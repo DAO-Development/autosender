@@ -41,6 +41,8 @@ $background-grey-gradient: linear-gradient(180deg, #F4F4F4 0%, #FFFFFF 29.69%, #
 
 /* Общие стили */
 .container
+    max-width: unset !important
+    padding: unset !important
     margin: 0 auto
     @media screen and (min-width: $mobileS) and (max-width: $mobileS)
         width: 94vw
@@ -76,8 +78,10 @@ h1
     letter-spacing: 0.045em
     text-transform: uppercase
 
-
 h2
+    letter-spacing: 0.045em;
+    text-align: center
+    margin-bottom: 47px
     font-weight: 700
     text-align: center
     letter-spacing: 0.045em
