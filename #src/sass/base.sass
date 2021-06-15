@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap')
-    
+
 /* Экраны */
 $mobileS: 360px
 $mobileM: 415px
@@ -39,7 +39,7 @@ $white-op30: rgba(255, 255, 255, 0.3)
 /* Общие стили */
 .container
     margin: 0 auto
-    @media screen and (min-width: $mobileS)
+    @media screen and (min-width: $mobileS)and (max-width: $mobileS)
         width: 94vw
     @media screen and (min-width: $mobileL)
         width: 536px
@@ -52,7 +52,8 @@ $white-op30: rgba(255, 255, 255, 0.3)
     @media screen and (min-width: $desktopM)
         width: 1345px
 
-    
+div
+    box-sizing: border-box
 
 *
     margin: 0
@@ -61,3 +62,19 @@ $white-op30: rgba(255, 255, 255, 0.3)
 
 body
     font-family: Roboto
+
+h1, h2, h3, h4, h5, h6, button, .btn
+    font-family: 'Montserrat', sans-serif
+    line-height: 120%
+
+h2
+    text-align: center
+    font-weight: 700
+    @media screen and (min-width: $mobileS) and (max-width: $mobileS)
+        font-size: 28px
+    @media screen and (min-width: $tabletS)
+        font-size: 32px
+    @media screen and (min-width: $desktopS)
+        font-size: 36px
+    @media screen and (min-width: $desktopM)
+        font-size: 38px
