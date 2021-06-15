@@ -5,5 +5,6 @@ frontend сайта autosender
 gulp + sass + ...
 
 ## Задача
-pagespeed: 80 моб
-десткоп: 90 моб
+### pagespeed:
+мобилка: 80,
+десткоп: 90
