@@ -1,0 +1,122 @@
+@import "base.sass"
+.product
+    & .interesting-cars
+        background: $background-grey-gradient
+        @media screen and (min-width: $mobileS) and (max-width: $mobileS)
+            padding: 20px 0
+        @media screen and (min-width: $tabletS)
+            padding: 20px 0
+        @media screen and (min-width: $desktopS)
+            padding: 20px 0
+        @media screen and (min-width: $desktopM)
+            padding: 120px 0
+            h2
+                margin-bottom: 50px
+
+.interesting-cars
+    &__categories
+        display: flex
+        flex-direction: row
+        align-items: center
+        @media screen and (min-width: $desktopM)
+            gap: 43px
+
+        .category
+            padding-bottom: 5px
+
+            &.active
+                border-bottom: 1px solid black
+
+        .categories-line
+            height: 38px
+            border-left: 1px solid $grey-185
+
+    &__card
+        position: relative
+        padding-top: 117px
+        max-width: 425px
+
+        & .card
+            &-image
+                z-index: 10000
+                position: absolute
+                left: 57px
+                top: 5%
+
+            &__content
+                border: 1px solid $grey-52
+                @media screen and (min-width: $desktopM)
+                    width: 425px
+                    height: 338px
+                    padding-top: 92px
+
+            &-title
+                display: flex
+                justify-content: center
+                align-items: center
+                gap: 10px
+
+                & > span
+                    color: $black-21
+                    font-weight: 400
+
+            &-data
+                display: flex
+                justify-content: center
+                gap: 10px
+                margin: 20px 0
+                font-size: 15px
+                color: $grey-102
+
+                &-line
+                    height: 15px
+                    border-left: 1px solid $black-op15
+
+            &-cta
+                border-top: 1px solid $grey-179
+                display: grid
+                @media screen and (min-width: $desktopM)
+                    grid-template-columns: 1fr 1fr
+
+                &-left
+                    @media screen and (min-width: $desktopM)
+                        grid-column: 1/2
+
+                    & > ul
+                        & > li
+                            position: relative
+                            border-bottom: 1px solid $black-op30
+                            border-right: 1px solid $black-op30
+
+                            @media screen and (min-width: $desktopM)
+                                padding: 7px 25px 6px 47px
+
+                            &:last-child
+                                border-bottom: none
+
+                            &:before
+                                content: url("../img/product-page/info.svg")
+                                position: absolute
+                                top: 40%
+                                left: 23px
+
+                            & > p
+                                font-size: 10px
+                                line-height: 12px
+                                color: $black-op50
+
+                    .cta__cost
+                        &-title
+                            & > span
+                                font-size: 15px
+
+                &-right
+                    margin: auto
+                    @media screen and (min-width: $desktopM)
+                        grid-column: 2/3
+
+                    & > button
+                        border: none
+                        background-color: white
+                        color: black
+                        font-size: 15px

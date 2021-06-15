@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap')
 
 /* Экраны */
 $mobileS: 360px
@@ -12,6 +12,7 @@ $desktopL: 1920px
 
 /* Цвета */
 $white-op50: rgba(255, 255, 255, 0.5)
+$black-21: rgba(21, 2, 2, 1)
 $black-op50: rgba(0, 0, 0, 0.5)
 $black-op30: rgba(0, 0, 0, 0.3)
 $black-op15: rgba(0, 0, 0, 0.15)
@@ -35,13 +36,15 @@ $grey-153: rgba(153, 153, 153, 1)
 $red-dark: rgba(188, 0, 45, 1)
 $white-op30: rgba(255, 255, 255, 0.3)
 
+$background-grey-gradient: linear-gradient(180deg, #F4F4F4 0%, #FFFFFF 29.69%, #FFFFFF 71.87%, #F4F4F4 100%)
+
 
 /* Общие стили */
 .container
     max-width: unset  !important
     padding: unset !important
     margin: 0 auto
-    @media screen and (min-width: $mobileS)and (max-width: $mobileS)
+    @media screen and (min-width: $mobileS) and (max-width: $mobileS)
         width: 94vw
     @media screen and (min-width: $mobileL)
         width: 536px
@@ -63,7 +66,7 @@ div
 
 
 body
-    font-family: Roboto
+    font-family: Roboto, sans-serif
 
 h1, h2, h3, h4, h5, h6, button, .btn
     font-family: 'Montserrat', sans-serif
@@ -80,6 +83,7 @@ h2
     text-align: center
     margin-bottom: 47px
     font-weight: 700
+    text-align: center
     @media screen and (min-width: $mobileS) and (max-width: $mobileS)
         font-size: 28px
     @media screen and (min-width: $tabletS)
@@ -88,3 +92,28 @@ h2
         font-size: 36px
     @media screen and (min-width: $desktopM)
         font-size: 38px
+
+h3
+    font-weight: 700
+    @media screen and (min-width: $mobileS) and (max-width: $mobileS)
+        font-size: 20px
+    @media screen and (min-width: $tabletS)
+        font-size: 20px
+    @media screen and (min-width: $desktopS)
+        font-size: 20px
+    @media screen and (min-width: $desktopM)
+        font-size: 20px
+
+h4
+    font-weight: 700
+    @media screen and (min-width: $mobileS) and (max-width: $mobileS)
+        font-size: 15px
+    @media screen and (min-width: $tabletS)
+        font-size: 15px
+    @media screen and (min-width: $desktopS)
+        font-size: 15px
+    @media screen and (min-width: $desktopM)
+        font-size: 15px
+
+ul
+    list-style: none
