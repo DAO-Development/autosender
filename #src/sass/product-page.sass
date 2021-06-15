@@ -7,29 +7,40 @@
         @media screen and (min-width: $tabletS)
             padding: 20px 0
         @media screen and (min-width: $desktopS)
-            padding: 20px 0
+            padding: 100px 0
         @media screen and (min-width: $desktopM)
             padding: 120px 0
-            h2
+
+        h2
+            @media screen and (min-width: $desktopS)
                 margin-bottom: 50px
 
 .interesting-cars
     &__categories
+        margin: 0 auto
         display: flex
         flex-direction: row
         align-items: center
+        @media screen and (min-width: $desktopS)
+            width: 1177px
+            gap: 36px
         @media screen and (min-width: $desktopM)
             gap: 43px
 
         .category
             padding-bottom: 5px
+            @media screen and (min-width: $desktopS)
+                font-size: 18px
 
             &.active
                 border-bottom: 1px solid black
 
         .categories-line
-            height: 38px
             border-left: 1px solid $grey-185
+            @media screen and (min-width: $desktopS)
+                height: 25px
+            @media screen and (min-width: $desktopM)
+                height: 38px
 
     &__card
         position: relative
@@ -40,15 +51,20 @@
             &-image
                 z-index: 10000
                 position: absolute
-                left: 57px
                 top: 5%
+                @media screen and (min-width: $desktopS)
+                    left: 33px
+                @media screen and (min-width: $desktopM)
+                    left: 57px
+
 
             &__content
                 border: 1px solid $grey-52
+                @media screen and (min-width: $desktopS)
+                    width: 376px
+                    padding-top: 92px
                 @media screen and (min-width: $desktopM)
                     width: 425px
-                    height: 338px
-                    padding-top: 92px
 
             &-title
                 display: flex
@@ -75,11 +91,13 @@
             &-cta
                 border-top: 1px solid $grey-179
                 display: grid
+                @media screen and (min-width: $desktopS)
+                    grid-template-columns: 1.21fr 1fr
                 @media screen and (min-width: $desktopM)
                     grid-template-columns: 1fr 1fr
 
                 &-left
-                    @media screen and (min-width: $desktopM)
+                    @media screen and (min-width: $desktopS)
                         grid-column: 1/2
 
                     & > ul
@@ -88,8 +106,14 @@
                             border-bottom: 1px solid $black-op30
                             border-right: 1px solid $black-op30
 
+                            @media screen and (min-width: $desktopS)
+                                padding: 7px 17px 6px 44px
                             @media screen and (min-width: $desktopM)
-                                padding: 7px 25px 6px 47px
+                                padding: 7px 21px 6px 47px
+
+                            &:nth-child(2)
+                                & > h3
+                                    color: $red-dark
 
                             &:last-child
                                 border-bottom: none
@@ -98,7 +122,10 @@
                                 content: url("../img/product-page/info.svg")
                                 position: absolute
                                 top: 40%
-                                left: 23px
+                                @media screen and (min-width: $desktopS)
+                                    left: 20px
+                                @media screen and (min-width: $desktopM)
+                                    left: 23px
 
                             & > p
                                 font-size: 10px
@@ -119,4 +146,6 @@
                         border: none
                         background-color: white
                         color: black
+                        font-family: Roboto, sans-serif
+                        font-weight: 400
                         font-size: 15px

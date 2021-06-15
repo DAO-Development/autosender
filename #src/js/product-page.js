@@ -8,7 +8,6 @@ $(document).ready(function () {
     });
 
     $('.interesting-cars-slider').on('beforeChange', function (event, slick, currentSlide, nextSlide) {
-        console.log(currentSlide)
         let categories = document.getElementsByClassName('category')
         categories.item(currentSlide / 3).classList.remove('active')
         categories.item(nextSlide / 3).classList.add('active')
