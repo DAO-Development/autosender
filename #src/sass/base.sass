@@ -41,20 +41,20 @@ $background-grey-gradient: linear-gradient(180deg, #F4F4F4 0%, #FFFFFF 29.69%, #
 
 /* Общие стили */
 .container
-    max-width: unset  !important
     padding: unset !important
     margin: 0 auto
-    @media screen and (min-width: $mobileS) and (max-width: $mobileS)
+    max-width: 99vw
+    @media screen and (max-width: $mobileS) and (max-width: $mobileS)
         width: 94vw
-    @media screen and (min-width: $mobileL)
+    @media screen and (max-width: $mobileL)
         width: 536px
-    @media screen and (min-width: $tabletS)
+    @media screen and (max-width: $tabletS)
         width: 712px
-    @media screen and (min-width: $tabletM)
+    @media screen and (max-width: $tabletM)
         width: 912px
-    @media screen and (min-width: $desktopS)
+    @media screen and (max-width: $desktopS)
         width: 1200px
-    @media screen and (min-width: $desktopM)
+    @media screen and (max-width: $desktopM)
         width: 1345px
 
 div
@@ -64,7 +64,8 @@ div
     margin: 0
     padding: 0
 
-
+html
+    overflow-x: hidden
 body
     font-family: Roboto, sans-serif
 
@@ -84,35 +85,35 @@ h2
     margin-bottom: 47px
     font-weight: 700
     text-align: center
-    @media screen and (min-width: $mobileS) and (max-width: $mobileS)
+    @media screen and (max-width: $mobileS) and (max-width: $mobileS)
         font-size: 28px
-    @media screen and (min-width: $tabletS)
+    @media screen and (max-width: $tabletS)
         font-size: 32px
-    @media screen and (min-width: $desktopS)
+    @media screen and (max-width: $desktopS)
         font-size: 36px
-    @media screen and (min-width: $desktopM)
+    @media screen and (max-width: $desktopM)
         font-size: 38px
 
 h3
     font-weight: 700
-    @media screen and (min-width: $mobileS) and (max-width: $mobileS)
+    @media screen and (max-width: $mobileS) and (max-width: $mobileS)
         font-size: 20px
-    @media screen and (min-width: $tabletS)
+    @media screen and (max-width: $tabletS)
         font-size: 20px
-    @media screen and (min-width: $desktopS)
+    @media screen and (max-width: $desktopS)
         font-size: 20px
-    @media screen and (min-width: $desktopM)
+    @media screen and (max-width: $desktopM)
         font-size: 20px
 
 h4
     font-weight: 700
-    @media screen and (min-width: $mobileS) and (max-width: $mobileS)
+    @media screen and (max-width: $mobileS) and (max-width: $mobileS)
         font-size: 15px
-    @media screen and (min-width: $tabletS)
+    @media screen and (max-width: $tabletS)
         font-size: 15px
-    @media screen and (min-width: $desktopS)
+    @media screen and (max-width: $desktopS)
         font-size: 15px
-    @media screen and (min-width: $desktopM)
+    @media screen and (max-width: $desktopM)
         font-size: 15px
 
 ul
