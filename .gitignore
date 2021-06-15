@@ -33,3 +33,9 @@ node_modules
 
 # Test results
 test.xunit
+
+#IntelliJ IDEA
+.idea
+
+#build
+autosender
