@@ -21,21 +21,34 @@
             <h2>Интересные автомобили</h2>
             <div class="interesting-cars__content">
                 <div class="interesting-cars__categories">
-                    <h3 class="category active">Гибриды</h3>
-                    <div class="categories-line"></div>
-                    <h3 class="category">Минивены</h3>
-                    <div class="categories-line"></div>
-                    <h3 class="category">Кейкары</h3>
-                    <div class="categories-line"></div>
-                    <h3 class="category">Седаны</h3>
-                    <div class="categories-line"></div>
-                    <h3 class="category">Кроссоверы</h3>
-                    <div class="categories-line"></div>
-                    <h3 class="category">Хэтчбеки</h3>
-                    <div class="categories-line"></div>
-                    <h3 class="category">Электрокары</h3>
+                    <div class="categories-tabs">
+                        <h3 class="category active">Гибриды</h3>
+                        <div class="categories-line"></div>
+                        <h3 class="category">Минивены</h3>
+                        <div class="categories-line"></div>
+                        <h3 class="category">Кейкары</h3>
+                        <div class="categories-line"></div>
+                        <h3 class="category">Седаны</h3>
+                        <div class="categories-line"></div>
+                        <h3 class="category">Кроссоверы</h3>
+                        <div class="categories-line"></div>
+                        <h3 class="category">Хэтчбеки</h3>
+                        <div class="categories-line"></div>
+                        <h3 class="category">Электрокары</h3>
+                    </div>
+                    <div class="categories-select">
+                        <select id="select">
+                            <option class="category-option" value="gibrids">Гибриды</option>
+                            <option class="category-option" value="minivans">Минивены</option>
+                            <option class="category-option" value="keycars">Кейкары</option>
+                            <option class="category-option" value="sedan">Седаны</option>
+                            <option class="category-option" value="crossover">Кроссоверы</option>
+                            <option class="category-option" value="hatchback">Хэтчбеки</option>
+                            <option class="category-option" value="electrocars">Электрокары</option>
+                        </select>
+                    </div>
                 </div>
-                <div class="interesting-cars-slider">
+                <div class="interesting-cars-slider active" id="slider-1">
                     <div class="slide">
                         <div class="interesting-cars__card">
                             <div class="card-image"><img src="./img/product-page/car1.png"></div>
@@ -167,49 +180,6 @@
                     </div>
                     <div class="slide">
                         <div class="interesting-cars__card">
-                            <div class="card-image"><img src="./img/product-page/car1.png"></div>
-                            <div class="card__content">
-                                <h3 class="card-title">
-                                    MITSUBISHI LANCER
-                                    <svg width="4" height="4" viewBox="0 0 4 4" fill="none"
-                                         xmlns="http://www.w3.org/2000/svg">
-                                        <circle opacity="0.5" cx="2" cy="2" r="2" fill="#150202"/>
-                                    </svg>
-                                    <span>CS2A</span>
-                                </h3>
-                                <div class="card-data">
-                                    <span>2005</span>
-                                    <div class="card-data-line"></div>
-                                    <span>2.0 л</span>
-                                    <div class="card-data-line"></div>
-                                    <span>4WD</span>
-                                </div>
-                                <div class="card-cta">
-                                    <div class="card-cta-left">
-                                        <ul>
-                                            <li>
-                                                <h3 class="cta__cost-title"><span>от</span> 300 000 ₽</h3>
-                                                <p class="cta__cost-info">Дешевые авто</p>
-                                            </li>
-                                            <li>
-                                                <h3 class="cta__cost-title"><span>от</span> 500 000 ₽</h3>
-                                                <p class="cta__cost-info">Хорошее авто</p>
-                                            </li>
-                                            <li>
-                                                <h3 class="cta__cost-title"><span>от</span> 800 000 ₽</h3>
-                                                <p class="cta__cost-info">Отличное авто</p>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="card-cta-right">
-                                        <button>Оставить заявку</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="slide">
-                        <div class="interesting-cars__card">
                             <div class="card-image"><img src="./img/product-page/car2.png"></div>
                             <div class="card__content">
                                 <h3 class="card-title">
@@ -251,178 +221,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="slide">
-                        <div class="interesting-cars__card">
-                            <div class="card-image"><img src="./img/product-page/car2.png"></div>
-                            <div class="card__content">
-                                <h3 class="card-title">
-                                    MITSUBISHI LANCER
-                                    <svg width="4" height="4" viewBox="0 0 4 4" fill="none"
-                                         xmlns="http://www.w3.org/2000/svg">
-                                        <circle opacity="0.5" cx="2" cy="2" r="2" fill="#150202"/>
-                                    </svg>
-                                    <span>CS2A</span>
-                                </h3>
-                                <div class="card-data">
-                                    <span>2005</span>
-                                    <div class="card-data-line"></div>
-                                    <span>2.0 л</span>
-                                    <div class="card-data-line"></div>
-                                    <span>4WD</span>
-                                </div>
-                                <div class="card-cta">
-                                    <div class="card-cta-left">
-                                        <ul>
-                                            <li>
-                                                <h3 class="cta__cost-title"><span>от</span> 300 000 ₽</h3>
-                                                <p class="cta__cost-info">Дешевые авто</p>
-                                            </li>
-                                            <li>
-                                                <h3 class="cta__cost-title"><span>от</span> 500 000 ₽</h3>
-                                                <p class="cta__cost-info">Хорошее авто</p>
-                                            </li>
-                                            <li>
-                                                <h3 class="cta__cost-title"><span>от</span> 800 000 ₽</h3>
-                                                <p class="cta__cost-info">Отличное авто</p>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="card-cta-right">
-                                        <button>Оставить заявку</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="slide">
-                        <div class="interesting-cars__card">
-                            <div class="card-image"><img src="./img/product-page/car1.png"></div>
-                            <div class="card__content">
-                                <h3 class="card-title">
-                                    MITSUBISHI LANCER
-                                    <svg width="4" height="4" viewBox="0 0 4 4" fill="none"
-                                         xmlns="http://www.w3.org/2000/svg">
-                                        <circle opacity="0.5" cx="2" cy="2" r="2" fill="#150202"/>
-                                    </svg>
-                                    <span>CS2A</span>
-                                </h3>
-                                <div class="card-data">
-                                    <span>2005</span>
-                                    <div class="card-data-line"></div>
-                                    <span>2.0 л</span>
-                                    <div class="card-data-line"></div>
-                                    <span>4WD</span>
-                                </div>
-                                <div class="card-cta">
-                                    <div class="card-cta-left">
-                                        <ul>
-                                            <li>
-                                                <h3 class="cta__cost-title"><span>от</span> 300 000 ₽</h3>
-                                                <p class="cta__cost-info">Дешевые авто</p>
-                                            </li>
-                                            <li>
-                                                <h3 class="cta__cost-title"><span>от</span> 500 000 ₽</h3>
-                                                <p class="cta__cost-info">Хорошее авто</p>
-                                            </li>
-                                            <li>
-                                                <h3 class="cta__cost-title"><span>от</span> 800 000 ₽</h3>
-                                                <p class="cta__cost-info">Отличное авто</p>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="card-cta-right">
-                                        <button>Оставить заявку</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="slide">
-                        <div class="interesting-cars__card">
-                            <div class="card-image"><img src="./img/product-page/car2.png"></div>
-                            <div class="card__content">
-                                <h3 class="card-title">
-                                    MITSUBISHI LANCER
-                                    <svg width="4" height="4" viewBox="0 0 4 4" fill="none"
-                                         xmlns="http://www.w3.org/2000/svg">
-                                        <circle opacity="0.5" cx="2" cy="2" r="2" fill="#150202"/>
-                                    </svg>
-                                    <span>CS2A</span>
-                                </h3>
-                                <div class="card-data">
-                                    <span>2005</span>
-                                    <div class="card-data-line"></div>
-                                    <span>2.0 л</span>
-                                    <div class="card-data-line"></div>
-                                    <span>4WD</span>
-                                </div>
-                                <div class="card-cta">
-                                    <div class="card-cta-left">
-                                        <ul>
-                                            <li>
-                                                <h3 class="cta__cost-title"><span>от</span> 300 000 ₽</h3>
-                                                <p class="cta__cost-info">Дешевые авто</p>
-                                            </li>
-                                            <li>
-                                                <h3 class="cta__cost-title"><span>от</span> 500 000 ₽</h3>
-                                                <p class="cta__cost-info">Хорошее авто</p>
-                                            </li>
-                                            <li>
-                                                <h3 class="cta__cost-title"><span>от</span> 800 000 ₽</h3>
-                                                <p class="cta__cost-info">Отличное авто</p>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="card-cta-right">
-                                        <button>Оставить заявку</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="slide">
-                        <div class="interesting-cars__card">
-                            <div class="card-image"><img src="./img/product-page/car2.png"></div>
-                            <div class="card__content">
-                                <h3 class="card-title">
-                                    MITSUBISHI LANCER
-                                    <svg width="4" height="4" viewBox="0 0 4 4" fill="none"
-                                         xmlns="http://www.w3.org/2000/svg">
-                                        <circle opacity="0.5" cx="2" cy="2" r="2" fill="#150202"/>
-                                    </svg>
-                                    <span>CS2A</span>
-                                </h3>
-                                <div class="card-data">
-                                    <span>2005</span>
-                                    <div class="card-data-line"></div>
-                                    <span>2.0 л</span>
-                                    <div class="card-data-line"></div>
-                                    <span>4WD</span>
-                                </div>
-                                <div class="card-cta">
-                                    <div class="card-cta-left">
-                                        <ul>
-                                            <li>
-                                                <h3 class="cta__cost-title"><span>от</span> 300 000 ₽</h3>
-                                                <p class="cta__cost-info">Дешевые авто</p>
-                                            </li>
-                                            <li>
-                                                <h3 class="cta__cost-title"><span>от</span> 500 000 ₽</h3>
-                                                <p class="cta__cost-info">Хорошее авто</p>
-                                            </li>
-                                            <li>
-                                                <h3 class="cta__cost-title"><span>от</span> 800 000 ₽</h3>
-                                                <p class="cta__cost-info">Отличное авто</p>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="card-cta-right">
-                                        <button>Оставить заявку</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                </div>
+                <div class="interesting-cars-slider" id="slider-2">
                     <div class="slide">
                         <div class="interesting-cars__card">
                             <div class="card-image"><img src="./img/product-page/car1.png"></div>
@@ -554,6 +354,51 @@
                     </div>
                     <div class="slide">
                         <div class="interesting-cars__card">
+                            <div class="card-image"><img src="./img/product-page/car2.png"></div>
+                            <div class="card__content">
+                                <h3 class="card-title">
+                                    MITSUBISHI LANCER
+                                    <svg width="4" height="4" viewBox="0 0 4 4" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <circle opacity="0.5" cx="2" cy="2" r="2" fill="#150202"/>
+                                    </svg>
+                                    <span>CS2A</span>
+                                </h3>
+                                <div class="card-data">
+                                    <span>2005</span>
+                                    <div class="card-data-line"></div>
+                                    <span>2.0 л</span>
+                                    <div class="card-data-line"></div>
+                                    <span>4WD</span>
+                                </div>
+                                <div class="card-cta">
+                                    <div class="card-cta-left">
+                                        <ul>
+                                            <li>
+                                                <h3 class="cta__cost-title"><span>от</span> 300 000 ₽</h3>
+                                                <p class="cta__cost-info">Дешевые авто</p>
+                                            </li>
+                                            <li>
+                                                <h3 class="cta__cost-title"><span>от</span> 500 000 ₽</h3>
+                                                <p class="cta__cost-info">Хорошее авто</p>
+                                            </li>
+                                            <li>
+                                                <h3 class="cta__cost-title"><span>от</span> 800 000 ₽</h3>
+                                                <p class="cta__cost-info">Отличное авто</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="card-cta-right">
+                                        <button>Оставить заявку</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="interesting-cars-slider" id="slider-3">
+                    <div class="slide">
+                        <div class="interesting-cars__card">
                             <div class="card-image"><img src="./img/product-page/car1.png"></div>
                             <div class="card__content">
                                 <h3 class="card-title">
@@ -681,6 +526,8 @@
                             </div>
                         </div>
                     </div>
+                </div>
+                <div class="interesting-cars-slider" id="slider-4">
                     <div class="slide">
                         <div class="interesting-cars__card">
                             <div class="card-image"><img src="./img/product-page/car1.png"></div>
@@ -810,6 +657,270 @@
                             </div>
                         </div>
                     </div>
+                </div>
+                <div class="interesting-cars-slider" id="slider-5">
+                    <div class="slide">
+                        <div class="interesting-cars__card">
+                            <div class="card-image"><img src="./img/product-page/car1.png"></div>
+                            <div class="card__content">
+                                <h3 class="card-title">
+                                    MITSUBISHI LANCER
+                                    <svg width="4" height="4" viewBox="0 0 4 4" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <circle opacity="0.5" cx="2" cy="2" r="2" fill="#150202"/>
+                                    </svg>
+                                    <span>CS2A</span>
+                                </h3>
+                                <div class="card-data">
+                                    <span>2005</span>
+                                    <div class="card-data-line"></div>
+                                    <span>2.0 л</span>
+                                    <div class="card-data-line"></div>
+                                    <span>4WD</span>
+                                </div>
+                                <div class="card-cta">
+                                    <div class="card-cta-left">
+                                        <ul>
+                                            <li>
+                                                <h3 class="cta__cost-title"><span>от</span> 300 000 ₽</h3>
+                                                <p class="cta__cost-info">Дешевые авто</p>
+                                            </li>
+                                            <li>
+                                                <h3 class="cta__cost-title"><span>от</span> 500 000 ₽</h3>
+                                                <p class="cta__cost-info">Хорошее авто</p>
+                                            </li>
+                                            <li>
+                                                <h3 class="cta__cost-title"><span>от</span> 800 000 ₽</h3>
+                                                <p class="cta__cost-info">Отличное авто</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="card-cta-right">
+                                        <button>Оставить заявку</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="interesting-cars__card">
+                            <div class="card-image"><img src="./img/product-page/car2.png"></div>
+                            <div class="card__content">
+                                <h3 class="card-title">
+                                    MITSUBISHI LANCER
+                                    <svg width="4" height="4" viewBox="0 0 4 4" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <circle opacity="0.5" cx="2" cy="2" r="2" fill="#150202"/>
+                                    </svg>
+                                    <span>CS2A</span>
+                                </h3>
+                                <div class="card-data">
+                                    <span>2005</span>
+                                    <div class="card-data-line"></div>
+                                    <span>2.0 л</span>
+                                    <div class="card-data-line"></div>
+                                    <span>4WD</span>
+                                </div>
+                                <div class="card-cta">
+                                    <div class="card-cta-left">
+                                        <ul>
+                                            <li>
+                                                <h3 class="cta__cost-title"><span>от</span> 300 000 ₽</h3>
+                                                <p class="cta__cost-info">Дешевые авто</p>
+                                            </li>
+                                            <li>
+                                                <h3 class="cta__cost-title"><span>от</span> 500 000 ₽</h3>
+                                                <p class="cta__cost-info">Хорошее авто</p>
+                                            </li>
+                                            <li>
+                                                <h3 class="cta__cost-title"><span>от</span> 800 000 ₽</h3>
+                                                <p class="cta__cost-info">Отличное авто</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="card-cta-right">
+                                        <button>Оставить заявку</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="interesting-cars__card">
+                            <div class="card-image"><img src="./img/product-page/car2.png"></div>
+                            <div class="card__content">
+                                <h3 class="card-title">
+                                    MITSUBISHI LANCER
+                                    <svg width="4" height="4" viewBox="0 0 4 4" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <circle opacity="0.5" cx="2" cy="2" r="2" fill="#150202"/>
+                                    </svg>
+                                    <span>CS2A</span>
+                                </h3>
+                                <div class="card-data">
+                                    <span>2005</span>
+                                    <div class="card-data-line"></div>
+                                    <span>2.0 л</span>
+                                    <div class="card-data-line"></div>
+                                    <span>4WD</span>
+                                </div>
+                                <div class="card-cta">
+                                    <div class="card-cta-left">
+                                        <ul>
+                                            <li>
+                                                <h3 class="cta__cost-title"><span>от</span> 300 000 ₽</h3>
+                                                <p class="cta__cost-info">Дешевые авто</p>
+                                            </li>
+                                            <li>
+                                                <h3 class="cta__cost-title"><span>от</span> 500 000 ₽</h3>
+                                                <p class="cta__cost-info">Хорошее авто</p>
+                                            </li>
+                                            <li>
+                                                <h3 class="cta__cost-title"><span>от</span> 800 000 ₽</h3>
+                                                <p class="cta__cost-info">Отличное авто</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="card-cta-right">
+                                        <button>Оставить заявку</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="interesting-cars-slider" id="slider-6">
+                    <div class="slide">
+                        <div class="interesting-cars__card">
+                            <div class="card-image"><img src="./img/product-page/car1.png"></div>
+                            <div class="card__content">
+                                <h3 class="card-title">
+                                    MITSUBISHI LANCER
+                                    <svg width="4" height="4" viewBox="0 0 4 4" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <circle opacity="0.5" cx="2" cy="2" r="2" fill="#150202"/>
+                                    </svg>
+                                    <span>CS2A</span>
+                                </h3>
+                                <div class="card-data">
+                                    <span>2005</span>
+                                    <div class="card-data-line"></div>
+                                    <span>2.0 л</span>
+                                    <div class="card-data-line"></div>
+                                    <span>4WD</span>
+                                </div>
+                                <div class="card-cta">
+                                    <div class="card-cta-left">
+                                        <ul>
+                                            <li>
+                                                <h3 class="cta__cost-title"><span>от</span> 300 000 ₽</h3>
+                                                <p class="cta__cost-info">Дешевые авто</p>
+                                            </li>
+                                            <li>
+                                                <h3 class="cta__cost-title"><span>от</span> 500 000 ₽</h3>
+                                                <p class="cta__cost-info">Хорошее авто</p>
+                                            </li>
+                                            <li>
+                                                <h3 class="cta__cost-title"><span>от</span> 800 000 ₽</h3>
+                                                <p class="cta__cost-info">Отличное авто</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="card-cta-right">
+                                        <button>Оставить заявку</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="interesting-cars__card">
+                            <div class="card-image"><img src="./img/product-page/car2.png"></div>
+                            <div class="card__content">
+                                <h3 class="card-title">
+                                    MITSUBISHI LANCER
+                                    <svg width="4" height="4" viewBox="0 0 4 4" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <circle opacity="0.5" cx="2" cy="2" r="2" fill="#150202"/>
+                                    </svg>
+                                    <span>CS2A</span>
+                                </h3>
+                                <div class="card-data">
+                                    <span>2005</span>
+                                    <div class="card-data-line"></div>
+                                    <span>2.0 л</span>
+                                    <div class="card-data-line"></div>
+                                    <span>4WD</span>
+                                </div>
+                                <div class="card-cta">
+                                    <div class="card-cta-left">
+                                        <ul>
+                                            <li>
+                                                <h3 class="cta__cost-title"><span>от</span> 300 000 ₽</h3>
+                                                <p class="cta__cost-info">Дешевые авто</p>
+                                            </li>
+                                            <li>
+                                                <h3 class="cta__cost-title"><span>от</span> 500 000 ₽</h3>
+                                                <p class="cta__cost-info">Хорошее авто</p>
+                                            </li>
+                                            <li>
+                                                <h3 class="cta__cost-title"><span>от</span> 800 000 ₽</h3>
+                                                <p class="cta__cost-info">Отличное авто</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="card-cta-right">
+                                        <button>Оставить заявку</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="interesting-cars__card">
+                            <div class="card-image"><img src="./img/product-page/car2.png"></div>
+                            <div class="card__content">
+                                <h3 class="card-title">
+                                    MITSUBISHI LANCER
+                                    <svg width="4" height="4" viewBox="0 0 4 4" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <circle opacity="0.5" cx="2" cy="2" r="2" fill="#150202"/>
+                                    </svg>
+                                    <span>CS2A</span>
+                                </h3>
+                                <div class="card-data">
+                                    <span>2005</span>
+                                    <div class="card-data-line"></div>
+                                    <span>2.0 л</span>
+                                    <div class="card-data-line"></div>
+                                    <span>4WD</span>
+                                </div>
+                                <div class="card-cta">
+                                    <div class="card-cta-left">
+                                        <ul>
+                                            <li>
+                                                <h3 class="cta__cost-title"><span>от</span> 300 000 ₽</h3>
+                                                <p class="cta__cost-info">Дешевые авто</p>
+                                            </li>
+                                            <li>
+                                                <h3 class="cta__cost-title"><span>от</span> 500 000 ₽</h3>
+                                                <p class="cta__cost-info">Хорошее авто</p>
+                                            </li>
+                                            <li>
+                                                <h3 class="cta__cost-title"><span>от</span> 800 000 ₽</h3>
+                                                <p class="cta__cost-info">Отличное авто</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="card-cta-right">
+                                        <button>Оставить заявку</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="interesting-cars-slider" id="slider-7">
                     <div class="slide">
                         <div class="interesting-cars__card">
                             <div class="card-image"><img src="./img/product-page/car1.png"></div>

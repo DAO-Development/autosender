@@ -2,34 +2,114 @@
 .product
     & .interesting-cars
         background: $background-grey-gradient
-        @media screen and (min-width: $mobileS) and (max-width: $mobileS)
-            padding: 20px 0
+        @media screen and (max-width: $mobileM)
+            padding: 60px 0
+            & > .container
+                width: 100vw
+        @media screen and (min-width: $mobileM)
+            padding: 64px 0
+            & > .container
+                width: 100vw
         @media screen and (min-width: $tabletS)
-            padding: 20px 0
+            padding: 80px 0
+            & > .container
+                width: 100vw
         @media screen and (min-width: $desktopS)
-            padding: 20px 0
+            padding: 100px 0
+            & > .container
+                width: 1200px
         @media screen and (min-width: $desktopM)
             padding: 120px 0
-            h2
+            & > .container
+                width: 1345px
+
+        h2
+            @media screen and (max-width: $tabletS)
+                margin-bottom: 40px
+            @media screen and (min-width: $tabletS)
+                margin-bottom: 48px
+            @media screen and (min-width: $desktopS)
                 margin-bottom: 50px
 
 .interesting-cars
+    &-slider
+        display: none
+
+        &.active
+            display: block
+
+        @media screen and (max-width: $mobileM)
+            margin-left: 30px
+        @media screen and (min-width: $mobileM)
+            margin-left: 32px
+        @media screen and (min-width: $mobileL)
+            margin-left: 40px
+        @media screen and (min-width: $tabletS)
+            margin-left: 56px
+        @media screen and (min-width: $desktopS)
+            margin-left: 0
+
     &__categories
-        display: flex
-        flex-direction: row
-        align-items: center
-        @media screen and (min-width: $desktopM)
-            gap: 43px
+        & .categories
+            &-tabs
+                margin: 0 auto
+                flex-direction: row
+                align-items: center
+                @media screen and (max-width: $mobileS)
+                    display: none
+                @media screen and (min-width: $mobileS)
+                    display: none
+                @media screen and (min-width: $desktopS)
+                    display: flex
+                    width: 1177px
+                    gap: 36px
+                @media screen and (min-width: $desktopM)
+                    gap: 43px
 
-        .category
-            padding-bottom: 5px
+                .category
+                    padding-bottom: 5px
+                    @media screen and (min-width: $desktopS)
+                        font-size: 18px
 
-            &.active
-                border-bottom: 1px solid black
+                    &:hover
+                        border-bottom: 1px solid black
+
+            &-select
+                & > select
+                    display: block
+                    margin: 0 auto
+                    border: none
+                    border-bottom: 1px solid $black-21
+                    background: none
+                    font-family: 'Montserrat', sans-serif
+                    font-weight: 700
+                    @media screen and (max-width: $mobileM)
+                        padding-bottom: 10px
+                        width: 80vw
+                        margin-bottom: -45px
+                        font-size: 18px
+                    @media screen and (min-width: $mobileM)
+                        padding-bottom: 12px
+                        width: 350px
+                        margin-bottom: -45px
+                        font-size: 18px
+                    @media screen and (min-width: $mobileL)
+                        width: 488px
+                        margin-bottom: 0px
+                    @media screen and (min-width: $tabletS)
+                        width: 656px
+                        padding-bottom: 15px
+                        font-size: 24px
+
+                @media screen and (min-width: $desktopS)
+                    display: none
 
         .categories-line
-            height: 38px
             border-left: 1px solid $grey-185
+            @media screen and (min-width: $desktopS)
+                height: 25px
+            @media screen and (min-width: $desktopM)
+                height: 38px
 
     &__card
         position: relative
@@ -40,15 +120,50 @@
             &-image
                 z-index: 10000
                 position: absolute
-                left: 57px
-                top: 5%
+
+                & img
+                    @media screen and (max-width: $mobileL)
+                        max-width: 220px
+                        max-height: 118px
+                    @media screen and (min-width: $mobileL)
+                        max-width: 240px
+                        max-height: 128px
+                    @media screen and (min-width: $tabletS)
+                        max-width: 310px
+                        max-height: 167px
+
+                @media screen and (max-width: $mobileM)
+                    left: 25px
+                    top: 12%
+                @media screen and (min-width: $mobileM)
+                    left: 40px
+                    top: 12%
+                @media screen and (min-width: $mobileL)
+                    left: 60px
+                    top: 5%
+                @media screen and (min-width: $desktopS)
+                    left: 33px
+                @media screen and (min-width: $desktopM)
+                    left: 57px
+
 
             &__content
                 border: 1px solid $grey-52
-                @media screen and (min-width: $desktopM)
-                    width: 425px
-                    height: 338px
+                @media screen and (max-width: $mobileM)
+                    max-width: 270px
+                    padding-top: 68px
+                @media screen and (min-width: $mobileM)
+                    max-width: 300px
+                    padding-top: 68px
+                @media screen and (min-width: $mobileL)
+                    max-width: 360px
+                @media screen and (min-width: $tabletS)
+                    max-width: 429px
                     padding-top: 92px
+                @media screen and (min-width: $desktopS)
+                    max-width: 376px
+                @media screen and (min-width: $desktopM)
+                    max-width: 425px
 
             &-title
                 display: flex
@@ -60,13 +175,24 @@
                     color: $black-21
                     font-weight: 400
 
+                @media screen and (max-width: $mobileL)
+                    flex-direction: column
+                    gap: 0
+                    & > svg
+                        display: none
+
             &-data
                 display: flex
                 justify-content: center
                 gap: 10px
-                margin: 20px 0
-                font-size: 15px
                 color: $grey-102
+                @media screen and (max-width: $tabletS)
+                    font-size: 14px
+                    margin: 15px 0
+                @media screen and (min-width: $tabletS)
+                    margin: 20px 0
+                    font-size: 15px
+
 
                 &-line
                     height: 15px
@@ -74,12 +200,16 @@
 
             &-cta
                 border-top: 1px solid $grey-179
-                display: grid
+                @media screen and (min-width: $tabletS)
+                    display: grid
+                    grid-template-columns: 1fr 1fr
+                @media screen and (min-width: $desktopS)
+                    grid-template-columns: 1.21fr 1fr
                 @media screen and (min-width: $desktopM)
                     grid-template-columns: 1fr 1fr
 
                 &-left
-                    @media screen and (min-width: $desktopM)
+                    @media screen and (min-width: $desktopS)
                         grid-column: 1/2
 
                     & > ul
@@ -88,17 +218,41 @@
                             border-bottom: 1px solid $black-op30
                             border-right: 1px solid $black-op30
 
+                            @media screen and (max-width: $mobileM)
+                                padding: 7px 51px 6px 74px
+                            @media screen and (min-width: $mobileM)
+                                padding: 7px 65px 6px 90px
+                            @media screen and (min-width: $mobileL)
+                                padding: 7px 95px 6px 125px
+                            @media screen and (min-width: $tabletS)
+                                padding: 7px 21px 6px 47px
+                                &:last-child
+                                    border-bottom: none
+                            @media screen and (min-width: $desktopS)
+                                padding: 7px 17px 6px 44px
                             @media screen and (min-width: $desktopM)
-                                padding: 7px 25px 6px 47px
+                                padding: 7px 21px 6px 47px
 
-                            &:last-child
-                                border-bottom: none
+                            &:nth-child(2)
+                                & > h3
+                                    color: $red-dark
 
                             &:before
                                 content: url("../img/product-page/info.svg")
                                 position: absolute
                                 top: 40%
-                                left: 23px
+                                @media screen and (max-width: $mobileM)
+                                    left: 51px
+                                @media screen and (min-width: $mobileM)
+                                    left: 68px
+                                @media screen and (min-width: $mobileL)
+                                    left: 98px
+                                @media screen and (min-width: $tabletS)
+                                    left: 23px
+                                @media screen and (min-width: $desktopS)
+                                    left: 20px
+                                @media screen and (min-width: $desktopM)
+                                    left: 23px
 
                             & > p
                                 font-size: 10px
@@ -112,11 +266,21 @@
 
                 &-right
                     margin: auto
-                    @media screen and (min-width: $desktopM)
+                    @media screen and (min-width: $tabletS)
                         grid-column: 2/3
 
                     & > button
                         border: none
-                        background-color: white
+                        background: none
                         color: black
+                        font-family: Roboto, sans-serif
+                        font-weight: 400
                         font-size: 15px
+                        @media screen and (max-width: $mobileM)
+                            padding: 20px 72px 20px 72px
+                        @media screen and (min-width: $mobileM)
+                            padding: 20px 82px 20px 83px
+                        @media screen and (min-width: $mobileL)
+                            padding: 20px 112px 20px 113px
+                        @media screen and (min-width: $tabletS)
+                            padding: 0
