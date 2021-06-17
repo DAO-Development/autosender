@@ -12,6 +12,7 @@
         padding: 60px 0
 
     h2
+
         margin-bottom: 60px
         @media screen and ( max-width: $desktopS )
             margin-bottom: 46px
@@ -22,8 +23,23 @@
         width: 1115px
         margin: 0 auto
         overflow: visible
+        @media screen and ( max-width: $desktopS )
+            width: 994px
+        @media screen and ( max-width: $tabletM )
+            padding: 0 56px
+            width: 100%
+        @media screen and ( max-width: $mobileL )
+            padding: 0 40px
+        @media screen and ( max-width: $mobileM )
+            padding: 0 32px
+        @media screen and ( max-width: $mobileS )
+            padding: 0 30px
+
+
+
 
     &__list
+        
         width: 117%
         padding-top: 10px
         margin-bottom: 120px
@@ -33,6 +49,19 @@
 
         scrollbar-width: none
         height: fit-content
+        @media screen and ( max-width: $desktopS )
+            margin-left: -103px
+            width: 132%
+            margin-bottom: 100px
+        @media screen and ( max-width: $tabletM )
+            margin-left: 0
+            margin-bottom: 80px
+        @media screen and ( max-width: $mobileL )
+            margin-bottom: 64px
+        @media screen and ( max-width: $mobileS )
+            margin-bottom: 60px
+            
+            
     &__list::-webkit-scrollbar 
         width: 0
         height: 0
@@ -45,14 +74,34 @@
         border: 1px solid $grey-185
         padding: 30px
         width: 425px
+        font-size: 15px;
+        line-height: 150%;
+        letter-spacing: 0.04em;
         position: relative
+
+        @media screen and ( max-width: $mobileL )
+            width: 288px
+        @media screen and ( max-width: $mobileS )
+            width: 280px
+            
 
     &__item::after
         margin: 0 35px
         content: ""
-        width: 200px
+        width: 195px
         border: 1px solid $grey-185
         display: block
+        @media screen and ( max-width: $desktopS )
+            width: 110px
+        @media screen and ( max-width: $tabletM )
+            width: 100px
+        @media screen and ( max-width: $tabletS )
+            width: 40px
+        @media screen and ( max-width: $mobileL )
+            width: 24px
+        @media screen and ( max-width: $mobileS )
+            width: 20px
+                
 
     &__item:last-child
         &::after
@@ -62,26 +111,65 @@
         width: 100%
         border-top: 1px solid $grey-185
         border-bottom: 1px solid $grey-185
+        
 
     &__brand-wrap--first
         border-bottom: none
 
     &__brands
+        margin: 0 auto
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr
+        place-items: center
+        border-bottom: 1px solid $grey-185
+
+        @media screen and ( max-width: $tabletM )
+            grid-template-columns: 1fr 1fr
+            .empty
+                display: none
+        
+
+
+    .empty
+        width: 100%
+        height: 100%
+    &__brand
         width: 100%
         height: 175px
         display: grid
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 
-        grid-template-rows: 1fr
         place-items: center
+        
+        @media screen and ( max-width: $tabletM )
+            height: 135px
+        @media screen and ( max-width: $tabletS )
+            height: 120px
+        @media screen and ( max-width: $mobileM )
+            height: 115px
+
 
     &__brand
-        width: 100%
-        height: 100%
-        display: grid
-        place-items: center
-
-    &__brand:nth-child(n+2)
         border-left: 1px solid $grey-185
+
+    &__brand:nth-child(7n-5)
+        border-left: 0
+    &__brands>*:nth-child(n+8)
+        border-top: 1px solid $grey-185
+
+    &__brand
+        @media screen and ( max-width: $tabletM )
+            border: none
+            border-top: 1px solid $grey-185
+            padding-right: 11.4%
+
+
+            &:nth-child(2), &:nth-child(3)
+                border-top: none
+
+            &:nth-child(2n)
+                border-right: 1px solid $grey-185
+                padding-right: 0
+                padding-left: 11.4%                
+            
 
     &__number
         position: absolute
@@ -100,6 +188,14 @@
         border-top: 1px solid black
         padding-top: 30px
         margin-top: 120px
+        @media screen and ( max-width: $desktopS )
+            margin-top: 100px
+        @media screen and ( max-width: $tabletM )
+            margin-top: 80px
+        @media screen and ( max-width: $mobileL )
+            margin-top: 64px
+        @media screen and ( max-width: $mobileS )
+            margin-top: 60px
 
         h3
             margin-bottom: 15px
@@ -109,9 +205,16 @@
             letter-spacing: 0.045em;
         
         p
+            margin-bottom: 7px
             font-size: 15px;
             line-height: 150%;
             letter-spacing: 0.04em;
+            @media screen and ( max-width: $tabletM )
+                font-size: 14px
+            @media screen and ( max-width: $mobileM )
+                font-size: 12px
+
+
     
 
     
