@@ -1,7 +1,8 @@
 @import "base"
 
 .feedback
-    background: linear-gradient(0deg, $grey-52-op80, $grey-52-op80), url("../img/autoauction-online/feedback-back.png") center
+    background-size: cover !important
+    background: linear-gradient(0deg, $grey-52-op80, $grey-52-op80), url("../img/autoauction-online/feedback-back.png") center no-repeat
     color: white
     @media screen and (max-width: $mobileM)
         padding: 60px 0
@@ -41,8 +42,9 @@
                 max-width: 408px
             @media screen and (min-width: $tabletS)
                 max-width: 473px
-                margin-bottom: 48px
+                margin: 0 0 48px
                 font-size: 16px
+                text-align: left
             @media screen and (min-width: $desktopS)
                 max-width: 507px
                 margin-bottom: 46px
@@ -63,6 +65,7 @@
                 @media screen and (min-width: $mobileM)
                     padding: 16px 108px
                 @media screen and (min-width: $tabletS)
+                    margin: 0
                     padding: 16px 87px
                 @media screen and (min-width: $desktopS)
                     padding: 12px 71px
@@ -80,6 +83,7 @@
         & > input
             background: none
             border: 1px solid white
+            color: white
 
             &::-moz-placeholder
                 color: white
@@ -97,7 +101,7 @@
                 padding: 16px 20px
             @media screen and (min-width: $tabletS)
                 width: 310px
-                margin-bottom: 28px
+                margin: 0 0 28px
                 padding: 16px 20px
             @media screen and (min-width: $desktopS)
                 width: 268px
@@ -118,6 +122,11 @@
             height: 14px
             background: none
             border: 1px solid white
+
+            &:checked
+                & + label
+                    background-image: url("../img/autoauction-online/checkmark.svg")
+
 
             & + label
                 width: 14px
