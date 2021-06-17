@@ -4,7 +4,7 @@
 $mobileS: 360px
 $mobileM: 414px
 $mobileL: 568px
-$tabletS: 768px
+$tabletS: 766px
 $tabletM: 1024px
 $desktopS: 1440px
 $desktopM: 1600px
@@ -66,6 +66,7 @@ $background-grey-gradient: linear-gradient(180deg, #F4F4F4 0%, #FFFFFF 29.69%, #
 
 html
     overflow-x: hidden
+
 body
     font-family: Roboto, sans-serif
     color: $black-21
@@ -89,11 +90,11 @@ h2
     @media screen and (max-width: $tabletS)
         margin: 0 auto
         font-size: 28px
-    @media screen and (max-width: $tabletS)
+    @media screen and (min-width: $tabletS)
         font-size: 32px
-    @media screen and (max-width: $desktopS)
+    @media screen and (min-width: $desktopS)
         font-size: 36px
-    @media screen and (max-width: $desktopM)
+    @media screen and (min-width: $desktopM)
         font-size: 38px
 
 h3
@@ -124,13 +125,18 @@ h4
 ul
     list-style: none
 
+input
+    box-sizing: border-box
+    font-size: 15px
+    letter-spacing: 0.04rem
+
 .red-btn
     display: block
     text-align: center
     box-sizing: border-box
     background: $red-dark
     color: white
-    font-size: 15px;
-    line-height: 18px;
-    letter-spacing: 0.04em;
+    font-size: 15px
+    line-height: 18px
+    letter-spacing: 0.04em
     text-decoration: none
