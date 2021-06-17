@@ -35,7 +35,8 @@
         z-index: 100
 
     .draggable
-        overflow: visible
+        @media screen and ( max-width: $tabletS )
+            overflow: visible
         @media screen and ( max-width: $mobileL )
             width: 340px
         @media screen and ( max-width: $mobileM )

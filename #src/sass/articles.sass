@@ -1,17 +1,78 @@
 @import "base.sass"
     
 .articles
+    background: $grey-52
+    padding: 120px 0
+    h2
+        color: white
 
+    &__content
+        display: flex
+        gap: 35px
+        width: fit-content
+        justify-content: center
+        margin: auto
+        @media screen and ( max-width:  $tabletM)
+            flex-direction: column
+            width: 100%
+        @media screen and ( max-width:  $mobileM)
+            gap: 32px
+            
     &__item
         width: fit-content
         height: 260px
         position: relative
+        
         picture
             height: 100%
+            display: grid
             img
                 height: 100%
+                width: 100%
+
+        &:hover
+            .articles__description
+                opacity: 1
+
+        @media screen and ( max-width:  $tabletM)
+            width: 656px
+            height: fit-content
+            padding-bottom: 16px
+            border-bottom: 1px solid $grey-185
+
+            place-self: center;
+
+
+            display: grid
+            grid-template-columns: 1fr 1fr
+            gap: 15px 24px
+
+            picture
+                grid-column: 1/2
+                height: 180px
+                position: relative
+                display: block
+
+
+                img
+                    object-fit: cover
+
+        @media screen and ( max-width:  $mobileM)
+            display: flex
+            flex-direction: column
+            height: unset
+            width: 100%
+            picture
+                height: 200px
+        @media screen and ( max-width:  $mobileM)
+            picture
+                height: 180px
+            
     
     &__description
+        transition: .3s
+        opacity: 0
+        box-sizing: border-box
         color: white
         position: absolute
         padding: 30px
@@ -20,11 +81,50 @@
         height: 100%
         width: 100%
         background: $black-op75
+        @media screen and ( max-width:  $tabletM)
+            position: relative
+            grid-column: 2/3
+            background: none
+            opacity: 1
+            padding: 0
+            >*
+                max-width: 100% 
 
     &__title
         max-width: 294px
         margin-bottom: 20px
 
+        @media screen and ( max-width:  $tabletM)
+            font-size: 18px;
+            line-height: 130%;
+            letter-spacing: 0.045em;
+            margin-bottom: 12px
+        @media screen and ( max-width:  $mobileS )
+            margin-bottom: 10px
+
+
 
     &__info
         max-width: 294px
+        @media screen and ( max-width:  $mobileM)
+            color: $grey-185
+            font-size: 12px;
+            line-height: 150%;
+            letter-spacing: 0.04em;
+
+    .btn
+        margin: 0 auto
+        padding: 13px 34px
+        justify-content: center
+        display: flex
+        gap: 10px
+        text-decoration: none
+        align-items: center
+        color: $grey-185
+        border: 1px solid $grey-185
+        width: fit-content
+        margin-top: 40px
+        @media screen and ( max-width:  $tabletM)
+            width: 656px
+            max-width: 100%
+            
