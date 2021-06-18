@@ -181,3 +181,176 @@
             margin-top: 25px
             padding-top: 40px
             
+
+
+    &__bar
+        display: none
+        @media screen and ( max-width: $tabletM)
+            display: flex
+            
+        position: fixed
+        z-index: 10
+        bottom: 0
+        left: 0
+        width: 100%
+        background: $black-21
+        justify-content: space-around
+        padding: 16px
+        &-text
+            font-size: 10px;
+            line-height: 100%;
+            text-align: center;
+            letter-spacing: 0.045em;
+
+        &-item
+            height: 48px
+            width: fit-content
+            padding: 14px 16px
+            display: flex
+            align-items: center
+            justify-content: space-between 
+            border-radius: 4px
+            gap: 12px
+            cursor: pointer
+            @media screen and ( max-width: $mobileL )
+                height: 54px
+                flex-direction: column
+                place-items: center
+                padding: 8px
+                svg
+                    height: 24px
+                
+            &--menu
+                background: $black-36
+
+            &--sms
+                padding: 0
+                picture
+                    height: 100%
+                    display: block
+                img
+                    height: 100%
+
+
+    .fmenu
+        display: none
+        position: fixed
+        left: 0
+        bottom: 80px
+        @media screen and ( max-width: $mobileL )
+            bottom: 85px
+        width: 100vw
+        height: 100vh
+        padding-top: 100px
+        background: $blue-dark
+        z-index: 100
+        h4
+            margin-bottom: 4px
+            font-weight: bold
+            font-size: 16px
+            line-height: 20px
+            letter-spacing: 0.045em
+
+        >*
+            padding: 32px 41px
+
+        &__close
+            cursor: pointer
+
+        &__head
+            padding: 19px 41px
+            display: flex
+            justify-content: space-between
+
+        &__menu
+            display: grid
+            grid-template-columns: 1fr 1fr
+            border-bottom: 1px solid $white-op15
+            padding: 19px 40px
+
+            &-desc
+                max-width: 125px
+                font-size: 10px !important
+                line-height: 120%;
+                letter-spacing: 0.04em;
+
+
+            &-item
+                padding: 0 10px 0 0
+
+            &-item:last-child
+                border-left: 1px solid $white-op15
+                padding-left: 56px
+
+        &__cars
+            padding-right: 0
+
+            &-item
+                display: inline-flex
+                flex-direction: column
+                width: fit-content
+                gap: 16px
+            &-list
+                overflow-x: scroll
+                scrollbar-width: none
+                display: flex
+                gap: 56px
+
+
+            &-list::-webkit-scrollbar
+                display: none
+
+            &-all
+                display: flex
+                color: $red-dark !important
+                align-items: center
+                gap: 10px
+                margin-top: 40px
+                font-size: 15px !important
+                line-height: 18px !important
+                letter-spacing: 0.04em !important
+        
+        &__model
+            width: fit-content
+            white-space: nowrap
+
+        &__menu2
+            display: grid
+            grid-template-columns: 1fr 1fr
+            gap: 10px
+
+            &-desc
+                font-size: 10px;
+                line-height: 120%;
+                letter-spacing: 0.04em;
+
+        &__menu2-item
+            display: flex
+            flex-direction: column
+            gap: 17px
+
+        &__footer
+            display: grid
+            grid-template-columns: 1fr 1fr
+
+        &__soc
+            display: flex
+            gap: 22px
+            
+        &__number
+            font-family: Montserrat;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 22px;
+            letter-spacing: 0.02em;
+            &-desc
+                font-size: 10px;
+                line-height: 120%;
+                letter-spacing: 0.04em;
+                color: $grey-181
+        
+    .vis
+        display: block
+            
+
