@@ -1,0 +1,269 @@
+@import "base.sass"
+    
+.article
+    h2
+        padding-bottom: 20px
+        border-bottom: 1px solid $black-21
+        text-align: left !important
+
+    &__content
+        display: grid
+        grid-template-columns: 2.85fr 1fr;
+        gap: 150px;
+        padding-top: 11px
+
+        p
+            font-size: 16px;
+            line-height: 160%;
+            letter-spacing: 0.04em;
+            margin: 35px 0  30px
+
+        table
+            width: 100%
+            border-collapse: collapse 
+
+            *
+                border: 1px solid $grey-185
+
+            th, td
+                padding: 17px 19px;
+    
+    &__main-pic
+        width 100%
+        img
+            width: 100%
+
+    &__link
+        width: 100%
+        padding: 20px
+        border-top: 1px solid $red-dark
+        border-bottom: 1px solid $red-dark
+        display: flex
+        place-items: center
+        color: $red-dark
+        text-decoration: none
+        justify-content: center
+        gap: 10px
+
+    &__contents
+        margin-top: 60px
+        background: $light
+        padding: 40px
+
+        h3
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 31px;
+            letter-spacing: 0.045em;
+            margin: 0
+
+        &-up
+            display: flex
+            justify-content: space-between
+            align-items: center
+            padding-bottom: 10px
+            border-bottom: 1px solid $black-21
+
+        &-down
+            padding-top: 27px
+
+    &__chapters
+        display: flex
+        justify-content: space-between
+    &__chapter
+        width: 100%
+        padding-left: 26px
+        display: flex
+        flex-direction: column
+        gap: 12px
+    &__chapter:nth-child(1)
+        padding-left: 0
+    &__chapter:last-child
+        padding-right: 0
+        .article__cbrand
+            padding-right: 0
+            border: none
+
+
+    &__calculator
+        display: flex
+        align-items: center
+        gap: 11px
+        padding: 12px 19px
+        background: $blue
+        justify-content: center
+        text-decoration: none
+        color: white
+        font-family: Montserrat;
+        font-size: 10px;
+        font-weight: 700;
+        line-height: 12px;
+        letter-spacing: 0.045em;
+        text-transform: uppercase;
+
+
+
+    &__cbrand
+        font-family: Montserrat;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 21px;
+        letter-spacing: 0.045em;
+        width: 100%
+        padding-right: 27px 
+        margin-bottom: 12px
+
+        border-right: 1px solid $grey-185
+
+    &__cmodel
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 14px;
+        letter-spacing: 0.045em;
+
+    &__cars
+        margin-top: 120px
+        display: flex
+        flex-direction: column
+        gap: 60px
+
+    &__car
+        display: flex
+        flex-direction: column
+    &__car-head
+        display: flex
+        justify-content: space-between
+
+    &__car-name
+        color: $black-21
+        font-family: Montserrat;
+        font-size: 20px;
+        line-height: 26px;
+        letter-spacing: 0.045em;
+        display: flex
+
+    p.article__car-description
+        margin-top: 18px
+
+    &__brand
+        font-weight: 700;
+        
+    &__model
+        opacity: 50%
+        display: flex
+        align-items: center
+    &__model::before
+        display: block
+        margin: 0 12px
+        content: ""
+        border-radius: 50%
+        background: $black-21
+        opacity: 50%
+        width: 6px
+        height: 6px
+
+    &__get-price
+        display: flex
+        gap: 10px
+        align-items: center
+        color: $red-dark
+
+    &__car-photo
+        width: 100%
+        height: 450px
+        img
+            object-fit: cover
+
+
+
+    
+.articles-a
+ 
+    &>h3
+        border-bottom: 1px solid $black-21
+        padding-bottom: 10px
+    &__content
+        display: flex
+        gap: 35px
+        width: fit-content
+        justify-content: center
+        margin: auto
+        flex-direction: column
+        width: 100%
+        gap: 32px
+            
+    &__item
+        text-decoration: none
+        color: $black-21
+        display: block
+        width: fit-content
+        height: 260px
+        position: relative
+        
+        picture
+            height: 100%
+            grid-column: 1/2
+            height: 210px
+            position: relative
+            display: block
+
+            img
+                height: 100%
+                width: 100%
+                object-fit: cover
+
+        width: 656px
+        height: fit-content
+        place-self: center;
+
+
+        display: grid
+        grid-template-columns: 1fr 1fr
+        gap: 20px 24px
+
+
+        display: flex
+        flex-direction: column
+        height: unset
+        width: 100%
+
+            
+    
+    &__description
+        transition: .3s
+        box-sizing: border-box
+        position: absolute
+        padding: 30px
+        top: 0
+        left: 0
+        height: 100%
+        width: 100%
+        background: $black-21
+        position: relative
+        grid-column: 2/3
+        background: none
+        padding: 0
+        
+        >*
+            max-width: 100% 
+
+    &__title
+        max-width: 294px
+        margin-bottom: 20px
+
+        font-size: 18px;
+        line-height: 130%;
+        letter-spacing: 0.045em;
+        margin-bottom: 10px
+
+
+
+    &__info
+        max-width: 294px
+        color: $black-21
+        line-height: 150%;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 21px;
+        letter-spacing: 0.04em;
+
