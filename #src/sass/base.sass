@@ -4,7 +4,7 @@
 $mobileS: 360px
 $mobileM: 414px
 $mobileL: 568px
-$tabletS: 766px
+$tabletS: 768px
 $tabletM: 1024px
 $desktopS: 1440px
 $desktopM: 1600px
@@ -13,6 +13,8 @@ $desktopL: 1920px
 /* Цвета */
 $white-op50: rgba(255, 255, 255, 0.5)
 $black-21: rgba(21, 2, 2, 1)
+$black-26: rgba(26, 26, 26, 1);
+
 $black-op50: rgba(0, 0, 0, 0.5)
 $black-op30: rgba(0, 0, 0, 0.3)
 $black-op15: rgba(0, 0, 0, 0.15)
@@ -40,6 +42,9 @@ $grey-52-op80: rgba(52, 52, 52, 0.8)
 $grey-153: rgba(153, 153, 153, 1)
 $red-dark: rgba(188, 0, 45, 1)
 $white-op30: rgba(255, 255, 255, 0.3)
+$white-op75: rgba(255, 255, 255, 0.75)
+$black-36: rgba(36, 36, 36, 1)
+
 
 $background-grey-gradient: linear-gradient(180deg, #F4F4F4 0%, #FFFFFF 29.69%, #FFFFFF 71.87%, #F4F4F4 100%)
 
@@ -55,7 +60,7 @@ $background-grey-gradient: linear-gradient(180deg, #F4F4F4 0%, #FFFFFF 29.69%, #
     @media screen and (max-width: $mobileL)
         width: 488px
     @media screen and (max-width: $tabletS)
-        width: 712px
+        width: 656px
     @media screen and (max-width: $tabletM)
         width: 912px
     @media screen and (max-width: $desktopS)
@@ -103,16 +108,25 @@ h2
 
 h3
     font-weight: 700
+    margin-bottom: 24px
 
-    letter-spacing: 0.045em
-    @media screen and (min-width: $mobileS) and (max-width: $mobileS)
-        font-size: 20px
-    @media screen and (max-width: $tabletS)
-        font-size: 20px
+    letter-spacing: 0.11em
     @media screen and (max-width: $desktopS)
-        font-size: 20px
+        font-size: 18px
+        letter-spacing: 0.04em
+
     @media screen and (max-width: $desktopM)
+        
         font-size: 20px
+    @media screen and ( max-width: $mobileL )
+        font-size: 16px;
+        line-height: 130%;
+        letter-spacing: 0.045em;
+        margin-bottom: 19px
+    @media screen and (min-width: $mobileS) and (max-width: $mobileS)
+        font-size: 16px
+
+        
 
 h4
     font-weight: 700

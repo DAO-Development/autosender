@@ -1,0 +1,356 @@
+@import "base.sass"
+
+.footer
+    background: $black-26
+    color: $white-op75
+    a, span, div
+        font-size: 14px;
+        letter-spacing: 0.045em;
+        @media screen and ( max-width: $mobileL )
+            font-size: 12px
+            
+    a
+        color: $white-op75
+        text-decoration: none
+
+    ul
+        padding: 0
+        margin: 0
+    h3
+        color: white
+    li
+        margin-bottom: 14px
+        @media screen and ( max-width: $tabletM )
+        
+            margin-bottom: 18px
+        @media screen and ( max-width: $mobileL )
+            margin-bottom: 20px
+        @media screen and ( max-width: $mobileS )
+            margin-bottom: 18px
+
+        
+
+    &__head
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr 3fr
+        gap: 13px
+        padding-top: 120px
+        @media screen and ( max-width: $desktopS )
+            grid-template-columns: 1fr 1fr 1fr 2fr
+            gap: 85px
+            padding-top: 100px            
+        @media screen and ( max-width: $tabletM )
+            grid-template-columns: 1fr 1fr 1fr
+            gap: 36px 25px
+            padding-top: 80px
+            &-item--contacts
+                grid-column: 1/4
+                grid-row: 2/3
+        @media screen and ( max-width: $mobileL )
+            padding-top: 64px
+            gap: 19px 25px
+            grid-template-columns: 1fr 1fr
+            &-item--contacts
+                grid-column: 2/3
+                grid-row: 1/4
+
+        @media screen and ( max-width: $mobileS )
+            padding-top: 60px
+
+                
+        &-item--soc
+            @media screen and ( max-width: $mobileM )
+                grid-column: 1/3
+                grid-row: 2/3
+                padding-bottom: 19px
+                
+
+        &-item--contacts
+            @media screen and ( max-width: $mobileM )
+                grid-column: 1/3
+                grid-row: 3/4
+            
+
+
+        
+
+    &__soc, &__contacts, &__contacts
+        display: flex
+
+    &__soc
+        gap: 15px
+        @media screen and ( max-width: $mobileL )
+            a
+                height: fit-content
+                line-height: 100%
+
+            
+
+            
+    &__contacts
+        gap: 35px
+        @media screen and ( max-width: $desktopS )
+            display: grid
+            grid-template-columns: 1fr 0.7fr
+            gap: 31px 10px
+
+        @media screen and ( max-width: $tabletM )
+            display: flex
+            gap: 31px 25px
+
+        @media screen and ( max-width: $tabletS )
+            gap: 31px 25px
+
+        @media screen and ( max-width: $mobileL )
+            flex-direction: column
+        @media screen and ( max-width: $mobileS )
+            gap: 26px
+
+            
+
+    
+    &__number
+        padding-bottom: 6px 
+
+    &__address, &__number
+        display: grid
+        gap: 0 4px
+        grid-template-columns: 1fr 100fr
+        svg
+            grid-column: 1/2
+            margin: 5px 0
+        .footer__content
+            grid-column: 2/3
+            width: 100%
+            line-height: 154%
+            *
+                line-height: 154%
+
+
+    &__how-to-get
+        display: block
+        color: $blue !important
+        font-size: 10px !important
+        line-height: 12px !important
+        letter-spacing: 0.03em 
+        margin-top: 5px
+
+    &__main
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr
+        padding-top: 59px
+        margin-top: 120px
+        border-top: 1px solid $white-op30
+        gap: 0 37px
+        a
+            margin-bottom: 14px
+
+        @media screen and ( max-width: $desktopS )
+            margin-top: 100px
+        @media screen and ( max-width: $tabletM )
+            grid-template-columns: 1fr 1fr 1fr
+            gap: 0 23px
+            margin-top: 48px
+            padding-top: 48px
+            a
+                margin-bottom: 21px
+        @media screen and ( max-width: $mobileL )
+            margin-top: 40px
+            padding-top: 44px
+            grid-template-columns: 1fr 1fr
+            a
+                margin-bottom: 19px
+        @media screen and ( max-width: $mobileL )
+            a
+                margin-bottom: 18px
+
+    &__footer
+        border-top: 1px solid $white-op30
+        color: $white-op30
+        text-align: center
+        padding: 30px
+        margin-top: 120px
+        font-size: 14px;
+        line-height: 150%;
+        letter-spacing: 0.035em;
+        @media screen and ( max-width: $desktopS )
+            margin-top: 100px
+        @media screen and ( max-width: $tabletM )
+            margin-top: 15px
+        @media screen and ( max-width: $mobileL )
+            margin-top: 25px
+            padding-top: 40px
+            
+
+
+    &__bar
+        display: none
+        @media screen and ( max-width: $tabletM)
+            display: flex
+            
+        position: fixed
+        z-index: 10
+        bottom: 0
+        left: 0
+        width: 100%
+        background: $black-21
+        justify-content: space-around
+        padding: 16px
+        &-text
+            font-size: 10px;
+            line-height: 100%;
+            text-align: center;
+            letter-spacing: 0.045em;
+
+        &-item
+            height: 48px
+            width: fit-content
+            padding: 14px 16px
+            display: flex
+            align-items: center
+            justify-content: space-between 
+            border-radius: 4px
+            gap: 12px
+            cursor: pointer
+            @media screen and ( max-width: $mobileL )
+                height: 54px
+                flex-direction: column
+                place-items: center
+                padding: 8px
+                svg
+                    height: 24px
+                
+            &--menu
+                background: $black-36
+
+            &--sms
+                padding: 0
+                picture
+                    height: 100%
+                    display: block
+                img
+                    height: 100%
+
+
+    .fmenu
+        display: none
+        position: fixed
+        left: 0
+        bottom: 80px
+        @media screen and ( max-width: $mobileL )
+            bottom: 85px
+        width: 100vw
+        height: 100vh
+        padding-top: 100px
+        background: $blue-dark
+        z-index: 100
+        h4
+            margin-bottom: 4px
+            font-weight: bold
+            font-size: 16px
+            line-height: 20px
+            letter-spacing: 0.045em
+
+        >*
+            padding: 32px 41px
+
+        &__close
+            cursor: pointer
+
+        &__head
+            padding: 19px 41px
+            display: flex
+            justify-content: space-between
+
+        &__menu
+            display: grid
+            grid-template-columns: 1fr 1fr
+            border-bottom: 1px solid $white-op15
+            padding: 19px 40px
+
+            &-desc
+                max-width: 125px
+                font-size: 10px !important
+                line-height: 120%;
+                letter-spacing: 0.04em;
+
+
+            &-item
+                padding: 0 10px 0 0
+
+            &-item:last-child
+                border-left: 1px solid $white-op15
+                padding-left: 56px
+
+        &__cars
+            padding-right: 0
+
+            &-item
+                display: inline-flex
+                flex-direction: column
+                width: fit-content
+                gap: 16px
+            &-list
+                overflow-x: scroll
+                scrollbar-width: none
+                display: flex
+                gap: 56px
+
+
+            &-list::-webkit-scrollbar
+                display: none
+
+            &-all
+                display: flex
+                color: $red-dark !important
+                align-items: center
+                gap: 10px
+                margin-top: 40px
+                font-size: 15px !important
+                line-height: 18px !important
+                letter-spacing: 0.04em !important
+        
+        &__model
+            width: fit-content
+            white-space: nowrap
+
+        &__menu2
+            display: grid
+            grid-template-columns: 1fr 1fr
+            gap: 10px
+
+            &-desc
+                font-size: 10px;
+                line-height: 120%;
+                letter-spacing: 0.04em;
+
+        &__menu2-item
+            display: flex
+            flex-direction: column
+            gap: 17px
+
+        &__footer
+            display: grid
+            grid-template-columns: 1fr 1fr
+
+        &__soc
+            display: flex
+            gap: 22px
+            
+        &__number
+            font-family: Montserrat;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 22px;
+            letter-spacing: 0.02em;
+            &-desc
+                font-size: 10px;
+                line-height: 120%;
+                letter-spacing: 0.04em;
+                color: $grey-181
+        
+    .vis
+        display: block
+            
+
