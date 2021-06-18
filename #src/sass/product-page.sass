@@ -2,11 +2,16 @@
 .product-page
 
     & .product
+        & > .container
+            @media screen and (min-width: $tabletM)
+                width: 100vw
+                margin-left: 56px
+
         &__title
             border-bottom: 1px solid $black-21
             padding-bottom: 10px
             margin-bottom: 12px
-            @media screen and (min-width: $desktopS)
+            @media screen and (min-width: $tabletS)
                 display: flex
                 justify-content: space-between
                 align-items: center
@@ -15,7 +20,10 @@
         &__name
             display: flex
             align-items: center
-            gap: 15px
+            @media screen and (min-width: $tabletS)
+                gap: 10px
+            @media screen and (min-width: $desktopS)
+                gap: 15px
 
             & > h2
                 margin-bottom: 0
@@ -72,10 +80,13 @@
         &__info-auction
             display: flex
             align-items: center
-            margin-bottom: 40px
             font-family: 'Montserrat', sans-serif
             letter-spacing: 0.045em
             font-size: 10px
+            @media screen and (min-width: $tabletS)
+                margin-bottom: 48px
+            @media screen and (min-width: $desktopS)
+                margin-bottom: 40px
 
             & > div
                 display: flex
@@ -104,6 +115,15 @@
         &__main
             display: flex
             justify-content: space-between
+            @media screen and (min-width: $tabletS)
+                flex-direction: column
+            @media screen and (min-width: $desktopS)
+                flex-direction: row
+
+            &-right
+                display: flex
+                flex-direction: column
+                align-items: center
 
         &__gallery
             margin-bottom: 45px
@@ -112,6 +132,11 @@
             max-width: 535px
             font-size: 12px
             margin-bottom: 44px
+
+            @media screen and (min-width: 0)
+                display: none
+            @media screen and (min-width: $desktopS)
+                display: block
 
             & > h4
                 font-size: 14px
@@ -142,7 +167,11 @@
                         font-weight: bold
                         letter-spacing: 0.045em
                         color: $red-dark
+                        @media screen and (min-width: $tabletS)
+                            font-size: 32px
                         @media screen and (min-width: $desktopS)
+                            font-size: 28px
+                        @media screen and (min-width: $desktopM)
                             font-size: 32px
 
                     &-description
@@ -163,30 +192,63 @@
                 gap: 12px
                 margin-bottom: 50px
 
+                & > span
+                    & > span
+                        font-weight: 700
+
             & > .red-btn
                 display: flex
                 align-items: center
                 gap: 14px
-                padding: 22px 98px
                 box-shadow: 0 5px 20px rgba(74, 0, 18, 0.18)
                 text-transform: uppercase
-                font-size: 18px
                 font-weight: bold
+                @media screen and (min-width: $tabletS)
+                    font-size: 18px
+                    padding: 22px 98px
+                @media screen and (min-width: $desktopS)
+                    font-size: 16px
+                    padding: 22px 84px
+                @media screen and (min-width: $desktopM)
+                    font-size: 18px
+                    padding: 22px 98px
 
         &__characteristic
-            width: 460px
+            @media screen and (min-width: $tabletS)
+                width: 100%
+                margin-bottom: 26px
+            @media screen and (min-width: $desktopS)
+                width: 400px
+            @media screen and (min-width: $desktopM)
+                width: 460px
 
             & > h3
-                margin-bottom: 30px
+                @media screen and (min-width: $tabletS)
+                    margin-bottom: 28px
+                @media screen and (min-width: $desktopS)
+                    margin-bottom: 30px
 
             & > ul
+                @media screen and (min-width: $tabletS)
+                    display: flex
+                    flex-direction: column
+                    flex-wrap: wrap
+                    max-height: 270px
+                @media screen and (min-width: $desktopS)
+                    display: block
+
                 & > li
                     display: block
                     position: relative
                     overflow: hidden
-                    margin-bottom: 26px
                     font-size: 14px
                     color: $grey-102
+                    @media screen and (min-width: $tabletS)
+                        margin-right: 72px
+                        margin-bottom: 24px
+                    @media screen and (min-width: $desktopS)
+                        margin-right: 0
+                        margin-bottom: 26px
 
                     &:after
                         content: ''
@@ -226,17 +288,29 @@
                 margin-bottom: 30px
 
             & > ul
-                max-height: 566px
                 display: flex
                 flex-direction: column
                 flex-wrap: wrap
+                @media screen and (min-width: $tabletM)
+                    max-height: 510px
+                @media screen and (min-width: $desktopS)
+                    max-height: 566px
 
                 & > li
                     max-width: 250px
                     margin-bottom: 22px
-                    margin-right: 120px
                     font-size: 14px
                     line-height: 150%
+                    @media screen and (min-width: $tabletM)
+                        margin-right: 129px
+                        &:nth-child(8n)
+                            margin-bottom: 0
+                    @media screen and (min-width: $desktopS)
+                        margin-right: 84px
+                        &:nth-child(9n)
+                            margin-bottom: 0
+                    @media screen and (min-width: $desktopM)
+                        margin-right: 120px
 
                     & > span
                         display: block
@@ -245,11 +319,12 @@
                             line-height: 16px
                             margin-bottom: 4px
 
-                    &:nth-child(9n)
-                        margin-bottom: 0
 
                     &:last-child
-                        max-width: 458px
+                        @media screen and (min-width: $tabletS)
+                            align-self: center
+                        @media screen and (min-width: $desktopM)
+                            max-width: 458px
 
 
             &__title
@@ -274,8 +349,12 @@
             padding: 120px 0
 
             & > iframe
-                width: 770px
-                height: 400px
+                @media screen and (min-width: $tabletS)
+                    width: 520px
+                    height: 290px
+                @media screen and (min-width: $desktopS)
+                    width: 770px
+                    height: 400px
 
 
     & .interesting-cars
@@ -302,16 +381,27 @@
                 width: 1345px
 
 .sincing-slider
-    max-width: 770px
+    @media screen and (min-width: $desktopS)
+        max-width: 685px
+    @media screen and (min-width: $desktopM)
+        max-width: 770px
 
     & .gallery
         &-open
             margin-bottom: 20px
+            @media screen and (min-width: 0)
+                display: none
+            @media screen and (min-width: $desktopS)
+                display: block
 
             & .open-slide
                 & img
-                    width: 770px
-                    height: 400px
+                    @media screen and (min-width: $desktopS)
+                        width: 685px
+                        height: 355px
+                    @media screen and (min-width: $desktopM)
+                        width: 770px
+                        height: 400px
 
         &-carousel
             & .carousel-slide
@@ -319,16 +409,26 @@
                     display: none
 
                 & img
-                    width: 205px
-                    height: 120px
+                    @media screen and (min-width: $tabletS)
+                        width: 400px
+                        height: 240px
+                    @media screen and (min-width: $desktopS)
+                        width: 188px
+                        height: 110px
+                    @media screen and (min-width: $desktopM)
+                        width: 205px
+                        height: 120px
 
     & .slick-current
         position: relative
 
         & > .carousel-filter
+            @media screen and (min-width: 0)
+                display: none
+            @media screen and (min-width: $desktopS)
+                display: block !important
             z-index: 10000
             position: absolute
-            display: block !important
             width: 205px
             height: 120px
             background: linear-gradient(0deg, $grey-52-op60, $grey-52-op60)
