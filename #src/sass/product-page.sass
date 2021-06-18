@@ -1,5 +1,283 @@
 @import "base.sass"
-.product
+.product-page
+
+    & .product
+        &__title
+            border-bottom: 1px solid $black-21
+            padding-bottom: 10px
+            margin-bottom: 12px
+            @media screen and (min-width: $desktopS)
+                display: flex
+                justify-content: space-between
+                align-items: center
+                width: 100%
+
+        &__name
+            display: flex
+            align-items: center
+            gap: 15px
+
+            & > h2
+                margin-bottom: 0
+                text-transform: uppercase
+
+                & > span
+                    font-weight: 400
+                    color: $black-21
+                    opacity: 0.5
+
+        &__code
+            color: $grey-102
+
+            & ul
+                display: flex
+
+                & li
+                    font-size: 12px
+                    line-height: 14px
+                    position: relative
+                    letter-spacing: 0.04em
+
+                    &::after
+                        content: "/"
+                        margin: 0 6px
+                        color: inherit
+                        font-size: inherit
+
+                    &:last-child
+                        &::after
+                            content: none
+
+        &__raiting
+            display: flex
+            flex-direction: column
+
+            & > .raiting-value
+                position: relative
+                font-family: 'Montserrat', sans-serif
+                font-size: 30px
+                font-weight: bold
+                color: $blue
+                line-height: 100%
+
+                &:after
+                    content: url("../img/product-page/tooltip.svg")
+                    position: absolute
+                    top: -12px
+                    right: 0
+
+            & > .raiting-description
+                font-size: 10px
+
+        &__info-auction
+            display: flex
+            align-items: center
+            margin-bottom: 40px
+            font-family: 'Montserrat', sans-serif
+            letter-spacing: 0.045em
+            font-size: 10px
+
+            & > div
+                display: flex
+                align-items: center
+                gap: 10px
+
+            &__info
+                padding: 12px 20px
+                border: 1px solid $grey-52
+                background-color: $grey-52
+                color: white
+                text-transform: uppercase
+
+            &__clock
+                padding: 12px 20px
+                border: 1px solid $grey-52
+                color: $grey-181
+                text-transform: uppercase
+
+            &__status
+                font-family: Roboto, sans-serif
+                font-size: 14px
+                padding: 12px 30px
+                color: $blue
+
+        &__main
+            display: flex
+            justify-content: space-between
+
+        &__gallery
+            margin-bottom: 45px
+
+        &__decoding
+            max-width: 535px
+            font-size: 12px
+            margin-bottom: 44px
+
+            & > h4
+                font-size: 14px
+                margin-bottom: 15px
+
+            & > h5
+                font-size: 12px
+                letter-spacing: 0.045em
+                margin-bottom: 4px
+
+            & > p
+                margin-bottom: 10px
+                line-height: 140%
+                color: $black-21
+                opacity: 0.5
+
+        &__buy-product
+            margin-bottom: 60px
+
+            &__prices
+                display: flex
+                align-items: center
+                margin-bottom: 45px
+
+                & .price
+                    &-title
+                        font-family: 'Montserrat', sans-serif
+                        font-weight: bold
+                        letter-spacing: 0.045em
+                        color: $red-dark
+                        @media screen and (min-width: $desktopS)
+                            font-size: 32px
+
+                    &-description
+                        font-size: 14px
+                        color: $grey-181
+
+                    &-line
+                        height: 38px
+                        margin: 0 30px
+                        border-left: 1px solid $grey-179
+
+                    & > span
+                        display: block
+
+            &__delivery
+                display: flex
+                align-items: center
+                gap: 12px
+                margin-bottom: 50px
+
+            & > .red-btn
+                display: flex
+                align-items: center
+                gap: 14px
+                padding: 22px 98px
+                box-shadow: 0 5px 20px rgba(74, 0, 18, 0.18)
+                text-transform: uppercase
+                font-size: 18px
+                font-weight: bold
+
+        &__characteristic
+            width: 460px
+
+            & > h3
+                margin-bottom: 30px
+
+            & > ul
+                & > li
+                    display: block
+                    position: relative
+                    overflow: hidden
+                    margin-bottom: 26px
+                    font-size: 14px
+                    color: $grey-102
+
+                    &:after
+                        content: ''
+                        display: block
+                        position: absolute
+                        bottom: 0
+                        left: 0
+                        width: 100%
+                        height: 2px
+                        border-top: 1px dotted $grey-179
+
+
+                    & > .row-title
+                        display: inline-block
+                        position: relative
+                        z-index: 2
+                        background: white
+                        padding-right: 5px
+
+                    & > .row-value
+                        font-weight: 700
+                        display: block
+                        position: absolute
+                        top: 0
+                        right: 0
+                        z-index: 2
+                        background: white
+                        padding-left: 5px
+
+        &__additional-info
+            width: 100%
+            background: white
+            box-shadow: 0 3px 20px $black-op20
+            padding: 60px
+
+            & > h3
+                margin-bottom: 30px
+
+            & > ul
+                max-height: 566px
+                display: flex
+                flex-direction: column
+                flex-wrap: wrap
+
+                & > li
+                    max-width: 250px
+                    margin-bottom: 22px
+                    margin-right: 120px
+                    font-size: 14px
+                    line-height: 150%
+
+                    & > span
+                        display: block
+
+                        &:first-child
+                            line-height: 16px
+                            margin-bottom: 4px
+
+                    &:nth-child(9n)
+                        margin-bottom: 0
+
+                    &:last-child
+                        max-width: 458px
+
+
+            &__title
+                color: $blue
+
+    & .video-review
+        & > .container
+            display: flex
+            align-items: center
+            justify-content: space-between
+
+            & > h2
+                max-width: 310px
+                font-size: 32px
+                text-align: start
+
+                & > span
+                    color: $red-dark
+
+        &__video
+            position: relative
+            padding: 120px 0
+
+            & > iframe
+                width: 770px
+                height: 400px
+
+
     & .interesting-cars
         background: $background-grey-gradient
         @media screen and (max-width: $mobileM)
@@ -23,15 +301,69 @@
             & > .container
                 width: 1345px
 
-        h2
-            @media screen and (max-width: $tabletS)
-                margin-bottom: 40px
-            @media screen and (min-width: $tabletS)
-                margin-bottom: 48px
-            @media screen and (min-width: $desktopS)
-                margin-bottom: 50px
+.sincing-slider
+    max-width: 770px
+
+    & .gallery
+        &-open
+            margin-bottom: 20px
+
+            & .open-slide
+                & img
+                    width: 770px
+                    height: 400px
+
+        &-carousel
+            & .carousel-slide
+                & .carousel-filter
+                    display: none
+
+                & img
+                    width: 205px
+                    height: 120px
+
+    & .slick-current
+        position: relative
+
+        & > .carousel-filter
+            z-index: 10000
+            position: absolute
+            display: block !important
+            width: 205px
+            height: 120px
+            background: linear-gradient(0deg, $grey-52-op60, $grey-52-op60)
+
+    & .arrow
+        width: 28px
+        height: 28px
+        display: flex
+        align-items: center
+        cursor: pointer
+        position: absolute
+        top: 46%
+
+        img
+            display: block
+
+    & .arrow-prev
+        z-index: 1000
+        position: absolute
+        left: 20px
+
+    & .arrow-next
+        z-index: 1000
+        position: absolute
+        right: 20px
 
 .interesting-cars
+    h2
+        @media screen and (max-width: $tabletS)
+            margin-bottom: 40px
+        @media screen and (min-width: $tabletS)
+            margin-bottom: 48px
+        @media screen and (min-width: $desktopS)
+            margin-bottom: 50px
+
     &-slider
         display: none
 
@@ -60,6 +392,7 @@
                 @media screen and (min-width: $mobileS)
                     display: none
                 @media screen and (min-width: $desktopS)
+                    margin: 0
                     display: flex
                     width: 1177px
                     gap: 36px
@@ -68,7 +401,8 @@
 
                 .category
                     padding-bottom: 5px
-                    @media screen and (min-width: $desktopS)
+                    font-size: 20px
+                    @media screen and (max-width: $desktopS)
                         font-size: 18px
 
                     &:hover
@@ -261,6 +595,8 @@
 
                     .cta__cost
                         &-title
+                            font-size: 20px
+
                             & > span
                                 font-size: 15px
 
