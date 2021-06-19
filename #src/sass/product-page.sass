@@ -2,11 +2,6 @@
 .product-page
 
     & .product
-        & > .container
-            @media screen and (min-width: $tabletM)
-                width: 100vw
-                margin-left: 56px
-
         &__title
             border-bottom: 1px solid $black-21
             padding-bottom: 10px
@@ -17,17 +12,34 @@
                 align-items: center
                 width: 100%
 
+            &-right
+                display: none
+                @media screen and (min-width: $tabletM)
+                    display: block
+
         &__name
             display: flex
-            align-items: center
-            @media screen and (min-width: $tabletS)
+            @media screen and (min-width: 0)
+                flex-direction: column
+                margin-bottom: 12px
+            @media screen and (min-width: $mobileL)
+                flex-direction: row
+                align-items: center
                 gap: 10px
+            @media screen and (min-width: $tabletS)
+                margin-bottom: 0
             @media screen and (min-width: $desktopS)
                 gap: 15px
 
+            & > svg
+                display: none
+                @media screen and (min-width: $mobileL)
+                    display: block
+
             & > h2
-                margin-bottom: 0
+                margin: 0
                 text-transform: uppercase
+                text-align: left
 
                 & > span
                     font-weight: 400
@@ -60,62 +72,168 @@
             display: flex
             flex-direction: column
 
-            & > .raiting-value
-                position: relative
-                font-family: 'Montserrat', sans-serif
-                font-size: 30px
-                font-weight: bold
-                color: $blue
-                line-height: 100%
+            &-top
+                display: flex
+                align-items: start
 
-                &:after
-                    content: url("../img/product-page/tooltip.svg")
-                    position: absolute
-                    top: -12px
-                    right: 0
+            & .raiting
+                &__value
+                    position: relative
+                    font-family: 'Montserrat', sans-serif
+                    font-weight: bold
+                    color: $blue
+                    line-height: 100%
+                    @media screen and (min-width: 0)
+                        font-size: 28px
+                    @media screen and (min-width: $tabletS)
+                        font-size: 30px
 
-            & > .raiting-description
-                font-size: 10px
+
+                &__info
+                    position: relative
+                    display: inline-block
+
+
+                    &-text-container
+                        transition: .3s
+                        position: absolute
+                        top: -74px
+                        left: -130px
+                        max-width: 158px
+                        opacity: 0
+                        font-size: 12px
+                        line-height: 14px
+
+                    &-text
+                        width: 100%
+                        padding: 15px 20px
+                        display: grid
+                        grid-template-columns: 95px 10px
+                        grid-template-rows: 1fr 1fr
+                        grid-column-gap: 15px
+                        grid-row-gap: 8px
+                        background-color: white
+                        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1)
+
+                        & > span
+                            &:nth-child(2n)
+                                color: $blue
+                                font-weight: 700
+
+
+                    &-sign
+                        &:hover
+                            & ~ .raiting__info-text-container
+                                opacity: 1
+                                z-index: 100
+                                transition: .3s
+
+
+                &__description
+                    @media screen and (min-width: 0)
+                        font-size: 12px
+                        font-weight: 500
+                        width: min-content
+                    @media screen and (min-width: $tabletS)
+                        font-size: 10px
+                        font-weight: 400
 
         &__info-auction
             display: flex
-            align-items: center
-            font-family: 'Montserrat', sans-serif
-            letter-spacing: 0.045em
-            font-size: 10px
+            justify-content: space-between
+            align-items: start
+            @media screen and (min-width: 0)
+                margin-bottom: 40px
             @media screen and (min-width: $tabletS)
                 margin-bottom: 48px
             @media screen and (min-width: $desktopS)
                 margin-bottom: 40px
 
-            & > div
+            &-left
                 display: flex
+                flex-wrap: wrap
                 align-items: center
-                gap: 10px
+                font-family: 'Montserrat', sans-serif
+                letter-spacing: 0.045em
+                font-size: 10px
+                @media screen and (min-width: 0)
+                    max-width: 224px
+                @media screen and (min-width: $tabletS)
+                    max-width: 424px
+                @media screen and (min-width: $tabletM)
+                    max-width: 800px
+
+                & > div
+                    display: flex
+                    align-items: center
+                    gap: 10px
+
+
+            &-right
+                @media screen and (min-width: 0)
+                    display: block
+                @media screen and (min-width: $tabletM)
+                    display: none !important
+
 
             &__info
                 padding: 12px 20px
                 border: 1px solid $grey-52
                 background-color: $grey-52
+                font-weight: 700
                 color: white
                 text-transform: uppercase
+                @media screen and (min-width: 0)
+                    display: none !important
+                @media screen and (min-width: $tabletS)
+                    display: flex !important
 
             &__clock
-                padding: 12px 20px
-                border: 1px solid $grey-52
-                color: $grey-181
                 text-transform: uppercase
+                font-weight: 700
+                @media screen and (min-width: 0)
+                    padding: 8px 20px
+                    font-size: 8px
+                    background-color: $grey-52
+                    color: white
+                    gap: 8px
+                    & > svg
+                        width: 12px
+                        height: 12px
+
+                        & > path
+                            fill: $grey-181
+                @media screen and (min-width: $mobileM)
+                    font-size: 12px
+                @media screen and (min-width: $tabletS)
+                    padding: 12px 20px
+                    font-size: 10px
+                    color: $grey-181
+                    background: none
+                    border: 1px solid $grey-52
+
+                    & > svg
+                        width: 16px
+                        height: 16px
+
+                        & > path
+                            fill: $red-dark
 
             &__status
                 font-family: Roboto, sans-serif
-                font-size: 14px
-                padding: 12px 30px
                 color: $blue
+                @media screen and (min-width: 0)
+                    padding: 12px 0
+                    font-size: 12px
+                @media screen and (min-width: $mobileM)
+                    font-size: 14px
+                @media screen and (min-width: $tabletM)
+                    padding: 12px 30px
 
         &__main
             display: flex
             justify-content: space-between
-            @media screen and (min-width: $tabletS)
+            @media screen and (min-width: 0)
                 flex-direction: column
             @media screen and (min-width: $desktopS)
                 flex-direction: row
@@ -126,7 +244,12 @@
                 align-items: center
 
         &__gallery
-            margin-bottom: 45px
+            @media screen and (min-width: 0)
+                margin-bottom: 40px
+            @media screen and (min-width: $tabletS)
+                margin-bottom: 48px
+            @media screen and (min-width: $desktopS)
+                margin-bottom: 45px
 
         &__decoding
             max-width: 535px
@@ -154,19 +277,45 @@
                 opacity: 0.5
 
         &__buy-product
-            margin-bottom: 60px
+            @media screen and (min-width: 0)
+                margin-bottom: 40px
+            @media screen and (min-width: $desktopS)
+                margin-bottom: 60px
 
             &__prices
                 display: flex
-                align-items: center
-                margin-bottom: 45px
+                @media screen and (min-width: 0)
+                    flex-direction: column
+                    margin-bottom: 24px
+                @media screen and (min-width: $mobileL)
+                    flex-direction: row
+                    align-items: center
+                @media screen and (min-width: $tabletS)
+                    margin-bottom: 32px
+                @media screen and (min-width: $desktopS)
+                    margin-bottom: 42px
+                @media screen and (min-width: $desktopM)
+                    margin-bottom: 45px
 
                 & .price
+                    @media screen and (min-width: 0)
+                        display: flex
+                        flex-direction: row-reverse
+                        align-items: baseline
+                        justify-content: space-between
+                        margin-bottom: 24px
+                    @media screen and (min-width: $mobileL)
+                        flex-direction: column
+
                     &-title
                         font-family: 'Montserrat', sans-serif
                         font-weight: bold
                         letter-spacing: 0.045em
                         color: $red-dark
+                        @media screen and (min-width: 0)
+                            font-size: 20px
+                        @media screen and (min-width: $mobileL)
+                            font-size: 24px
                         @media screen and (min-width: $tabletS)
                             font-size: 32px
                         @media screen and (min-width: $desktopS)
@@ -175,13 +324,22 @@
                             font-size: 32px
 
                     &-description
-                        font-size: 14px
                         color: $grey-181
+                        @media screen and (min-width: 0)
+                            font-size: 12px
+                        @media screen and (min-width: $tabletS)
+                            font-size: 14px
 
                     &-line
-                        height: 38px
                         margin: 0 30px
                         border-left: 1px solid $grey-179
+                        @media screen and (min-width: 0)
+                            display: none
+                        @media screen and (min-width: $mobileL)
+                            display: block
+                            height: 33px
+                        @media screen and (min-width: $tabletS)
+                            height: 38px
 
                     & > span
                         display: block
@@ -190,7 +348,16 @@
                 display: flex
                 align-items: center
                 gap: 12px
-                margin-bottom: 50px
+                @media screen and (min-width: 0)
+                    margin-bottom: 28px
+                    font-size: 12px
+                @media screen and (min-width: $tabletS)
+                    margin-bottom: 40px
+                    font-size: 13px
+                @media screen and (min-width: $desktopS)
+                    margin-bottom: 48px
+                @media screen and (min-width: $desktopM)
+                    margin-bottom: 50px
 
                 & > span
                     & > span
@@ -199,13 +366,24 @@
             & > .red-btn
                 display: flex
                 align-items: center
-                gap: 14px
                 box-shadow: 0 5px 20px rgba(74, 0, 18, 0.18)
                 text-transform: uppercase
                 font-weight: bold
+                @media screen and (min-width: 0)
+                    font-size: 14px
+                    padding: 20px 46px
+                    gap: 12px
+                @media screen and (min-width: $mobileM)
+                    font-size: 16px
+                    padding: 20px 58px
+                    gap: 12px
+                @media screen and (min-width: $mobileL)
+                    font-size: 16px
+                    padding: 20px 81px
                 @media screen and (min-width: $tabletS)
                     font-size: 18px
                     padding: 22px 98px
+                    gap: 14px
                 @media screen and (min-width: $desktopS)
                     font-size: 16px
                     padding: 22px 84px
@@ -214,7 +392,17 @@
                     padding: 22px 98px
 
         &__characteristic
+            @media screen and (min-width: 0)
+                width: 300px
+                margin: 0 auto 40px
+            @media screen and (min-width: $mobileM)
+                width: 350px
+            @media screen and (min-width: $mobileL)
+                width: 488px
             @media screen and (min-width: $tabletS)
+                width: 520px
+                margin: 0 auto 48px
+            @media screen and (min-width: $tabletM)
                 width: 100%
                 margin-bottom: 26px
             @media screen and (min-width: $desktopS)
@@ -229,7 +417,9 @@
                     margin-bottom: 30px
 
             & > ul
-                @media screen and (min-width: $tabletS)
+                @media screen and (min-width: 0)
+                    display: block
+                @media screen and (min-width: $tabletM)
                     display: flex
                     flex-direction: column
                     flex-wrap: wrap
@@ -243,11 +433,22 @@
                     overflow: hidden
                     font-size: 14px
                     color: $grey-102
+                    @media screen and (min-width: 0)
+                        margin-bottom: 16px
                     @media screen and (min-width: $tabletS)
+                        margin-bottom: 20px
+                    @media screen and (min-width: $tabletM)
                         margin-right: 72px
                         margin-bottom: 24px
+                        &:nth-child(7),
+                        &:nth-child(8),
+                        &:nth-child(9),
+                        &:nth-child(10),
+                        &:nth-child(11)
+                            margin-right: 0
                     @media screen and (min-width: $desktopS)
                         margin-right: 0
+                    @media screen and (min-width: $desktopM)
                         margin-bottom: 26px
 
                     &:after
@@ -288,29 +489,44 @@
                 margin-bottom: 30px
 
             & > ul
-                display: flex
-                flex-direction: column
-                flex-wrap: wrap
+                @media screen and (min-width: 0)
+                    display: block
+                @media screen and (min-width: $mobileM)
+                    display: grid
+                    grid-auto-flow: column
+                    max-height: 1200px
+                    grid-template-columns: 1fr 1fr
+                    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr
+                    grid-column-gap: 35px
+                    grid-row-gap: 16px
+                @media screen and (min-width: $mobileL)
+                    max-height: 1054px
+                @media screen and (min-width: $tabletS)
+                    max-height: 742px
+                    grid-template-columns: 1fr 1.1fr 0.95fr
+                    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr
+                    grid-column-gap: 41px
+                    grid-row-gap: 20px
                 @media screen and (min-width: $tabletM)
-                    max-height: 510px
+                    max-height: 660px
+                    grid-column-gap: 130px
                 @media screen and (min-width: $desktopS)
+                    grid-template-columns: 1fr 1fr 2fr
+                    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr
                     max-height: 566px
+                    grid-row-gap: 22px
+                    grid-column-gap: 84px
 
                 & > li
-                    max-width: 250px
-                    margin-bottom: 22px
                     font-size: 14px
-                    line-height: 150%
-                    @media screen and (min-width: $tabletM)
-                        margin-right: 129px
-                        &:nth-child(8n)
-                            margin-bottom: 0
-                    @media screen and (min-width: $desktopS)
-                        margin-right: 84px
-                        &:nth-child(9n)
-                            margin-bottom: 0
-                    @media screen and (min-width: $desktopM)
-                        margin-right: 120px
+                    @media screen and (min-width: 0)
+                        line-height: 16px
+                        margin-bottom: 14px
+                    @media screen and (min-width: $mobileM)
+                        margin: 0
+                        line-height: 16px
+                    @media screen and (min-width: $tabletS)
+                        line-height: 150%
 
                     & > span
                         display: block
@@ -321,10 +537,16 @@
 
 
                     &:last-child
+                        @media screen and (min-width: 0)
+                            grid-row: 13/14
+                            grid-column: 1/3
                         @media screen and (min-width: $tabletS)
-                            align-self: center
-                        @media screen and (min-width: $desktopM)
+                            grid-row: 9/10
+                            grid-column: 1/4
+                        @media screen and (min-width: $desktopS)
                             max-width: 458px
+                            grid-column: auto
+                            grid-row: 7/10
 
 
             &__title
@@ -332,26 +554,53 @@
 
     & .video-review
         & > .container
-            display: flex
-            align-items: center
-            justify-content: space-between
+            @media screen and (min-width: 0)
+                padding: 64px 0
+            @media screen and (min-width: $tabletS)
+                padding: 80px 0
+            @media screen and (min-width: $tabletM)
+                display: flex
+                align-items: center
+                justify-content: space-between
+            @media screen and (min-width: $desktopS)
+                padding: 120px 0
 
             & > h2
-                max-width: 310px
-                font-size: 32px
                 text-align: start
+                @media screen and (min-width: 0)
+                    margin: 0 0 28px
+                @media screen and (min-width: $tabletS)
+                    margin: 0 0 36px
+                    max-width: 565px
+                @media screen and (min-width: $tabletM)
+                    margin-bottom: 0
+                    max-width: 310px
+                    font-size: 32px
 
                 & > span
                     color: $red-dark
 
         &__video
             position: relative
-            padding: 120px 0
 
             & > iframe
+                @media screen and (min-width: 0)
+                    width: 300px
+                    height: 160px
+                    margin: 0 auto
+                @media screen and (min-width: $mobileM)
+                    width: 350px
+                    height: 200px
+                @media screen and (min-width: $mobileL)
+                    width: 488px
+                    height: 280px
                 @media screen and (min-width: $tabletS)
+                    width: 656px
+                    height: 370px
+                @media screen and (min-width: $tabletM)
                     width: 520px
                     height: 290px
+                    margin: 0
                 @media screen and (min-width: $desktopS)
                     width: 770px
                     height: 400px
@@ -381,6 +630,12 @@
                 width: 1345px
 
 .sincing-slider
+    @media screen and (max-width: $mobileM)
+        width: 92vw
+    @media screen and (min-width: $mobileM)
+        width: 92vw
+    @media screen and (min-width: $tabletS)
+        width: 92vw
     @media screen and (min-width: $desktopS)
         max-width: 685px
     @media screen and (min-width: $desktopM)
@@ -409,6 +664,15 @@
                     display: none
 
                 & img
+                    @media screen and (min-width: 0)
+                        width: 270px
+                        height: 150px
+                    @media screen and (min-width: $mobileM)
+                        width: 300px
+                        height: 180px
+                    @media screen and (min-width: $mobileL)
+                        width: 340px
+                        height: 204px
                     @media screen and (min-width: $tabletS)
                         width: 400px
                         height: 240px
@@ -484,7 +748,7 @@
     &__categories
         & .categories
             &-tabs
-                margin: 0 auto
+                margin: 0 auto 20px
                 flex-direction: row
                 align-items: center
                 @media screen and (max-width: $mobileS)
@@ -500,12 +764,15 @@
                     gap: 43px
 
                 .category
-                    padding-bottom: 5px
+                    padding-bottom: 6px
+                    margin-bottom: 0
                     font-size: 20px
+                    border-bottom: 1px solid inherit
                     @media screen and (max-width: $desktopS)
                         font-size: 18px
 
                     &:hover
+                        padding-bottom: 5px
                         border-bottom: 1px solid black
 
             &-select
@@ -663,7 +930,7 @@
                                 &:last-child
                                     border-bottom: none
                             @media screen and (min-width: $desktopS)
-                                padding: 7px 17px 6px 44px
+                                padding: 7px 5px 6px 40px
                             @media screen and (min-width: $desktopM)
                                 padding: 7px 21px 6px 47px
 
@@ -684,7 +951,7 @@
                                 @media screen and (min-width: $tabletS)
                                     left: 23px
                                 @media screen and (min-width: $desktopS)
-                                    left: 20px
+                                    left: 18px
                                 @media screen and (min-width: $desktopM)
                                     left: 23px
 
@@ -696,6 +963,7 @@
                     .cta__cost
                         &-title
                             font-size: 20px
+                            margin-bottom: 0
 
                             & > span
                                 font-size: 15px

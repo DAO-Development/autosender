@@ -28,6 +28,13 @@
                 </ul>
             </nav>
         </div>
+        <div class="breadcrumbs-tablet">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11.25 4.5L6.75 9L11.25 13.5" stroke="#B5B5B5" stroke-width="1.125" stroke-linecap="round"
+                      stroke-linejoin="round"/>
+            </svg>
+            <span>Каталог</span>
+        </div>
     </div>
     <section class="product">
         <div class="container">
@@ -50,47 +57,85 @@
                 </div>
                 <div class="product__title-right">
                     <div class="product__raiting">
-                        <span class="raiting-value">4.0</span>
-                        <span class="raiting-description">Общая оценка</span>
+                        <div class="product__raiting-top">
+                            <span class="raiting__value">4.0</span>
+                            <div class="raiting__info">
+                                <div class="raiting__info-sign">
+                                    <img src="./img/product-page/tooltip-icon.svg" alt="info">
+                                </div>
+                                <div class="raiting__info-text-container">
+                                    <div class="raiting__info-text">
+                                        <span>Оценка салона:</span>
+                                        <span>A</span>
+                                        <span>Оценка кузова:</span>
+                                        <span>B</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <span class="raiting__description">Общая оценка</span>
                     </div>
                 </div>
             </div>
             <div class="product__info-auction">
-                <div class="product__info-auction__info">
-                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g clip-path="url(#clip0)">
-                            <path d="M9.19819 12.6133H1.20142C0.538194 12.6133 0 13.1514 0 13.8147V15.9994H10.3996V13.8147C10.3996 13.1514 9.86141 12.6133 9.19819 12.6133Z"
-                                  fill="#B5B5B5"/>
-                            <path d="M15.7847 12.7814L8.48504 5.48162L9.89498 4.07419C10.1275 4.2792 10.485 4.26917 10.7049 4.0492C10.9349 3.81672 10.9349 3.44421 10.7049 3.21173L7.66509 0.174358C7.43508 -0.0581193 7.0601 -0.0581193 6.83013 0.174358C6.59765 0.404361 6.59765 0.779346 6.83013 1.00932L6.80513 0.984318L2.94526 4.84164L2.97026 4.86912C2.74025 4.63664 2.36527 4.63664 2.1353 4.86912C1.90282 5.09912 1.90282 5.4741 2.1353 5.70411L5.17267 8.74395C5.40515 8.97396 5.78014 8.97396 6.01014 8.74395C6.24014 8.51148 6.24014 8.139 6.01014 7.90655L6.03514 7.93149L7.44507 6.52406L14.7423 13.8213C15.0298 14.1088 15.4973 14.1088 15.7847 13.8213C16.0722 13.5338 16.0722 13.0688 15.7847 12.7814Z"
-                                  fill="#B5B5B5"/>
-                        </g>
-                        <defs>
-                            <clipPath id="clip0">
-                                <rect width="16" height="16" fill="white"/>
-                            </clipPath>
-                        </defs>
-                    </svg>
-                    <span>Автоаукционы онлайн</span>
+                <div class="product__info-auction-left">
+                    <div class="product__info-auction__info">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0)">
+                                <path d="M9.19819 12.6133H1.20142C0.538194 12.6133 0 13.1514 0 13.8147V15.9994H10.3996V13.8147C10.3996 13.1514 9.86141 12.6133 9.19819 12.6133Z"
+                                      fill="#B5B5B5"/>
+                                <path d="M15.7847 12.7814L8.48504 5.48162L9.89498 4.07419C10.1275 4.2792 10.485 4.26917 10.7049 4.0492C10.9349 3.81672 10.9349 3.44421 10.7049 3.21173L7.66509 0.174358C7.43508 -0.0581193 7.0601 -0.0581193 6.83013 0.174358C6.59765 0.404361 6.59765 0.779346 6.83013 1.00932L6.80513 0.984318L2.94526 4.84164L2.97026 4.86912C2.74025 4.63664 2.36527 4.63664 2.1353 4.86912C1.90282 5.09912 1.90282 5.4741 2.1353 5.70411L5.17267 8.74395C5.40515 8.97396 5.78014 8.97396 6.01014 8.74395C6.24014 8.51148 6.24014 8.139 6.01014 7.90655L6.03514 7.93149L7.44507 6.52406L14.7423 13.8213C15.0298 14.1088 15.4973 14.1088 15.7847 13.8213C16.0722 13.5338 16.0722 13.0688 15.7847 12.7814Z"
+                                      fill="#B5B5B5"/>
+                            </g>
+                            <defs>
+                                <clipPath id="clip0">
+                                    <rect width="16" height="16" fill="white"/>
+                                </clipPath>
+                            </defs>
+                        </svg>
+                        <span>Автоаукционы онлайн</span>
+                    </div>
+                    <div class="product__info-auction__clock">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10.8501 9.41194L8.61926 7.73881V4.33062C8.61926 3.98794 8.34226 3.71094 7.99957 3.71094C7.65688 3.71094 7.37988 3.98794 7.37988 4.33062V8.04869C7.37988 8.24388 7.4716 8.42794 7.62776 8.54444L10.1065 10.4035C10.218 10.4871 10.3481 10.5274 10.4776 10.5274C10.6666 10.5274 10.8525 10.4425 10.974 10.2789C11.1798 10.0056 11.124 9.61706 10.8501 9.41194Z"
+                                  fill="#BC002D"/>
+                            <path d="M8 0C3.58853 0 0 3.58853 0 8C0 12.4115 3.58853 16 8 16C12.4115 16 16 12.4115 16 8C16 3.58853 12.4115 0 8 0ZM8 14.7607C4.27266 14.7607 1.23934 11.7273 1.23934 8C1.23934 4.27266 4.27266 1.23934 8 1.23934C11.728 1.23934 14.7607 4.27266 14.7607 8C14.7607 11.7273 11.7273 14.7607 8 14.7607Z"
+                                  fill="#BC002D"/>
+                        </svg>
+                        <span>АУКЦИОН: ЧЕРЕЗ 1 ЧАС</span>
+                    </div>
+                    <div class="product__info-auction__status">
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 0C3.13078 0 0 3.13105 0 7C0 10.8692 3.13105 14 7 14C10.8692 14 14 10.8689 14 7C14 3.13078 10.8689 0 7 0ZM7 12.9062C3.73535 12.9062 1.09375 10.2644 1.09375 7C1.09375 3.73535 3.73557 1.09375 7 1.09375C10.2647 1.09375 12.9062 3.73557 12.9062 7C12.9062 10.2647 10.2644 12.9062 7 12.9062Z"
+                                  fill="#5A9CFF"/>
+                            <path d="M7 5.85938C6.69796 5.85938 6.45312 6.10421 6.45312 6.40625V9.92794C6.45312 10.23 6.69796 10.4748 7 10.4748C7.30204 10.4748 7.54688 10.23 7.54688 9.92792V6.40625C7.54688 6.10421 7.30204 5.85938 7 5.85938Z"
+                                  fill="#5A9CFF"/>
+                            <path d="M7 5.19141C7.40774 5.19141 7.73828 4.86087 7.73828 4.45312C7.73828 4.04538 7.40774 3.71484 7 3.71484C6.59226 3.71484 6.26172 4.04538 6.26172 4.45312C6.26172 4.86087 6.59226 5.19141 7 5.19141Z"
+                                  fill="#5A9CFF"/>
+                        </svg>
+                        <span>Доступен для торгов</span>
+                    </div>
                 </div>
-                <div class="product__info-auction__clock">
-                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M10.8501 9.41194L8.61926 7.73881V4.33062C8.61926 3.98794 8.34226 3.71094 7.99957 3.71094C7.65688 3.71094 7.37988 3.98794 7.37988 4.33062V8.04869C7.37988 8.24388 7.4716 8.42794 7.62776 8.54444L10.1065 10.4035C10.218 10.4871 10.3481 10.5274 10.4776 10.5274C10.6666 10.5274 10.8525 10.4425 10.974 10.2789C11.1798 10.0056 11.124 9.61706 10.8501 9.41194Z"
-                              fill="#BC002D"/>
-                        <path d="M8 0C3.58853 0 0 3.58853 0 8C0 12.4115 3.58853 16 8 16C12.4115 16 16 12.4115 16 8C16 3.58853 12.4115 0 8 0ZM8 14.7607C4.27266 14.7607 1.23934 11.7273 1.23934 8C1.23934 4.27266 4.27266 1.23934 8 1.23934C11.728 1.23934 14.7607 4.27266 14.7607 8C14.7607 11.7273 11.7273 14.7607 8 14.7607Z"
-                              fill="#BC002D"/>
-                    </svg>
-                    <span>АУКЦИОН: ЧЕРЕЗ 1 ЧАС</span>
-                </div>
-                <div class="product__info-auction__status">
-                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M7 0C3.13078 0 0 3.13105 0 7C0 10.8692 3.13105 14 7 14C10.8692 14 14 10.8689 14 7C14 3.13078 10.8689 0 7 0ZM7 12.9062C3.73535 12.9062 1.09375 10.2644 1.09375 7C1.09375 3.73535 3.73557 1.09375 7 1.09375C10.2647 1.09375 12.9062 3.73557 12.9062 7C12.9062 10.2647 10.2644 12.9062 7 12.9062Z"
-                              fill="#5A9CFF"/>
-                        <path d="M7 5.85938C6.69796 5.85938 6.45312 6.10421 6.45312 6.40625V9.92794C6.45312 10.23 6.69796 10.4748 7 10.4748C7.30204 10.4748 7.54688 10.23 7.54688 9.92792V6.40625C7.54688 6.10421 7.30204 5.85938 7 5.85938Z"
-                              fill="#5A9CFF"/>
-                        <path d="M7 5.19141C7.40774 5.19141 7.73828 4.86087 7.73828 4.45312C7.73828 4.04538 7.40774 3.71484 7 3.71484C6.59226 3.71484 6.26172 4.04538 6.26172 4.45312C6.26172 4.86087 6.59226 5.19141 7 5.19141Z"
-                              fill="#5A9CFF"/>
-                    </svg>
-                    <span>Доступен для торгов</span>
+                <div class="product__info-auction-right">
+                    <div class="product__raiting">
+                        <div class="product__raiting-top">
+                            <span class="raiting__value">4.0</span>
+                            <div class="raiting__info">
+                                <div class="raiting__info-sign">
+                                    <img src="./img/product-page/tooltip-icon.svg" alt="info">
+                                </div>
+                                <div class="raiting__info-text-container">
+                                    <div class="raiting__info-text">
+                                        <span>Оценка салона:</span>
+                                        <span>A</span>
+                                        <span>Оценка кузова:</span>
+                                        <span>B</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <span class="raiting__description">Общая оценка</span>
+                    </div>
                 </div>
             </div>
             <div class="product__main">
@@ -184,7 +229,7 @@
                                     </clipPath>
                                 </defs>
                             </svg>
-                            <span>Доставка во Владивосток: <span>3-4 недели<span/></span>
+                            <span>Доставка во Владивосток: <span>3-4 недели</span></span>
                         </div>
                         <button class="red-btn">
                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
@@ -1392,15 +1437,15 @@ entertainment. Раздвижные двери с электроприводом
                                     <div class="card-cta-left">
                                         <ul>
                                             <li>
-                                                <h3 class="cta__cost-title"><span>от</span> 300 000 ₽</h3>
+                                                <p class="cta__cost-title"><span>от</span> 300 000 ₽</p>
                                                 <p class="cta__cost-info">Дешевые авто</p>
                                             </li>
                                             <li>
-                                                <h3 class="cta__cost-title"><span>от</span> 500 000 ₽</h3>
+                                                <p class="cta__cost-title"><span>от</span> 500 000 ₽</p>
                                                 <p class="cta__cost-info">Хорошее авто</p>
                                             </li>
                                             <li>
-                                                <h3 class="cta__cost-title"><span>от</span> 800 000 ₽</h3>
+                                                <p class="cta__cost-title"><span>от</span> 800 000 ₽</p>
                                                 <p class="cta__cost-info">Отличное авто</p>
                                             </li>
                                         </ul>
