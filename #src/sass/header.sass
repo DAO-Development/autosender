@@ -15,6 +15,9 @@
     &__nav
         display: flex
         gap: 32px
+        @media screen and ( max-width: $tabletM )
+            display: none
+            
 
         a
             font-size: 15px;
@@ -22,21 +25,45 @@
             letter-spacing: 0.045em;
             color: white
             text-decoration: none
+            @media screen and ( max-width: $desktopS )
+                font-size: 14px
+                white-space: nowrap
+                
 
     &__contacts
         display: flex
         justify-content: space-between
         gap: 68px
+        @media screen and ( max-width: $desktopS )
+            gap: 36px
+       
+
+            
 
     &__soc
         display: flex
         align-items: center
         gap: 18px
+        @media screen and ( max-width:  $tabletM)
+            display: none
+
+        &-mob
+            display: none
+            @media screen and ( max-width:  $tabletM)
+                display: flex
+                gap: 32px
+                align-items: center 
+            @media screen and ( max-width: $mobileL )
+                gap: 25px
+
+                
     
     &__phone
         display: flex
         flex-direction: column
         gap: 4px
+        @media screen and ( max-width:  $tabletM)
+            display: none
 
         &-up
             font-weight: bold;
@@ -44,6 +71,7 @@
             line-height: 20px;
             letter-spacing: 0.04em;
             text-align: right
+            white-space: nowrap
 
 
         &-down

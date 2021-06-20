@@ -1,4 +1,4 @@
-@import "base"
+@import "base.sass"
 
 .feedback
     background-size: cover !important
@@ -17,58 +17,57 @@
     @media screen and (min-width: $desktopM)
         padding: 120px 0
 
-    & > .container
-        & > h2
-            @media screen and (max-width: $tabletS)
-                margin-bottom: 20px
-            @media screen and (min-width: $tabletS)
-                text-align: left
-                margin-bottom: 15px
+    & > h2
+        @media screen and (max-width: $tabletS)
+            margin-bottom: 20px
+        @media screen and (min-width: $tabletS)
+            text-align: left
+            margin-bottom: 15px
 
-        & > p
-            line-height: 150%
-            letter-spacing: 0.04em
-            @media screen and (max-width: $mobileM)
-                max-width: 300px
-                margin: 0 auto 40px
-                font-size: 14px
-                text-align: center
+    & > p
+        line-height: 150%
+        letter-spacing: 0.04em
+        @media screen and (max-width: $mobileM)
+            max-width: 300px
+            margin: 0 auto 40px
+            font-size: 14px
+            text-align: center
+        @media screen and (min-width: $mobileM)
+            max-width: 324px
+            margin: 0 auto 40px
+            font-size: 14px
+            text-align: center
+        @media screen and (min-width: $mobileL)
+            max-width: 408px
+        @media screen and (min-width: $tabletS)
+            max-width: 473px
+            margin: 0 0 48px
+            font-size: 16px
+            text-align: left
+        @media screen and (min-width: $desktopS)
+            max-width: 507px
+            margin-bottom: 46px
+
+    & > form
+        @media screen and (max-width: $tabletS)
+            max-width: 100vw
+        @media screen and (min-width: $tabletS)
+            max-width: 656px
+        @media screen and (min-width: $desktopS)
+            max-width: 613px
+
+        & > .red-btn
+            border: none
+            @media screen and (max-width: $tabletS)
+                margin: 0 auto
+                padding: 14px 87px
             @media screen and (min-width: $mobileM)
-                max-width: 324px
-                margin: 0 auto 40px
-                font-size: 14px
-                text-align: center
-            @media screen and (min-width: $mobileL)
-                max-width: 408px
+                padding: 16px 108px
             @media screen and (min-width: $tabletS)
-                max-width: 473px
-                margin: 0 0 48px
-                font-size: 16px
-                text-align: left
+                margin: 0
+                padding: 16px 87px
             @media screen and (min-width: $desktopS)
-                max-width: 507px
-                margin-bottom: 46px
-
-        & > form
-            @media screen and (max-width: $tabletS)
-                max-width: 100vw
-            @media screen and (min-width: $tabletS)
-                max-width: 656px
-            @media screen and (min-width: $desktopS)
-                max-width: 613px
-
-            & > .red-btn
-                border: none
-                @media screen and (max-width: $tabletS)
-                    margin: 0 auto
-                    padding: 14px 87px
-                @media screen and (min-width: $mobileM)
-                    padding: 16px 108px
-                @media screen and (min-width: $tabletS)
-                    margin: 0
-                    padding: 16px 87px
-                @media screen and (min-width: $desktopS)
-                    padding: 12px 71px
+                padding: 12px 71px
 
     &__fields
         width: 100%
