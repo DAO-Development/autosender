@@ -1,0 +1,98 @@
+@import "base"
+
+.main-filter
+    margin-top: 60px
+    @media screen and (max-width: $desktopS)
+        margin-top: 50px
+    @media screen and (max-width: $mobileL)
+        margin-top: 40px
+
+    &__categories
+        &-tabs
+            margin-bottom: 25px
+
+        &-select
+            @media screen and (min-width: 0)
+                margin-bottom: 25px
+            @media screen and (min-width: $mobileL)
+                margin-bottom: 25px
+            @media screen and (min-width: $tabletS)
+                margin-bottom: 28px
+
+    &__lists
+        display: grid
+        @media screen and (min-width: 0)
+            margin-bottom: 32px
+        @media screen and (min-width: $tabletS)
+            margin-bottom: 0
+        @media screen and (min-width: $desktopS)
+            grid-template-columns: 114px 135px 113px 114px 153px 119px 166px
+            column-gap: 49px
+            margin-bottom: 30px
+        @media screen and (min-width: $desktopS)
+            column-gap: 71px
+
+        & > ul
+            @media screen and (min-width: 0)
+                display: none
+                &.active
+                    width: 350px
+                    margin: 0 auto
+                    display: grid
+                    grid-auto-flow: column
+                    grid-template-columns: 1fr 1fr
+                    grid-template-rows: 1fr 1fr 1fr 1fr 1fr
+                    row-gap: 24px
+            @media screen and (min-width: $mobileL)
+                &.active
+                    width: 488px
+            @media screen and (min-width: $tabletS)
+                &.active
+                    width: 656px
+                    grid-template-columns: 1fr 1fr 1fr
+                    grid-template-rows: 1fr 1fr 1fr 1fr
+                    column-gap: 113px
+                    row-gap: 24px
+            @media screen and (min-width: $desktopS)
+                display: block
+                &.active
+                    display: block
+
+
+            & > li
+                letter-spacing: 0.045em
+                @media screen and (min-width: 0)
+                    font-size: 14px
+                    line-height: 16px
+                @media screen and (min-width: $desktopS)
+                    margin-bottom: 14px
+                    font-size: 13px
+                    line-height: 15px
+
+                & > a
+                    color: black
+                    text-decoration: none
+
+                    &:hover
+                        text-decoration: underline
+
+    &__more-link
+        display: flex
+        align-items: center
+        gap: 10px
+        @media screen and (min-width: 0)
+            justify-content: flex-start
+            margin-bottom: 40px
+        @media screen and (min-width: $tabletS)
+            justify-content: flex-end
+            width: 656px
+            margin: -15px auto 48px
+            font-size: 15px
+            line-height: 18px
+        @media screen and (min-width: $desktopS)
+            width: 100%
+            margin: 0 0 40px
+
+        & > a
+            color: $red-dark
+            text-decoration: none
