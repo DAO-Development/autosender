@@ -1,4 +1,6 @@
 @import "base"
+.not-visible
+    display: none
 
 .main-filter
     margin-top: 60px
@@ -96,3 +98,451 @@
         & > a
             color: $red-dark
             text-decoration: none
+
+    &__filter
+        @media screen and (min-width: 0)
+            display: none
+            background: white
+            width: 100vw
+        @media screen and (min-width: $tabletM)
+            display: block
+            box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2)
+            margin-bottom: 80px
+        @media screen and (min-width: $desktopS)
+            display: grid
+            grid-template-columns: 2fr 1fr
+            margin-bottom: 100px
+        @media screen and (min-width: $desktopM)
+            margin-bottom: 120px
+
+        &.active
+            display: block !important
+            position: absolute
+            top: 0
+            left: 0
+
+        .filter
+            &__top
+                display: flex
+                justify-content: space-between
+                grid-column: 1/3
+                background-color: rgba(248, 248, 248, 1)
+                @media screen and (min-width: $mobileL)
+                    padding: 20px 40px
+                @media screen and (min-width: $tabletS)
+                    padding: 28px 56px
+                @media screen and (min-width: $tabletM)
+                    display: none
+
+                & > h2
+                    text-align: left
+                    margin-left: 0
+
+                & > button
+                    background: none
+                    border: none
+
+            &__left
+                @media screen and (min-width: $mobileL)
+                    padding: 52px 40px 0
+                    border-bottom: 1px solid rgba(21, 2, 2, 0.06)
+                @media screen and (min-width: $tabletS)
+                    display: grid
+                    grid-template-columns: 1fr 1fr
+                    grid-template-rows: 1fr 1fr 1fr 1fr 1fr
+                    padding: 0
+
+                & > div
+                    @media screen and (min-width: $mobileL)
+                        margin-bottom: 52px
+                    @media screen and (min-width: $tabletS)
+                        margin-bottom: 0
+                        padding: 50px 39px
+                        border-right: 1px solid rgba(21, 2, 2, 0.06)
+                        border-bottom: 1px solid rgba(21, 2, 2, 0.06)
+                    @media screen and (min-width: $tabletM)
+                        padding: 50px 74px
+                    @media screen and (min-width: $desktopS)
+                        padding: 50px 69px
+                    @media screen and (min-width: $desktopM)
+                        padding: 50px 77px
+
+                    &:nth-child(2n-1)
+                        @media screen and (min-width: $tabletS)
+                            padding: 50px 39px
+                        @media screen and (min-width: $tabletM)
+                            padding: 50px 74px
+                        @media screen and (min-width: $desktopS)
+                            padding: 50px 69px 50px 52px
+                        @media screen and (min-width: $desktopM)
+                            padding: 50px 77px 50px 60px
+
+                    & > label
+                        font-size: 10px
+                        line-height: 12px
+                        letter-spacing: 0.03em
+                        margin-bottom: 12px
+
+            &__right
+                @media screen and (min-width: $tabletS)
+                    display: grid
+                    grid-template-columns: 1fr 1fr
+                    grid-template-rows: 1fr auto auto
+                @media screen and (min-width: $desktopS)
+                    display: flex
+                    flex-direction: column
+                    gap: 60px
+                    padding: 50px 0
+
+                & > div
+                    @media screen and (min-width: $tabletS)
+                        padding: 50px 39px
+                        border-right: 1px solid rgba(21, 2, 2, 0.06)
+                        border-bottom: 1px solid rgba(21, 2, 2, 0.06)
+                    @media screen and (min-width: $tabletM)
+                        padding: 50px 74px
+                    @media screen and (min-width: $desktopS)
+                        max-width: 305px
+                        padding: 0
+                        margin: 0 auto
+
+                    & > label
+                        font-size: 15px
+                        line-height: 18px
+
+                    & > div
+                        margin-top: 15px
+
+                    &:last-child
+                        @media screen and (min-width: $tabletS)
+                            grid-column: 1/3
+                            padding: 80px 82px
+                        @media screen and (min-width: $tabletM)
+                            padding: 50px 282px
+                        @media screen and (min-width: $desktopS)
+                            margin-top: 125px
+
+                & input[type=checkbox]
+                    display: none
+
+                    &:checked + label
+                        background-image: url("../img/autoauction-online/checkmark.svg")
+                        background-repeat: no-repeat
+                        background-position: center
+
+            &__raiting
+                &__content
+                    display: flex
+                    flex-wrap: wrap
+                    @media screen and (min-width: $tabletS)
+                        max-width: 294px
+                        column-gap: 32px
+                        row-gap: 24px
+                    @media screen and (min-width: $desktopS)
+                        max-width: 270px
+                        column-gap: 23px
+                        row-gap: 15px
+                    @media screen and (min-width: $desktopM)
+                        max-width: 305px
+
+                &__checkbox
+                    display: flex
+                    align-items: center
+
+                & input[type=checkbox]
+                    &:checked + label
+                        background-color: $red-dark
+
+                    & + label
+                        display: inline-block
+                        margin-right: 6px
+                        width: 16px
+                        height: 16px
+                        border: 1px solid $grey-179
+                        box-sizing: border-box
+
+                        & + label
+                            font-size: 12px
+                            line-height: 14px
+
+            &__color
+                &__content
+                    display: flex
+                    flex-wrap: wrap
+                    @media screen and (min-width: $tabletS)
+                        max-width: 292px
+                        gap: 20px
+                    @media screen and (min-width: $desktopS)
+                        max-width: 270px
+                        column-gap: 16px
+                        row-gap: 12px
+                    @media screen and (min-width: $desktopM)
+                        max-width: 305px
+
+                &__checkbox
+                    & input[type=checkbox]
+                        & + label
+                            display: block
+                            border: 1px solid $grey-229
+                            border-radius: 50%
+                            @media screen and (min-width: $tabletS)
+                                width: 32px
+                                height: 32px
+                            @media screen and (min-width: $desktopS)
+                                width: 24px
+                                height: 24px
+
+                    &:nth-child(1)
+                        & label
+                            background-color: white
+
+                    &:nth-child(2)
+                        & label
+                            background: linear-gradient(180deg, #C4C4C4 0%, #F4F4F4 92.19%)
+
+                    &:nth-child(3)
+                        & label
+                            background-color: rgba(156, 156, 156, 1)
+
+                    &:nth-child(4)
+                        & label
+                            background-color: black
+
+                    &:nth-child(5)
+                        & label
+                            background-color: rgba(150, 75, 0, 1)
+
+                    &:nth-child(6)
+                        & label
+                            background: linear-gradient(180deg, #F4BF00 0%, #FFD700 100%)
+
+                    &:nth-child(7)
+                        & label
+                            background-color: rgba(244, 230, 208, 1)
+
+                    &:nth-child(8)
+                        & label
+                            background-color: rgba(255, 0, 0, 1)
+
+                    &:nth-child(9)
+                        & label
+                            background-color: rgba(255, 127, 9, 1)
+
+                    &:nth-child(10)
+                        & label
+                            background-color: rgba(249, 240, 34, 1)
+
+                    &:nth-child(11)
+                        & label
+                            background-color: rgba(0, 174, 0, 1)
+
+                    &:nth-child(12)
+                        & label
+                            background-color: rgba(36, 202, 255, 1)
+
+                    &:nth-child(13)
+                        & label
+                            background-color: rgba(1, 26, 248, 1)
+
+                    &:nth-child(14)
+                        & label
+                            background-color: rgba(158, 0, 255, 1)
+
+                    &:nth-child(15)
+                        & label
+                            background-color: rgba(212, 0, 191, 1)
+
+                    &:nth-child(16)
+                        & label
+                            background-color: rgba(255, 206, 230, 1)
+
+            &__left,
+            &__right
+                & select,
+                & input
+                    padding-bottom: 13px
+                    border: none
+                    border-bottom: 1px solid $black-21
+                    @media screen and (min-width: 0)
+                        font-size: 16px
+                        line-height: 19px
+                    @media screen and (min-width: $tabletS)
+                        font-size: 15px
+                        line-height: 18px
+
+                & > div
+                    & > select,
+                    & > input
+                        @media screen and (min-width: $mobileL)
+                            width: 488px
+                        @media screen and (min-width: $tabletS)
+                            width: 288px
+                        @media screen and (min-width: $tabletM)
+                            width: 305px
+                        @media screen and (min-width: $desktopS)
+                            width: 273px
+                        @media screen and (min-width: $desktopM)
+                            width: 305px
+
+                        &::-webkit-input-placeholder
+                            color: $black-21
+
+                        &::-moz-placeholder
+                            color: $black-21
+
+                    & > .filter__selects
+                        display: flex
+                        gap: 35px
+
+                        & > select
+                            @media screen and (min-width: $mobileL)
+                                width: 234px
+                            @media screen and (min-width: $tabletS)
+                                width: 135px
+
+            &__buttons
+                align-items: center
+                @media screen and (min-width: 0)
+                    display: flex
+                    justify-content: space-between
+                @media screen and (min-width: $tabletM)
+                    display: flex
+                    flex-wrap: wrap
+                    justify-content: center
+
+                & > button
+                    display: flex
+                    align-items: center
+                    gap: 8px
+                    font-size: 15px
+                    line-height: 18px
+                    letter-spacing: 0.04em
+                    border: none
+                    font-family: Roboto
+
+                & > .all-btn
+                    background: none
+                    color: $red-dark
+                    margin-bottom: 18px
+                    @media screen and (min-width: 0)
+                        display: none
+                    @media screen and (min-width: $tabletM)
+                        display: block
+                        margin-right: 111px
+                    @media screen and (min-width: $desktopS)
+                        margin-right: 42px
+                    @media screen and (min-width: $desktopM)
+                        margin-right: 70px
+
+                & > .clear-btn
+                    background: none
+                    color: $grey-181
+                    @media screen and (min-width: $tabletS)
+                        margin-right: 80px
+                    @media screen and (min-width: $tabletM)
+                        margin-right: 0
+                        margin-bottom: 18px
+
+                & > .red-btn
+                    @media screen and (min-width: $tabletS)
+                        padding: 16px 125px
+                    @media screen and (min-width: $tabletM)
+                        padding: 13px 89px
+                    @media screen and (min-width: $desktopS)
+                        padding: 13px 55px
+                    @media screen and (min-width: $desktopM)
+                        padding: 13px 69px
+
+        &-mobile
+            display: block
+            background: white
+            box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2)
+            @media screen and (min-width: 0)
+                padding: 20px
+                margin-bottom: 60px
+            @media screen and (min-width: $mobileM)
+                margin-bottom: 64px
+            @media screen and (min-width: $mobileL)
+                padding: 24px
+            @media screen and (min-width: $tabletS)
+                padding: 28px
+                margin-bottom: 80px
+            @media screen and (min-width: $tabletM)
+                display: none
+
+            &-top
+                display: flex
+                justify-content: space-between
+                @media screen and (min-width: 0)
+                    margin-bottom: 20px
+                @media screen and (min-width: $mobileL)
+                    margin-bottom: 24px
+                @media screen and (min-width: $tabletS)
+                    margin-bottom: 28px
+
+                & > .red-btn
+                    display: flex
+                    align-items: center
+                    letter-spacing: 0.045em
+                    gap: 16px
+                    @media screen and (min-width: 0)
+                        padding: 16px 25px
+                        font-size: 14px
+                        line-height: 17px
+                    @media screen and (min-width: $mobileM)
+                        padding: 18px 28px
+                    @media screen and (min-width: $mobileL)
+                        padding: 18px 62px
+                        font-size: 16px
+                        line-height: 20px
+                    @media screen and (min-width: $tabletS)
+                        padding: 19px 89px
+                        font-size: 18px
+                        line-height: 22px
+
+                    & > svg
+                        @media screen and (min-width: 0)
+                            width: 22px
+                            height: 22px
+                        @media screen and (min-width: $mobileL)
+                            width: 24px
+                            height: 24px
+                        @media screen and (min-width: $tabletS)
+                            width: 28px
+                            height: 28px
+
+                & > p
+                    text-align: right
+                    @media screen and (min-width: 0)
+                        font-size: 14px
+                        line-height: 16px
+                    @media screen and (min-width: $mobileM)
+                        max-width: 108px
+                        font-size: 16px
+                        line-height: 18px
+                    @media screen and (min-width: $mobileL)
+                        max-width: 200px
+
+                    & > span
+                        font-weight: 700
+
+            &-tabs
+                display: flex
+                flex-wrap: wrap
+                gap: 8px
+
+                & > .tab-active
+                    display: flex
+                    align-items: center
+                    gap: 8px
+                    color: $blue
+                    border: 1px solid $blue
+                    border-radius: 100px
+                    @media screen and (min-width: 0)
+                        padding: 8px 14px
+                    @media screen and (min-width: $mobileM)
+                        padding: 8px 16px
+                    @media screen and (min-width: $mobileL)
+                        padding: 8px 20px
+                    @media screen and (min-width: $tabletS)
+                        padding: 12px 24px

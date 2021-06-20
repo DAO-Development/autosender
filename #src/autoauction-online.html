@@ -165,6 +165,336 @@
                 </svg>
                 <a href="">Смотреть все модели</a>
             </div>
+            <div class="main-filter__filter">
+                <div class="filter__top">
+                    <h2>Фильтр</h2>
+                    <button id="filter__close-btn">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M13.3259 12.0008L23.7254 1.6012C24.0916 1.23506 24.0916 0.641431 23.7254 0.275338C23.3593 -0.0907558 22.7657 -0.0908027 22.3996 0.275338L12 10.6749L1.60046 0.275338C1.23432 -0.0908027 0.640698 -0.0908027 0.274605 0.275338C-0.0914881 0.641478 -0.091535 1.2351 0.274605 1.6012L10.6741 12.0007L0.274605 22.4003C-0.091535 22.7665 -0.091535 23.3601 0.274605 23.7262C0.457651 23.9092 0.697604 24.0007 0.937557 24.0007C1.17751 24.0007 1.41742 23.9092 1.60051 23.7262L12 13.3266L22.3995 23.7262C22.5826 23.9092 22.8225 24.0007 23.0625 24.0007C23.3024 24.0007 23.5423 23.9092 23.7254 23.7262C24.0916 23.36 24.0916 22.7664 23.7254 22.4003L13.3259 12.0008Z"
+                                  fill="black"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="filter__left">
+                    <div class="filter__manufacturer">
+                        <select>
+                            <option hidden selected>Производитель</option>
+                            <option>Производитель 1</option>
+                            <option>Производитель 2</option>
+                        </select>
+                    </div>
+                    <div class="filter__model">
+                        <select>
+                            <option hidden selected>Модель</option>
+                            <option>Модель 1</option>
+                            <option>Модель 2</option>
+                        </select>
+                    </div>
+                    <div class="filter__price">
+                        <label>Цена, руб</label>
+                        <div class="filter__selects">
+                            <select class="filter__price-from">
+                                <option hidden selected>от</option>
+                                <option>1000</option>
+                                <option>2000</option>
+                            </select>
+                            <select class="filter__price-to">
+                                <option hidden selected>до</option>
+                                <option>10000</option>
+                                <option>20000</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="filter__year">
+                        <label>Год выпуска</label>
+                        <div class="filter__selects">
+                            <select class="filter__year-from">
+                                <option hidden selected>от</option>
+                                <option>2017</option>
+                                <option>2018</option>
+                            </select>
+                            <select class="filter__year-to">
+                                <option hidden selected>до</option>
+                                <option>2021</option>
+                                <option>2020</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="filter__body-model">
+                        <select>
+                            <option hidden selected>Модель кузова</option>
+                            <option>Кузов 1</option>
+                            <option>Кузов 2</option>
+                        </select>
+                    </div>
+                    <div class="filter__body-type">
+                        <select>
+                            <option hidden selected>Тип кузова</option>
+                            <option>Тип 1</option>
+                            <option>Тип 2</option>
+                        </select>
+                    </div>
+                    <div class="filter__mileage">
+                        <label>Пробег, км</label>
+                        <div class="filter__selects">
+                            <select class="filter__mileage-from">
+                                <option hidden selected>от</option>
+                                <option>1000</option>
+                                <option>2000</option>
+                            </select>
+                            <select class="filter__mileage-to">
+                                <option hidden selected>до</option>
+                                <option>10000</option>
+                                <option>20000</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="filter__volume">
+                        <label>Объем, см<sup>3</sup></label>
+                        <div class="filter__selects">
+                            <select class="filter__volume-from">
+                                <option hidden selected>от</option>
+                                <option>2017</option>
+                                <option>2018</option>
+                            </select>
+                            <select class="filter__volume-to">
+                                <option hidden selected>до</option>
+                                <option>2021</option>
+                                <option>2020</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="filter__drive">
+                        <select>
+                            <option hidden selected>Привод</option>
+                            <option>Кузов 1</option>
+                            <option>Кузов 2</option>
+                        </select>
+                    </div>
+                    <div class="filter__num-body">
+                        <input type="text" placeholder="Номер кузова">
+                    </div>
+                </div>
+                <div class="filter__right">
+                    <div class="filter__raiting">
+                        <label>Оценка</label>
+                        <div class="filter__raiting__content">
+                            <div class="filter__raiting__checkbox">
+                                <input type="checkbox" id="rait-1">
+                                <label for="rait-1"></label>
+                                <label for="rait-1">-</label>
+                            </div>
+                            <div class="filter__raiting__checkbox">
+                                <input type="checkbox" id="rait-2">
+                                <label for="rait-2"></label>
+                                <label for="rait-2">3</label>
+                            </div>
+                            <div class="filter__raiting__checkbox">
+                                <input type="checkbox" id="rait-3">
+                                <label for="rait-3"></label>
+                                <label for="rait-3">3.4</label>
+                            </div>
+                            <div class="filter__raiting__checkbox">
+                                <input type="checkbox" id="rait-4">
+                                <label for="rait-4"></label>
+                                <label for="rait-4">4</label>
+                            </div>
+                            <div class="filter__raiting__checkbox">
+                                <input type="checkbox" id="rait-5">
+                                <label for="rait-5"></label>
+                                <label for="rait-5">4.5</label>
+                            </div>
+                            <div class="filter__raiting__checkbox">
+                                <input type="checkbox" id="rait-6">
+                                <label for="rait-6"></label>
+                                <label for="rait-6">5</label>
+                            </div>
+                            <div class="filter__raiting__checkbox">
+                                <input type="checkbox" id="rait-7">
+                                <label for="rait-7"></label>
+                                <label for="rait-7">6</label>
+                            </div>
+                            <div class="filter__raiting__checkbox">
+                                <input type="checkbox" id="rait-8">
+                                <label for="rait-8"></label>
+                                <label for="rait-8">7</label>
+                            </div>
+                            <div class="filter__raiting__checkbox">
+                                <input type="checkbox" id="rait-9">
+                                <label for="rait-9"></label>
+                                <label for="rait-9">8</label>
+                            </div>
+                            <div class="filter__raiting__checkbox">
+                                <input type="checkbox" id="rait-10">
+                                <label for="rait-10"></label>
+                                <label for="rait-10">9</label>
+                            </div>
+                            <div class="filter__raiting__checkbox">
+                                <input type="checkbox" id="rait-11">
+                                <label for="rait-11"></label>
+                                <label for="rait-11">R</label>
+                            </div>
+                            <div class="filter__raiting__checkbox">
+                                <input type="checkbox" id="rait-12">
+                                <label for="rait-12"></label>
+                                <label for="rait-12">RA</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="filter__color">
+                        <label>Цвет</label>
+                        <div class="filter__color__content">
+                            <div class="filter__color__checkbox">
+                                <input type="checkbox" id="color-1">
+                                <label for="color-1"></label>
+                            </div>
+                            <div class="filter__color__checkbox">
+                                <input type="checkbox" id="color-2">
+                                <label for="color-2"></label>
+                            </div>
+                            <div class="filter__color__checkbox">
+                                <input type="checkbox" id="color-3">
+                                <label for="color-3"></label>
+                            </div>
+                            <div class="filter__color__checkbox">
+                                <input type="checkbox" id="color-4">
+                                <label for="color-4"></label>
+                            </div>
+                            <div class="filter__color__checkbox">
+                                <input type="checkbox" id="color-5">
+                                <label for="color-5"></label>
+                            </div>
+                            <div class="filter__color__checkbox">
+                                <input type="checkbox" id="color-6">
+                                <label for="color-6"></label>
+                            </div>
+                            <div class="filter__color__checkbox">
+                                <input type="checkbox" id="color-7">
+                                <label for="color-7"></label>
+                            </div>
+                            <div class="filter__color__checkbox">
+                                <input type="checkbox" id="color-8">
+                                <label for="color-8"></label>
+                            </div>
+                            <div class="filter__color__checkbox">
+                                <input type="checkbox" id="color-9">
+                                <label for="color-9"></label>
+                            </div>
+                            <div class="filter__color__checkbox">
+                                <input type="checkbox" id="color-10">
+                                <label for="color-10"></label>
+                            </div>
+                            <div class="filter__color__checkbox">
+                                <input type="checkbox" id="color-11">
+                                <label for="color-11"></label>
+                            </div>
+                            <div class="filter__color__checkbox">
+                                <input type="checkbox" id="color-12">
+                                <label for="color-12"></label>
+                            </div>
+                            <div class="filter__color__checkbox">
+                                <input type="checkbox" id="color-13">
+                                <label for="color-13"></label>
+                            </div>
+                            <div class="filter__color__checkbox">
+                                <input type="checkbox" id="color-14">
+                                <label for="color-14"></label>
+                            </div>
+                            <div class="filter__color__checkbox">
+                                <input type="checkbox" id="color-15">
+                                <label for="color-15"></label>
+                            </div>
+                            <div class="filter__color__checkbox">
+                                <input type="checkbox" id="color-16">
+                                <label for="color-16"></label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="filter__auctions">
+                        <select>
+                            <option hidden selected>Привод</option>
+                            <option>Кузов 1</option>
+                            <option>Кузов 2</option>
+                        </select>
+                    </div>
+                    <div class="filter__num-lot">
+                        <input type="text" placeholder="Номер кузова">
+                    </div>
+                    <div class="filter__buttons">
+                        <button class="btn all-btn">
+                            Все параметры
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12.5713 10.2852L7.99986 5.71373L3.42843 10.2852" stroke="#BC002D"
+                                      stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                        <button class="btn clear-btn">
+                            Сбросить
+                            <svg width="10" height="10" viewBox="0 0 10 10" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0)">
+                                    <path d="M5.91617 5.01169L9.80998 1.11777C10.0634 0.864489 10.0634 0.454965 9.80998 0.201681C9.55669 -0.0516021 9.14717 -0.0516021 8.89388 0.201681L4.99996 4.0956L1.10614 0.201681C0.852742 -0.0516021 0.443336 -0.0516021 0.190052 0.201681C-0.0633506 0.454965 -0.0633506 0.864489 0.190052 1.11777L4.08386 5.01169L0.190052 8.90561C-0.0633506 9.15889 -0.0633506 9.56842 0.190052 9.8217C0.316279 9.94805 0.482248 10.0115 0.648098 10.0115C0.813949 10.0115 0.9798 9.94805 1.10614 9.8217L4.99996 5.92778L8.89388 9.8217C9.02023 9.94805 9.18608 10.0115 9.35193 10.0115C9.51778 10.0115 9.68363 9.94805 9.80998 9.8217C10.0634 9.56842 10.0634 9.15889 9.80998 8.90561L5.91617 5.01169Z"
+                                          fill="#B5B5B5"/>
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0">
+                                        <rect width="10" height="10" fill="white"/>
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </button>
+                        <button class="red-btn show-btn">Показать результаты</button>
+                    </div>
+                </div>
+            </div>
+            <div class="main-filter__filter-mobile">
+                <div class="main-filter__filter-mobile-top">
+                    <button class="red-btn" id="filter-btn">
+                        <svg width="28" height="26" viewBox="0 0 28 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M26.9047 2.51963H10.2229C9.76426 1.15748 8.47586 0.17334 6.96103 0.17334C5.4462 0.17334 4.15779 1.15748 3.69917 2.51963H1.09527C0.490389 2.51963 0 3.01002 0 3.6149C0 4.21978 0.490389 4.71017 1.09527 4.71017H3.69924C4.15787 6.07232 5.44627 7.05646 6.9611 7.05646C8.47593 7.05646 9.76433 6.07232 10.223 4.71017H26.9047C27.5096 4.71017 28 4.21978 28 3.6149C28 3.01002 27.5096 2.51963 26.9047 2.51963ZM6.96103 4.86592C6.27123 4.86592 5.71001 4.3047 5.71001 3.6149C5.71001 2.9251 6.27123 2.36388 6.96103 2.36388C7.65083 2.36388 8.21204 2.9251 8.21204 3.6149C8.21204 4.3047 7.65083 4.86592 6.96103 4.86592Z"
+                                  fill="white"/>
+                            <path d="M26.9047 11.9048H24.3007C23.8421 10.5426 22.5536 9.55847 21.0388 9.55847C19.5241 9.55847 18.2357 10.5426 17.777 11.9048H1.09527C0.490389 11.9048 0 12.3951 0 13C0 13.6049 0.490389 14.0953 1.09527 14.0953H17.777C18.2357 15.4575 19.5241 16.4416 21.0389 16.4416C22.5537 16.4416 23.8421 15.4575 24.3008 14.0953H26.9047C27.5096 14.0953 28 13.6049 28 13C28 12.3951 27.5096 11.9048 26.9047 11.9048ZM21.0389 14.251C20.3491 14.251 19.7879 13.6898 19.7879 13C19.7879 12.3102 20.3491 11.749 21.0389 11.749C21.7287 11.749 22.2899 12.3102 22.2899 13C22.2899 13.6898 21.7287 14.251 21.0389 14.251Z"
+                                  fill="white"/>
+                            <path d="M26.9047 21.29H14.9155C14.4569 19.9279 13.1685 18.9437 11.6537 18.9437C10.1388 18.9437 8.85044 19.9279 8.39182 21.29H1.09527C0.490389 21.29 0 21.7804 0 22.3853C0 22.9902 0.490389 23.4806 1.09527 23.4806H8.39182C8.85044 24.8427 10.1388 25.8268 11.6537 25.8268C13.1685 25.8268 14.4569 24.8427 14.9155 23.4806H26.9047C27.5096 23.4806 28 22.9902 28 22.3853C28 21.7804 27.5096 21.29 26.9047 21.29ZM11.6537 23.6364C10.9639 23.6364 10.4027 23.0752 10.4027 22.3854C10.4027 21.6956 10.9639 21.1343 11.6537 21.1343C12.3435 21.1343 12.9047 21.6955 12.9047 22.3853C12.9047 23.0751 12.3435 23.6364 11.6537 23.6364Z"
+                                  fill="white"/>
+                        </svg>
+
+                        <span>Фильтр</span>
+                    </button>
+                    <p class="car-count"><span>25 246</span> автомобилей</p>
+                </div>
+                <div class="main-filter__filter-mobile-tabs">
+                    <div class="tab-active">
+                        <svg width="8" height="9" viewBox="0 0 8 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0)">
+                                <path d="M4.73293 4.50682L7.84797 1.39168C8.05069 1.18905 8.05069 0.861433 7.84797 0.658806C7.64534 0.456179 7.31772 0.456179 7.1151 0.658806L3.99996 3.77394L0.884915 0.658806C0.682193 0.456179 0.354668 0.456179 0.152041 0.658806C-0.0506804 0.861433 -0.0506804 1.18905 0.152041 1.39168L3.26709 4.50682L0.152041 7.62195C-0.0506804 7.82458 -0.0506804 8.1522 0.152041 8.35482C0.253023 8.4559 0.385798 8.50668 0.518478 8.50668C0.651158 8.50668 0.783839 8.4559 0.884915 8.35482L3.99996 5.23969L7.1151 8.35482C7.21617 8.4559 7.34885 8.50668 7.48153 8.50668C7.61421 8.50668 7.74689 8.4559 7.84797 8.35482C8.05069 8.1522 8.05069 7.82458 7.84797 7.62195L4.73293 4.50682Z"
+                                      fill="#5A9CFF"/>
+                            </g>
+                            <defs>
+                                <clipPath id="clip0">
+                                    <rect width="8" height="8" fill="white" transform="translate(0 0.5)"/>
+                                </clipPath>
+                            </defs>
+                        </svg>
+                        <span>Nissan</span>
+                    </div>
+                    <div class="tab-active">
+                        <svg width="8" height="9" viewBox="0 0 8 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0)">
+                                <path d="M4.73293 4.50682L7.84797 1.39168C8.05069 1.18905 8.05069 0.861433 7.84797 0.658806C7.64534 0.456179 7.31772 0.456179 7.1151 0.658806L3.99996 3.77394L0.884915 0.658806C0.682193 0.456179 0.354668 0.456179 0.152041 0.658806C-0.0506804 0.861433 -0.0506804 1.18905 0.152041 1.39168L3.26709 4.50682L0.152041 7.62195C-0.0506804 7.82458 -0.0506804 8.1522 0.152041 8.35482C0.253023 8.4559 0.385798 8.50668 0.518478 8.50668C0.651158 8.50668 0.783839 8.4559 0.884915 8.35482L3.99996 5.23969L7.1151 8.35482C7.21617 8.4559 7.34885 8.50668 7.48153 8.50668C7.61421 8.50668 7.74689 8.4559 7.84797 8.35482C8.05069 8.1522 8.05069 7.82458 7.84797 7.62195L4.73293 4.50682Z"
+                                      fill="#5A9CFF"/>
+                            </g>
+                            <defs>
+                                <clipPath id="clip0">
+                                    <rect width="8" height="8" fill="white" transform="translate(0 0.5)"/>
+                                </clipPath>
+                            </defs>
+                        </svg>
+                        <span>AD EXPERT</span>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
     <section class="feedback">
@@ -191,7 +521,7 @@
 <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-<script type="text/javascript" src="/js/interesting-cars"></script>
+<!--<script type="text/javascript" src="/js/interesting-cars"></script>-->
 <script type="text/javascript" src="/js/autoauction-online.js"></script>
 </body>
 </html>
