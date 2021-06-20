@@ -1,0 +1,332 @@
+@import "base.sass"
+
+.contacts
+    h2
+        border-bottom: 1px solid $black-21
+        width: 100%
+        text-align: left
+        padding-bottom: 21px;
+        margin-bottom: 60px
+        @media screen and ( max-width: $desktopS )
+            margin-bottom: 52px
+        @media screen and ( max-width: $mobileL )
+            padding-bottom: 13px;
+            margin-bottom: 40px
+
+    &__info
+        display: grid
+        grid-template-columns: 2fr 1fr
+        place-items: center
+        gap: 0 50px
+        @media screen and ( max-width: $tabletS )
+            grid-template-columns: 2.4fr 1fr
+        @media screen and ( max-width: $mobileL )
+            display: flex
+            flex-direction: column
+            place-items: start
+            gap: 32px
+            >*
+                margin-top: 0
+            
+
+    &__connect
+        display: flex
+        flex-wrap: wrap
+        gap: 50px 60px
+        border-right: 1px solid $grey-229
+        grid-column: 1/2
+        grid-row: 1/3
+
+        @media screen and ( max-width: $desktopS )
+            gap: 50px 46px
+
+        @media screen and ( max-width: $tabletM )
+            display: grid
+            grid-template-columns: 1fr 1fr
+            gap: 28px 40px
+            padding-right: 40px
+
+        @media screen and ( max-width: $tabletS )
+            grid-column: 1/3
+            grid-row: 1/2
+            display: flex
+            gap: 27px 38px
+            padding-right: 0
+            border-right: 0
+
+        @media screen and ( max-width: $mobileL )
+            display: grid
+            gap: 23px 58px;
+        @media screen and ( max-width: $mobileM )
+            display: flex
+            flex-direction: column
+            height: 250px
+            flex-wrap: wrap
+            gap: 16px
+            border-bottom: 1px solid $grey-229
+
+        @media screen and ( max-width: $mobileS )
+            gap: 18px
+            height: unset
+            flex-wrap: nowrap
+            padding-bottom: 28px
+                
+            
+        a
+            color: $black-21
+            text-decoration: none
+    &__item-num
+        a
+            font-family: Montserrat;
+            font-size: 22px;
+            font-weight: 700;
+            line-height: 27px;
+            letter-spacing: 0.02em;
+            white-space: nowrap
+            @media screen and ( max-width: $tabletM )
+                font-size: 20px;
+                line-height: 24px;
+            @media screen and ( max-width: $mobileS )
+                font-size: 18px;
+                line-height: 22px;
+
+
+    &__mes
+        display: flex
+        gap: 20px
+
+    &__item-desc
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 16px;
+        letter-spacing: 0.02em;
+        color: $grey-181
+        padding-top: 4px
+        @media screen and ( max-width: $mobileL )
+            font-size: 12px
+        @media screen and ( max-width: $mobileS )
+            font-size: 12px;
+            line-height: 14px;
+
+    &__mail
+        .contacts__item-num a
+            color: $blue
+
+
+    &__loc
+
+        display: flex
+        flex-direction: column
+
+        grid-column: 2/3
+        grid-row: 1/2
+
+        @media screen and ( max-width: $tabletS )
+            grid-column: 1/2
+            grid-row: 2/3
+            place-self: end start
+            margin-top: 65px;
+            h3
+                font-size: 20px
+                @media screen and ( max-width: $mobileS )
+                    font-size: 16px
+
+        @media screen and ( max-width: $mobileL )
+            place-self: start
+
+        &-item
+            margin-bottom: 16px
+            display: flex
+            gap: 12px
+
+        &-text
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 22px;
+            letter-spacing: 0.04em;
+            @media screen and ( max-width: $tabletS )
+                max-width: 310px
+            @media screen and ( max-width: $mobileL )
+                max-width: unset
+            @media screen and ( max-width: $mobileS )
+                font-size: 14px
+                line-height: 20px
+
+            
+
+
+        &-link
+            color: $blue
+            font-size: 12px;
+            line-height: 14px;
+            letter-spacing: 0.03em;
+            margin-top: 8px
+
+    &__soc
+        display: flex
+        gap: 15px 40px
+        margin-top: 18px
+        grid-column: 2/3
+        grid-row: 2/3
+
+        @media screen and ( max-width: $desktopS )
+            gap: 15px 27px
+        @media screen and ( max-width: $tabletM )
+            margin-top: 16px
+        @media screen and ( max-width: $tabletS )
+            grid-column: 1/2
+            grid-row: 3/4
+            flex-direction: column
+            place-self: start
+        @media screen and ( max-width: $mobileL )
+            flex-direction: row
+            margin-top: 6px
+            gap: 15px 40px
+        @media screen and ( max-width: $mobileM )
+            flex-direction: column
+            margin-top: -24px
+        @media screen and ( max-width: $mobileS )
+            margin-top: -30px
+            gap: 7px
+
+
+        a
+            font-family: Montserrat;
+            font-size: 12px;
+            font-weight: 700;
+            line-height: 130%;
+            letter-spacing: 0.04em;
+            text-decoration: none
+            color: $black-21
+            display: flex
+            align-items: center
+            gap: 12px
+            white-space: nowrap
+
+
+    &__managers
+        width: 100%
+        place-self: start
+        grid-column: 1/3
+        grid-row: 3/4
+        padding-top: 40px
+        border-top: 1px solid $grey-229
+        margin-top: 40px
+
+        @media screen and ( max-width: $desktopS )
+            padding-top: 36px
+            margin-top: 36px
+        @media screen and ( max-width: $tabletM )
+            padding-top: 32px
+            margin-top: 32px
+        @media screen and ( max-width: $tabletS )
+            grid-column: 2/3
+            grid-row: 2/4
+            flex-direction: column
+            display: flex
+        @media screen and ( max-width: $mobileS )
+            padding-top: 23px
+
+    
+        &-title
+            font-family: Montserrat;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 20px;
+            letter-spacing: 0.04em;
+            color: $grey-181
+            margin-bottom: 24px
+            @media screen and ( max-width: $tabletM )
+                margin-bottom: 20px
+            @media screen and ( max-width: $tabletS )
+                font-size: 14px;
+                line-height: 17px;
+                margin-bottom: 13px
+            @media screen and ( max-width: $tabletS )
+                margin-bottom: 16px
+            
+
+        &-list
+            display: flex
+            gap: 58px
+            @media screen and ( max-width: $tabletS )
+                flex-direction: column
+                gap: 32px
+            @media screen and ( max-width: $mobileL )
+                flex-direction: row
+                place-self: start
+                flex-wrap: wrap
+                gap: 24px 77px
+
+    &__manager
+        display: grid
+        gap: 4px 13px
+        @media screen and ( max-width: $tabletM )
+            gap: 0px 11px
+        @media screen and ( max-width: $mobileL )
+            gap: 4px 11px
+
+
+        picture
+            grid-column: 1/2
+            grid-row: 1/3
+            overflow: hidden
+            display: block
+            border-radius: 50%
+            border: 1px solid $grey-229
+            width: 40px
+            height: 40px
+            img
+                width: 100%
+                height: 100%
+
+        &-name
+            grid-column: 2/3
+            grid-row: 1/2
+            font-family: Montserrat;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 20px;
+            letter-spacing: 0.04em;
+            
+
+
+        &-number
+            grid-column: 2/3
+            grid-row: 2/3
+            a
+                font-size: 14px;
+                line-height: 20px;
+                letter-spacing: 0.02em;
+                color: $black-21
+                text-decoration: none
+
+
+    &__banner
+        margin: 120px auto
+        display: block
+        width: 100%
+        max-width: 99vw
+        width: 1345px
+
+        @media screen and (max-width: $mobileM)
+            width: 100%
+
+        @media screen and (max-width: $mobileL)
+            width: 86vw
+        @media screen and (max-width: $tabletS)
+            width: 85.8vw
+            margin: 63px auto
+
+        @media screen and (max-width: $tabletM)
+            width: 88.62vw
+            margin: 80px auto
+
+        @media screen and (max-width: $desktopS)
+            width: 1200px
+            margin: 100px auto
+
+        img
+            width: 100%
+                
+

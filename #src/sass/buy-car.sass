@@ -122,17 +122,20 @@
         letter-spacing: 0.045em
         text-align: center
         border-right: 1px solid $grey-181
-        width: 1.9ch
+        width: 4.5ch
         text-align: right
         box-sizing: content-box
         place-self: start
         margin-top: 5px
+        @media screen and ( max-width: $tabletM )
+            width: 1.9ch
         @media screen and ( max-width: $mobileL)
             border: none
             width: unset
             font-size: 40px
             margin-top: 0
             line-height: 100%
+            
 
     &__content
         max-width: 435px
