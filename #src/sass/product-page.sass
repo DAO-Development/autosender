@@ -252,7 +252,6 @@
                 margin-bottom: 45px
 
         &__decoding
-            max-width: 535px
             font-size: 12px
             margin-bottom: 44px
 
@@ -423,9 +422,10 @@
                     display: flex
                     flex-direction: column
                     flex-wrap: wrap
-                    max-height: 270px
+                    height: 270px
                 @media screen and (min-width: $desktopS)
                     display: block
+                    height: auto
 
                 & > li
                     display: block
@@ -745,7 +745,7 @@
         @media screen and (min-width: $desktopS)
             margin-left: 0
 
-    &__categories
+    //&__categories
         & .categories
             &-tabs
                 margin: 0 auto 20px
@@ -805,12 +805,12 @@
                 @media screen and (min-width: $desktopS)
                     display: none
 
-        .categories-line
-            border-left: 1px solid $grey-185
-            @media screen and (min-width: $desktopS)
-                height: 25px
-            @media screen and (min-width: $desktopM)
-                height: 38px
+            &-line
+                border-left: 1px solid $grey-185
+                @media screen and (min-width: $desktopS)
+                    height: 25px
+                @media screen and (min-width: $desktopM)
+                    height: 38px
 
     &__card
         position: relative
@@ -932,7 +932,7 @@
                             @media screen and (min-width: $desktopS)
                                 padding: 7px 5px 6px 40px
                             @media screen and (min-width: $desktopM)
-                                padding: 7px 21px 6px 47px
+                                padding: 7px 5px 6px 47px
 
                             &:nth-child(2)
                                 & > h3
@@ -988,3 +988,67 @@
                             padding: 20px 112px 20px 113px
                         @media screen and (min-width: $tabletS)
                             padding: 0
+
+.categories
+    &-tabs
+        flex-direction: row
+        align-items: center
+        @media screen and (min-width: 0)
+            display: none
+        @media screen and (min-width: $desktopS)
+            display: flex
+            width: 1177px
+
+        .category
+            padding-bottom: 6px
+            margin-bottom: 0
+            font-size: 20px
+            border-bottom: 1px solid inherit
+            @media screen and (max-width: $desktopS)
+                font-size: 18px
+
+            &:hover,
+            &.active
+                padding-bottom: 5px
+                border-bottom: 1px solid black
+
+    &-select
+        @media screen and (min-width: 0)
+            margin-bottom: -45px
+        @media screen and (min-width: $mobileL)
+            margin-bottom: 0
+
+        & > select
+            display: block
+            margin: 0 auto
+            border: none
+            border-bottom: 1px solid $black-21
+            background: none
+            font-family: 'Montserrat', sans-serif
+            font-weight: 700
+            @media screen and (min-width: 0)
+                padding-bottom: 10px
+                width: 100%
+                font-size: 18px
+            @media screen and (min-width: $mobileM)
+                padding-bottom: 12px
+                width: 350px
+                font-size: 18px
+            @media screen and (min-width: $mobileL)
+                width: 488px
+            @media screen and (min-width: $tabletS)
+                width: 656px
+                padding-bottom: 15px
+                font-size: 24px
+
+        @media screen and (min-width: $desktopS)
+            display: none
+
+    &-line
+        border-left: 1px solid $grey-185
+        @media screen and (min-width: $desktopS)
+            height: 25px
+            margin: 0 36px
+        @media screen and (min-width: $desktopM)
+            height: 38px
+//margin: 0 43px

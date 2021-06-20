@@ -58,18 +58,23 @@ $(document).ready(function () {
     }
 
     let sliders = document.getElementsByClassName('interesting-cars-slider')
+    let elements = document.getElementsByClassName('interesting-cars__category')
+    let selectedSlider;
     let selectedCategory;
     for (let i = 0; i < sliders.length; i++) {
         if (sliders[i].classList.contains('active')) {
-            selectedCategory = sliders[i]
+            selectedSlider = sliders[i]
+            selectedCategory = elements[i]
         }
     }
-    let elements = document.getElementsByClassName('category')
     for (let i = 0; i < elements.length; i++) {
         elements[i].addEventListener("click", function () {
-            selectedCategory.classList.remove("active")
-            selectedCategory = sliders[i]
-            selectedCategory.classList.add("active")
+            selectedSlider.classList.remove("active");
+            selectedCategory.classList.remove("active");
+            sliders[i].classList.add("active");
+            elements[i].classList.add("active");
+            selectedSlider = sliders[i]
+            selectedCategory = elements[i]
             let id = '#slider-' + (i + 1);
             if ($(window).width() >= '1440') {
                 $(id).slick({
@@ -131,7 +136,7 @@ $(document).ready(function () {
         });
     }
 
-    let select = document.getElementById('select');
+    let select = document.getElementById('interesting-cars__select');
     select.onchange = function () {
         selectedCategory.classList.remove("active")
         selectedCategory = sliders[select.selectedIndex]
