@@ -608,7 +608,7 @@
 
     & .interesting-cars
         background: $background-grey-gradient
-        @media screen and (max-width: $mobileM)
+        @media screen and (min-width: 0)
             padding: 60px 0
             & > .container
                 width: 100vw
@@ -734,7 +734,7 @@
         &.active
             display: block
 
-        @media screen and (max-width: $mobileM)
+        @media screen and (min-width: 0)
             margin-left: 30px
         @media screen and (min-width: $mobileM)
             margin-left: 32px
@@ -744,73 +744,6 @@
             margin-left: 56px
         @media screen and (min-width: $desktopS)
             margin-left: 0
-
-    //&__categories
-        & .categories
-            &-tabs
-                margin: 0 auto 20px
-                flex-direction: row
-                align-items: center
-                @media screen and (max-width: $mobileS)
-                    display: none
-                @media screen and (min-width: $mobileS)
-                    display: none
-                @media screen and (min-width: $desktopS)
-                    margin: 0
-                    display: flex
-                    width: 1177px
-                    gap: 36px
-                @media screen and (min-width: $desktopM)
-                    gap: 43px
-
-                .category
-                    padding-bottom: 6px
-                    margin-bottom: 0
-                    font-size: 20px
-                    border-bottom: 1px solid inherit
-                    @media screen and (max-width: $desktopS)
-                        font-size: 18px
-
-                    &:hover
-                        padding-bottom: 5px
-                        border-bottom: 1px solid black
-
-            &-select
-                & > select
-                    display: block
-                    margin: 0 auto
-                    border: none
-                    border-bottom: 1px solid $black-21
-                    background: none
-                    font-family: 'Montserrat', sans-serif
-                    font-weight: 700
-                    @media screen and (max-width: $mobileM)
-                        padding-bottom: 10px
-                        width: 80vw
-                        margin-bottom: -45px
-                        font-size: 18px
-                    @media screen and (min-width: $mobileM)
-                        padding-bottom: 12px
-                        width: 350px
-                        margin-bottom: -45px
-                        font-size: 18px
-                    @media screen and (min-width: $mobileL)
-                        width: 488px
-                        margin-bottom: 0px
-                    @media screen and (min-width: $tabletS)
-                        width: 656px
-                        padding-bottom: 15px
-                        font-size: 24px
-
-                @media screen and (min-width: $desktopS)
-                    display: none
-
-            &-line
-                border-left: 1px solid $grey-185
-                @media screen and (min-width: $desktopS)
-                    height: 25px
-                @media screen and (min-width: $desktopM)
-                    height: 38px
 
     &__card
         position: relative
@@ -850,7 +783,7 @@
 
             &__content
                 border: 1px solid $grey-52
-                @media screen and (max-width: $mobileM)
+                @media screen and (min-width: 0)
                     max-width: 270px
                     padding-top: 68px
                 @media screen and (min-width: $mobileM)
@@ -1013,10 +946,7 @@
                 border-bottom: 1px solid black
 
     &-select
-        @media screen and (min-width: 0)
-            margin-bottom: -45px
-        @media screen and (min-width: $mobileL)
-            margin-bottom: 0
+        margin-bottom: 0
 
         & > select
             display: block
@@ -1051,4 +981,3 @@
             margin: 0 36px
         @media screen and (min-width: $desktopM)
             height: 38px
-//margin: 0 43px

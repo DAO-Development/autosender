@@ -642,3 +642,185 @@
                         padding: 8px 20px
                     @media screen and (min-width: $tabletS)
                         padding: 12px 24px
+
+.autoauction-online
+    & .interesting-cars,
+    & .youtube
+        background: $background-grey-gradient
+        @media screen and (max-width: $mobileM)
+            padding: 60px 0
+            & > .container
+                width: 100vw
+        @media screen and (min-width: $mobileM)
+            padding: 64px 0
+            & > .container
+                width: 100vw
+        @media screen and (min-width: $tabletS)
+            padding: 80px 0
+            & > .container
+                width: 100vw
+        @media screen and (min-width: $desktopS)
+            padding: 100px 0
+            & > .container
+                width: 1200px
+        @media screen and (min-width: $desktopM)
+            padding: 120px 0
+            & > .container
+                width: 1345px
+
+    & .CEO
+        @media screen and (max-width: $mobileM)
+            margin: 60px 0
+        @media screen and (min-width: $mobileM)
+            margin: 64px 0
+        @media screen and (min-width: $tabletS)
+            margin: 80px 0
+        @media screen and (min-width: $desktopS)
+            margin: 100px 0
+        @media screen and (min-width: $desktopM)
+            margin: 120px 0
+
+        & > .container
+            border-top: 1px solid $black-21
+
+        & h3
+            @media screen and (min-width: 0)
+                margin: 20px 0 12px
+            @media screen and (min-width: $mobileL)
+                margin: 24px 0 16px
+            @media screen and (min-width: $desktopS)
+                margin: 30px 0 15px
+
+        & p
+            line-height: 150%
+            letter-spacing: 0.04em
+            margin-bottom: 10px
+            @media screen and (min-width: 0)
+                font-size: 14px
+            @media screen and (min-width: $tabletS)
+                font-size: 15px
+
+        & ul
+            & > li
+                display: flex
+                align-items: center
+                margin-bottom: 8px
+                gap: 12px
+
+                &::before
+                    content: url("../img/marker.svg")
+
+                & > p
+                    margin-bottom: 0
+
+                    & > span
+                        font-weight: 700
+
+
+.youtube
+    @media screen and (max-width: $mobileM)
+        padding: 60px 0
+        & > .container
+            width: 100vw
+    @media screen and (min-width: $mobileM)
+        padding: 64px 0
+        & > .container
+            width: 100vw
+    @media screen and (min-width: $tabletS)
+        padding: 80px 0
+        & > .container
+            width: 100vw
+    @media screen and (min-width: $desktopS)
+        padding: 100px 0
+        & > .container
+            width: 1200px
+    @media screen and (min-width: $desktopM)
+        padding: 120px 0
+        & > .container
+            width: 1345px
+
+    & h2
+        text-align: left
+        @media screen and (min-width: 0)
+            margin-left: 30px
+            & > svg
+                width: 32px
+                margin-bottom: -7px
+        @media screen and (min-width: $mobileM)
+            margin-left: 32px
+        @media screen and (min-width: $mobileL)
+            margin-left: 40px
+        @media screen and (min-width: $tabletS)
+            margin-left: 56px
+            & > svg
+                width: 47px
+                margin-bottom: -7px
+        @media screen and (min-width: $desktopS)
+            margin-left: 0
+
+    &-slider
+        @media screen and (max-width: $mobileM)
+            margin-left: 30px
+        @media screen and (min-width: $mobileM)
+            margin-left: 32px
+        @media screen and (min-width: $mobileL)
+            margin-left: 40px
+        @media screen and (min-width: $tabletS)
+            margin-left: 56px
+        @media screen and (min-width: $desktopS)
+            margin-left: 0
+
+        & .slide
+            & > iframe
+                @media screen and (min-width: 0)
+                    width: 270px
+                    height: 160px
+                @media screen and (min-width: $mobileM)
+                    width: 300px
+                    height: 180px
+                @media screen and (min-width: $mobileL)
+                    width: 340px
+                    height: 204px
+                @media screen and (min-width: $tabletS)
+                    width: 400px
+                    height: 240px
+                @media screen and (min-width: $desktopS)
+                    width: 376px
+                    height: 212px
+                @media screen and (min-width: $desktopM)
+                    width: 425px
+                    height: 240px
+
+    & .arrow
+        display: flex
+        align-items: center
+        cursor: pointer
+        position: absolute
+        @media screen and (min-width: $desktopS)
+            top: -68px
+        @media screen and (min-width: $desktopM)
+            top: -77px
+
+        & > img
+            @media screen and (min-width: $desktopS)
+                width: 68px
+                height: 15px
+            @media screen and (min-width: $desktopM)
+                width: 80px
+
+        img
+            display: block
+
+    & .arrow-prev
+        z-index: 1000
+        position: absolute
+        @media screen and (min-width: $desktopS)
+            right: 103px
+        @media screen and (min-width: $desktopM)
+            right: 120px
+
+    & .arrow-next
+        z-index: 1000
+        position: absolute
+        right: 20px
+

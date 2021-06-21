@@ -1,0 +1,61 @@
+$(document).ready(function () {
+    if ($(window).width() >= '1440') {
+        $('.managers-slider').slick({
+            slidesToShow: 4,
+            variableWidth: false,
+            arrows: true,
+            prevArrow: '<div class="arrow-prev arrow"><img src="../img/autoauction-online/prev-arrow.svg"></div>',
+            nextArrow: '<div class="arrow-next arrow"><img src="../img/autoauction-online/next-arrow.svg"></div>',
+            dots: true,
+            infinite: false
+        });
+    } else if ($(window).width() >= '1024') {
+        $('.managers-slider').slick({
+            slidesToShow: 3.2,
+            variableWidth: false,
+            arrows: false,
+            dots: true,
+            infinite: false
+        });
+    } else if ($(window).width() >= '768') {
+        $('.managers-slider').slick({
+            slidesToShow: 2.4,
+            variableWidth: false,
+            arrows: false,
+            dots: true,
+            infinite: false
+        });
+    } else if ($(window).width() >= '568') {
+        $('.managers-slider').slick({
+            slidesToShow: 1.8,
+            variableWidth: false,
+            arrows: false,
+            dots: true,
+            infinite: false
+        });
+    } else if ($(window).width() >= '414') {
+        $('.managers-slider').slick({
+            slidesToShow: 1.3,
+            variableWidth: false,
+            arrows: false,
+            dots: true,
+            infinite: false
+        });
+    } else if ($(window).width() >= '360') {
+        $('.managers-slider').slick({
+            slidesToShow: 1.1,
+            variableWidth: false,
+            arrows: false,
+            dots: true,
+            infinite: false
+        });
+    } else if ($(window).width() < '360') {
+        $('.managers-slider').slick({
+            slidesToShow: 1,
+            variableWidth: false,
+            arrows: false,
+            dots: true,
+            infinite: false
+        });
+    }
+})
