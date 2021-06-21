@@ -668,6 +668,46 @@
             & > .container
                 width: 1345px
 
+    & .CEO
+        @media screen and (max-width: $mobileM)
+            margin: 60px 0
+        @media screen and (min-width: $mobileM)
+            margin: 64px 0
+        @media screen and (min-width: $tabletS)
+            margin: 80px 0
+        @media screen and (min-width: $desktopS)
+            margin: 100px 0
+        @media screen and (min-width: $desktopM)
+            margin: 120px 0
+
+        & > .container
+            border-top: 1px solid $black-21
+
+        & h3
+            @media screen and (min-width: 0)
+                margin: 20px 0 12px
+            @media screen and (min-width: $mobileL)
+                margin: 24px 0 16px
+            @media screen and (min-width: $desktopS)
+                margin: 30px 0 15px
+
+        & p
+            font-size: 15px
+            line-height: 150%
+            letter-spacing: 0.04em
+            margin-bottom: 10px
+
+        & ul
+            list-style: unset
+            margin-left: 18px
+
+            & > li
+                margin-bottom: 8px
+
+                & > span
+                    font-weight: 700
+
+
 .youtube
     & h2
         text-align: left
@@ -753,3 +793,4 @@
         z-index: 1000
         position: absolute
         right: 20px
+
