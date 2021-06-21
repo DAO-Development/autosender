@@ -1,4 +1,5 @@
 $(document).ready(function () {
+    console.log("pitty");
     $('.reviews__items').slick({
         slidesToShow: 3,
         variableWidth: false,
@@ -13,11 +14,11 @@ $(document).ready(function () {
               }
             },
             {
-                breakpoint: 568,
-                settings: {
-                  slidesToShow: 1,
-                }
-              },
+              breakpoint: 570,
+              settings: {
+                slidesToShow: 1,
+              }
+            },
         ]
     });
 });

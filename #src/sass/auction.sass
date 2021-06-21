@@ -2,11 +2,20 @@
 .auction
     padding: 120px 0
 
+    
+    @media screen and ( max-width: $tabletM )
+        padding: 80px 0
+    @media screen and ( max-width: $mobileM )
+        padding: 64px 0
+        
+
     &__content
-        display: flex
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr
         align-items: center 
         @media screen and ( max-width: $tabletM )
-            >svg
+            display: flex
+            &>svg
                 display: none
                 
     .empty
@@ -58,7 +67,7 @@
             grid-template-columns: 1fr 6fr
 
         @media screen and ( max-width: $mobileL )
-            grid-template-columns: 1.1fr 1fr
+            grid-template-columns: 53% 47%;
             gap: 0
         @media screen and ( max-width: $mobileM )
             display: flex
@@ -81,8 +90,10 @@
         @media screen and ( max-width: $mobileL )
             height: 168px
             width: auto
-        @media screen and ( max-width: $mobileL )
+        @media screen and ( max-width: $mobileM )
             height: 230px
+        @media screen and ( max-width: $mobileM )
+            height: 200px
         img
             min-height: 100%
             min-width: 100%;
@@ -105,9 +116,15 @@
         align-items: center
         @media screen and ( max-width: $tabletS)
             line-height: 120%;
-        @media screen and ( max-width: $mobileM )
             &::before
                 display: none
+        @media screen and ( max-width: $mobileL)
+            &::before
+                display: block
+        @media screen and ( max-width: $mobileM)
+            &::before
+                display: none
+
 
 
     &__model::before
@@ -148,9 +165,15 @@
             margin-bottom: 15px
             gap: 0
 
-            @media screen and ( max-width: $mobileM )
+            @media screen and ( max-width: $tabletS )
                 display: flex
                 flex-direction: column
+            @media screen and ( max-width: $mobileL )
+                flex-direction: row
+                gap: 10px
+            @media screen and ( max-width: $mobileM )
+                flex-direction: column
+                gap: 0
 
 
                 
@@ -209,7 +232,7 @@
                 border: none
         @media screen and ( max-width: $mobileM )
             padding-left: 20px
-            margin-bottom: 10px;
+            margin-bottom: 0px;
             &-text
                 font-size: 12px;
                 line-height: 120%;
@@ -248,7 +271,7 @@
         display: flex
         align-items: center
         position: absolute
-        height: 47px
+        height: 55px
         gap: 29px
         padding: 8px 30px
         
@@ -259,6 +282,7 @@
             position: relative
             justify-content: center
             height: 60px
+            gap: 42px
         @media screen and ( max-width: $tabletS )
             grid-row: 3/4
 
@@ -276,6 +300,7 @@
         @media screen and ( max-width: $mobileM )
             padding-top: 14px
             gap: 10px
+            margin-top: 10px
 
 
 

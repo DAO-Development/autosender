@@ -41,7 +41,7 @@
     &__list
         
         width: 117%
-        padding-top: 10px
+        padding-top: 0
         margin-bottom: 120px
         display: flex
         overflow-x: scroll
@@ -81,8 +81,11 @@
 
         @media screen and ( max-width: $mobileL )
             width: 288px
+            padding: 12px 24px
+            font-size: 14px;
         @media screen and ( max-width: $mobileS )
             width: 280px
+            padding: 4px 19px;
             
 
     &__item::after
@@ -119,10 +122,13 @@
     &__brands
         margin: 0 auto
         display: grid
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr
+        grid-template-columns: 1.65fr 1fr 1fr 1fr 1fr 1fr 1.65fr
         place-items: center
         border-bottom: 1px solid $grey-185
 
+        @media screen and ( max-width: $desktopS )
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr
+            
         @media screen and ( max-width: $tabletM )
             grid-template-columns: 1fr 1fr
             .empty
@@ -194,6 +200,8 @@
             margin-top: 80px
         @media screen and ( max-width: $mobileL )
             margin-top: 64px
+        @media screen and ( max-width: $mobileM )
+            padding-top: 15px
         @media screen and ( max-width: $mobileS )
             margin-top: 60px
 
@@ -203,6 +211,9 @@
             font-size: 18px;
             line-height: 130%;
             letter-spacing: 0.045em;
+            @media screen and ( max-width: $mobileM )
+                font-size: 16px
+
         
         p
             margin-bottom: 7px
