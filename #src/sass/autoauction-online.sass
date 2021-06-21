@@ -692,23 +692,53 @@
                 margin: 30px 0 15px
 
         & p
-            font-size: 15px
             line-height: 150%
             letter-spacing: 0.04em
             margin-bottom: 10px
+            @media screen and (min-width: 0)
+                font-size: 14px
+            @media screen and (min-width: $tabletS)
+                font-size: 15px
 
         & ul
-            list-style: unset
-            margin-left: 18px
-
             & > li
+                display: flex
+                align-items: center
                 margin-bottom: 8px
+                gap: 12px
 
-                & > span
-                    font-weight: 700
+                &::before
+                    content: url("../img/marker.svg")
+
+                & > p
+                    margin-bottom: 0
+
+                    & > span
+                        font-weight: 700
 
 
 .youtube
+    @media screen and (max-width: $mobileM)
+        padding: 60px 0
+        & > .container
+            width: 100vw
+    @media screen and (min-width: $mobileM)
+        padding: 64px 0
+        & > .container
+            width: 100vw
+    @media screen and (min-width: $tabletS)
+        padding: 80px 0
+        & > .container
+            width: 100vw
+    @media screen and (min-width: $desktopS)
+        padding: 100px 0
+        & > .container
+            width: 1200px
+    @media screen and (min-width: $desktopM)
+        padding: 120px 0
+        & > .container
+            width: 1345px
+
     & h2
         text-align: left
         @media screen and (min-width: 0)
