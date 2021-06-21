@@ -138,9 +138,9 @@ $(document).ready(function () {
 
     let select = document.getElementById('interesting-cars__select');
     select.onchange = function () {
-        selectedCategory.classList.remove("active")
-        selectedCategory = sliders[select.selectedIndex]
-        selectedCategory.classList.add("active")
+        selectedSlider.classList.remove("active");
+        selectedSlider = sliders[select.selectedIndex]
+        selectedSlider.classList.add("active")
         let id = '#slider-' + (select.selectedIndex + 1);
         if ($(window).width() >= '1440') {
             $(id).slick({
