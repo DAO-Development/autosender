@@ -16,8 +16,6 @@
         @media screen and ( max-width: $tabletM )
             display: block
 
-        @media screen and ( max-width: $mobileM )
-            padding-top: 37px
             
 
 
@@ -39,8 +37,13 @@
 
         .table-wrap
             width: 100%
+            max-width: 788px
             overflow: scroll
             scrollbar-width: none
+            @media screen and ( max-width: $tabletM )
+                max-width: unset
+                
+        
 
         .table-wrap::-webkit-scrollbar 
             width: 0
@@ -65,8 +68,8 @@
                 white-space: nowrap
 
                 @media screen and ( max-width: $desktopS )
-                    padding: 18px 12px
-                @media screen and ( max-width: $desktopS )
+                    padding: 17px 12px
+                @media screen and ( max-width: $tabletS )
                     padding: 17px 24px
                 @media screen and ( max-width: $mobileL )
                     padding: 11px 18px
@@ -101,13 +104,20 @@
             justify-content: center
             &-text
                 max-width: 195px
+        @media screen and ( max-width: $mobileS )
+            font-size: 15px;
+
+
 
     &__contents
         margin-top: 60px
         background: $light
         padding: 40px
-
+        @media screen and ( max-width: $tabletM )
+            margin-top: 80px
         @media screen and ( max-width: $tabletS )
+            margin-top: 60px
+
             position: absolute
             left: 0
             width: 100%
@@ -124,6 +134,9 @@
             margin: 0
             @media screen and ( max-width: $desktopS ) and (min-width: $tabletM)
                 font-size: 22px
+
+            @media screen and ( max-width: $tabletM )
+                font-size: 24px;
 
             @media screen and ( max-width: $mobileL )
                 font-size: 20px
@@ -288,10 +301,11 @@
 
         @media screen and ( max-width: $tabletM )
             gap: 48px
+            margin-top: 80px
 
 
         @media screen and ( max-width: $tabletS )
-            margin-top: 468px
+            margin-top: 465px
 
         @media screen and ( max-width: $mobileL )
             margin-top: 558px
