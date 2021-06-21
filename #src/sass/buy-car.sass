@@ -89,11 +89,18 @@
         padding: 24px 0
 
         border: 1px solid $grey-179
-        display: flex
+        display: grid
+        grid-template-columns: 1fr 10fr
         position: relative
         height: fit-content
 
+
+        @media screen and ( max-width: $tabletM )
+            width: min-content
+            
+
         @media screen and ( max-width: $mobileL)
+            display: flex
             flex-direction: column
             width: 100%
             padding: 16px 20px 9px
@@ -122,7 +129,7 @@
         letter-spacing: 0.045em
         text-align: center
         border-right: 1px solid $grey-181
-        width: 4.5ch
+        width: 1.9ch
         text-align: right
         box-sizing: content-box
         place-self: start
@@ -138,7 +145,7 @@
             
 
     &__content
-        max-width: 435px
+        width: 435px
         padding: 0 25px
         font-size: 14px
         font-weight: 400
@@ -150,6 +157,7 @@
         overflow: hidden
         @media screen and ( max-width: $mobileL)
             padding: 0
+            width: unset
         @media screen and ( max-width: $mobileM )
             -webkit-line-clamp: 3
 
