@@ -644,6 +644,38 @@
                         padding: 12px 24px
 
 .autoauction-online
+    & .title-products
+        & > .container
+            display: flex
+            align-items: center
+            justify-content: space-between
+            border-top: 1px solid $black-21
+            padding-top: 15px
+            margin-bottom: 40px
+
+        & p
+            display: none
+            font-size: 16px
+            line-height: 18px
+
+            & > span
+                font-weight: 700
+
+            @media screen and (min-width: $tabletM)
+                display: block
+
+        & select
+            padding: 10px 14px
+            border: 1px solid $grey-179
+            @media screen and (min-width: 0)
+                width: 100%
+                font-size: 16px
+                line-height: 19px
+            @media screen and (min-width: $tabletM)
+                width: 195px
+                font-size: 15px
+                line-height: 18px
+
     & .interesting-cars,
     & .youtube
         background: $background-grey-gradient
