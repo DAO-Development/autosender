@@ -608,26 +608,6 @@
 
     & .interesting-cars
         background: $background-grey-gradient
-        @media screen and (min-width: 0)
-            padding: 60px 0
-            & > .container
-                width: 100vw
-        @media screen and (min-width: $mobileM)
-            padding: 64px 0
-            & > .container
-                width: 100vw
-        @media screen and (min-width: $tabletS)
-            padding: 80px 0
-            & > .container
-                width: 100vw
-        @media screen and (min-width: $desktopS)
-            padding: 100px 0
-            & > .container
-                width: 1200px
-        @media screen and (min-width: $desktopM)
-            padding: 120px 0
-            & > .container
-                width: 1345px
 
 .sincing-slider
     @media screen and (max-width: $mobileM)
@@ -723,6 +703,27 @@
         right: 20px
 
 .interesting-cars
+    @media screen and (min-width: 0)
+        padding: 60px 0
+        & > .container
+            width: 100vw
+    @media screen and (min-width: $mobileM)
+        padding: 64px 0
+        & > .container
+            width: 100vw
+    @media screen and (min-width: $tabletS)
+        padding: 80px 0
+        & > .container
+            width: 100vw
+    @media screen and (min-width: $desktopS)
+        padding: 100px 0
+        & > .container
+            width: 1200px
+    @media screen and (min-width: $desktopM)
+        padding: 120px 0
+        & > .container
+            width: 1345px
+
     h2
         @media screen and (max-width: $tabletS)
             margin-bottom: 40px
