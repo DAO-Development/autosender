@@ -1,8 +1,14 @@
 @import "base.sass"
+.invis
+        display: none !important
 
 .footer
     background: $black-26
     color: $white-op75
+    .f-vis
+        display: block !important
+        position: relative
+    
     a, span, div
         font-size: 14px;
         letter-spacing: 0.045em;
@@ -194,10 +200,10 @@
             display: flex
             
         position: fixed
-        z-index: 10
+        z-index: 1000
         bottom: 0
         left: 0
-        width: 100%
+        width: 100vw
         background: $black-21
         justify-content: space-around
         padding: 16px
@@ -239,13 +245,13 @@
 
     .fmenu
         display: none
-        position: fixed
-        left: 0
+        position: relative
+        left: -9%
         bottom: 80px
         @media screen and ( max-width: $mobileL )
             bottom: 85px
         width: 100vw
-        height: 100vh
+        min-height: 100vh
         padding-top: 100px
         background: $blue-dark
         z-index: 100
