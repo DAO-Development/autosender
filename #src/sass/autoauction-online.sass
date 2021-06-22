@@ -708,13 +708,19 @@
             border: 1px solid $grey-52
 
         &s__notes
-            border: 1px solid $grey-52
+            @media screen and (min-width: $tabletS)
+                border: 1px solid $grey-52
 
             &-item
-                border-bottom: 1px solid $grey-179
+                @media screen and (min-width: $tabletS)
+                    border-right: 1px solid $grey-179
+                @media screen and (min-width: $tabletM)
+                    border-right: none
+                    border-bottom: 1px solid $grey-179
 
             &-text
-                border-left: 1px solid $grey-179
+                @media screen and (min-width: $tabletS)
+                    border-left: 1px solid $grey-179
 
             & svg
                 & > path
