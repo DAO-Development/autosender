@@ -676,6 +676,55 @@
                 font-size: 15px
                 line-height: 18px
 
+    & .auction
+        background-color: white
+        color: $grey-102
+        margin: 0 auto
+
+        &-first
+            padding-top: 0
+
+        &__content
+            display: block
+
+            & .auctions
+                align-items: center
+
+        &s__content
+            border: 1px solid $grey-52
+
+        &s__background
+            color: $grey-52
+            opacity: 0.03
+
+        &s__model
+            color: $black-21
+            opacity: 0.5
+
+            &::before
+                background-color: $grey-102
+
+        &s__price
+            border: 1px solid $grey-52
+
+        &s__notes
+            border: 1px solid $grey-52
+
+            &-item
+                border-bottom: 1px solid $grey-179
+
+            &-text
+                border-left: 1px solid $grey-179
+
+            & svg
+                & > path
+                    fill: $grey-181
+
+        &s__watch-more
+            color: $grey-181 !important
+            border-top: 1px solid $grey-181
+            border-bottom: 1px solid $grey-181
+
     & .interesting-cars,
     & .youtube
         background: $background-grey-gradient
