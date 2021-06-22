@@ -276,30 +276,42 @@
 
     &__cars
         margin-top: 120px
+        margin-bottom: 100px
         display: flex
         flex-direction: column
         gap: 60px
 
         @media screen and (max-width: $desktopS)
             margin-top: 100px
+            margin-bottom: 100px
             gap: 52px
 
         @media screen and (max-width: $tabletM)
             gap: 48px
             margin-top: 80px
+            margin-bottom: 80px
 
 
         @media screen and (max-width: $tabletS)
             margin-top: 465px
+            margin-bottom: 80px
+            &-bottom
+                margin: 80px 0
 
         @media screen and (max-width: $mobileL)
             margin-top: 558px
+            margin-bottom: 64px
             gap: 40px
+            &-bottom
+                margin: 64px 0
 
         @media screen and (max-width: $mobileM)
             margin-top: 552px
         @media screen and (max-width: $mobileS)
             margin-top: 661px
+            margin-bottom: 60px
+            &-bottom
+                margin: 60px 0
 
 
     &__car
