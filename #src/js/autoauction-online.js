@@ -1,15 +1,14 @@
 $(document).ready(function () {
-    if ($(window).width() >= '1024') {
-        $('.filter__color').addClass('not-visible')
-        $('.filter__auctions').addClass('not-visible')
-        $('.filter__num-lot').addClass('not-visible')
-        $('.filter__body-model').addClass('not-visible')
-        $('.filter__body-type').addClass('not-visible')
-        $('.filter__mileage').addClass('not-visible')
-        $('.filter__volume').addClass('not-visible')
-        $('.filter__drive').addClass('not-visible')
-        $('.filter__num-body').addClass('not-visible')
-    }
+    $('.filter__color').addClass('not-visible')
+    $('.filter__auctions').addClass('not-visible')
+    $('.filter__num-lot').addClass('not-visible')
+    $('.filter__body-model').addClass('not-visible')
+    $('.filter__body-type').addClass('not-visible')
+    $('.filter__mileage').addClass('not-visible')
+    $('.filter__volume').addClass('not-visible')
+    $('.filter__drive').addClass('not-visible')
+    $('.filter__num-body').addClass('not-visible')
+
     let lists = document.getElementsByClassName('main-filter__list-category')
     let selectedList;
     for (let i = 0; i < lists.length; i++) {
