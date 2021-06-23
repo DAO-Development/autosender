@@ -84,6 +84,7 @@ $background-grey-gradient: linear-gradient(180deg, #F4F4F4 0%, #FFFFFF 29.69%, #
 
 html
     overflow-x: hidden
+    width: 100vw
 
 body
     font-family: Roboto, sans-serif
@@ -182,6 +183,9 @@ input
     letter-spacing: 0.04em
     text-decoration: none
     border: none
+    -webkit-appearance: none;
+    -moz-appearance:    none;
+    appearance:         none;
 
 .breadcrumbs
     display: none
@@ -234,5 +238,11 @@ input
     width: 100%
     text-align: left
     padding-bottom: 21px
+    @media screen and ( max-width: $tabletS )
+        font-size: 32px;
+        
+
     @media screen and (max-width: $mobileL)
         padding-bottom: 13px
+        font-size: 28px;
+        margin-bottom: 40px
