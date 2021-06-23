@@ -27,7 +27,6 @@
     li
         margin-bottom: 14px
         @media screen and ( max-width: $tabletM )
-        
             margin-bottom: 18px
         @media screen and ( max-width: $mobileL )
             margin-bottom: 20px
@@ -248,13 +247,15 @@
         position: relative
         left: -9%
         bottom: 80px
-        @media screen and ( max-width: $mobileL )
-            bottom: 85px
+        
         width: 100vw
         min-height: 100vh
         padding-top: 100px
         background: $blue-dark
         z-index: 100
+        @media screen and ( max-width: $mobileL )
+            bottom: 85px
+            padding-top: 83.8px
         h4
             margin-bottom: 4px
             font-weight: bold
@@ -265,6 +266,10 @@
         >*
             padding: 32px 41px
 
+            @media screen and ( max-width: $mobileM )
+                padding: 22px 31px
+                
+
         &__close
             cursor: pointer
 
@@ -272,12 +277,23 @@
             padding: 19px 41px
             display: flex
             justify-content: space-between
+            @media screen and ( max-width: $mobileL )
+                margin-bottom: 10px
+                
+            @media screen and ( max-width: $mobileM )
+                padding: 19px 31px !important
+                
 
         &__menu
             display: grid
             grid-template-columns: 1fr 1fr
             border-bottom: 1px solid $white-op15
             padding: 19px 40px
+
+            @media screen and ( max-width: $mobileM )
+                display: flex
+                justify-content: space-between
+                
 
             &-desc
                 max-width: 125px
@@ -288,10 +304,17 @@
 
             &-item
                 padding: 0 10px 0 0
+                
+                @media screen and ( max-width: $mobileM)
+                    padding: 0
+                    
 
             &-item:last-child
                 border-left: 1px solid $white-op15
                 padding-left: 56px
+
+                @media screen and ( max-width: $mobileM)
+                    padding-left: 18px
 
         &__cars
             padding-right: 0
@@ -306,6 +329,12 @@
                 scrollbar-width: none
                 display: flex
                 gap: 56px
+                @media screen and ( max-width: $mobileL )
+                    gap: 65px
+                @media screen and ( max-width: $mobileS )
+                    gap: 75px
+
+                    
 
 
             &-list::-webkit-scrollbar
@@ -330,6 +359,18 @@
             grid-template-columns: 1fr 1fr
             gap: 10px
 
+            @media screen and ( max-width: $mobileL )
+                gap: 26px
+                
+            @media screen and ( max-width: $mobileM )
+                grid-template-columns: 1fr
+                padding-top: 0
+                >*
+                    padding-top: 22px
+                    margin-top: 22px
+                    border-top: 1px solid $white-op15
+
+
             &-desc
                 font-size: 10px;
                 line-height: 120%;
@@ -343,6 +384,11 @@
         &__footer
             display: grid
             grid-template-columns: 1fr 1fr
+            @media screen and ( max-width: $mobileL )
+                gap: 26px
+            @media screen and ( max-width: $mobileM )
+                display: flex
+                justify-content: space-between
 
         &__soc
             display: flex
@@ -355,11 +401,22 @@
             font-size: 18px;
             line-height: 22px;
             letter-spacing: 0.02em;
+            @media screen and ( max-width: $mobileM )
+                font-size: 18px;
+                line-height: 22px;
+            @media screen and ( max-width: $mobileS )
+                font-size: 16px
+                line-height: 20px;
+
+
             &-desc
                 font-size: 10px;
                 line-height: 120%;
                 letter-spacing: 0.04em;
                 color: $grey-181
+                @media screen and ( max-width: $mobileS )
+                    font-size: 10px;
+                    line-height: 120%;
         
     .vis
         display: block
