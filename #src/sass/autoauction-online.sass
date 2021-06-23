@@ -889,7 +889,40 @@
             margin-left: 0
 
         & .slide
-            & > iframe
+            position: relative
+
+            & img
+                @media screen and (min-width: 0)
+                    width: 270px
+                    height: 160px
+                @media screen and (min-width: $mobileM)
+                    width: 300px
+                    height: 180px
+                @media screen and (min-width: $mobileL)
+                    width: 340px
+                    height: 204px
+                @media screen and (min-width: $tabletS)
+                    width: 400px
+                    height: 240px
+                @media screen and (min-width: $desktopS)
+                    width: 376px
+                    height: 212px
+                @media screen and (min-width: $desktopM)
+                    width: 425px
+                    height: 240px
+
+            &:hover
+                & .filter
+                    opacity: 1
+
+            & .filter
+                opacity: 0
+                position: absolute
+                background-color: $black-op50
+                background-image: url("../img/autoauction-online/play-icon.svg")
+                background-repeat: no-repeat
+                background-position: center
+                transition: 0.3s ease
                 @media screen and (min-width: 0)
                     width: 270px
                     height: 160px
