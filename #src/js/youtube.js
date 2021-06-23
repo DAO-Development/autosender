@@ -8,6 +8,14 @@ $(document).ready(function () {
             nextArrow: '<div class="arrow-next arrow"><img src="../img/autoauction-online/next-arrow.svg"></div>',
             infinite: false
         });
+    } else if ($(window).width() >= '1200') {
+        $('.youtube-slider').slick({
+            slidesToShow: 2.5,
+            variableWidth: false,
+            arrows: false,
+            dots: true,
+            infinite: false
+        });
     } else if ($(window).width() >= '1024') {
         $('.youtube-slider').slick({
             slidesToShow: 2.2,

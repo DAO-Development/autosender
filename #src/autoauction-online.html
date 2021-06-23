@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto&display=swap"
           rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css">
 
     <link rel="stylesheet" href="css/style.min.css">
     <title>Автоаукцион онлайн</title>
@@ -588,20 +589,6 @@
                     <li><a href="">Corolla Axio</a></li>
                 </ul>
             </div>
-            <div class="main-filter__more-link">
-                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g clip-path="url(#clip0)">
-                        <path d="M13.8396 6.61289C13.8394 6.61273 13.8393 6.61254 13.8391 6.61237L10.9816 3.76862C10.7675 3.55559 10.4213 3.55638 10.2082 3.77048C9.9951 3.98456 9.99592 4.33081 10.21 4.54387L12.1285 6.45312H0.546875C0.244836 6.45312 0 6.69796 0 7C0 7.30204 0.244836 7.54687 0.546875 7.54687H12.1285L10.21 9.45612C9.99594 9.66919 9.99512 10.0154 10.2082 10.2295C10.4213 10.4436 10.7676 10.4444 10.9816 10.2314L13.8391 7.38762C13.8393 7.38746 13.8394 7.38727 13.8396 7.3871C14.0538 7.17333 14.0531 6.82596 13.8396 6.61289Z"
-                              fill="#BC002D"/>
-                    </g>
-                    <defs>
-                        <clipPath id="clip0">
-                            <rect width="14" height="14" fill="white"/>
-                        </clipPath>
-                    </defs>
-                </svg>
-                <a href="">Смотреть все модели</a>
-            </div>
             <div class="main-filter__filter">
                 <div class="filter__top">
                     <h2>Фильтр</h2>
@@ -614,15 +601,15 @@
                 </div>
                 <div class="filter__left">
                     <div class="filter__manufacturer">
-                        <select>
-                            <option hidden selected>Производитель</option>
+                        <select class="select" placeholder="Производитель">
+                            <option class="placeholder" value="placeholder">Производитель</option>
                             <option>Производитель 1</option>
                             <option>Производитель 2</option>
                         </select>
                     </div>
                     <div class="filter__model">
-                        <select>
-                            <option hidden selected>Модель</option>
+                        <select class="select">
+                            <option class="placeholder" value="placeholder">Модель</option>
                             <option>Модель 1</option>
                             <option>Модель 2</option>
                         </select>
@@ -630,13 +617,13 @@
                     <div class="filter__price">
                         <label>Цена, руб</label>
                         <div class="filter__selects">
-                            <select class="filter__price-from">
-                                <option hidden selected>от</option>
+                            <select class="filter__price-from select">
+                                <option class="placeholder" value="placeholder">от</option>
                                 <option>1000</option>
                                 <option>2000</option>
                             </select>
-                            <select class="filter__price-to">
-                                <option hidden selected>до</option>
+                            <select class="filter__price-to select">
+                                <option class="placeholder" value="placeholder">до</option>
                                 <option>10000</option>
                                 <option>20000</option>
                             </select>
@@ -645,28 +632,28 @@
                     <div class="filter__year">
                         <label>Год выпуска</label>
                         <div class="filter__selects">
-                            <select class="filter__year-from">
-                                <option hidden selected>от</option>
+                            <select class="filter__year-from select">
+                                <option class="placeholder" value="placeholder">от</option>
                                 <option>2017</option>
                                 <option>2018</option>
                             </select>
-                            <select class="filter__year-to">
-                                <option hidden selected>до</option>
+                            <select class="filter__year-to select">
+                                <option class="placeholder" value="placeholder">до</option>
                                 <option>2021</option>
                                 <option>2020</option>
                             </select>
                         </div>
                     </div>
                     <div class="filter__body-model">
-                        <select>
-                            <option hidden selected>Модель кузова</option>
+                        <select class="select">
+                            <option class="placeholder" value="placeholder">Модель кузова</option>
                             <option>Кузов 1</option>
                             <option>Кузов 2</option>
                         </select>
                     </div>
                     <div class="filter__body-type">
-                        <select>
-                            <option hidden selected>Тип кузова</option>
+                        <select class="select">
+                            <option class="placeholder" value="placeholder">Тип кузова</option>
                             <option>Тип 1</option>
                             <option>Тип 2</option>
                         </select>
@@ -674,13 +661,13 @@
                     <div class="filter__mileage">
                         <label>Пробег, км</label>
                         <div class="filter__selects">
-                            <select class="filter__mileage-from">
-                                <option hidden selected>от</option>
+                            <select class="filter__mileage-from select">
+                                <option class="placeholder" value="placeholder">от</option>
                                 <option>1000</option>
                                 <option>2000</option>
                             </select>
-                            <select class="filter__mileage-to">
-                                <option hidden selected>до</option>
+                            <select class="filter__mileage-to select">
+                                <option class="placeholder" value="placeholder">до</option>
                                 <option>10000</option>
                                 <option>20000</option>
                             </select>
@@ -689,21 +676,21 @@
                     <div class="filter__volume">
                         <label>Объем, см<sup>3</sup></label>
                         <div class="filter__selects">
-                            <select class="filter__volume-from">
-                                <option hidden selected>от</option>
+                            <select class="filter__volume-from select">
+                                <option class="placeholder" value="placeholder">от</option>
                                 <option>2017</option>
                                 <option>2018</option>
                             </select>
-                            <select class="filter__volume-to">
-                                <option hidden selected>до</option>
+                            <select class="filter__volume-to select">
+                                <option class="placeholder" value="placeholder">до</option>
                                 <option>2021</option>
                                 <option>2020</option>
                             </select>
                         </div>
                     </div>
                     <div class="filter__drive">
-                        <select>
-                            <option hidden selected>Привод</option>
+                        <select class="select">
+                            <option class="placeholder" value="placeholder">Привод</option>
                             <option>Кузов 1</option>
                             <option>Кузов 2</option>
                         </select>
@@ -848,8 +835,8 @@
                         </div>
                     </div>
                     <div class="filter__auctions">
-                        <select>
-                            <option hidden selected>Привод</option>
+                        <select class="select">
+                            <option class="placeholder" value="placeholder">Привод</option>
                             <option>Кузов 1</option>
                             <option>Кузов 2</option>
                         </select>
@@ -4139,6 +4126,8 @@
 <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
 <script type="text/javascript" src="js/interesting-cars.js"></script>
 <script type="text/javascript" src="js/autoauction-online.js"></script>
 <script type="text/javascript" src="js/youtube.js"></script>

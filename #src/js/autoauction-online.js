@@ -31,4 +31,12 @@ $(document).ready(function () {
         $('.main-filter__filter').removeClass('active')
         $('.main-filter__filter-mobile').removeClass('not-visible')
     });
+
+
+    const elements = document.querySelectorAll('.select');
+    elements.forEach(el => {
+        const choices = new Choices(el, {
+            placeholder: true,
+        });
+    });
 })

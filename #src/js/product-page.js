@@ -25,6 +25,14 @@ $(document).ready(function () {
             dots: true,
             infinite: false,
         });
+    }  else if ($(window).width() >= '1200') {
+        $('.gallery-carousel').slick({
+            slidesToShow: 2.5,
+            slidesToScroll: 1,
+            variableWidth: false,
+            dots: true,
+            infinite: false,
+        });
     } else if ($(window).width() >= '768') {
         $('.gallery-carousel').slick({
             slidesToShow: 1.6,

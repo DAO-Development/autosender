@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    if ($(window).width() >= '1440') {
+    if ($(window).width() >= '1300') {
         $('.managers-slider').slick({
             slidesToShow: 4,
             variableWidth: false,

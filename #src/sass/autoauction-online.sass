@@ -9,6 +9,10 @@
     @media screen and (max-width: $mobileL)
         margin-top: 40px
 
+    #main-filter__select
+        &:focus-visible
+            outline: none
+
     &__categories
         &-tabs
             margin-bottom: 25px
@@ -24,15 +28,14 @@
     &__lists
         display: grid
         @media screen and (min-width: 0)
-            margin-bottom: 32px
+            margin-bottom: 40px
         @media screen and (min-width: $tabletS)
-            margin-bottom: 0
+            margin-bottom: 48px
+        @media screen and (max-width: $desktopS)
+            margin-bottom: 40px
         @media screen and (min-width: $desktopS)
-            grid-template-columns: 114px 135px 113px 114px 153px 119px 166px
-            column-gap: 49px
-            margin-bottom: 30px
-        @media screen and (min-width: $desktopM)
-            column-gap: 71px
+            grid-template-columns: 120px 135px 120px 120px 153px 120px 166px
+            column-gap: 68px
 
         & > ul
             @media screen and (min-width: 0)
@@ -66,6 +69,7 @@
                 display: block
                 &.active
                     display: block
+                    width: auto
 
 
             & > li
@@ -85,26 +89,6 @@
                     &:hover
                         text-decoration: underline
 
-    &__more-link
-        display: flex
-        align-items: center
-        gap: 10px
-        @media screen and (min-width: 0)
-            justify-content: flex-start
-            margin-bottom: 40px
-        @media screen and (min-width: $tabletS)
-            justify-content: flex-end
-            width: 656px
-            margin: -15px auto 48px
-            font-size: 15px
-            line-height: 18px
-        @media screen and (min-width: $desktopS)
-            width: 100%
-            margin: 0 0 40px
-
-        & > a
-            color: $red-dark
-            text-decoration: none
 
     &__filter
         @media screen and (min-width: 0)
@@ -129,6 +113,14 @@
             z-index: 10000
             top: 0
             left: 0
+
+
+        .choices__list--dropdown
+            .choices__item[data-value="placeholder"]
+                display: none
+
+        .choices
+            margin-bottom: 0
 
         .filter
             &__top
@@ -424,9 +416,11 @@
             &__left,
             &__right
                 & select,
+                & .choices__inner,
                 & input
                     padding-bottom: 13px
                     border: none
+                    border-radius: 0
                     border-bottom: 1px solid $black-21
                     background: white
                     @media screen and (min-width: 0)
@@ -438,6 +432,8 @@
 
                 & > div
                     & > select,
+                    & .choices__inner,
+                    & .choices,
                     & > input
                         @media screen and (min-width: 0)
                             width: 81vw
@@ -466,7 +462,9 @@
                         display: flex
                         gap: 35px
 
-                        & > select
+                        & > select,
+                        & .choices__inner,
+                        & .choices
                             @media screen and (min-width: 0)
                                 width: 140px
                             @media screen and (min-width: $mobileM)
@@ -475,6 +473,12 @@
                                 width: 234px
                             @media screen and (min-width: $tabletS)
                                 width: 135px
+
+                        & .choices__item
+                            padding-right: 10px
+
+                            &:after
+                                display: none
 
             &__buttons
                 align-items: center
@@ -673,6 +677,7 @@
         & select
             padding: 10px 14px
             border: 1px solid $grey-179
+            background: white
             @media screen and (min-width: 0)
                 width: 100%
                 font-size: 16px
@@ -681,6 +686,9 @@
                 width: 195px
                 font-size: 15px
                 line-height: 18px
+
+            &:focus-visible
+                outline: none
 
     & .auction
         background-color: white
