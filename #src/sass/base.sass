@@ -59,6 +59,22 @@ $background-grey-gradient: linear-gradient(180deg, #F4F4F4 0%, #FFFFFF 29.69%, #
 
 
 /* Общие стили */
+
+*
+    scrollbar-color: #eee rgba(0, 0, 0, 0)
+    scrollbar-width: thin;  
+
+    &::-webkit-scrollbar 
+        width: 8px;
+        height: 24px;
+        background-color: #f0f0f0;
+
+    &::-webkit-scrollbar-thumb 
+        background-color: #707070;
+        border-radius: 9em;
+        box-shadow: inset 1px 1px 10px rgba(0, 0, 0, 0);
+
+
 .container
     margin: 0 auto
     max-width: 99vw
