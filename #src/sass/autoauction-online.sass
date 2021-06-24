@@ -1,6 +1,6 @@
 @import "base"
 .not-visible
-    display: none
+    display: none !important
 
 .main-filter
     margin-top: 60px
@@ -100,6 +100,12 @@
             box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2)
             margin-bottom: 80px
             width: 100%
+        @media screen and (min-width: $tabletS)
+
+            input[type="text"]
+                padding-top: 16px !important
+                align-self: end
+
         @media screen and (min-width: 1300px)
             display: grid
             grid-template-columns: 2fr 1fr
@@ -123,6 +129,7 @@
             margin: 0
 
         .filter
+         
             &__top
                 width: 100%
                 display: flex
@@ -149,6 +156,7 @@
                     border: none
 
             &__left
+                
                 @media screen and (min-width: 0)
                     padding: 50px 30px 0
                     border-bottom: 1px solid rgba(21, 2, 2, 0.06)
@@ -161,6 +169,7 @@
                     grid-template-columns: 1fr 1fr
                     //grid-template-rows: 1fr 1fr 1fr 1fr 1fr
                     padding: 0
+             
 
                 & > div
                     
@@ -204,13 +213,19 @@
                     grid-template-columns: 1fr 1fr
                     grid-template-rows: 1fr auto auto
                 @media screen and (min-width: 1300px)
-                    display: flex
-                    flex-direction: column
+                   
+                    grid-template-columns: 1fr
+                    grid-template-rows: unset !important
+                    &>*
+                        grid-column: 1/2
+                        height: fit-content
+
                     gap: 23px !important
                     padding: 50px 0
 
 
                 & > div
+                    display: grid
                     @media screen and (min-width: 0)
                         padding: 40px 30px
                     @media screen and (min-width: $mobileM)
@@ -249,7 +264,7 @@
                             padding: 0
                             margin-top: 0
                         @media screen and (min-width: $desktopM)
-                            margin-top: 125px
+                            margin-top: 0
 
                 & input[type=checkbox]
                     display: none
@@ -484,9 +499,10 @@
                                 display: none
 
             &__buttons
+                align-self: end 
                 align-items: center
                 @media screen and (min-width: 0)
-                    display: flex
+                    display: flex !important
                     flex-direction: column
                     align-items: center
                 @media screen and (min-width: $tabletS)
@@ -510,11 +526,12 @@
                 & > .all-btn
                     background: none
                     color: $red-dark
-                    margin-bottom: 18px
+                    margin-bottom: 0
                     @media screen and (min-width: 0)
                         display: block
                     @media screen and (min-width: $tabletM)
                         margin-right: 111px
+                        margin-bottom: 18px
                     @media screen and (min-width: 1300px)
                         margin-right: 42px
                     @media screen and (min-width: $desktopM)
