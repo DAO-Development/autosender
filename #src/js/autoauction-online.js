@@ -8,6 +8,11 @@ $(document).ready(function () {
     $('.filter__volume').addClass('not-visible')
     $('.filter__drive').addClass('not-visible')
     $('.filter__num-body').addClass('not-visible')
+    if ($(window).width() < '1024') {
+        $('.filter__price').addClass('not-visible')
+        $('.filter__year').addClass('not-visible')
+        $('.filter__raiting').addClass('not-visible')
+    }
 
     let lists = document.getElementsByClassName('main-filter__list-category')
     let selectedList;
@@ -42,6 +47,11 @@ $(document).ready(function () {
             $('.filter__volume').removeClass('not-visible')
             $('.filter__drive').removeClass('not-visible')
             $('.filter__num-body').removeClass('not-visible')
+            if ($(window).width() < '1024') {
+                $('.filter__price').removeClass('not-visible')
+                $('.filter__year').removeClass('not-visible')
+                $('.filter__raiting').removeClass('not-visible')
+            }
         } else {
             btn.classList.add('closed')
             $('.filter__color').addClass('not-visible')
@@ -53,6 +63,11 @@ $(document).ready(function () {
             $('.filter__volume').addClass('not-visible')
             $('.filter__drive').addClass('not-visible')
             $('.filter__num-body').addClass('not-visible')
+            if ($(window).width() < '1024') {
+                $('.filter__price').addClass('not-visible')
+                $('.filter__year').addClass('not-visible')
+                $('.filter__raiting').addClass('not-visible')
+            }
         }
     });
     $('#filter__close-btn').on("click", function () {
