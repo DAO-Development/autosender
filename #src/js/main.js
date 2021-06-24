@@ -2,8 +2,8 @@ const mainSelect = () => {
 	const elements = document.querySelectorAll('.select');
     elements.forEach(el => {
         const choices = new Choices(el, {
-            searchEnabled: false,
-            maxItemCount: 4,
+            searchEnabled: true,
+            maxItemCount: 4 ,
             classNames: {
                 list: 'choices__list-c',
                 item: 'choices__item-c',
