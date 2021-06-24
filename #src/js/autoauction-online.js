@@ -43,7 +43,7 @@ $(document).ready(function () {
             $('.filter__drive').removeClass('not-visible')
             $('.filter__num-body').removeClass('not-visible')
         } else {
-            $('.all-btn-svg').addClass('closed')
+            btn.classList.add('closed')
             $('.filter__color').addClass('not-visible')
             $('.filter__auctions').addClass('not-visible')
             $('.filter__num-lot').addClass('not-visible')
