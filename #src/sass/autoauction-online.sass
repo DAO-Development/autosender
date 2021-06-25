@@ -95,12 +95,16 @@
             display: none
             background: white
             width: 100vw
-            min-height: 100vh
+           
         @media screen and (min-width: $tabletM)
             display: block
             box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2)
             margin-bottom: 80px
             width: 100%
+            
+        @media screen and ( max-width: $tabletM )
+            
+            min-height: 100vh
         @media screen and (min-width: $tabletS)
 
             input[type="text"]

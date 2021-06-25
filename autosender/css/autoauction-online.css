@@ -801,7 +801,6 @@ input {
     display: none;
     background: white;
     width: 100vw;
-    min-height: 100vh;
   }
 
   .main-filter__filter .filter__top {
@@ -1874,6 +1873,10 @@ input {
 
   h1 {
     letter-spacing: 0.01em;
+  }
+
+  .main-filter__filter {
+    min-height: 100vh;
   }
 }
 
