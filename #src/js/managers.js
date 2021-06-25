@@ -6,7 +6,7 @@ $(document).ready(function () {
             arrows: true,
             prevArrow: '<div class="arrow-prev arrow"><img src="../img/autoauction-online/prev-arrow.svg"></div>',
             nextArrow: '<div class="arrow-next arrow"><img src="../img/autoauction-online/next-arrow.svg"></div>',
-            dots: true,
+            dots: false,
             infinite: false
         });
     } else if ($(window).width() >= '1024') {
@@ -14,7 +14,8 @@ $(document).ready(function () {
             slidesToShow: 3.2,
             variableWidth: false,
             arrows: false,
-            dots: true,
+            dots: false,
+
             infinite: false
         });
     } else if ($(window).width() >= '768') {
@@ -22,7 +23,8 @@ $(document).ready(function () {
             slidesToShow: 2.4,
             variableWidth: false,
             arrows: false,
-            dots: true,
+            dots: false,
+
             infinite: false
         });
     } else if ($(window).width() >= '568') {
@@ -30,7 +32,8 @@ $(document).ready(function () {
             slidesToShow: 1.8,
             variableWidth: false,
             arrows: false,
-            dots: true,
+            dots: false,
+
             infinite: false
         });
     } else if ($(window).width() >= '414') {
@@ -38,7 +41,8 @@ $(document).ready(function () {
             slidesToShow: 1.3,
             variableWidth: false,
             arrows: false,
-            dots: true,
+            dots: false,
+
             infinite: false
         });
     } else if ($(window).width() >= '360') {
@@ -46,7 +50,8 @@ $(document).ready(function () {
             slidesToShow: 1.1,
             variableWidth: false,
             arrows: false,
-            dots: true,
+            dots: false,
+
             infinite: false
         });
     } else if ($(window).width() < '360') {
@@ -54,7 +59,8 @@ $(document).ready(function () {
             slidesToShow: 1,
             variableWidth: false,
             arrows: false,
-            dots: true,
+            dots: false,
+
             infinite: false
         });
     }
