@@ -129,7 +129,7 @@
             margin: 0
 
         .filter
-         
+
             &__top
                 width: 100%
                 display: flex
@@ -156,7 +156,7 @@
                     border: none
 
             &__left
-                
+
                 @media screen and (min-width: 0)
                     padding: 50px 30px 0
                     border-bottom: 1px solid rgba(21, 2, 2, 0.06)
@@ -169,10 +169,10 @@
                     grid-template-columns: 1fr 1fr
                     //grid-template-rows: 1fr 1fr 1fr 1fr 1fr
                     padding: 0
-             
+
 
                 & > div
-                    
+
                     @media screen and (min-width: 0)
                         margin-bottom: 50px
                     @media screen and (min-width: $mobileM)
@@ -213,10 +213,10 @@
                     grid-template-columns: 1fr 1fr
                     grid-template-rows: 1fr auto auto
                 @media screen and (min-width: 1250px)
-                   
+
                     grid-template-columns: 1fr
                     grid-template-rows: unset !important
-                    &>*
+                    & > *
                         grid-column: 1/2
                         height: fit-content
 
@@ -499,7 +499,7 @@
                                 display: none
 
             &__buttons
-                align-self: end 
+                align-self: end
                 align-items: center
                 @media screen and (min-width: 0)
                     display: flex !important
@@ -529,6 +529,7 @@
                     margin-bottom: 0
                     @media screen and (min-width: 0)
                         display: block
+                        margin-bottom: 20px
                     @media screen and (min-width: $tabletM)
                         margin-right: 111px
                         margin-bottom: 18px

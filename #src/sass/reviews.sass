@@ -46,9 +46,10 @@
     &__items
         width: 1040px
         position: relative
-        @media screen and (max-width: $tabletM)
+        @media screen and (max-width: $tabletS)
             width: 100vw
-            //width: 670px
+        @media screen and (max-width: $tabletM)
+            width: 670px
 
     &__items::before
         position: absolute
@@ -182,7 +183,7 @@
         height: 503px
         margin-top: 7px
         position: relative
-        @media screen and ( max-width: $tabletM )
+        @media screen and (max-width: $tabletM)
             height: 439px
         @media screen and (max-width: $tabletS)
             display: none

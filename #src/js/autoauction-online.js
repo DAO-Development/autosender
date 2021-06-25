@@ -33,6 +33,7 @@ $(document).ready(function () {
         console.log('open')
         $('.main-filter__filter').addClass('active')
         $('.main-filter__filter-mobile').addClass('not-visible')
+        window.scrollTo(0, 0);
     });
     $('.all-btn').on("click", function () {
         let btn = document.querySelector('.all-btn-svg')
@@ -70,17 +71,21 @@ $(document).ready(function () {
             }
         }
     });
+    let title = document.getElementById(('mobile-filter'))
     $('#filter__close-btn').on("click", function () {
         $('.main-filter__filter').removeClass('active')
         $('.main-filter__filter-mobile').removeClass('not-visible')
+        window.scrollTo(title.getBoundingClientRect().left, title.getBoundingClientRect().top)
     });
     $('.clear-btn').on("click", function () {
         $('.main-filter__filter').removeClass('active')
         $('.main-filter__filter-mobile').removeClass('not-visible')
+        window.scrollTo(title.getBoundingClientRect().left, title.getBoundingClientRect().top)
     });
     $('.show-btn').on("click", function () {
         $('.main-filter__filter').removeClass('active')
         $('.main-filter__filter-mobile').removeClass('not-visible')
+        window.scrollTo(title.getBoundingClientRect().left, title.getBoundingClientRect().top)
     });
 
 
