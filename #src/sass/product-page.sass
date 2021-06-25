@@ -25,11 +25,11 @@
             @media screen and (min-width: $mobileL)
                 flex-direction: row
                 align-items: center
-                gap: 10px
+                grid-gap: 10px
             @media screen and (min-width: $tabletS)
                 margin-bottom: 0
             @media screen and (min-width: $desktopS)
-                gap: 15px
+                grid-gap: 15px
 
             & > svg
                 display: none
@@ -110,8 +110,8 @@
                         display: grid
                         grid-template-columns: 95px 10px
                         grid-template-rows: 1fr 1fr
-                        grid-column-gap: 15px
-                        grid-row-gap: 8px
+                        grid-column-grid-gap: 15px
+                        grid-row-grid-gap: 8px
                         background-color: white
                         box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1)
 
@@ -166,7 +166,7 @@
                 & > div
                     display: flex
                     align-items: center
-                    gap: 10px
+                    grid-gap: 10px
 
 
             &-right
@@ -196,7 +196,7 @@
                     font-size: 8px
                     background-color: $grey-52
                     color: white
-                    gap: 8px
+                    grid-gap: 8px
                     & > svg
                         width: 12px
                         height: 12px
@@ -346,7 +346,7 @@
             &__delivery
                 display: flex
                 align-items: center
-                gap: 12px
+                grid-gap: 12px
                 @media screen and (min-width: 0)
                     margin-bottom: 28px
                     font-size: 12px
@@ -371,18 +371,18 @@
                 @media screen and (min-width: 0)
                     font-size: 14px
                     padding: 20px 46px
-                    gap: 12px
+                    grid-gap: 12px
                 @media screen and (min-width: $mobileM)
                     font-size: 16px
                     padding: 20px 55px
-                    gap: 12px
+                    grid-gap: 12px
                 @media screen and (min-width: $mobileL)
                     font-size: 16px
                     padding: 20px 81px
                 @media screen and (min-width: $tabletS)
                     font-size: 18px
                     padding: 22px 98px
-                    gap: 14px
+                    grid-gap: 14px
                 @media screen and (min-width: $desktopS)
                     font-size: 16px
                     padding: 22px 84px
@@ -497,25 +497,25 @@
                     max-height: 1200px
                     grid-template-columns: 1fr 1fr
                     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr
-                    grid-column-gap: 35px
-                    grid-row-gap: 16px
+                    grid-column-grid-gap: 35px
+                    grid-row-grid-gap: 16px
                 @media screen and (min-width: $mobileL)
                     max-height: 1054px
                 @media screen and (min-width: $tabletS)
                     max-height: 742px
                     grid-template-columns: 1fr 1.1fr 0.95fr
                     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr
-                    grid-column-gap: 41px
-                    grid-row-gap: 20px
+                    grid-column-grid-gap: 41px
+                    grid-row-grid-gap: 20px
                 @media screen and (min-width: $tabletM)
                     max-height: 660px
-                    grid-column-gap: 130px
+                    grid-column-grid-gap: 130px
                 @media screen and (min-width: $desktopS)
                     grid-template-columns: 1fr 1fr 2fr
                     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr
                     max-height: 566px
-                    grid-row-gap: 22px
-                    grid-column-gap: 84px
+                    grid-row-grid-gap: 22px
+                    grid-column-grid-gap: 84px
 
                 & > li
                     font-size: 14px
@@ -822,7 +822,7 @@
                 display: flex
                 justify-content: center
                 align-items: center
-                gap: 10px
+                grid-gap: 10px
 
                 & > span
                     color: $black-21
@@ -830,14 +830,14 @@
 
                 @media screen and (max-width: $mobileL)
                     flex-direction: column
-                    gap: 0
+                    grid-gap: 0
                     & > svg
                         display: none
 
             &-data
                 display: flex
                 justify-content: center
-                gap: 10px
+                grid-gap: 10px
                 color: $grey-102
                 @media screen and (max-width: $tabletS)
                     font-size: 14px

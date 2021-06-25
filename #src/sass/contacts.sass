@@ -5,14 +5,14 @@
         display: grid
         grid-template-columns: 2fr 1fr
         place-items: center
-        gap: 0 50px
+        grid-gap: 0 50px
         @media screen and (max-width: $tabletS)
             grid-template-columns: 2.4fr 1fr
         @media screen and (max-width: $mobileL)
             display: flex
             flex-direction: column
             place-items: start
-            gap: 32px
+            grid-gap: 32px
             > *
                 margin-top: 0
 
@@ -20,41 +20,41 @@
     &__connect
         display: flex
         flex-wrap: wrap
-        gap: 50px 60px
+        grid-gap: 50px 60px
         border-right: 1px solid $grey-229
         grid-column: 1/2
         grid-row: 1/3
 
         @media screen and (max-width: $desktopS)
-            gap: 50px 46px
+            grid-gap: 50px 46px
 
         @media screen and (max-width: $tabletM)
             display: grid
             grid-template-columns: 1fr 1fr
-            gap: 28px 40px
+            grid-gap: 28px 40px
             padding-right: 40px
 
         @media screen and (max-width: $tabletS)
             grid-column: 1/3
             grid-row: 1/2
             display: flex
-            gap: 27px 38px
+            grid-gap: 27px 38px
             padding-right: 0
             border-right: 0
 
         @media screen and (max-width: $mobileL)
             display: grid
-            gap: 23px 58px
+            grid-gap: 23px 58px
         @media screen and (max-width: $mobileM)
             display: flex
             flex-direction: column
             height: 250px
             flex-wrap: wrap
-            gap: 16px
+            grid-gap: 16px
             border-bottom: 1px solid $grey-229
 
         @media screen and (max-width: $mobileS)
-            gap: 18px
+            grid-gap: 18px
             height: unset
             flex-wrap: nowrap
             padding-bottom: 28px
@@ -82,7 +82,7 @@
 
     &__mes
         display: flex
-        gap: 20px
+        grid-gap: 20px
 
     &__item-desc
         font-size: 14px
@@ -125,7 +125,7 @@
         &-item
             margin-bottom: 16px
             display: flex
-            gap: 12px
+            grid-gap: 12px
 
         &-text
             font-size: 16px
@@ -150,13 +150,13 @@
 
     &__soc
         display: flex
-        gap: 15px 40px
+        grid-gap: 15px 40px
         margin-top: 18px
         grid-column: 2/3
         grid-row: 2/3
 
         @media screen and (max-width: $desktopS)
-            gap: 15px 27px
+            grid-gap: 15px 27px
         @media screen and (max-width: $tabletM)
             margin-top: 16px
         @media screen and (max-width: $tabletS)
@@ -167,13 +167,13 @@
         @media screen and (max-width: $mobileL)
             flex-direction: row
             margin-top: 6px
-            gap: 15px 40px
+            grid-gap: 15px 40px
         @media screen and (max-width: $mobileM)
             flex-direction: column
             margin-top: -24px
         @media screen and (max-width: $mobileS)
             margin-top: -30px
-            gap: 7px
+            grid-gap: 7px
 
 
         a
@@ -186,7 +186,7 @@
             color: $black-21
             display: flex
             align-items: center
-            gap: 12px
+            grid-gap: 12px
             white-space: nowrap
 
 
@@ -234,23 +234,23 @@
 
         &-list
             display: flex
-            gap: 58px
+            grid-gap: 58px
             @media screen and (max-width: $tabletS)
                 flex-direction: column
-                gap: 32px
+                grid-gap: 32px
             @media screen and (max-width: $mobileL)
                 flex-direction: row
                 place-self: start
                 flex-wrap: wrap
-                gap: 24px 77px
+                grid-gap: 24px 77px
 
     &__manager
         display: grid
-        gap: 4px 13px
+        grid-gap: 4px 13px
         @media screen and (max-width: $tabletM)
-            gap: 0px 11px
+            grid-gap: 0px 11px
         @media screen and (max-width: $mobileL)
-            gap: 4px 11px
+            grid-gap: 4px 11px
 
 
         picture
@@ -364,21 +364,21 @@
                 grid-auto-flow: column
                 grid-template-columns: 1fr 1fr
                 grid-template-rows: auto auto auto auto auto
-                grid-column-gap: 26px
-                grid-row-gap: 20px
+                grid-column-grid-gap: 26px
+                grid-row-grid-gap: 20px
             @media screen and (min-width: $tabletS)
                 grid-template-columns: 1.5fr 1fr 1fr
                 grid-template-rows: 1fr 1fr 1fr
-                grid-column-gap: 41px
+                grid-column-grid-gap: 41px
             @media screen and (min-width: $tabletM)
-                grid-column-gap: 67px
+                grid-column-grid-gap: 67px
                 grid-template-columns: 2fr 1fr 1fr
                 grid-template-rows: 1fr 1fr 1fr
             @media screen and (min-width: $desktopS)
                 grid-template-columns: 2fr 1fr 1fr
                 grid-template-rows: 1fr 1fr 1fr
-                grid-row-gap: 22px
-                grid-column-gap: 80px
+                grid-row-grid-gap: 22px
+                grid-column-grid-gap: 80px
 
             & > li
                 @media screen and (min-width: 0)

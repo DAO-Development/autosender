@@ -23,7 +23,7 @@
 
     &__content
         display: flex
-        gap: 35px
+        grid-gap: 35px
         width: fit-content
         justify-content: center
         margin: auto
@@ -37,7 +37,7 @@
         @media screen and ( max-width:  $tabletS)
             width: 100%
         @media screen and ( max-width:  $mobileM)
-            gap: 32px
+            grid-gap: 32px
             
     &__item
         width: fit-content
@@ -67,7 +67,7 @@
 
             display: grid
             grid-template-columns: 1fr 1fr
-            gap: 15px 24px
+            grid-gap: 15px 24px
 
             picture
                 grid-column: 1/2
@@ -139,7 +139,7 @@
         padding: 13px 34px
         justify-content: center
         display: flex
-        gap: 10px
+        grid-gap: 10px
         text-decoration: none
         align-items: center
         color: $grey-185

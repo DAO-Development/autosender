@@ -4,10 +4,10 @@
     &__content
         display: grid
         grid-template-columns: 2.85fr 1fr
-        gap: 150px
+        grid-gap: 150px
         padding-top: 11px
         @media screen and (max-width: $desktopS)
-            gap: 140px
+            grid-gap: 140px
         @media screen and (max-width: $tabletM)
             display: block
 
@@ -88,7 +88,7 @@
         color: $red-dark
         text-decoration: none
         justify-content: center
-        gap: 10px
+        grid-gap: 10px
         font-size: 17px
         line-height: 19px
         @media screen and (max-width: $mobileM)
@@ -179,12 +179,12 @@
             height: 5rem
             flex-wrap: wrap
             padding-left: 16px
-            gap: 0 75px
+            grid-gap: 0 75px
 
         @media screen and (max-width: $mobileL)
             height: 10rem
             justify-content: start
-            gap: 7px 56px
+            grid-gap: 7px 56px
         @media screen and (max-width: $mobileS)
             height: fit-content
             flex-wrap: nowrap
@@ -195,7 +195,7 @@
         padding-left: 26px
         display: flex
         flex-direction: column
-        gap: 12px
+        grid-gap: 12px
         @media screen and (max-width: $desktopS)
             padding-left: 21px
             width: fit-content
@@ -228,7 +228,7 @@
     &__calculator
         display: flex
         align-items: center
-        gap: 11px
+        grid-gap: 11px
         padding: 12px 19px
         background: $blue
         justify-content: center
@@ -279,15 +279,15 @@
         margin-bottom: 100px
         display: flex
         flex-direction: column
-        gap: 60px
+        grid-gap: 60px
 
         @media screen and (max-width: $desktopS)
             margin-top: 100px
             margin-bottom: 100px
-            gap: 52px
+            grid-gap: 52px
 
         @media screen and (max-width: $tabletM)
-            gap: 48px
+            grid-gap: 48px
             margin-top: 80px
             margin-bottom: 80px
 
@@ -301,7 +301,7 @@
         @media screen and (max-width: $mobileL)
             margin-top: 558px
             margin-bottom: 64px
-            gap: 40px
+            grid-gap: 40px
             &-bottom
                 margin: 64px 0
 
@@ -323,9 +323,9 @@
         justify-content: space-between
         @media screen and (max-width: $mobileL)
             flex-direction: column
-            gap: 16px
+            grid-gap: 16px
             .article__get-price
-                gap: 13px
+                grid-gap: 13px
 
     &__car-name
         color: $black-21
@@ -362,7 +362,7 @@
 
     &__get-price
         display: flex
-        gap: 10px
+        grid-gap: 10px
         align-items: center
         color: $red-dark
         @media screen and (max-width: $tabletS)
@@ -404,13 +404,13 @@
 
     &__content
         display: flex
-        gap: 35px
+        grid-gap: 35px
         width: fit-content
         justify-content: center
         margin: auto
         flex-direction: column
         width: 100%
-        gap: 32px
+        grid-gap: 32px
 
     &__item
         text-decoration: none
@@ -438,7 +438,7 @@
 
         display: grid
         grid-template-columns: 1fr 1fr
-        gap: 20px 24px
+        grid-gap: 20px 24px
 
 
         display: flex

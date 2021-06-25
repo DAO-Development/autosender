@@ -70,7 +70,7 @@
     &__steps
         display: grid
         grid-template-columns: 1fr 1fr 1fr
-        gap: 60px 24px
+        grid-gap: 60px 24px
         flex-wrap: wrap
         justify-content: space-between
 
@@ -78,7 +78,7 @@
             display: flex
             place-items: center
             flex-direction: column
-            gap: 23px
+            grid-gap: 23px
         @media screen and (max-width: $mobileM)
             margin-bottom: 60px
         @media screen and (min-width: $mobileM)
@@ -110,10 +110,10 @@
             flex-direction: column
             width: 100%
             padding: 16px 20px 9px
-            gap: 16px
+            grid-gap: 16px
 
         @media screen and (max-width: $mobileS)
-            gap: 5px
+            grid-gap: 5px
 
 
     &__split

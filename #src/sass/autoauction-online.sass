@@ -35,7 +35,7 @@
             margin-bottom: 40px
         @media screen and (min-width: $desktopS)
             grid-template-columns: 120px 135px 120px 120px 153px 120px 166px
-            column-gap: 68px
+            column-grid-gap: 68px
 
         & > ul
             @media screen and (min-width: 0)
@@ -45,7 +45,7 @@
                     margin: 0 auto
                     display: flex
                     flex-direction: column
-                    gap: 24px
+                    grid-gap: 24px
             @media screen and (min-width: $mobileS)
                 &.active
                     width: 350px
@@ -54,7 +54,7 @@
                     grid-auto-flow: column
                     grid-template-columns: 1fr 1fr
                     grid-template-rows: 1fr 1fr 1fr 1fr 1fr
-                    row-gap: 24px
+                    row-grid-gap: 24px
             @media screen and (min-width: $mobileL)
                 &.active
                     width: 488px
@@ -63,8 +63,8 @@
                     width: 656px
                     grid-template-columns: 1fr 1fr 1fr
                     grid-template-rows: 1fr 1fr 1fr 1fr
-                    column-gap: 113px
-                    row-gap: 24px
+                    column-grid-gap: 113px
+                    row-grid-gap: 24px
             @media screen and (min-width: $desktopS)
                 display: block
                 &.active
@@ -220,7 +220,7 @@
                         grid-column: 1/2
                         height: fit-content
 
-                    gap: 23px !important
+                    grid-gap: 23px !important
                     padding: 50px 0
 
 
@@ -285,21 +285,21 @@
                     flex-wrap: wrap
                     @media screen and (min-width: 0)
                         max-width: 300px
-                        column-gap: 35px
-                        row-gap: 22px
+                        column-grid-gap: 35px
+                        row-grid-gap: 22px
                     @media screen and (min-width: $mobileM)
                         max-width: 332px
-                        column-gap: 42px
-                        row-gap: 24px
+                        column-grid-gap: 42px
+                        row-grid-gap: 24px
                     @media screen and (min-width: $mobileL)
                         max-width: 480px
                     @media screen and (min-width: $tabletS)
                         max-width: 294px
-                        column-gap: 32px
+                        column-grid-gap: 32px
                     @media screen and (min-width: 1250px)
                         max-width: 270px
-                        column-gap: 23px
-                        row-gap: 15px
+                        column-grid-gap: 23px
+                        row-grid-gap: 15px
                     @media screen and (min-width: $desktopM)
                         max-width: 305px
 
@@ -335,22 +335,22 @@
                     flex-wrap: wrap
                     @media screen and (min-width: 0)
                         max-width: 300px
-                        gap: 20px
+                        grid-gap: 20px
                     @media screen and (min-width: $mobileM)
                         max-width: 332px
-                        column-gap: 28px
-                        row-gap: 24px
+                        column-grid-gap: 28px
+                        row-grid-gap: 24px
                     @media screen and (min-width: $mobileL)
                         max-width: 480px
-                        column-gap: 32px
-                        row-gap: 20px
+                        column-grid-gap: 32px
+                        row-grid-gap: 20px
                     @media screen and (min-width: $tabletS)
                         max-width: 292px
-                        gap: 20px
+                        grid-gap: 20px
                     @media screen and (min-width: 1250px)
                         max-width: 270px
-                        column-gap: 16px
-                        row-gap: 12px
+                        column-grid-gap: 16px
+                        row-grid-gap: 12px
                     @media screen and (min-width: $desktopM)
                         max-width: 305px
 
@@ -478,7 +478,7 @@
 
                     & > .filter__selects
                         display: flex
-                        gap: 35px
+                        grid-gap: 35px
 
                         & > select,
                         & .choices__inner,
@@ -516,7 +516,7 @@
                 & > button
                     display: flex
                     align-items: center
-                    gap: 8px
+                    grid-gap: 8px
                     font-size: 15px
                     line-height: 18px
                     letter-spacing: 0.04em
@@ -608,7 +608,7 @@
                     display: flex
                     align-items: center
                     letter-spacing: 0.045em
-                    gap: 16px
+                    grid-gap: 16px
                     @media screen and (min-width: 0)
                         padding: 16px 25px
                         font-size: 14px
@@ -656,12 +656,12 @@
             &-tabs
                 display: flex
                 flex-wrap: wrap
-                gap: 8px
+                grid-gap: 8px
 
                 & > .tab-active
                     display: flex
                     align-items: center
-                    gap: 8px
+                    grid-gap: 8px
                     color: $blue
                     border: 1px solid $blue
                     border-radius: 100px
@@ -771,12 +771,12 @@
     & .article-list__pages
         margin-top: 25px
         justify-content: space-between
-        gap: 0
+        grid-gap: 0
         @media screen and (min-width: $mobileM)
             margin-top: 28px
         @media screen and (min-width: $tabletS)
             margin-top: 32px
-            gap: 20px
+            grid-gap: 20px
         @media screen and (min-width: $desktopS)
             margin-top: 30px
 
@@ -841,7 +841,7 @@
                 display: flex
                 align-items: center
                 margin-bottom: 8px
-                gap: 12px
+                grid-gap: 12px
 
                 &::before
                     content: url("../img/marker.svg")
