@@ -96,4 +96,13 @@ $(document).ready(function () {
             placeholder: true,
         });
     });
+
+    $(".model-change").on("click", function(){
+        $(".filter__model").html("<select class='model-select'><option class='placeholder' value='placeholder'>Модель</option><option>не Модель 1</option><option> неМодель 2</option></select>")
+        let models = document.querySelector('.model-select');
+        console.log(models.innerHTML)
+        const choices1 = new Choices(models, {
+            placeholder: true,
+        });
+})
 })
