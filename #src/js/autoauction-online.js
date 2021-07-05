@@ -104,5 +104,5 @@ $(document).ready(function () {
         const choices1 = new Choices(models, {
             placeholder: true,
         });
-})
+    })
 })
