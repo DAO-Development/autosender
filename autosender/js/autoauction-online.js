@@ -6,8 +6,9 @@ $(document).ready(function () {
         slidesToScroll: 1,
         dots: true,
         arrows: true,
-
     });
+
+
     $('.filter__color').addClass('not-visible')
     $('.filter__auctions').addClass('not-visible')
     $('.filter__num-lot').addClass('not-visible')
@@ -25,6 +26,20 @@ $(document).ready(function () {
 
     let lists = document.getElementsByClassName('main-filter__list-category')
     let selectedList;
+
+    tabs.each((i, el) => {
+        console.log(el)
+        $(el).on('click', function () {
+            console.log(el)
+            console.log($(el).attr('data-num'))
+            $('.main-filter__list-category').removeClass('active')
+            $('#list-category-' + $(el).attr('data-num')).addClass('active')
+
+            tabs.removeClass('active')
+            $(el).addClass('active')
+        })
+
+    })
     for (let i = 0; i < lists.length; i++) {
         if (lists[i].classList.contains('active')) {
             selectedList = lists[i]
@@ -37,6 +52,9 @@ $(document).ready(function () {
         selectedList = lists[filterSelect.selectedIndex]
         selectedList.classList.add("active")
     };
+
+    let tabs = $('.main-filter__category')
+
 
     $('#filter-btn').on("click", function () {
         console.log('open')

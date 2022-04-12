@@ -215,11 +215,49 @@ input {
   outline: none;
 }
 
+.main-filter__category {
+  width: inherit;
+  display: grid;
+  padding: 12px 0 15px !important;
+  place-items: center;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+  border-bottom: none !important;
+  border-radius: 10px 10px 0 0;
+  font-size: 19px !important;
+}
+
+.main-filter__category:hover {
+  padding: 8px 0 19px !important;
+  -webkit-box-shadow: 0 -12px 12px rgba(0, 0, 0, 0.03);
+          box-shadow: 0 -12px 12px rgba(0, 0, 0, 0.03);
+}
+
+.main-filter__category.active {
+  background: #bc002d;
+  color: white;
+}
+
+.main-filter__category.active:hover {
+  padding: 15px 0 17px !important;
+}
+
 .main-filter__categories-tabs {
-  margin-bottom: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100% !important;
 }
 
 .main-filter__lists {
+  padding: 20px 20px 15px;
+  -webkit-box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 0 0 5px 5px;
   display: grid;
 }
 
@@ -1654,19 +1692,24 @@ input {
   }
 
   .main-filter__lists {
-    grid-template-columns: 120px 135px 120px 120px 153px 120px 166px;
     -webkit-column-gap: 68px;
        -moz-column-gap: 68px;
             column-gap: 68px;
   }
 
-  .main-filter__lists > ul {
-    display: block;
-  }
-
   .main-filter__lists > ul.active {
-    display: block;
-    width: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 5px;
+    width: 100%;
   }
 
   .main-filter__lists > ul > li {
@@ -1860,6 +1903,9 @@ input {
 
   .main-filter__lists {
     margin-bottom: 40px;
+    padding: 20px;
+    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
   }
 }
 

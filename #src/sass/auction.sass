@@ -309,26 +309,31 @@
         @media screen and ( max-width: $mobileL )
             padding-left: 20px
             place-self: start
-        @media screen and ( max-width: 1100px )
+        @media screen and ( max-width: 1100px ) and ( min-width: $tabletM)
             &:first-child
                 display: none
                 &+svg
                     display: none
         @media screen and ( max-width: $tabletM )
             width: 100%
-            padding: 0 20px
+            // padding: 0 20px
             display: grid
-            margin-bottom: 15px
+            grid-template-columns: 1fr 1.5fr
+            gap: 10px
 
             &-down
                 grid-column: 1/2
                 place-self: center start
-                width: 10ch
+                // width: 17ch
                 grid-row: 1/2
-                display: none
+                // display: none
+                font-size: 13px
+                line-height: 130%
 
             &-up
-                place-self: start
+                grid-column: 2/3
+
+                place-self: center start
                 font-size: 18px
 
         &-up

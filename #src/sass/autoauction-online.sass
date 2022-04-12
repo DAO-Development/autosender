@@ -13,10 +13,36 @@
         &:focus-visible
             outline: none
 
+    &__category
+        // border: 1px solid $grey-153
+
+        width: inherit
+        display: grid
+        padding: 12px 0 15px !important
+        place-items: center
+        transition: .3s
+        border-bottom: none !important
+        border-radius: 10px 10px 0 0
+        font-size: 19px !important
+        &:hover
+            padding: 8px 0 19px !important
+            box-shadow: 0 -12px 12px rgba(0,0,0,.03)
+            // padding: 20px 0 20px !important
+
+        &.active
+
+            background: $red-dark
+            color: white
+            &:hover
+                padding: 15px 0 17px !important
+
     &__categories
         &-tabs
-            margin-bottom: 25px
-
+            // margin-bottom: 25px
+            display: flex
+            // gap: 15px
+            justify-content: space-between
+            width: 100% !important
         &-select
             @media screen and (min-width: 0)
                 margin-bottom: 25px
@@ -26,6 +52,10 @@
                 margin-bottom: 28px
 
     &__lists
+        padding: 20px 20px 15px
+        box-shadow: 0 10px 10px rgba(0,0,0,.2)
+        border-radius: 0 0 5px 5px
+        // border: 1px solid $black-21
         display: grid
         @media screen and (min-width: 0)
             margin-bottom: 40px
@@ -33,8 +63,11 @@
             margin-bottom: 48px
         @media screen and (max-width: $desktopS)
             margin-bottom: 40px
+            padding: 20px
+            box-shadow: 0 6px 12px rgba(0,0,0,.2)
+
         @media screen and (min-width: $desktopS)
-            grid-template-columns: 120px 135px 120px 120px 153px 120px 166px
+            // grid-template-columns: 120px 135px 120px 120px 153px 120px 166px
             column-gap: 68px
 
         & > ul
@@ -66,10 +99,16 @@
                     column-gap: 113px
                     row-gap: 24px
             @media screen and (min-width: $desktopS)
-                display: block
                 &.active
-                    display: block
-                    width: auto
+                    display: flex
+                    justify-content: space-between
+                    flex-direction: row
+                    gap: 5px
+                    width: 100%
+            //     display: block
+            //     &.active
+            //         display: block
+            //         width: auto
 
             & > li
                 letter-spacing: 0.045em
