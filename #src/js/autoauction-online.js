@@ -26,20 +26,6 @@ $(document).ready(function () {
 
     let lists = document.getElementsByClassName('main-filter__list-category')
     let selectedList;
-
-    tabs.each((i, el) => {
-        console.log(el)
-        $(el).on('click', function () {
-            console.log(el)
-            console.log($(el).attr('data-num'))
-            $('.main-filter__list-category').removeClass('active')
-            $('#list-category-' + $(el).attr('data-num')).addClass('active')
-
-            tabs.removeClass('active')
-            $(el).addClass('active')
-        })
-
-    })
     for (let i = 0; i < lists.length; i++) {
         if (lists[i].classList.contains('active')) {
             selectedList = lists[i]
@@ -54,6 +40,19 @@ $(document).ready(function () {
     };
 
     let tabs = $('.main-filter__category')
+    tabs.each((i, el) => {
+        console.log(el)
+        $(el).on('click', function () {
+            console.log(el)
+            console.log($(el).attr('data-num'))
+            $('.main-filter__list-category').removeClass('active')
+            $('#list-category-' + $(el).attr('data-num')).addClass('active')
+
+            tabs.removeClass('active')
+            $(el).addClass('active')
+        })
+
+    })
 
 
     $('#filter-btn').on("click", function () {
