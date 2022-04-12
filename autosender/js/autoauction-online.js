@@ -6,14 +6,7 @@ $(document).ready(function () {
         slidesToScroll: 1,
         dots: true,
         arrows: true,
-        responsive: [
-            {
-                breakpoint: 1024,
-                settings: {
-                    // arrows: false,
-                }
-            }
-        ]
+
     });
     $('.filter__color').addClass('not-visible')
     $('.filter__auctions').addClass('not-visible')

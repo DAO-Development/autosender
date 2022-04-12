@@ -1808,6 +1808,34 @@ input {
   width: 360px;
 }
 
+.auctions__content-pictures .slick-arrow::before {
+  background: -o-radial-gradient(#fff8, rgba(255, 255, 255, 0) 65%, rgba(255, 255, 255, 0));
+  background: radial-gradient(#fff8, rgba(255, 255, 255, 0) 65%, rgba(255, 255, 255, 0));
+  display: inline-block;
+  height: 60px;
+  padding: 0 5px;
+}
+
+.auctions__content-pictures .slick-next {
+  right: 15px !important;
+  z-index: 10;
+}
+
+.auctions__content-pictures .slick-next::before {
+  content: url(../img/arrow.svg);
+  height: 52px;
+}
+
+.auctions__content-pictures .slick-prev {
+  left: 15px !important;
+  z-index: 10;
+}
+
+.auctions__content-pictures .slick-prev::before {
+  content: url(../img/arrow-left.svg);
+  height: 52px;
+}
+
 .auctions picture {
   overflow: hidden;
   width: 310px;
@@ -9455,16 +9483,6 @@ input {
     margin: 0 !important;
   }
 
-  .auctions__content-pictures .slick-next {
-    right: 15px !important;
-    z-index: 10;
-  }
-
-  .auctions__content-pictures .slick-prev {
-    left: 15px !important;
-    z-index: 10;
-  }
-
   .auctions__content-pictures .slick-list {
     height: 100% !important;
   }
@@ -11348,7 +11366,7 @@ input {
 
   .auctions__item {
     width: 100%;
-    max-width: 350px;
+    max-width: 360px;
   }
 
   .auctions__content-pictures {
@@ -11399,15 +11417,11 @@ input {
 
   .auctions__price {
     border: none !important;
-    grid-column: 1/3;
-    grid-row: 2/3;
     position: relative;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    height: 60px;
     grid-gap: 42px;
-    grid-row: 3/4;
     padding: 0;
     padding-top: 12px;
     grid-column: 2/3;
@@ -11423,7 +11437,7 @@ input {
             justify-content: end;
     padding-top: 14px;
     grid-gap: 10px;
-    margin-top: 10px;
+    margin-top: 0px;
   }
 
   .auctions__price svg {
