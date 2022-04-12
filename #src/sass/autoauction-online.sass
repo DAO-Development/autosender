@@ -71,7 +71,6 @@
                     display: block
                     width: auto
 
-
             & > li
                 letter-spacing: 0.045em
                 @media screen and (min-width: 0)
@@ -89,21 +88,20 @@
                     &:hover
                         text-decoration: underline
 
-
     &__filter
         @media screen and (min-width: 0)
             display: none
             background: white
             width: 100vw
-           
+
         @media screen and (min-width: $tabletM)
             display: block
             box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2)
             margin-bottom: 80px
             width: 100%
-            
+
         @media screen and ( max-width: $tabletM )
-            
+
             min-height: 100vh
         @media screen and (min-width: $tabletS)
 
@@ -124,7 +122,6 @@
             z-index: 10000
             top: 0
             left: 0
-
 
         .choices__list--dropdown
             .choices__item[data-value="placeholder"]
@@ -175,7 +172,6 @@
                     //grid-template-rows: 1fr 1fr 1fr 1fr 1fr
                     padding: 0
 
-
                 & > div
 
                     @media screen and (min-width: 0)
@@ -225,9 +221,8 @@
                         grid-column: 1/2
                         height: fit-content
 
-                    grid-gap: 23px !important
-                    padding: 50px 0
-
+                        grid-gap: 23px !important
+                        padding: 50px 0
 
                 & > div
                     display: grid
@@ -747,11 +742,10 @@
                 background-color: $grey-102
 
         &s__price
-            border: 1px solid $grey-52
+            border-top: 1px solid $grey-52
+            border-left: 1px solid $grey-52
 
         &s__notes
-            @media screen and (min-width: $tabletS)
-                border: 1px solid $grey-52
 
             &-item
                 @media screen and (min-width: $tabletS)
@@ -856,7 +850,6 @@
 
                     & > span
                         font-weight: 700
-
 
 .youtube
     @media screen and (max-width: $mobileM)
@@ -997,4 +990,3 @@
         z-index: 1000
         position: absolute
         right: 20px
-

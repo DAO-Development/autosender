@@ -1,4 +1,20 @@
 $(document).ready(function () {
+
+    $('.auctions__content-pictures').slick({
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: true,
+        arrows: true,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    // arrows: false,
+                }
+            }
+        ]
+    });
     $('.filter__color').addClass('not-visible')
     $('.filter__auctions').addClass('not-visible')
     $('.filter__num-lot').addClass('not-visible')
@@ -97,7 +113,7 @@ $(document).ready(function () {
         });
     });
 
-    $(".model-change").on("click", function(){
+    $(".model-change").on("click", function () {
         $(".filter__model").html("<select class='model-select'><option class='placeholder' value='placeholder'>Модель</option><option>не Модель 1</option><option> неМодель 2</option></select>")
         let models = document.querySelector('.model-select');
         console.log(models.innerHTML)

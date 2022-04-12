@@ -655,7 +655,8 @@ input {
 }
 
 .autoauction-online .auctions__price {
-  border: 1px solid #343434;
+  border-top: 1px solid #343434;
+  border-left: 1px solid #343434;
 }
 
 .autoauction-online .auctions__notes svg > path {
@@ -1392,10 +1393,6 @@ input {
     padding: 12px 24px;
   }
 
-  .autoauction-online .auctions__notes {
-    border: 1px solid #343434;
-  }
-
   .autoauction-online .auctions__notes-item {
     border-right: 1px solid #b3b3b3;
   }
@@ -1570,8 +1567,6 @@ input {
   .main-filter__filter .filter__right {
     grid-template-columns: 1fr;
     grid-template-rows: unset !important;
-    grid-gap: 23px !important;
-    padding: 50px 0;
   }
 
   .main-filter__filter .filter__right > * {
@@ -1579,6 +1574,8 @@ input {
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
+    grid-gap: 23px !important;
+    padding: 50px 0;
   }
 
   .main-filter__filter .filter__right > div {
