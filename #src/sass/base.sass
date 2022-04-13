@@ -10,13 +10,13 @@ $desktopS: 1440px
 $desktopM: 1600px
 $desktopL: 1920px
 /*$mobileS: 400px
-    $mobileM: 554px
-    $mobileL: 754px
-    $tabletS: 1010px
-    $tabletM: 1426px
-    $desktopS: 1586px
-    $desktopM: 1906px
-    $desktopL: 1920px*/
+ $mobileM: 554px
+ $mobileL: 754px
+ $tabletS: 1010px
+ $tabletM: 1426px
+ $desktopS: 1586px
+ $desktopM: 1906px
+ $desktopL: 1920px*/
 
 /* Цвета */
 $white-op50: rgba(255, 255, 255, 0.5)
@@ -57,7 +57,6 @@ $grey-229: rgba(229, 229, 229, 1)
 
 $background-grey-gradient: linear-gradient(180deg, #F4F4F4 0%, #FFFFFF 29.69%, #FFFFFF 71.87%, #F4F4F4 100%)
 
-
 /* Общие стили */
 body
     overflow-x: hidden
@@ -66,26 +65,24 @@ body
     max-height: 10rem
     overflow-y: scroll
 
-
 input[type="submit"]
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
+    -webkit-appearance: none
+    -moz-appearance: none
+    appearance: none
 
 *
     scrollbar-color: #eee rgba(0, 0, 0, 0)
-    scrollbar-width: thin;  
+    // scrollbar-width: thin;  
 
-    &::-webkit-scrollbar 
-        width: 8px;
-        height: 24px;
-        background-color: #f0f0f0;
+    &::-webkit-scrollbar
+        // width: 8px;
+        height: 24px
+        background-color: #f0f0f0
 
-    &::-webkit-scrollbar-thumb 
-        background-color: #707070;
-        border-radius: 9em;
-        box-shadow: inset 1px 1px 10px rgba(0, 0, 0, 0);
-
+    &::-webkit-scrollbar-thumb
+        background-color: #707070
+        border-radius: 9em
+        box-shadow: inset 1px 1px 10px rgba(0, 0, 0, 0)
 
 .container
     margin: 0 auto
@@ -118,7 +115,6 @@ body
     font-family: Roboto, sans-serif
     color: $black-21
 
-
 h1, h2, h3, h4, h5, h6, button, .btn
     font-family: 'Montserrat', sans-serif
     line-height: 130%
@@ -142,9 +138,6 @@ h1
         font-size: 32px
     @media screen and ( max-width: $mobileS )
         font-size: 24px
-        
-
-
 
 h2
     margin-bottom: 47px
@@ -179,7 +172,6 @@ h3
     @media screen and (min-width: $mobileS) and (max-width: $mobileS)
         font-size: 16px
 
-
 h4
     font-weight: 700
     letter-spacing: 0.045em
@@ -211,9 +203,9 @@ input
     letter-spacing: 0.04em
     text-decoration: none
     border: none
-    -webkit-appearance: none;
-    -moz-appearance:    none;
-    appearance:         none;
+    -webkit-appearance: none
+    -moz-appearance: none
+    appearance: none
 
 .breadcrumbs
     display: none
@@ -267,10 +259,9 @@ input
     text-align: left
     padding-bottom: 21px
     @media screen and ( max-width: $tabletS )
-        font-size: 32px;
-        
+        font-size: 32px
 
     @media screen and (max-width: $mobileL)
         padding-bottom: 13px
-        font-size: 28px;
+        font-size: 28px
         margin-bottom: 40px

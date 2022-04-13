@@ -117,8 +117,10 @@ $(document).ready(function () {
     }
 
     const elements = document.querySelectorAll('.select');
+    console.log(elements)
+    console.log($('.select'));
     elements.forEach(el => {
-        const choices = new Choices(el, {
+        let choices = new Choices(el, {
             placeholder: true,
         });
     });

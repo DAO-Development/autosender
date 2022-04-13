@@ -5,13 +5,13 @@
 /* Экраны */
 
 /*$mobileS: 400px
-    $mobileM: 554px
-    $mobileL: 754px
-    $tabletS: 1010px
-    $tabletM: 1426px
-    $desktopS: 1586px
-    $desktopM: 1906px
-    $desktopL: 1920px*/
+ $mobileM: 554px
+ $mobileL: 754px
+ $tabletS: 1010px
+ $tabletM: 1426px
+ $desktopS: 1586px
+ $desktopM: 1906px
+ $desktopL: 1920px*/
 
 /* Цвета */
 
@@ -34,11 +34,9 @@ input[type="submit"] {
 
 * {
   scrollbar-color: #eee rgba(0, 0, 0, 0);
-  scrollbar-width: thin;
 }
 
 *::-webkit-scrollbar {
-  width: 8px;
   height: 24px;
   background-color: #f0f0f0;
 }
@@ -209,6 +207,18 @@ input {
 
 .main-filter {
   margin-top: 60px;
+}
+
+.main-filter .choices__inner {
+  background: none;
+  border: none;
+  border-radius: 0;
+  border-bottom: 1px solid #150202;
+}
+
+.main-filter .choices__inner .choices__item {
+  font-size: 19px !important;
+  line-height: 19px !important;
 }
 
 .main-filter #main-filter__select:focus-visible {

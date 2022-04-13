@@ -125,3 +125,11 @@ $(".header__hover-3").mouseleave(function () {
         }
     }, 100);
 });
+
+$('.modal-city-open').on('click', function () {
+    $('.modal-city').addClass('vis')
+})
+
+$('.modal-city__close').on("click", function () {
+    $('.modal-city').removeClass('vis')
+})

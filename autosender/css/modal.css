@@ -5,13 +5,13 @@
 /* Экраны */
 
 /*$mobileS: 400px
-    $mobileM: 554px
-    $mobileL: 754px
-    $tabletS: 1010px
-    $tabletM: 1426px
-    $desktopS: 1586px
-    $desktopM: 1906px
-    $desktopL: 1920px*/
+ $mobileM: 554px
+ $mobileL: 754px
+ $tabletS: 1010px
+ $tabletM: 1426px
+ $desktopS: 1586px
+ $desktopM: 1906px
+ $desktopL: 1920px*/
 
 /* Цвета */
 
@@ -34,11 +34,9 @@ input[type="submit"] {
 
 * {
   scrollbar-color: #eee rgba(0, 0, 0, 0);
-  scrollbar-width: thin;
 }
 
 *::-webkit-scrollbar {
-  width: 8px;
   height: 24px;
   background-color: #f0f0f0;
 }
@@ -207,7 +205,55 @@ input {
   display: grid !important;
 }
 
-.modal {
+.modal-city .modal__wrap {
+  padding-bottom: 0;
+}
+
+.modal-city-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px 20px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-height: 600px;
+  height: 80vh;
+  overflow: scroll;
+}
+
+.modal-city a {
+  color: #150202;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.modal__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 100px;
+  border-bottom: 1px solid #150202;
+  margin-bottom: 20px;
+  -webkit-box-align: bottom;
+      -ms-flex-align: bottom;
+          align-items: bottom;
+}
+
+.modal__header-city {
+  margin-bottom: 15px;
+}
+
+.modal__header h3 {
+  margin-bottom: 15px !important;
+}
+
+.modal,
+.modal-city {
+  z-index: 10000;
   display: none;
   position: fixed;
   background: rgba(52, 52, 52, 0.7);
@@ -217,21 +263,24 @@ input {
   bottom: 0;
 }
 
-.modal__wrap {
+.modal__wrap,
+.modal-city__wrap {
   padding-bottom: 100px;
   z-index: 100;
   width: 710px;
   place-self: center;
 }
 
-.modal__close {
+.modal__close,
+.modal-city__close {
   right: 22px;
   top: 22px;
   position: absolute;
   cursor: pointer;
 }
 
-.modal__content {
+.modal__content,
+.modal-city__content {
   padding: 40px;
   width: 100%;
   margin: 0 auto;
@@ -239,27 +288,32 @@ input {
   position: relative;
 }
 
-.modal__content .feedback {
+.modal__content .feedback,
+.modal-city__content .feedback {
   background: white;
   padding-top: 0;
   padding-bottom: 40px;
 }
 
-.modal__content .feedback__fields {
+.modal__content .feedback__fields,
+.modal-city__content .feedback__fields {
   grid-gap: 20px;
 }
 
-.modal__content .feedback .feedback__agreement label {
+.modal__content .feedback .feedback__agreement label,
+.modal-city__content .feedback .feedback__agreement label {
   margin-bottom: 22px;
 }
 
-.modal__content .feedback h3 {
+.modal__content .feedback h3,
+.modal-city__content .feedback h3 {
   padding-bottom: 13px;
   margin-bottom: 25px;
   border-bottom: 1px solid #150202;
 }
 
-.modal__content .feedback p {
+.modal__content .feedback p,
+.modal-city__content .feedback p {
   font-size: 14px;
   font-weight: 400;
   line-height: 21px;
@@ -267,30 +321,36 @@ input {
   margin-bottom: 40px;
 }
 
-.modal__content .feedback > * {
+.modal__content .feedback > *,
+.modal-city__content .feedback > * {
   color: black;
 }
 
-.modal__content .feedback .feedback__fields input {
+.modal__content .feedback .feedback__fields input,
+.modal-city__content .feedback .feedback__fields input {
   border: 1px solid black;
   color: black;
   margin-bottom: 0;
 }
 
-.modal__content .feedback .feedback__fields input::-moz-placeholder {
+.modal__content .feedback .feedback__fields input::-moz-placeholder,
+.modal-city__content .feedback .feedback__fields input::-moz-placeholder {
   color: black !important;
 }
 
-.modal__content .feedback .feedback__fields input::-webkit-input-placeholder {
+.modal__content .feedback .feedback__fields input::-webkit-input-placeholder,
+.modal-city__content .feedback .feedback__fields input::-webkit-input-placeholder {
   color: black !important;
 }
 
-.modal__content .contacts__info {
+.modal__content .contacts__info,
+.modal-city__content .contacts__info {
   display: block;
   border-top: 1px solid rgba(0, 0, 0, 0.15);
 }
 
-.modal__content .contacts__connect {
+.modal__content .contacts__connect,
+.modal-city__content .contacts__connect {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -306,12 +366,14 @@ input {
   grid-gap: 50px;
 }
 
-.modal__content .contacts__managers {
+.modal__content .contacts__managers,
+.modal-city__content .contacts__managers {
   margin-top: 15px;
   padding-top: 15px;
 }
 
-.modal__content .contacts__managers-title {
+.modal__content .contacts__managers-title,
+.modal-city__content .contacts__managers-title {
   font-family: Montserrat;
   font-size: 12px;
   font-weight: 700;
@@ -320,14 +382,16 @@ input {
   margin-bottom: 14px;
 }
 
-.modal__content .contacts__managers-list {
+.modal__content .contacts__managers-list,
+.modal-city__content .contacts__managers-list {
   grid-gap: 30px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
 
-.modal__content .contacts__manager-number {
+.modal__content .contacts__manager-number,
+.modal-city__content .contacts__manager-number {
   font-size: 12px;
   font-weight: 400;
   line-height: 17px;
@@ -389,7 +453,8 @@ input {
     font-size: 15px;
   }
 
-  .modal__content .feedback h3 {
+  .modal__content .feedback h3,
+  .modal-city__content .feedback h3 {
     font-size: 20px;
     font-weight: 700;
     line-height: 26px;
@@ -406,7 +471,8 @@ input {
     letter-spacing: 0.01em;
   }
 
-  .modal__wrap {
+  .modal__wrap,
+  .modal-city__wrap {
     width: 738px;
   }
 }
@@ -434,20 +500,24 @@ input {
     font-size: 32px;
   }
 
-  .modal__wrap {
+  .modal__wrap,
+  .modal-city__wrap {
     width: 712px;
   }
 
-  .modal__content {
+  .modal__content,
+  .modal-city__content {
     padding: 40px 28px;
   }
 
-  .modal__content .contacts__managers-title {
+  .modal__content .contacts__managers-title,
+  .modal-city__content .contacts__managers-title {
     font-size: 14px;
     line-height: 17px;
   }
 
-  .modal__content .contacts__managers-list {
+  .modal__content .contacts__managers-list,
+  .modal-city__content .contacts__managers-list {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -457,7 +527,8 @@ input {
             justify-content: start;
   }
 
-  .modal__content .contacts__manager-number {
+  .modal__content .contacts__manager-number,
+  .modal-city__content .contacts__manager-number {
     font-size: 20px;
     font-weight: 700;
     line-height: 24px;
@@ -486,22 +557,30 @@ input {
     margin-bottom: 40px;
   }
 
-  .modal {
+  .modal__header {
+    gap: 20px;
+  }
+
+  .modal,
+  .modal-city {
     overflow-y: scroll;
   }
 
-  .modal__wrap {
+  .modal__wrap,
+  .modal-city__wrap {
     width: 94vw;
     position: absolute;
     top: 1rem;
   }
 
-  .modal__content .feedback .feedback__agreement {
+  .modal__content .feedback .feedback__agreement,
+  .modal-city__content .feedback .feedback__agreement {
     margin-left: 66px;
     margin-bottom: 7px;
   }
 
-  .modal__content .feedback p {
+  .modal__content .feedback p,
+  .modal-city__content .feedback p {
     margin-left: 0;
     margin-right: 0;
     margin-bottom: 32px;
@@ -509,17 +588,20 @@ input {
     text-align: left;
   }
 
-  .modal__content .feedback .feedback__fields {
+  .modal__content .feedback .feedback__fields,
+  .modal-city__content .feedback .feedback__fields {
     margin-bottom: 20px;
   }
 
-  .modal__content .contacts__info {
+  .modal__content .contacts__info,
+  .modal-city__content .contacts__info {
     display: grid;
     grid-template-columns: 1fr 1.3fr;
     grid-gap: 32px;
   }
 
-  .modal__content .contacts__connect {
+  .modal__content .contacts__connect,
+  .modal-city__content .contacts__connect {
     grid-column: 1/2;
     grid-row: 1/2;
     -webkit-box-pack: start;
@@ -529,7 +611,8 @@ input {
     margin-top: 20px;
   }
 
-  .modal__content .contacts__managers {
+  .modal__content .contacts__managers,
+  .modal-city__content .contacts__managers {
     grid-column: 2/3;
     grid-row: 1/2;
     padding-left: 32px;
@@ -539,22 +622,26 @@ input {
     margin-top: 20px;
   }
 
-  .modal__content .contacts__mes a {
+  .modal__content .contacts__mes a,
+  .modal-city__content .contacts__mes a {
     display: block;
     width: 28px;
     height: 28px;
   }
 
-  .modal__content .contacts__mes a svg {
+  .modal__content .contacts__mes a svg,
+  .modal-city__content .contacts__mes a svg {
     width: 100%;
     height: 100%;
   }
 
-  .modal__content .contacts__manager {
+  .modal__content .contacts__manager,
+  .modal-city__content .contacts__manager {
     place-self: start;
   }
 
-  .modal__content .contacts__manager-number {
+  .modal__content .contacts__manager-number,
+  .modal-city__content .contacts__manager-number {
     font-size: 20px;
     font-weight: 700;
     line-height: 24px;
@@ -570,31 +657,37 @@ input {
     font-size: 32px;
   }
 
-  .modal__content {
+  .modal__content,
+  .modal-city__content {
     padding: 32px 20px;
   }
 
-  .modal__content .feedback .red-btn {
+  .modal__content .feedback .red-btn,
+  .modal-city__content .feedback .red-btn {
     padding-left: 0;
     padding-right: 0;
     text-align: center;
     width: 100%;
   }
 
-  .modal__content .feedback .feedback__agreement {
+  .modal__content .feedback .feedback__agreement,
+  .modal-city__content .feedback .feedback__agreement {
     margin-left: 0;
   }
 
-  .modal__content .feedback .feedback__fields input {
+  .modal__content .feedback .feedback__fields input,
+  .modal-city__content .feedback .feedback__fields input {
     width: 100%;
   }
 
-  .modal__content .feedback .feedback__fields input {
+  .modal__content .feedback .feedback__fields input,
+  .modal-city__content .feedback .feedback__fields input {
     padding-top: 13px;
     padding-bottom: 13px;
   }
 
-  .modal__content .contacts__info {
+  .modal__content .contacts__info,
+  .modal-city__content .contacts__info {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -605,7 +698,8 @@ input {
     grid-gap: 0;
   }
 
-  .modal__content .contacts__connect {
+  .modal__content .contacts__connect,
+  .modal-city__content .contacts__connect {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -620,12 +714,14 @@ input {
     padding-top: 12px;
   }
 
-  .modal__content .contacts__managers {
+  .modal__content .contacts__managers,
+  .modal-city__content .contacts__managers {
     border-left: 0;
     padding-left: 0;
   }
 
-  .modal__content .contacts__managers-list {
+  .modal__content .contacts__managers-list,
+  .modal-city__content .contacts__managers-list {
     grid-gap: 18px;
   }
 }
@@ -635,19 +731,23 @@ input {
     font-size: 24px;
   }
 
-  .modal__content {
+  .modal__content,
+  .modal-city__content {
     padding: 30px 20px;
   }
 
-  .modal__content .feedback {
+  .modal__content .feedback,
+  .modal-city__content .feedback {
     padding-bottom: 30px;
   }
 
-  .modal__content .feedback .feedback__agreement label {
+  .modal__content .feedback .feedback__agreement label,
+  .modal-city__content .feedback .feedback__agreement label {
     margin-bottom: 20px;
   }
 
-  .modal__content .feedback h3 {
+  .modal__content .feedback h3,
+  .modal-city__content .feedback h3 {
     padding-bottom: 10px;
     margin-bottom: 20px;
     font-family: Montserrat;
@@ -656,18 +756,21 @@ input {
     letter-spacing: 0.045em;
   }
 
-  .modal__content .feedback p {
+  .modal__content .feedback p,
+  .modal-city__content .feedback p {
     font-size: 12px;
     line-height: 18px;
     color: #b9b9b9;
   }
 
-  .modal__content .contacts__managers-title {
+  .modal__content .contacts__managers-title,
+  .modal-city__content .contacts__managers-title {
     font-size: 12px;
     line-height: 15px;
   }
 
-  .modal__content .contacts__manager-name {
+  .modal__content .contacts__manager-name,
+  .modal-city__content .contacts__manager-name {
     font-size: 14px;
     font-weight: 700;
     line-height: 17px;
