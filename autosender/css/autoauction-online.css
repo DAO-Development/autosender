@@ -264,6 +264,7 @@ input {
 }
 
 .main-filter__lists {
+  position: relative;
   padding: 20px 20px 15px;
   -webkit-box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
           box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
@@ -829,7 +830,7 @@ input {
   }
 
   .main-filter__lists > ul.active {
-    width: 100%;
+    max-width: 100% !important;
     margin: 0 auto;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1024,7 +1025,7 @@ input {
 
 @media screen and (min-width: 360px) {
   .main-filter__lists > ul.active {
-    width: 350px;
+    width: 100%;
     margin: 0 auto;
     display: grid;
     grid-auto-flow: column;
