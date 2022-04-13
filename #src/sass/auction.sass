@@ -226,7 +226,12 @@
             display: none
 
         @media screen and ( max-width: $tabletM )
-            display: none
+            // display: none
+            right: -10px
+            top: 80px
+            left: unset
+            flex-direction: column
+            width: fit-content
         @media screen and ( max-width: $mobileM )
             padding-left: 20px
             margin-bottom: 0px
@@ -235,6 +240,8 @@
                 line-height: 120%
                 letter-spacing: 0.02em
                 width: 250px
+                left: unset !important
+                right: 0px !important
 
         &-item
             display: flex

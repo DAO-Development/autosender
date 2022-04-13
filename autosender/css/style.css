@@ -11537,7 +11537,16 @@ input {
   }
 
   .auctions__notes {
-    display: none;
+    right: -10px;
+    top: 80px;
+    left: unset;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
   }
 
   .auctions__price {
@@ -13869,6 +13878,8 @@ input {
     line-height: 120%;
     letter-spacing: 0.02em;
     width: 250px;
+    left: unset !important;
+    right: 0px !important;
   }
 
   .container {
