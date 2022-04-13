@@ -669,8 +669,9 @@ input {
 
   .auctions__notes {
     right: -10px;
-    top: 80px;
+    bottom: 20px;
     left: unset;
+    gap: 12px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
