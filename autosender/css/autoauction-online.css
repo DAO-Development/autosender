@@ -626,6 +626,14 @@ input {
   border-radius: 100px;
 }
 
+.auctions picture img {
+  max-height: 270px;
+  min-height: 270px;
+  height: 270px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .autoauction-online {
   overflow: hidden;
 }
