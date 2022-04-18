@@ -14074,6 +14074,12 @@ input {
     font-size: 32px;
   }
 
+  .auctions picture img {
+    max-height: 230px;
+    min-height: 230px;
+    height: 230px;
+  }
+
   .autoauction-online .interesting-cars,
   .autoauction-online .youtube {
     padding: 60px 0;
