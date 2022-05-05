@@ -647,6 +647,39 @@ input {
 .product-page .product__decoding {
   font-size: 12px;
   margin-bottom: 44px;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  border-radius: 15px;
+  padding: 15px;
+}
+
+.product-page .product__decoding-title {
+  cursor: pointer;
+  margin-bottom: 0 !important;
+}
+
+.product-page .product__decoding-title svg {
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+}
+
+.product-page .product__decoding-content {
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+  max-height: 0;
+  overflow: hidden;
+}
+
+.product-page .product__decoding.show .product__decoding-title svg {
+  -webkit-transform: rotateZ(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotateZ(180deg);
+}
+
+.product-page .product__decoding.show .product__decoding-content {
+  padding-top: 20px;
+  max-height: 500px;
 }
 
 .product-page .product__decoding > h4 {
@@ -1083,6 +1116,95 @@ input {
   display: grid;
   place-items: center;
   cursor: pointer;
+}
+
+.product-full-price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.product-full-price__item {
+  display: grid;
+  grid-template-columns: 5fr 1fr 1fr;
+  gap: 20px;
+}
+
+.product-full-price__yen,
+.product-full-price__rub {
+  white-space: nowrap;
+  place-self: end;
+  font-weight: 600;
+}
+
+.product-full-price__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  gap: 15px;
+}
+
+.product-full-price__info-content {
+  font-weight: normal;
+  display: none;
+  position: absolute;
+  top: 25px;
+  background: white;
+  border-radius: 10px;
+  padding: 10px;
+  -webkit-box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
+  width: 300px;
+  z-index: 100;
+  left: 0;
+}
+
+.product-full-price__info-content ul {
+  list-style: disc;
+  margin-left: 16px;
+  margin-bottom: 10px;
+}
+
+.product-full-price__info-sign {
+  border-radius: 50%;
+  width: 17px;
+  height: 17px;
+  font-size: 12px;
+  display: grid;
+  place-items: center;
+  background: #b9b9b9;
+  color: white;
+}
+
+.product-full-price__info-sign:hover + .product-full-price__info-content {
+  display: block;
+}
+
+.product-full-price__total {
+  display: grid;
+  grid-template-columns: 3fr 3fr;
+  gap: 20px;
+  padding-top: 20px;
+  margin-top: 10px;
+  border-top: 1px solid rgba(0, 0, 0, 0.75);
+  width: 100%;
+}
+
+.product-full-price__total-title {
+  font-style: 20px;
+}
+
+.product-full-price__total-val {
+  font-size: 32px;
+  font-weight: 700;
+  color: #bc002d;
 }
 
 /* Экраны */
@@ -8866,6 +8988,29 @@ input {
     width: 488px;
   }
 
+  .product-full-price {
+    padding-right: 50px;
+  }
+
+  .product-full-price__title {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .product-full-price__info {
+    position: relative;
+  }
+
+  .product-full-price__info-content {
+    left: -120px;
+  }
+
+  .product-full-price__total-val {
+    place-self: end;
+    font-size: 37px;
+  }
+
   .feedback p {
     max-width: 408px;
   }
@@ -12996,6 +13141,16 @@ input {
 
   .interesting-cars__card .card-title > svg {
     display: none;
+  }
+
+  .product-full-price__total {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 
   .container {

@@ -101,5 +101,13 @@ $(document).ready(function () {
                     }
                 }
             ]
-        });
+     });
+    
+    
+    $('.product__decoding-title').on('click', function () {
+        if ($('.product__decoding').hasClass('show'))
+            $('.product__decoding').removeClass('show')
+        else
+            $('.product__decoding').addClass('show')
+    })
 });
