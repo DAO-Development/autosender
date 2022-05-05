@@ -1,7 +1,7 @@
 @import "base.sass"
 .product-page
 
-    & .product
+    .product
         &__title
             border-bottom: 1px solid $black-21
             padding-bottom: 10px
@@ -88,11 +88,9 @@
                     @media screen and (min-width: $tabletS)
                         font-size: 30px
 
-
                 &__info
                     position: relative
                     display: inline-block
-
 
                     &-text-container
                         transition: .3s
@@ -120,14 +118,12 @@
                                 color: $blue
                                 font-weight: 700
 
-
                     &-sign
                         &:hover
                             & ~ .raiting__info-text-container
                                 opacity: 1
                                 z-index: 100
                                 transition: .3s
-
 
                 &__description
                     @media screen and (min-width: 0)
@@ -168,13 +164,11 @@
                     align-items: center
                     grid-gap: 10px
 
-
             &-right
                 @media screen and (min-width: 0)
                     display: block
                 @media screen and (min-width: $tabletM)
                     display: none !important
-
 
             &__info
                 padding: 12px 20px
@@ -461,7 +455,6 @@
                         height: 2px
                         border-top: 1px dotted $grey-179
 
-
                     & > .row-title
                         display: inline-block
                         position: relative
@@ -494,9 +487,7 @@
                 @media screen and (min-width: $mobileM)
                     display: grid
                     grid-auto-flow: column
-                    max-height: 1200px
                     grid-template-columns: 1fr 1fr
-                    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr
                     grid-column-gap: 35px
                     grid-row-gap: 16px
                 @media screen and (min-width: $mobileL)
@@ -504,7 +495,6 @@
                 @media screen and (min-width: $tabletS)
                     max-height: 742px
                     grid-template-columns: 1fr 1.1fr 0.95fr
-                    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr
                     grid-column-gap: 41px
                     grid-row-gap: 20px
                 @media screen and (min-width: $tabletM)
@@ -512,7 +502,6 @@
                     grid-column-gap: 130px
                 @media screen and (min-width: $desktopS)
                     grid-template-columns: 1fr 1fr 2fr
-                    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr
                     max-height: 566px
                     grid-row-gap: 22px
                     grid-column-gap: 84px
@@ -535,7 +524,6 @@
                             line-height: 16px
                             margin-bottom: 4px
 
-
                     &:last-child
                         @media screen and (min-width: 0)
                             grid-row: 13/14
@@ -547,7 +535,6 @@
                             max-width: 458px
                             grid-column: auto
                             grid-row: 7/10
-
 
             &__title
                 color: $blue
@@ -620,7 +607,6 @@
                 background-position: center
                 transition: 0.3s ease
 
-
     & .interesting-cars
         background: $background-grey-gradient
 
@@ -691,9 +677,9 @@
             @media screen and (min-width: $desktopM)
                 width: 205px
                 height: 120px
-            z-index: 10000
-            position: absolute
-            background: linear-gradient(0deg, $grey-52-op60, $grey-52-op60)
+                z-index: 10000
+                position: absolute
+                background: linear-gradient(0deg, $grey-52-op60, $grey-52-op60)
 
     & .arrow
         width: 28px
@@ -799,7 +785,6 @@
                 @media screen and (min-width: $desktopM)
                     left: 57px
 
-
             &__content
                 border: 1px solid $grey-52
                 @media screen and (min-width: 0)
@@ -845,7 +830,6 @@
                 @media screen and (min-width: $tabletS)
                     margin: 20px 0
                     font-size: 15px
-
 
                 &-line
                     height: 15px
@@ -1004,3 +988,46 @@
             margin: 0 36px
         @media screen and (min-width: $desktopM)
             height: 38px
+
+.product-similar
+    margin-bottom: 60px
+    &__list
+        display: flex
+        gap: 30px
+
+    &__card
+        box-shadow: 0 3px 20px rgba(0,0,0,.2)
+        height: max-content
+
+        &-wrapper
+            padding: 30px
+            height: max-content
+        &-content
+            padding: 30px
+
+    &__photo
+        width: 100%
+        height: 255px
+        object-fit: cover
+
+    &__anchor
+        margin-bottom: 20px
+        a
+            text-decoration: none
+            color: $black-21
+
+    &__price
+        font-size: 16px
+        &-val
+            color: $red
+.arrow-similar
+    border-radius: 50%
+    box-shadow: 0 3px 20px rgba(0,0,0,.2)
+    height: 40px
+    width: 40px
+    margin-top: 14%
+    flex-shrink: 0
+    box-sizing: border-box
+    display: grid
+    place-items: center
+    cursor: pointer

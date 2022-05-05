@@ -5,6 +5,7 @@ $('.footer__bar-item--menu').on("click", function(){
     $('.footer__head').addClass('invis')
     $('.footer__main').addClass('invis')
     $('.footer__footer').addClass('invis')
+    window.scrollTo(0,0);
 })
 
 $('.fmenu__close').on("click", function(){

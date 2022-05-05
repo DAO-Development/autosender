@@ -620,6 +620,12 @@ input {
     display: none;
   }
 
+  .auctions__desc {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+
   .auctions__item {
     width: 100%;
     max-width: 360px;
