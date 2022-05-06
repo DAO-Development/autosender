@@ -2210,7 +2210,8 @@ input {
 
   .product-page .product__acc-mobile.show .product__acc-mobile-content {
     padding-top: 20px;
-    max-height: 500px;
+    max-height: 1000px;
+    overflow: visible;
   }
 
   .interesting-cars__card .card-image img {
