@@ -1182,7 +1182,7 @@ input {
 .product-full-price__rub {
   white-space: nowrap;
   place-self: end;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .product-full-price__title {
@@ -1249,7 +1249,7 @@ input {
 }
 
 .product-full-price__total-currencies {
-  font-weight: 600;
+  font-weight: 700;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
