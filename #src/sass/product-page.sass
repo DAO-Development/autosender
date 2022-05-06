@@ -236,6 +236,18 @@
                 display: flex
                 flex-direction: column
                 align-items: center
+                .red-btn
+                    display: flex
+                    align-items: center
+                    box-shadow: 0 5px 20px rgba(74, 0, 18, 0.18)
+                    text-transform: uppercase
+                    font-weight: bold
+                    width: fit-content
+                    @media screen and (min-width: 0)
+                        font-size: 14px
+                        padding: 15px 22px
+
+                        grid-gap: 12px
 
         &__gallery
             @media screen and (min-width: 0)
@@ -245,21 +257,39 @@
             @media screen and (min-width: $desktopS)
                 margin-bottom: 45px
 
-        &__decoding
-            font-size: 12px
-            margin-bottom: 44px
+        &__acc
             border: 1px solid $black-op40
             border-radius: 15px
             padding: 15px
+            margin-right: 50px
+            margin-bottom: 20px
 
             @media screen and (min-width: 0)
-                display: none
+                width: 300px
+                margin: 0 auto 40px
+            @media screen and (min-width: $mobileM)
+                width: 350px
+            @media screen and (min-width: $mobileL)
+                width: 488px
+            @media screen and (min-width: $tabletS)
+                width: 520px
+                margin: 0 auto 48px
+            @media screen and (min-width: $tabletM)
+                width: 100%
+                margin-bottom: 26px
             @media screen and (min-width: $desktopS)
-                display: block
+                width: 450px
+            @media screen and (min-width: $desktopM)
+                width: 500px
 
             &-title
                 cursor: pointer
                 margin-bottom: 0 !important
+                display: flex
+                gap: 5px
+                font-size: 15px
+                align-items: center
+                font-size: 15px
                 svg
                     transition: .3s
             &-content
@@ -267,15 +297,23 @@
                 max-height: 0
                 overflow: hidden
             &.show
-                .product__decoding-title
+                .product__acc-title
                     svg
                         transform: rotateZ(180deg)
-                .product__decoding-content
+                .product__acc-content
                     padding-top: 20px
                     max-height: 500px
+        &__decoding
+            font-size: 12px
+            margin-bottom: 44px
+
+            // @media screen and (min-width: 0)
+                // display: none
+            @media screen and (min-width: $desktopS)
+                display: block
 
             & > h4
-                font-size: 14px
+                // font-size: 14px
                 margin-bottom: 15px
 
             & > h5
@@ -405,23 +443,6 @@
                     padding: 22px 98px
 
         &__characteristic
-            @media screen and (min-width: 0)
-                width: 300px
-                margin: 0 auto 40px
-            @media screen and (min-width: $mobileM)
-                width: 350px
-            @media screen and (min-width: $mobileL)
-                width: 488px
-            @media screen and (min-width: $tabletS)
-                width: 520px
-                margin: 0 auto 48px
-            @media screen and (min-width: $tabletM)
-                width: 100%
-                margin-bottom: 26px
-            @media screen and (min-width: $desktopS)
-                width: 400px
-            @media screen and (min-width: $desktopM)
-                width: 460px
 
             & > h3
                 @media screen and (min-width: $tabletS)
@@ -652,12 +673,14 @@
 
             & .open-slide
                 & img
+                    object-fit: cover
+
                     @media screen and (min-width: $desktopS)
                         width: 685px
                         height: 355px
                     @media screen and (min-width: $desktopM)
                         width: 770px
-                        height: 400px
+                        height: 480px
 
         &-carousel
             & .carousel-slide
@@ -1053,38 +1076,73 @@
     cursor: pointer
 
 .product-full-price
-    display: flex
-    flex-direction: column
-    gap: 20px
-    margin-bottom: 40px
-    @media screen and ( min-width: $mobileL )
-        padding-right: 50px
+    margin-bottom: 20px
+    h3
+        margin-bottom: 18px
+    @media screen and (min-width: 0)
+        width: 300px
+        margin: 0 auto 40px
+    @media screen and (min-width: $mobileM)
+        width: 350px
+    @media screen and (min-width: $mobileL)
+        width: 488px
+    @media screen and (min-width: $tabletS)
+        width: 520px
+        margin: 0 auto 48px
+    @media screen and (min-width: $tabletM)
+        width: 100%
+        margin-bottom: 26px
+    @media screen and (min-width: $desktopS)
+        width: 450px
+    @media screen and (min-width: $desktopM)
+        width: 500px
+
+    &-content
+        display: flex
+        flex-direction: column
+        gap: 12px
+        margin-top: 15px
+        @media screen and ( max-width: $mobileL )
+            gap: 17px
+        // font-size: 15px
+        // @media screen and ( min-width: $mobileL )
+            // padding-right: 50px
 
     &__item
         display: grid
         grid-template-columns: 5fr 1fr 1fr
-        gap: 20px
+        gap: 10px 20px
+        @media screen and ( max-width: $mobileL )
+            grid-template-columns: 1fr 1fr
+
     &__yen, &__rub
         white-space: nowrap
         place-self: end
         font-weight: 600
+        @media screen and ( max-width: $mobileL )
+            place-self: start
 
     &__title
-        display: flex
+        // display: flex
         position: relative
+        @media screen and ( max-width: $mobileL )
+            grid-column: 1/3
 
-        gap: 15px
+        // gap: 15px
 
         @media screen and ( min-width: $mobileL )
             align-items: center
     &__info
+        width: 17px
+        display: inline-block
+        margin-left: 4px
         @media screen and ( min-width: $mobileL )
             position: relative
     &__info-content
         font-weight: normal
         display: none
         position: absolute
-        top: 25px
+        top: 115%
         background: white
         border-radius: 10px
         padding: 10px
@@ -1117,23 +1175,41 @@
         display: grid
         grid-template-columns: 3fr 3fr
         gap: 20px
-        padding-top: 20px
-        margin-top: 10px
+        padding-top: 15px
+        margin-top: 5px
         border-top: 1px solid $black-op75
         width: 100%
-        @media screen and ( max-width: $mobileL )
+        display: flex
+        flex-direction: column
+        &-currencies
+
+            font-weight: 600
             display: flex
-            flex-direction: column
+            justify-content: space-between
+            align-items: center
+            margin-bottom: 8px
+            @media screen and ( max-width: $mobileL )
+                flex-direction: column
+                gap: 5px
+                justify-content: start
+                align-items: start
+        &-currency-rates
+            margin-top: 5px
+            display: flex
+            gap: 20px
 
         &-title
             font-style: 20px
             // font-weight: 600
 
         &-val
-            font-size: 32px
+            font-size: 30px
 
             font-weight: 700
             color: $red-dark
-            @media screen and ( min-width: $mobileL )
-                place-self: end
-                font-size: 37px
+            display: flex
+            align-items: center
+            justify-content: space-between
+            @media screen and ( max-width: $mobileL )
+                flex-direction: column
+                gap: 14px

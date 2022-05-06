@@ -104,10 +104,11 @@ $(document).ready(function () {
      });
     
     
-    $('.product__decoding-title').on('click', function () {
-        if ($('.product__decoding').hasClass('show'))
-            $('.product__decoding').removeClass('show')
+    $('.product__acc-title').on('click', function () {
+        let data_id = $(this).attr('data-id')
+        if ($('.product__acc[data-id="'+data_id+'"]').hasClass('show'))
+            $('.product__acc[data-id="'+data_id+'"]').removeClass('show')
         else
-            $('.product__decoding').addClass('show')
+            $('.product__acc[data-id="'+data_id+'"]').addClass('show')
     })
 });
