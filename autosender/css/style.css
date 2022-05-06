@@ -660,6 +660,10 @@ input {
   width: fit-content;
 }
 
+.product-page .product__acc-mobile-title svg {
+  display: none;
+}
+
 .product-page .product__acc {
   border: 1px solid rgba(0, 0, 0, 0.4);
   border-radius: 15px;
@@ -1176,6 +1180,14 @@ input {
   display: grid;
   grid-template-columns: 5fr 1fr 1fr;
   gap: 10px 20px;
+}
+
+.product-full-price__yen {
+  color: #5a9cff;
+}
+
+.product-full-price__rub {
+  color: #bc002d;
 }
 
 .product-full-price__yen,
@@ -13230,6 +13242,56 @@ input {
     padding-bottom: 13px;
     font-size: 28px;
     margin-bottom: 40px;
+  }
+
+  .product-page .product__acc-mobile {
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    border-radius: 15px;
+    padding: 15px;
+    margin-right: 50px;
+    margin-bottom: 20px;
+    margin: 0 auto 40px;
+  }
+
+  .product-page .product__acc-mobile-title {
+    cursor: pointer;
+    margin-bottom: 0 !important;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 5px;
+    font-size: 15px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-size: 15px;
+  }
+
+  .product-page .product__acc-mobile-title svg {
+    display: block;
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+  }
+
+  .product-page .product__acc-mobile-content {
+    margin-top: 0;
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+    max-height: 0;
+    overflow: hidden;
+  }
+
+  .product-page .product__acc-mobile.show .product__acc-mobile-title svg {
+    -webkit-transform: rotateZ(180deg);
+        -ms-transform: rotate(180deg);
+            transform: rotateZ(180deg);
+  }
+
+  .product-page .product__acc-mobile.show .product__acc-mobile-content {
+    padding-top: 20px;
+    max-height: 500px;
   }
 
   .interesting-cars__card .card-image img {

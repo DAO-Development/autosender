@@ -256,7 +256,42 @@
                 margin-bottom: 48px
             @media screen and (min-width: $desktopS)
                 margin-bottom: 45px
+        &__acc-mobile
+            &-title
+                svg
+                    display: none
+            @media screen and ( max-width: $mobileL )
 
+                border: 1px solid $black-op40
+                border-radius: 15px
+                padding: 15px
+                margin-right: 50px
+                margin-bottom: 20px
+
+                margin: 0 auto 40px
+                &-title
+                    cursor: pointer
+                    margin-bottom: 0 !important
+                    display: flex
+                    gap: 5px
+                    font-size: 15px
+                    align-items: center
+                    font-size: 15px
+                    svg
+                        display: block
+                        transition: .3s
+                &-content
+                    margin-top: 0
+                    transition: .3s
+                    max-height: 0
+                    overflow: hidden
+                &.show
+                    .product__acc-mobile-title
+                        svg
+                            transform: rotateZ(180deg)
+                    .product__acc-mobile-content
+                        padding-top: 20px
+                        max-height: 500px
         &__acc
             border: 1px solid $black-op40
             border-radius: 15px
@@ -1114,6 +1149,11 @@
         gap: 10px 20px
         @media screen and ( max-width: $mobileL )
             grid-template-columns: 1fr 1fr
+
+    &__yen
+        color: $blue
+    &__rub
+        color: $red-dark
 
     &__yen, &__rub
         white-space: nowrap
