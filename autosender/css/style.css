@@ -666,7 +666,6 @@ input {
 
 .product-page .product__acc {
   border: 1px solid rgba(0, 0, 0, 0.4);
-  border-radius: 15px;
   padding: 15px;
   margin-right: 50px;
   margin-bottom: 20px;
@@ -13246,7 +13245,6 @@ input {
 
   .product-page .product__acc-mobile {
     border: 1px solid rgba(0, 0, 0, 0.4);
-    border-radius: 15px;
     padding: 15px;
     margin-right: 50px;
     margin-bottom: 20px;
@@ -13275,7 +13273,7 @@ input {
   }
 
   .product-page .product__acc-mobile-content {
-    margin-top: 0;
+    margin-top: 10px;
     -webkit-transition: .3s;
     -o-transition: .3s;
     transition: .3s;
