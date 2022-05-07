@@ -13243,6 +13243,10 @@ input {
     margin-bottom: 40px;
   }
 
+  .product-page .product__main-right .red-btn {
+    margin-bottom: 5px;
+  }
+
   .product-page .product__acc-mobile {
     border: 1px solid rgba(0, 0, 0, 0.4);
     padding: 15px;
