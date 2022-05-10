@@ -515,6 +515,10 @@ input {
     font-size: 15px;
   }
 
+  .header__nav {
+    display: none;
+  }
+
   .header__nav a {
     font-size: 14px;
     white-space: nowrap;
@@ -536,10 +540,6 @@ input {
 
   .header__hover {
     display: none !important;
-  }
-
-  .header__nav {
-    display: none;
   }
 
   .header__soc {

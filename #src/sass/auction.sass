@@ -39,7 +39,7 @@
         line-height: 14px
         letter-spacing: 0.045em
         color: $white-op50
-        @media screen and ( max-width: $tabletM )
+        @media screen and ( max-width: $tabletS )
             justify-content: center
 
         @media screen and ( max-width: $mobileM )
@@ -49,9 +49,11 @@
     &__item
         width: 100%
         height: fit-content
-        @media screen and ( max-width: $tabletM )
+        @media screen and ( max-width: $tabletSM )
             width: 100%
-            max-width: 360px
+
+        @media screen and ( max-width: $mobileL )
+            // max-width: 360px
 
     &__content
         margin-top: 10px
@@ -82,7 +84,7 @@
                     content: url(../img/arrow-left.svg)
                     height: 52px
 
-            @media screen and ( min-width: $tabletM )
+            @media screen and ( min-width: $tabletSM)
                 margin: 0 !important
 
                 .slick-list
@@ -92,24 +94,28 @@
                 .slick-dots
                     position: absolute
                     bottom: 15px
-            @media screen and ( max-width: $tabletM )
+            @media screen and ( max-width: $tabletSM)
                 width: 100%
 
-        // @media screen and ( max-width: $tabletM )
-        //     display: grid
-        //     grid-template-columns: 1fr 6fr
+        @media screen and ( max-width: $tabletM )
+            display: grid
+            grid-template-columns: 1fr 2fr
+            .auctions__price
+                position: relative
+                grid-column: 1/3
+                justify-content: center
 
         // @media screen and ( max-width: $mobileL )
         //     grid-template-columns: 53% 47%;
         //     grid-gap: 0
-        @media screen and ( max-width: $tabletM )
+        @media screen and ( max-width: $tabletSM)
             display: flex
             flex-direction: column
 
     picture
         overflow: hidden
         width: 310px
-        @media screen and ( max-width: $tabletM )
+        @media screen and ( max-width: $tabletSM)
             grid-column: 1/2
             grid-row: 1/2
             width: 100%
@@ -138,7 +144,7 @@
             line-height: 120%
             &::before
                 display: none
-        @media screen and ( max-width: $mobileL)
+        @media screen and ( max-width: $tabletS)
             &::before
                 display: block
         @media screen and ( max-width: $mobileM)
@@ -163,12 +169,14 @@
         flex-wrap: wrap
         gap: 0 100px
         width: 100%
+        max-height: 120px
+
         @media screen and ( max-width: 1200px )
             gap: 0 4vw
-        @media screen and ( min-width: $tabletM )
-            max-height: 120px
 
         @media screen and ( max-width: $tabletM )
+            max-height: 133px
+
             grid-column: 2/3
             grid-row: 1/2
             font-size: 13px
@@ -176,6 +184,8 @@
             grid-column: 1/2
             grid-row: 2/3
             padding-bottom: 0
+        @media screen and ( max-width: $mobileL)
+            max-height: unset
 
         &-wrap
             padding: 25px 0 0px
@@ -188,7 +198,7 @@
                 margin-bottom: 15px
                 grid-gap: 0
 
-                @media screen and ( max-width: $tabletS )
+                @media screen and ( max-width: $tabletSM)
                     display: flex
                     flex-direction: column
                     flex-direction: row
@@ -196,7 +206,7 @@
                     flex-direction: column
                     grid-gap: 0
 
-            @media screen and ( max-width: $tabletM )
+            @media screen and ( max-width: $tabletSM)
                 padding: 10px 0 20px 20px
 
         &-item
@@ -204,7 +214,7 @@
             grid-auto-columns: 1fr 1.5fr
             width: auto
             grid-gap: 20px
-            @media screen and ( max-width: $tabletM )
+            @media screen and ( max-width: $mobileL)
                 &:nth-child(n+8)
                     display: none
 
@@ -227,7 +237,7 @@
         &-text
             display: none
 
-        @media screen and ( max-width: $tabletM )
+        @media screen and ( max-width: $tabletSM)
             // display: none
             right: -10px
             bottom: 20px
@@ -235,7 +245,7 @@
             gap: 12px
             flex-direction: column
             width: fit-content
-        @media screen and ( max-width: $mobileM )
+        @media screen and ( max-width: $tabletSM )
             padding-left: 20px
             margin-bottom: 0px
             &-text
@@ -270,7 +280,7 @@
                 border-right: 1px solid $white-op50
                 &:last-child
                     border: none
-            @media screen and ( max-width: $mobileL)
+            @media screen and ( max-width: $tabletS)
                 padding-top: 3px
                 padding-bottom: 3px
 
@@ -294,6 +304,10 @@
         padding: 8px 30px
 
         @media screen and ( max-width: $tabletM )
+            border-left: none !important
+            border-right: none !important
+
+        @media screen and ( max-width: $mobileL)
             border: none !important
             position: relative
             justify-content: center
@@ -316,16 +330,16 @@
     &__cost
 
         padding-right: 1px solid
-        @media screen and ( max-width: $mobileL )
+        @media screen and ( max-width: $tabletSM)
+            width: 100%
             padding-left: 20px
             place-self: start
-        @media screen and ( max-width: 1100px ) and ( min-width: $tabletM)
+        @media screen and ( max-width: 1100px ) and ( min-width: $mobileL)
             &:first-child
                 display: none
                 &+svg
                     display: none
-        @media screen and ( max-width: $tabletM )
-            width: 100%
+        @media screen and ( max-width: $mobileL)
             // padding: 0 20px
             display: grid
             grid-template-columns: 1fr 1.5fr
@@ -362,11 +376,14 @@
     a
         color: black
         text-decoration: none
-    @media screen and ( max-width: $tabletM )
+    @media screen and ( max-width: $mobileL)
+        &__action
+            border-top: 1px solid $grey-179
+
+    @media screen and ( max-width: $tabletSM)
         &__action
             padding: 20px 0
             text-align: center
-            border-top: 1px solid $grey-179
             width: 100%
             font-size: 16px
             line-height: 19px
@@ -383,7 +400,7 @@
         bottom: 47px
         right: 0
         color: $white-op03
-        @media screen and ( max-width: $tabletM )
+        @media screen and ( max-width: $tabletSM)
             display: none
 
     &__watch-more
