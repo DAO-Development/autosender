@@ -50,7 +50,7 @@ input[type="submit"] {
 
 .container {
   margin: 0 auto;
-  max-width: 99vw;
+  max-width: 96vw;
   width: 1345px;
 }
 
@@ -931,7 +931,7 @@ input {
   }
 }
 
-@media screen and (max-width: 1100px) and (min-width: 568px) {
+@media screen and (max-width: 910px) and (min-width: 568px) {
   .auctions__cost:first-child {
     display: none;
   }
@@ -1056,7 +1056,7 @@ input {
 
 }
 
- @media screen and (max-width: 1100px) and (min-width: 568px){
+ @media screen and (max-width: 910px) and (min-width: 568px){
 
 @supports (-webkit-appearance:none){
 

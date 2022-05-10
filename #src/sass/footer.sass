@@ -1,6 +1,6 @@
 @import "base.sass"
 .invis
-        display: none !important
+    display: none !important
 
 .footer
     background: $black-26
@@ -8,13 +8,13 @@
     .f-vis
         display: block !important
         position: relative
-    
+
     a, span, div
-        font-size: 14px;
-        letter-spacing: 0.045em;
+        font-size: 14px
+        letter-spacing: 0.045em
         @media screen and ( max-width: $mobileL )
             font-size: 12px
-            
+
     a
         color: $white-op75
         text-decoration: none
@@ -33,8 +33,6 @@
         @media screen and ( max-width: $mobileS )
             margin-bottom: 18px
 
-        
-
     &__head
         display: grid
         grid-template-columns: 1fr 1fr 1fr 3fr
@@ -43,7 +41,7 @@
         @media screen and ( max-width: $desktopS )
             grid-template-columns: 1fr 1fr 1fr 2fr
             grid-gap: 85px
-            padding-top: 100px            
+            padding-top: 100px
         @media screen and ( max-width: $tabletM )
             grid-template-columns: 1fr 1fr 1fr
             grid-gap: 36px 25px
@@ -62,22 +60,16 @@
         @media screen and ( max-width: $mobileS )
             padding-top: 60px
 
-                
         &-item--soc
             @media screen and ( max-width: $mobileM )
                 grid-column: 1/3
                 grid-row: 2/3
                 padding-bottom: 19px
-                
 
         &-item--contacts
             @media screen and ( max-width: $mobileM )
                 grid-column: 1/3
                 grid-row: 3/4
-            
-
-
-        
 
     &__soc, &__contacts, &__contacts
         display: flex
@@ -89,9 +81,6 @@
                 height: fit-content
                 line-height: 100%
 
-            
-
-            
     &__contacts
         grid-gap: 35px
         @media screen and ( max-width: $desktopS )
@@ -111,11 +100,8 @@
         @media screen and ( max-width: $mobileS )
             grid-gap: 26px
 
-            
-
-    
     &__number
-        padding-bottom: 6px 
+        padding-bottom: 6px
 
     &__address, &__number
         display: grid
@@ -131,13 +117,12 @@
             *
                 line-height: 154%
 
-
     &__how-to-get
         display: block
         color: $blue !important
         font-size: 10px !important
         line-height: 12px !important
-        letter-spacing: 0.03em 
+        letter-spacing: 0.03em
         margin-top: 5px
 
     &__main
@@ -180,9 +165,9 @@
         text-align: center
         padding: 30px
         margin-top: 120px
-        font-size: 14px;
-        line-height: 150%;
-        letter-spacing: 0.035em;
+        font-size: 14px
+        line-height: 150%
+        letter-spacing: 0.035em
         @media screen and ( max-width: $desktopS )
             margin-top: 100px
         @media screen and ( max-width: $tabletM )
@@ -190,27 +175,25 @@
         @media screen and ( max-width: $mobileL )
             margin-top: 25px
             padding-top: 40px
-            
-
 
     &__bar
         display: none
-        @media screen and ( max-width: $tabletM)
+        @media screen and ( max-width: $desktopS)
             display: flex
-            
-        position: fixed
-        z-index: 1000
-        bottom: 0
-        left: 0
-        width: 100vw
-        background: $black-21
-        justify-content: space-around
-        padding: 16px
+
+            position: fixed
+            z-index: 1000
+            bottom: 0
+            left: 0
+            width: 100vw
+            background: $black-21
+            justify-content: space-around
+            padding: 16px
         &-text
-            font-size: 10px;
-            line-height: 100%;
-            text-align: center;
-            letter-spacing: 0.045em;
+            font-size: 10px
+            line-height: 100%
+            text-align: center
+            letter-spacing: 0.045em
 
         &-item
             height: 48px
@@ -218,7 +201,7 @@
             padding: 14px 16px
             display: flex
             align-items: center
-            justify-content: space-between 
+            justify-content: space-between
             border-radius: 4px
             grid-gap: 12px
             cursor: pointer
@@ -229,7 +212,7 @@
                 padding: 8px
                 svg
                     height: 24px
-                
+
             &--menu
                 background: $black-36
 
@@ -241,13 +224,12 @@
                 img
                     height: 100%
 
-
     .fmenu
         display: none
         position: relative
-        left: -9%
+        // left: -9%
         bottom: 80px
-        
+
         width: 100vw
         min-height: 100vh
         padding-top: 100px
@@ -268,7 +250,6 @@
 
             @media screen and ( max-width: $mobileM )
                 padding: 22px 31px
-                
 
         &__close
             cursor: pointer
@@ -279,10 +260,9 @@
             justify-content: space-between
             @media screen and ( max-width: $mobileL )
                 margin-bottom: 10px
-                
+
             @media screen and ( max-width: $mobileM )
                 padding: 19px 31px !important
-                
 
         &__menu
             display: grid
@@ -293,21 +273,18 @@
             @media screen and ( max-width: $mobileM )
                 display: flex
                 justify-content: space-between
-                
 
             &-desc
                 max-width: 125px
                 font-size: 10px !important
-                line-height: 120%;
-                letter-spacing: 0.04em;
-
+                line-height: 120%
+                letter-spacing: 0.04em
 
             &-item
                 padding: 0 10px 0 0
-                
+
                 @media screen and ( max-width: $mobileM)
                     padding: 0
-                    
 
             &-item:last-child
                 border-left: 1px solid $white-op15
@@ -334,9 +311,6 @@
                 @media screen and ( max-width: $mobileS )
                     grid-gap: 75px
 
-                    
-
-
             &-list::-webkit-scrollbar
                 display: none
 
@@ -349,7 +323,7 @@
                 font-size: 15px !important
                 line-height: 18px !important
                 letter-spacing: 0.04em !important
-        
+
         &__model
             width: fit-content
             white-space: nowrap
@@ -361,7 +335,7 @@
 
             @media screen and ( max-width: $mobileL )
                 grid-gap: 26px
-                
+
             @media screen and ( max-width: $mobileM )
                 grid-template-columns: 1fr
                 padding-top: 0
@@ -370,11 +344,10 @@
                     margin-top: 22px
                     border-top: 1px solid $white-op15
 
-
             &-desc
-                font-size: 10px;
-                line-height: 120%;
-                letter-spacing: 0.04em;
+                font-size: 10px
+                line-height: 120%
+                letter-spacing: 0.04em
 
         &__menu2-item
             display: flex
@@ -387,8 +360,10 @@
             picture
                 display: grid
                 height: 100%
-                place-items: start  
+                place-items: start
 
+            @media screen and ( max-width: $desktopS )
+                padding-bottom: 84px
             @media screen and ( max-width: $mobileL )
                 grid-gap: 26px
             @media screen and ( max-width: $mobileM )
@@ -398,32 +373,29 @@
         &__soc
             display: flex
             grid-gap: 22px
-            
+
         &__number
-            font-family: Montserrat;
-            font-style: normal;
-            font-weight: bold;
-            font-size: 18px;
-            line-height: 22px;
-            letter-spacing: 0.02em;
+            font-family: Montserrat
+            font-style: normal
+            font-weight: bold
+            font-size: 18px
+            line-height: 22px
+            letter-spacing: 0.02em
             @media screen and ( max-width: $mobileM )
-                font-size: 18px;
-                line-height: 22px;
+                font-size: 18px
+                line-height: 22px
             @media screen and ( max-width: $mobileS )
                 font-size: 16px
-                line-height: 20px;
-
+                line-height: 20px
 
             &-desc
-                font-size: 10px;
-                line-height: 120%;
-                letter-spacing: 0.04em;
+                font-size: 10px
+                line-height: 120%
+                letter-spacing: 0.04em
                 color: $grey-181
                 @media screen and ( max-width: $mobileS )
-                    font-size: 10px;
-                    line-height: 120%;
-        
+                    font-size: 10px
+                    line-height: 120%
+
     .vis
         display: block
-            
-

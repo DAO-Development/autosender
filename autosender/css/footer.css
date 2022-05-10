@@ -50,7 +50,7 @@ input[type="submit"] {
 
 .container {
   margin: 0 auto;
-  max-width: 99vw;
+  max-width: 96vw;
   width: 1345px;
 }
 
@@ -327,15 +327,6 @@ input {
 
 .footer__bar {
   display: none;
-  position: fixed;
-  z-index: 1000;
-  bottom: 0;
-  left: 0;
-  width: 100vw;
-  background: #150202;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  padding: 16px;
 }
 
 .footer__bar-text {
@@ -385,7 +376,6 @@ input {
 .footer .fmenu {
   display: none;
   position: relative;
-  left: -9%;
   bottom: 80px;
   width: 100vw;
   min-height: 100vh;
@@ -631,6 +621,25 @@ input {
   .footer__footer {
     margin-top: 100px;
   }
+
+  .footer__bar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: fixed;
+    z-index: 1000;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    background: #150202;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    padding: 16px;
+  }
+
+  .footer .fmenu__footer {
+    padding-bottom: 84px;
+  }
 }
 
 @media screen and (max-width: 1024px) {
@@ -677,12 +686,6 @@ input {
 
   .footer__footer {
     margin-top: 15px;
-  }
-
-  .footer__bar {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
   }
 }
 
