@@ -66,6 +66,8 @@
         padding: 20px 20px 15px
         box-shadow: 0 10px 10px rgba(0,0,0,.2)
         border-radius: 0 0 5px 5px
+        position: relative
+
         // border: 1px solid $black-21
         display: grid
         @media screen and (min-width: 0)
@@ -135,6 +137,27 @@
                 & > a
                     color: black
                     text-decoration: none
+                    position: relative
+                    white-space: nowrap
+                    @media screen and ( max-width: $tabletS )
+                        position: static
+
+                    .auctions__notes
+                        position: static
+                        display: inline-block
+                        padding: 0 !important
+                    .auctions__notes-item
+                        padding: 0 0 0 10px !important
+
+                    .auctions__notes-text
+                        bottom: 27px !important
+                        right: -90px !important
+                        white-space: normal
+                        z-index: 111
+                        @media screen and ( max-width: $tabletS )
+                            right: 20px !important
+                            bottom: unset !important
+                            margin-bottom: 80px
 
                     &:hover
                         text-decoration: underline

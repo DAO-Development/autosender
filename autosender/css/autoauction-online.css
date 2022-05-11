@@ -269,6 +269,7 @@ input {
   -webkit-box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
           box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
   border-radius: 0 0 5px 5px;
+  position: relative;
   display: grid;
 }
 
@@ -279,6 +280,25 @@ input {
 .main-filter__lists > ul > li > a {
   color: black;
   text-decoration: none;
+  position: relative;
+  white-space: nowrap;
+}
+
+.main-filter__lists > ul > li > a .auctions__notes {
+  position: static;
+  display: inline-block;
+  padding: 0 !important;
+}
+
+.main-filter__lists > ul > li > a .auctions__notes-item {
+  padding: 0 0 0 10px !important;
+}
+
+.main-filter__lists > ul > li > a .auctions__notes-text {
+  bottom: 27px !important;
+  right: -90px !important;
+  white-space: normal;
+  z-index: 111;
 }
 
 .main-filter__lists > ul > li > a:hover {
@@ -1963,6 +1983,16 @@ input {
 
   .page-title {
     font-size: 32px;
+  }
+
+  .main-filter__lists > ul > li > a {
+    position: static;
+  }
+
+  .main-filter__lists > ul > li > a .auctions__notes-text {
+    right: 20px !important;
+    bottom: unset !important;
+    margin-bottom: 80px;
   }
 }
 
