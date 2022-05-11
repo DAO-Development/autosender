@@ -12384,6 +12384,7 @@ input {
 
   .auctions__content-pictures {
     width: 100%;
+    max-width: 360px;
   }
 
   .auctions__content {
@@ -12454,7 +12455,6 @@ input {
 
   .auctions__cost {
     width: 100%;
-    padding-left: 20px;
     place-self: start;
   }
 
@@ -12607,6 +12607,10 @@ input {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+
+  .auctions__content-pictures {
+    max-width: 280px;
   }
 
   .auctions__brand {
@@ -13485,6 +13489,10 @@ input {
     margin-bottom: 36px;
   }
 
+  .auctions__content-pictures {
+    max-width: 100%;
+  }
+
   .auctions__info {
     max-height: unset;
   }
@@ -13523,6 +13531,7 @@ input {
   }
 
   .auctions__cost {
+    padding-left: 20px;
     display: grid;
     grid-template-columns: 1fr 1.5fr;
     gap: 10px;
@@ -15320,12 +15329,40 @@ input {
 }
 
 @media screen and (max-width: 910px) and (min-width: 568px) {
-  .auctions__cost:first-child {
+  .auctions__content {
+    display: grid;
+    grid-template-columns: unset;
+  }
+
+  .auctions__content .auctions__content-pictures {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+
+  .auctions__content .auctions__price {
+    border: none !important;
+    grid-column: 2/3;
+    grid-row: 1/2;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: unset;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .auctions__content .auctions__price svg {
     display: none;
   }
 
-  .auctions__cost:first-child + svg {
-    display: none;
+  .auctions__content .auctions__info-wrap {
+    grid-column: 1/3;
+  }
+
+  .auctions__content .auctions__cost {
+    text-align: center;
   }
 }
 
