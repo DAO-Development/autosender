@@ -5499,6 +5499,45 @@ input {
   border-radius: 100px;
 }
 
+.main-filter__mods {
+  -webkit-box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
+  margin-bottom: 50px;
+  padding: 20px 25px;
+}
+
+.main-filter__mods-list {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  position: relative;
+  gap: 10px;
+  height: 50px;
+  overflow: hidden;
+}
+
+.main-filter__mods-list.active {
+  height: unset;
+}
+
+.main-filter__mods-show {
+  text-align: center;
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.5);
+  padding-top: 15px;
+}
+
+.main-filter__mods-show .hide {
+  display: none;
+}
+
+.main-filter__mods-show.active .show {
+  display: none;
+}
+
+.main-filter__mods-show.active .hide {
+  display: inline-block;
+}
+
 .auctions picture img {
   max-height: 270px;
   min-height: 270px;
@@ -5511,7 +5550,7 @@ input {
   overflow: hidden;
 }
 
-.autoauction-online .title-products > .container {
+.autoauction-online .title-products > .container:first-child {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -5697,14 +5736,23 @@ input {
   right: 20px;
 }
 
+.mobile-sort {
+  display: none !important;
+}
+
 .desktop-sort {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
   gap: 10px;
   -webkit-box-pack: start !important;
       -ms-flex-pack: start !important;
           justify-content: start !important;
+}
+
+.desktop-sort svg {
+  display: none;
+  height: 13px;
 }
 
 .desktop-sort .radio-list {
@@ -5722,8 +5770,22 @@ input {
   display: none;
 }
 
-.desktop-sort input:checked + label {
+.desktop-sort input:checked + svg {
+  display: inline-block;
+}
+
+.desktop-sort .sort__item.active {
   color: #bc002d;
+}
+
+.desktop-sort .sort__item {
+  cursor: pointer;
+  display: grid;
+  grid-template-columns: 1fr 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 5px;
 }
 
 /* Экраны */
@@ -8713,6 +8775,7 @@ input {
     width: 100%;
     font-size: 16px;
     line-height: 19px;
+    display: block;
   }
 
   .autoauction-online .CEO h3 {
@@ -9656,7 +9719,8 @@ input {
     row-gap: 24px;
   }
 
-  .main-filter__filter input[type="text"] {
+  .main-filter__filter input[type="text"],
+  .main-filter__filter input[type="date"] {
     padding-top: 16px !important;
     -ms-flex-item-align: end;
         align-self: end;
@@ -10046,6 +10110,7 @@ input {
   }
 
   .autoauction-online .title-products select {
+    display: none !important;
     width: 195px;
     font-size: 15px;
     line-height: 18px;
@@ -12170,6 +12235,18 @@ input {
     min-height: 100vh;
   }
 
+  .main-filter__mods-list {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .mobile-sort {
+    display: block !important;
+  }
+
+  .desktop-sort {
+    display: none !important;
+  }
+
   .container {
     width: 88.62vw;
   }
@@ -12906,6 +12983,10 @@ input {
     right: 20px !important;
     bottom: unset !important;
     margin-bottom: 80px;
+  }
+
+  .main-filter__mods-list {
+    grid-template-columns: repeat(4, 1fr);
   }
 
   .container {
@@ -13860,6 +13941,10 @@ input {
 
   .main-filter {
     margin-top: 40px;
+  }
+
+  .main-filter__mods-list {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .container {

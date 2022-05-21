@@ -893,6 +893,108 @@
                     <li><a href="">Corolla Axio</a></li>
                 </ul>
             </div>
+
+            <div class="main-filter__mods">
+                <div class="main-filter__mods-list">
+                    <div class="main-filter__mod">
+                        ASPIRE (2)
+                    </div>
+                    <div class="main-filter__mod">
+                        ASPIRE (2)
+                    </div>
+                    <div class="main-filter__mod">
+                        ASPIRE (2)
+                    </div>
+                    <div class="main-filter__mod">
+                        ASPIRE (2)
+                    </div>
+                    <div class="main-filter__mod">
+                        ASPIRE (2)
+                    </div>
+                    <div class="main-filter__mod">
+                        ASPIRE (2)
+                    </div>
+                    <div class="main-filter__mod">
+                        ASPIRE (2)
+                    </div>
+                    <div class="main-filter__mod">
+                        ASPIRE (2)
+                    </div>
+                    <div class="main-filter__mod">
+                        ASPIRE (2)
+                    </div>
+                    <div class="main-filter__mod">
+                        ASPIRE (2)
+                    </div>
+                    <div class="main-filter__mod">
+                        ASPIRE (2)
+                    </div>
+                    <div class="main-filter__mod">
+                        ASPIRE (2)
+                    </div>
+                    <div class="main-filter__mod">
+                        ASPIRE (2)
+                    </div>
+                    <div class="main-filter__mod">
+                        ASPIRE (2)
+                    </div>
+                    <div class="main-filter__mod">
+                        ASPIRE (2)
+                    </div>
+                    <div class="main-filter__mod">
+                        ASPIRE (2)
+                    </div>
+                    <div class="main-filter__mod">
+                        ASPIRE (2)
+                    </div>
+                    <div class="main-filter__mod">
+                        ASPIRE (2)
+                    </div>
+                    <div class="main-filter__mod">
+                        ASPIRE (2)
+                    </div>
+                    <div class="main-filter__mod">
+                        ASPIRE (2)
+                    </div>
+                    <div class="main-filter__mod">
+                        ASPIRE (2)
+                    </div>
+                    <div class="main-filter__mod">
+                        ASPIRE (2)
+                    </div>
+                    <div class="main-filter__mod">
+                        ASPIRE (2)
+                    </div>
+                    <div class="main-filter__mod">
+                        ASPIRE (2)
+                    </div>
+                    <div class="main-filter__mod">
+                        ASPIRE (2)
+                    </div>
+                    <div class="main-filter__mod">
+                        ASPIRE (2)
+                    </div>
+                    <div class="main-filter__mod">
+                        ASPIRE (2)
+                    </div>
+                    <div class="main-filter__mod">
+                        ASPIRE (2)
+                    </div>
+                    <div class="main-filter__mod">
+                        ASPIRE (2)
+                    </div>
+                    <div class="main-filter__mod">
+                        ASPIRE (2)
+                    </div>
+                </div>
+
+                <div class="main-filter__mods-show  btn">
+                    <span class="show"> Показать еще</span>
+                    <span class="hide"> Скрыть</span>
+                </div>
+
+            </div>
+
             <div class="main-filter__filter">
                 <div class="filter__top">
                     <h2>Фильтр</h2>
@@ -1175,7 +1277,7 @@
                         
                         
                         <div class="filter__num-date">
-                            <input type="text" placeholder="дата торгов">
+                            <input type="date" placeholder="дата торгов">
                         </div>  
                         <div class="filter__num-lot">
                             <input type="text" placeholder="Номер лота">
@@ -1251,32 +1353,93 @@
             Cортировать по:
             <div class="radio-list">
 
-            <input checked name="sort" type="radio" value="popular" id="sort_popular">
-            <label for="sort_popular">
-                Популярности
-            </label>
+                <div class="sort__item active ">
+                    Текущие активные торги
 
-            <input name="sort" type="radio" value="price" id="sort_price">
-            <label for="sort_price">
-                Цене
-            </label>
+                    <input checked name="sort" type="radio" value="popular" id="sort__item-up" class="sort-up">
+                    <svg width="8" height="15" viewBox="0 0 8 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M4.38711 14.2302C4.38727 14.2301 4.38746 14.2299 4.38763 14.2297L7.23138 11.3722C7.44441 11.1581 7.44362 10.8119 7.22952 10.5988C7.01544 10.3857 6.66919 10.3865 6.45613 10.6006L4.54688 12.5192V0.9375C4.54688 0.635461 4.30204 0.390625 4 0.390625C3.69796 0.390625 3.45313 0.635461 3.45313 0.9375V12.5191L1.54388 10.6006C1.33081 10.3866 0.984561 10.3858 0.770486 10.5988C0.556358 10.8119 0.555619 11.1582 0.768627 11.3722L3.61238 14.2298C3.61254 14.2299 3.61273 14.2301 3.6129 14.2303C3.82667 14.4444 4.17404 14.4438 4.38711 14.2302Z" fill="#BC002D"/>
+</svg>
+
+                    <input name="sort" type="radio" value="popular" id="sort__item-down" class="sort-down">
+                    <svg width="8" height="15" viewBox="0 0 8 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M3.61289 0.551023C3.61273 0.551187 3.61254 0.551324 3.61237 0.551516L0.768623 3.40905C0.555588 3.62312 0.556381 3.96938 0.770482 4.18246C0.984557 4.39553 1.33081 4.39471 1.54387 4.18063L3.45312 2.26209L3.45312 13.8438C3.45312 14.1458 3.69796 14.3906 4 14.3906C4.30204 14.3906 4.54687 14.1458 4.54687 13.8438L4.54687 2.26211L6.45612 4.18061C6.66919 4.39468 7.01544 4.3955 7.22951 4.18244C7.44364 3.96935 7.44438 3.62307 7.23137 3.40902L4.38762 0.551488C4.38746 0.551324 4.38727 0.551187 4.3871 0.550996C4.17333 0.336812 3.82596 0.337496 3.61289 0.551023Z" fill="#BC002D"/>
+</svg>
+
+                </div>   
 
 
-            <input name="sort" type="radio" value="milliage" id="sort_milliage">
-            <label for="sort_milliage">
-                Пробегу 
-            </label>
+                <div class="sort__item">
+                    Цене
+
+                    <input name="sort" type="radio" value="price-up" id="sort_price-up" class="sort-up">
+                                        <svg width="8" height="15" viewBox="0 0 8 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M4.38711 14.2302C4.38727 14.2301 4.38746 14.2299 4.38763 14.2297L7.23138 11.3722C7.44441 11.1581 7.44362 10.8119 7.22952 10.5988C7.01544 10.3857 6.66919 10.3865 6.45613 10.6006L4.54688 12.5192V0.9375C4.54688 0.635461 4.30204 0.390625 4 0.390625C3.69796 0.390625 3.45313 0.635461 3.45313 0.9375V12.5191L1.54388 10.6006C1.33081 10.3866 0.984561 10.3858 0.770486 10.5988C0.556358 10.8119 0.555619 11.1582 0.768627 11.3722L3.61238 14.2298C3.61254 14.2299 3.61273 14.2301 3.6129 14.2303C3.82667 14.4444 4.17404 14.4438 4.38711 14.2302Z" fill="#BC002D"/>
+</svg>
+                    <input name="sort" type="radio" value="price-down" id="sort_price-down" class="sort-down">
+                    <svg width="8" height="15" viewBox="0 0 8 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M3.61289 0.551023C3.61273 0.551187 3.61254 0.551324 3.61237 0.551516L0.768623 3.40905C0.555588 3.62312 0.556381 3.96938 0.770482 4.18246C0.984557 4.39553 1.33081 4.39471 1.54387 4.18063L3.45312 2.26209L3.45312 13.8438C3.45312 14.1458 3.69796 14.3906 4 14.3906C4.30204 14.3906 4.54687 14.1458 4.54687 13.8438L4.54687 2.26211L6.45612 4.18061C6.66919 4.39468 7.01544 4.3955 7.22951 4.18244C7.44364 3.96935 7.44438 3.62307 7.23137 3.40902L4.38762 0.551488C4.38746 0.551324 4.38727 0.551187 4.3871 0.550996C4.17333 0.336812 3.82596 0.337496 3.61289 0.551023Z" fill="#BC002D"/>
+</svg>
+
+                </div>
+
+                <div class="sort__item">
+                    Пробегу
+
+                    <input name="sort" type="radio" value="milliage-up" id="sort_milliage-up" class="sort-up">
+                                        <svg width="8" height="15" viewBox="0 0 8 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M4.38711 14.2302C4.38727 14.2301 4.38746 14.2299 4.38763 14.2297L7.23138 11.3722C7.44441 11.1581 7.44362 10.8119 7.22952 10.5988C7.01544 10.3857 6.66919 10.3865 6.45613 10.6006L4.54688 12.5192V0.9375C4.54688 0.635461 4.30204 0.390625 4 0.390625C3.69796 0.390625 3.45313 0.635461 3.45313 0.9375V12.5191L1.54388 10.6006C1.33081 10.3866 0.984561 10.3858 0.770486 10.5988C0.556358 10.8119 0.555619 11.1582 0.768627 11.3722L3.61238 14.2298C3.61254 14.2299 3.61273 14.2301 3.6129 14.2303C3.82667 14.4444 4.17404 14.4438 4.38711 14.2302Z" fill="#BC002D"/>
+</svg>
+                    <input name="sort" type="radio" value="milliage-down" id="sort_milliage-down" class="sort-down">
+                    <svg width="8" height="15" viewBox="0 0 8 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M3.61289 0.551023C3.61273 0.551187 3.61254 0.551324 3.61237 0.551516L0.768623 3.40905C0.555588 3.62312 0.556381 3.96938 0.770482 4.18246C0.984557 4.39553 1.33081 4.39471 1.54387 4.18063L3.45312 2.26209L3.45312 13.8438C3.45312 14.1458 3.69796 14.3906 4 14.3906C4.30204 14.3906 4.54687 14.1458 4.54687 13.8438L4.54687 2.26211L6.45612 4.18061C6.66919 4.39468 7.01544 4.3955 7.22951 4.18244C7.44364 3.96935 7.44438 3.62307 7.23137 3.40902L4.38762 0.551488C4.38746 0.551324 4.38727 0.551187 4.3871 0.550996C4.17333 0.336812 3.82596 0.337496 3.61289 0.551023Z" fill="#BC002D"/>
+</svg>
+
+                </div>
+
+                <div class="sort__item">
+                    Году
+
+                    <input name="sort" type="radio" value="year-up" id="sort_year-up" class="sort-up">
+                                        <svg width="8" height="15" viewBox="0 0 8 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M4.38711 14.2302C4.38727 14.2301 4.38746 14.2299 4.38763 14.2297L7.23138 11.3722C7.44441 11.1581 7.44362 10.8119 7.22952 10.5988C7.01544 10.3857 6.66919 10.3865 6.45613 10.6006L4.54688 12.5192V0.9375C4.54688 0.635461 4.30204 0.390625 4 0.390625C3.69796 0.390625 3.45313 0.635461 3.45313 0.9375V12.5191L1.54388 10.6006C1.33081 10.3866 0.984561 10.3858 0.770486 10.5988C0.556358 10.8119 0.555619 11.1582 0.768627 11.3722L3.61238 14.2298C3.61254 14.2299 3.61273 14.2301 3.6129 14.2303C3.82667 14.4444 4.17404 14.4438 4.38711 14.2302Z" fill="#BC002D"/>
+</svg>
+                    <input name="sort" type="radio" value="year-down" id="sort_year-down" class="sort-down">
+                    <svg width="8" height="15" viewBox="0 0 8 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M3.61289 0.551023C3.61273 0.551187 3.61254 0.551324 3.61237 0.551516L0.768623 3.40905C0.555588 3.62312 0.556381 3.96938 0.770482 4.18246C0.984557 4.39553 1.33081 4.39471 1.54387 4.18063L3.45312 2.26209L3.45312 13.8438C3.45312 14.1458 3.69796 14.3906 4 14.3906C4.30204 14.3906 4.54687 14.1458 4.54687 13.8438L4.54687 2.26211L6.45612 4.18061C6.66919 4.39468 7.01544 4.3955 7.22951 4.18244C7.44364 3.96935 7.44438 3.62307 7.23137 3.40902L4.38762 0.551488C4.38746 0.551324 4.38727 0.551187 4.3871 0.550996C4.17333 0.336812 3.82596 0.337496 3.61289 0.551023Z" fill="#BC002D"/>
+</svg>
+
+                </div>
 
 
-            <input name="sort" type="radio" value="rate" id="sort_rate" >
-            <label for="sort_rate">
-                Оценке
-            </label>
-            
-            <input name="sort" type="radio" value="date" id="sort_date">
-            <label for="sort_date">
-                Дате обновления
-            </label>
+                <div class="sort__item">
+                    Оценке
+
+                    <input name="sort" type="radio" value="rate-up" id="sort_rate-up" class="sort-up">
+                                        <svg width="8" height="15" viewBox="0 0 8 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M4.38711 14.2302C4.38727 14.2301 4.38746 14.2299 4.38763 14.2297L7.23138 11.3722C7.44441 11.1581 7.44362 10.8119 7.22952 10.5988C7.01544 10.3857 6.66919 10.3865 6.45613 10.6006L4.54688 12.5192V0.9375C4.54688 0.635461 4.30204 0.390625 4 0.390625C3.69796 0.390625 3.45313 0.635461 3.45313 0.9375V12.5191L1.54388 10.6006C1.33081 10.3866 0.984561 10.3858 0.770486 10.5988C0.556358 10.8119 0.555619 11.1582 0.768627 11.3722L3.61238 14.2298C3.61254 14.2299 3.61273 14.2301 3.6129 14.2303C3.82667 14.4444 4.17404 14.4438 4.38711 14.2302Z" fill="#BC002D"/>
+</svg>
+                    <input name="sort" type="radio" value="rate-down" id="sort_rate-down" class="sort-down">
+                    <svg width="8" height="15" viewBox="0 0 8 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M3.61289 0.551023C3.61273 0.551187 3.61254 0.551324 3.61237 0.551516L0.768623 3.40905C0.555588 3.62312 0.556381 3.96938 0.770482 4.18246C0.984557 4.39553 1.33081 4.39471 1.54387 4.18063L3.45312 2.26209L3.45312 13.8438C3.45312 14.1458 3.69796 14.3906 4 14.3906C4.30204 14.3906 4.54687 14.1458 4.54687 13.8438L4.54687 2.26211L6.45612 4.18061C6.66919 4.39468 7.01544 4.3955 7.22951 4.18244C7.44364 3.96935 7.44438 3.62307 7.23137 3.40902L4.38762 0.551488C4.38746 0.551324 4.38727 0.551187 4.3871 0.550996C4.17333 0.336812 3.82596 0.337496 3.61289 0.551023Z" fill="#BC002D"/>
+</svg>
+
+                </div> 
+
+                <div class="sort__item">
+                    Дате обновления
+
+                    <input name="sort" type="radio" value="date-up" id="sort_date-up" class="sort-up">
+                                        <svg width="8" height="15" viewBox="0 0 8 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M4.38711 14.2302C4.38727 14.2301 4.38746 14.2299 4.38763 14.2297L7.23138 11.3722C7.44441 11.1581 7.44362 10.8119 7.22952 10.5988C7.01544 10.3857 6.66919 10.3865 6.45613 10.6006L4.54688 12.5192V0.9375C4.54688 0.635461 4.30204 0.390625 4 0.390625C3.69796 0.390625 3.45313 0.635461 3.45313 0.9375V12.5191L1.54388 10.6006C1.33081 10.3866 0.984561 10.3858 0.770486 10.5988C0.556358 10.8119 0.555619 11.1582 0.768627 11.3722L3.61238 14.2298C3.61254 14.2299 3.61273 14.2301 3.6129 14.2303C3.82667 14.4444 4.17404 14.4438 4.38711 14.2302Z" fill="#BC002D"/>
+</svg>
+                    <input name="sort" type="radio" value="date-down" id="sort_date-down" class="sort-down">
+                    <svg width="8" height="15" viewBox="0 0 8 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M3.61289 0.551023C3.61273 0.551187 3.61254 0.551324 3.61237 0.551516L0.768623 3.40905C0.555588 3.62312 0.556381 3.96938 0.770482 4.18246C0.984557 4.39553 1.33081 4.39471 1.54387 4.18063L3.45312 2.26209L3.45312 13.8438C3.45312 14.1458 3.69796 14.3906 4 14.3906C4.30204 14.3906 4.54687 14.1458 4.54687 13.8438L4.54687 2.26211L6.45612 4.18061C6.66919 4.39468 7.01544 4.3955 7.22951 4.18244C7.44364 3.96935 7.44438 3.62307 7.23137 3.40902L4.38762 0.551488C4.38746 0.551324 4.38727 0.551187 4.3871 0.550996C4.17333 0.336812 3.82596 0.337496 3.61289 0.551023Z" fill="#BC002D"/>
+</svg>
+
+                </div> 
+           
             </div>
         </div>
     </section>

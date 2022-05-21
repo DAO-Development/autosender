@@ -164,6 +164,27 @@ $(document).ready(function () {
         $('#rating-start').html(values[0])
         $('#rating-end').html(values[1])
     });
+    $('.sort__item:first input').prop('checked', true)
+    $('.sort__item').on('click', function () {
+        $('.sort__item').removeClass('active')
+        $(this).addClass('active')
+        $(this).find('input:not(:checked):first').prop('checked', true)
+    })
+
+    let active_list = false
+    $('.main-filter__mods-show').on('click', function () {
+        if (active_list) {
+            $('.main-filter__mods-show').removeClass('active')
+            $('.main-filter__mods-list').removeClass('active')
+            active_list = false
+        }
+        else {
+            
+            $('.main-filter__mods-show').addClass('active')
+            $('.main-filter__mods-list').addClass('active')
+            active_list = true
+        }
+    })
 
 
 });
