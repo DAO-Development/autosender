@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto&display=swap"
           rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css">
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.6.0/nouislider.css" integrity="sha512-MKxcSu/LDtbIYHBNAWUQwfB3iVoG9xeMCm32QV5hZ/9lFaQZJVaXfz9aFa0IZExWzCpm7OWvp9zq9gVip/nLMg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/style.min.css">
     <title>Автоаукцион онлайн</title>
 </head>
@@ -1009,70 +1009,90 @@
                     </div>
                 </div>
                 <div class="filter__right">
-                    <div class="filter__raiting">
-                        <label>Оценка</label>
-                        <div class="filter__raiting__content">
-                            <div class="filter__raiting__checkbox">
-                                <input type="checkbox" id="rait-1">
-                                <label for="rait-1"></label>
-                                <label for="rait-1">-</label>
-                            </div>
-                            <div class="filter__raiting__checkbox">
-                                <input type="checkbox" id="rait-2">
-                                <label for="rait-2"></label>
-                                <label for="rait-2">3</label>
-                            </div>
-                            <div class="filter__raiting__checkbox">
-                                <input type="checkbox" id="rait-3">
-                                <label for="rait-3"></label>
-                                <label for="rait-3">3.4</label>
-                            </div>
-                            <div class="filter__raiting__checkbox">
-                                <input type="checkbox" id="rait-4">
-                                <label for="rait-4"></label>
-                                <label for="rait-4">4</label>
-                            </div>
-                            <div class="filter__raiting__checkbox">
-                                <input type="checkbox" id="rait-5">
-                                <label for="rait-5"></label>
-                                <label for="rait-5">4.5</label>
-                            </div>
-                            <div class="filter__raiting__checkbox">
-                                <input type="checkbox" id="rait-6">
-                                <label for="rait-6"></label>
-                                <label for="rait-6">5</label>
-                            </div>
-                            <div class="filter__raiting__checkbox">
-                                <input type="checkbox" id="rait-7">
-                                <label for="rait-7"></label>
-                                <label for="rait-7">6</label>
-                            </div>
-                            <div class="filter__raiting__checkbox">
-                                <input type="checkbox" id="rait-8">
-                                <label for="rait-8"></label>
-                                <label for="rait-8">7</label>
-                            </div>
-                            <div class="filter__raiting__checkbox">
-                                <input type="checkbox" id="rait-9">
-                                <label for="rait-9"></label>
-                                <label for="rait-9">8</label>
-                            </div>
-                            <div class="filter__raiting__checkbox">
-                                <input type="checkbox" id="rait-10">
-                                <label for="rait-10"></label>
-                                <label for="rait-10">9</label>
-                            </div>
-                            <div class="filter__raiting__checkbox">
+                    <div class="filter__rating">
+                        
+                        <div class="h3">Оценка: </div>
+                        <div class="filter__rating-values">
+                            <input type="hidden" id="rating-start-val" name="rating-start-val" class="hidden">
+                            <input type="hidden" id="rating-end-val" name="rating-end-val" class="hidden">
+
+                            <div class="filter__rating-value" id="rating-start"></div>
+                        <div class="filter__rating-range" id="rating"></div>
+
+                            <div class="filter__rating-value" id="rating-end"></div>
+                            <div class="filter__rating__checkbox">
                                 <input type="checkbox" id="rait-11">
                                 <label for="rait-11"></label>
                                 <label for="rait-11">R</label>
                             </div>
-                            <div class="filter__raiting__checkbox">
+                            <div class="filter__rating__checkbox">
                                 <input type="checkbox" id="rait-12">
                                 <label for="rait-12"></label>
                                 <label for="rait-12">RA</label>
                             </div>
                         </div>
+                        <!--<div class="filter__rating__content">
+                            <div class="filter__rating__checkbox">
+                                <input type="checkbox" id="rait-1">
+                                <label for="rait-1"></label>
+                                <label for="rait-1">-</label>
+                            </div>
+                            <div class="filter__rating__checkbox">
+                                <input type="checkbox" id="rait-2">
+                                <label for="rait-2"></label>
+                                <label for="rait-2">3</label>
+                            </div>
+                            <div class="filter__rating__checkbox">
+                                <input type="checkbox" id="rait-3">
+                                <label for="rait-3"></label>
+                                <label for="rait-3">3.4</label>
+                            </div>
+                            <div class="filter__rating__checkbox">
+                                <input type="checkbox" id="rait-4">
+                                <label for="rait-4"></label>
+                                <label for="rait-4">4</label>
+                            </div>
+                            <div class="filter__rating__checkbox">
+                                <input type="checkbox" id="rait-5">
+                                <label for="rait-5"></label>
+                                <label for="rait-5">4.5</label>
+                            </div>
+                            <div class="filter__rating__checkbox">
+                                <input type="checkbox" id="rait-6">
+                                <label for="rait-6"></label>
+                                <label for="rait-6">5</label>
+                            </div>
+                            <div class="filter__rating__checkbox">
+                                <input type="checkbox" id="rait-7">
+                                <label for="rait-7"></label>
+                                <label for="rait-7">6</label>
+                            </div>
+                            <div class="filter__rating__checkbox">
+                                <input type="checkbox" id="rait-8">
+                                <label for="rait-8"></label>
+                                <label for="rait-8">7</label>
+                            </div>
+                            <div class="filter__rating__checkbox">
+                                <input type="checkbox" id="rait-9">
+                                <label for="rait-9"></label>
+                                <label for="rait-9">8</label>
+                            </div>
+                            <div class="filter__rating__checkbox">
+                                <input type="checkbox" id="rait-10">
+                                <label for="rait-10"></label>
+                                <label for="rait-10">9</label>
+                            </div>
+                            <div class="filter__rating__checkbox">
+                                <input type="checkbox" id="rait-11">
+                                <label for="rait-11"></label>
+                                <label for="rait-11">R</label>
+                            </div>
+                            <div class="filter__rating__checkbox">
+                                <input type="checkbox" id="rait-12">
+                                <label for="rait-12"></label>
+                                <label for="rait-12">RA</label>
+                            </div>
+                        </div> -->
                     </div>
                     <div class="filter__color">
                         <label>Цвет</label>
@@ -1150,9 +1170,18 @@
                             <option>Аукцион 2</option>
                         </select>
                     </div>
-                    <div class="filter__num-lot">
-                        <input type="text" placeholder="Номер лота">
-                    </div>
+                    <div class="filter__sell"><div class="filter__selects">
+
+                        
+                        
+                        <div class="filter__num-date">
+                            <input type="text" placeholder="дата торгов">
+                        </div>  
+                        <div class="filter__num-lot">
+                            <input type="text" placeholder="Номер лота">
+                        </div>  
+                    </div></div>
+
                     <div class="filter__buttons">
                         <button class="btn all-btn">
                             Все параметры
@@ -1188,7 +1217,7 @@
 
                         <span>Фильтр</span>
                     </button>
-                    <p class="car-count"><span>25 246</span> автомобилей</p>
+                    <p class="car-count"><span>25 246</span> автомобилей на 12 аукционах Японии</p>
                 </div>
                 <div class="main-filter__filter-mobile-tabs">
                     <div class="tab-active">
@@ -1211,14 +1240,47 @@
     </section>
     <section class="title-products" id="title-products">
         <div class="container">
-            <p class="car-count"><span>25 246</span> автомобилей</p>
-            <select>
+            <p class="car-count"><span>25 246</span> автомобилей  на 12 аукционах Японии</p>
+            <select сlass="mobile-sort">
                 <option value="default">По умолчанию</option>
                 <option value="up">По возрастанию цены</option>
                 <option value="down">По убыванию цены</option>
             </select>
         </div>
+        <div class="container desktop-sort">
+            Cортировать по:
+            <div class="radio-list">
+
+            <input checked name="sort" type="radio" value="popular" id="sort_popular">
+            <label for="sort_popular">
+                Популярности
+            </label>
+
+            <input name="sort" type="radio" value="price" id="sort_price">
+            <label for="sort_price">
+                Цене
+            </label>
+
+
+            <input name="sort" type="radio" value="milliage" id="sort_milliage">
+            <label for="sort_milliage">
+                Пробегу 
+            </label>
+
+
+            <input name="sort" type="radio" value="rate" id="sort_rate" >
+            <label for="sort_rate">
+                Оценке
+            </label>
+            
+            <input name="sort" type="radio" value="date" id="sort_date">
+            <label for="sort_date">
+                Дате обновления
+            </label>
+            </div>
+        </div>
     </section>
+    
     <div class="auction auction-first">
         <div class="container">
             <div class="auction__content">
@@ -4482,6 +4544,7 @@
         src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery.maskedinput@1.4.1/src/jquery.maskedinput.min.js"
 type="text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.6.0/nouislider.min.js" integrity="sha512-1mDhG//LAjM3pLXCJyaA+4c+h5qmMoTc7IuJyuNNPaakrWT9rVTxICK4tIizf7YwJsXgDC2JP74PGCc7qxLAHw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script type="text/javascript" src="js/autoauction-online.js"></script>
 <script type="text/javascript" src="js/feedback.js"></script>
 <script type="text/javascript" src="js/interesting-cars.js"></script>

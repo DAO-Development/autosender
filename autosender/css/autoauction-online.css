@@ -217,8 +217,8 @@ input {
 }
 
 .main-filter .choices__inner .choices__item {
-  font-size: 19px !important;
-  line-height: 19px !important;
+  font-size: 17px !important;
+  line-height: 17px !important;
 }
 
 .main-filter #main-filter__select:focus-visible {
@@ -235,28 +235,32 @@ input {
   transition: .3s;
   border-bottom: none !important;
   border-radius: 10px 10px 0 0;
-  font-size: 19px !important;
+  font-size: 18px !important;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.03);
+  color: rgba(0, 0, 0, 0.5);
 }
 
 .main-filter__category:hover {
-  padding: 8px 0 19px !important;
+  border: 1px solid rgba(0, 0, 0, 0.75);
+  color: rgba(0, 0, 0, 0.75);
   -webkit-box-shadow: 0 -12px 12px rgba(0, 0, 0, 0.03);
           box-shadow: 0 -12px 12px rgba(0, 0, 0, 0.03);
 }
 
 .main-filter__category.active {
-  background: #bc002d;
-  color: white;
-}
-
-.main-filter__category.active:hover {
-  padding: 15px 0 17px !important;
+  border: 1px solid rgba(0, 0, 0, 0.75);
+  color: rgba(0, 0, 0, 0.75);
+  background: white;
+  margin-top: -5px;
+  padding-bottom: 20px !important;
 }
 
 .main-filter__categories-tabs {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  gap: 10px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -270,6 +274,9 @@ input {
           box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
   border-radius: 0 0 5px 5px;
   position: relative;
+  border-left: 1px solid rgba(0, 0, 0, 0.2);
+  border-right: 1px solid rgba(0, 0, 0, 0.2);
+  border-left: 1px solid rgba(0, 0, 0, 0.2);
   display: grid;
 }
 
@@ -373,7 +380,66 @@ input {
   background-position: center;
 }
 
-.main-filter__filter .filter__raiting__content {
+.main-filter__filter .filter__rating {
+  width: 100%;
+}
+
+.main-filter__filter .filter__rating .h3 {
+  margin-top: 15px;
+}
+
+.main-filter__filter .filter__rating-range {
+  width: 100%;
+}
+
+.main-filter__filter .filter__rating-values {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 15px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 0 !important;
+}
+
+.main-filter__filter .filter__rating-value {
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.main-filter__filter .filter__rating .noUi-horizontal {
+  height: 5px;
+}
+
+.main-filter__filter .filter__rating .noUi-connect {
+  background: #bc002d;
+  left: 5px;
+}
+
+.main-filter__filter .filter__rating .noUi-handle {
+  height: 15px;
+  width: 15px;
+  background: #bc002d;
+  border: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.main-filter__filter .filter__rating .noUi-handle::before,
+.main-filter__filter .filter__rating .noUi-handle::after {
+  display: none;
+}
+
+.main-filter__filter .filter__rating .noUi-connect,
+.main-filter__filter .filter__rating .noUi-origin {
+  margin-right: 10px;
+}
+
+.main-filter__filter .filter__rating__content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -381,7 +447,7 @@ input {
       flex-wrap: wrap;
 }
 
-.main-filter__filter .filter__raiting__checkbox {
+.main-filter__filter .filter__rating__checkbox {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -391,11 +457,11 @@ input {
   width: 45px;
 }
 
-.main-filter__filter .filter__raiting input[type=checkbox]:checked + label {
+.main-filter__filter .filter__rating input[type=checkbox]:checked + label {
   background-color: #bc002d;
 }
 
-.main-filter__filter .filter__raiting input[type=checkbox] + label {
+.main-filter__filter .filter__rating input[type=checkbox] + label {
   display: inline-block;
   margin-right: 6px;
   width: 16px;
@@ -405,7 +471,7 @@ input {
           box-sizing: border-box;
 }
 
-.main-filter__filter .filter__raiting input[type=checkbox] + label + label {
+.main-filter__filter .filter__rating input[type=checkbox] + label + label {
   font-size: 12px;
   line-height: 14px;
 }
@@ -527,21 +593,31 @@ input {
   color: #150202;
 }
 
-.main-filter__filter .filter__left > div > .filter__selects,
-.main-filter__filter .filter__right > div > .filter__selects {
+.main-filter__filter .filter__left > div .filter__selects,
+.main-filter__filter .filter__right > div .filter__selects {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   grid-gap: 35px;
 }
 
-.main-filter__filter .filter__left > div > .filter__selects .choices__item,
-.main-filter__filter .filter__right > div > .filter__selects .choices__item {
+.main-filter__filter .filter__left > div .filter__selects > *,
+.main-filter__filter .filter__right > div .filter__selects > * {
+  max-width: calc(50% - 18px);
+}
+
+.main-filter__filter .filter__left > div .filter__selects > * *,
+.main-filter__filter .filter__right > div .filter__selects > * * {
+  max-width: 100%;
+}
+
+.main-filter__filter .filter__left > div .filter__selects .choices__item,
+.main-filter__filter .filter__right > div .filter__selects .choices__item {
   padding-right: 10px;
 }
 
-.main-filter__filter .filter__left > div > .filter__selects .choices__item:after,
-.main-filter__filter .filter__right > div > .filter__selects .choices__item:after {
+.main-filter__filter .filter__left > div .filter__selects .choices__item:after,
+.main-filter__filter .filter__right > div .filter__selects .choices__item:after {
   display: none;
 }
 
@@ -551,6 +627,10 @@ input {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 10px 5px;
 }
 
 .main-filter__filter .filter__buttons > button {
@@ -583,6 +663,12 @@ input {
 .main-filter__filter .filter__buttons > .clear-btn {
   background: none;
   color: #b5b5b5;
+}
+
+.main-filter__filter .filter__buttons > .red-btn {
+  width: 100%;
+  margin-bottom: 15px;
+  text-align: center;
 }
 
 .main-filter__filter-mobile {
@@ -844,6 +930,35 @@ input {
   right: 20px;
 }
 
+.desktop-sort {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+  -webkit-box-pack: start !important;
+      -ms-flex-pack: start !important;
+          justify-content: start !important;
+}
+
+.desktop-sort .radio-list {
+  font-weight: 600;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 15px;
+  -webkit-box-pack: start !important;
+      -ms-flex-pack: start !important;
+          justify-content: start !important;
+}
+
+.desktop-sort input {
+  display: none;
+}
+
+.desktop-sort input:checked + label {
+  color: #bc002d;
+}
+
 @media screen and (min-width: 0) {
   .main-filter__categories-select {
     margin-bottom: 25px;
@@ -895,14 +1010,14 @@ input {
   }
 
   .main-filter__filter .filter__right > div {
-    padding: 40px 30px;
+    padding: 15px 35px 21px;
   }
 
-  .main-filter__filter .filter__raiting {
+  .main-filter__filter .filter__rating {
     border-bottom: 1px solid rgba(21, 2, 2, 0.06);
   }
 
-  .main-filter__filter .filter__raiting__content {
+  .main-filter__filter .filter__rating__content {
     max-width: 300px;
     -webkit-column-gap: 35px;
        -moz-column-gap: 35px;
@@ -945,35 +1060,28 @@ input {
     width: 81vw;
   }
 
-  .main-filter__filter .filter__left > div > .filter__selects > select,
-  .main-filter__filter .filter__left > div > .filter__selects .choices__inner,
-  .main-filter__filter .filter__left > div > .filter__selects .choices,
-  .main-filter__filter .filter__right > div > .filter__selects > select,
-  .main-filter__filter .filter__right > div > .filter__selects .choices__inner,
-  .main-filter__filter .filter__right > div > .filter__selects .choices {
-    width: 140px;
+  .main-filter__filter .filter__left > div .filter__selects > select,
+  .main-filter__filter .filter__left > div .filter__selects .choices__inner,
+  .main-filter__filter .filter__left > div .filter__selects .choices,
+  .main-filter__filter .filter__right > div .filter__selects > select,
+  .main-filter__filter .filter__right > div .filter__selects .choices__inner,
+  .main-filter__filter .filter__right > div .filter__selects .choices {
+    width: 100%;
   }
 
   .main-filter__filter .filter__buttons {
     display: -webkit-box !important;
     display: -ms-flexbox !important;
     display: flex !important;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
 
   .main-filter__filter .filter__buttons > .all-btn {
     display: block;
-    margin-bottom: 20px;
-  }
-
-  .main-filter__filter .filter__buttons > .clear-btn {
-    margin-bottom: 20px;
   }
 
   .main-filter__filter .filter__buttons > .red-btn {
@@ -1070,7 +1178,7 @@ input {
   .main-filter__filter .filter__right > div .choices__inner,
   .main-filter__filter .filter__right > div .choices,
   .main-filter__filter .filter__right > div > input {
-    width: 300px;
+    width: 100%;
   }
 
   .main-filter__filter-mobile-top {
@@ -1102,11 +1210,7 @@ input {
     margin-bottom: 52px;
   }
 
-  .main-filter__filter .filter__right > div {
-    padding: 40px 32px;
-  }
-
-  .main-filter__filter .filter__raiting__content {
+  .main-filter__filter .filter__rating__content {
     max-width: 332px;
     -webkit-column-gap: 42px;
        -moz-column-gap: 42px;
@@ -1120,26 +1224,6 @@ input {
        -moz-column-gap: 28px;
             column-gap: 28px;
     row-gap: 24px;
-  }
-
-  .main-filter__filter .filter__left > div > select,
-  .main-filter__filter .filter__left > div .choices__inner,
-  .main-filter__filter .filter__left > div .choices,
-  .main-filter__filter .filter__left > div > input,
-  .main-filter__filter .filter__right > div > select,
-  .main-filter__filter .filter__right > div .choices__inner,
-  .main-filter__filter .filter__right > div .choices,
-  .main-filter__filter .filter__right > div > input {
-    width: 350px;
-  }
-
-  .main-filter__filter .filter__left > div > .filter__selects > select,
-  .main-filter__filter .filter__left > div > .filter__selects .choices__inner,
-  .main-filter__filter .filter__left > div > .filter__selects .choices,
-  .main-filter__filter .filter__right > div > .filter__selects > select,
-  .main-filter__filter .filter__right > div > .filter__selects .choices__inner,
-  .main-filter__filter .filter__right > div > .filter__selects .choices {
-    width: 165px;
   }
 
   .main-filter__filter .filter__buttons > .red-btn {
@@ -1226,11 +1310,7 @@ input {
     padding: 52px 40px 0;
   }
 
-  .main-filter__filter .filter__right > div {
-    padding: 40px;
-  }
-
-  .main-filter__filter .filter__raiting__content {
+  .main-filter__filter .filter__rating__content {
     max-width: 480px;
   }
 
@@ -1240,26 +1320,6 @@ input {
        -moz-column-gap: 32px;
             column-gap: 32px;
     row-gap: 20px;
-  }
-
-  .main-filter__filter .filter__left > div > select,
-  .main-filter__filter .filter__left > div .choices__inner,
-  .main-filter__filter .filter__left > div .choices,
-  .main-filter__filter .filter__left > div > input,
-  .main-filter__filter .filter__right > div > select,
-  .main-filter__filter .filter__right > div .choices__inner,
-  .main-filter__filter .filter__right > div .choices,
-  .main-filter__filter .filter__right > div > input {
-    width: 488px;
-  }
-
-  .main-filter__filter .filter__left > div > .filter__selects > select,
-  .main-filter__filter .filter__left > div > .filter__selects .choices__inner,
-  .main-filter__filter .filter__left > div > .filter__selects .choices,
-  .main-filter__filter .filter__right > div > .filter__selects > select,
-  .main-filter__filter .filter__right > div > .filter__selects .choices__inner,
-  .main-filter__filter .filter__right > div > .filter__selects .choices {
-    width: 234px;
   }
 
   .main-filter__filter .filter__buttons > .red-btn {
@@ -1357,13 +1417,8 @@ input {
 
   .main-filter__filter .filter__left > div {
     margin-bottom: 0;
-    padding: 50px 39px;
+    padding: 15px 35px 21px;
     border-bottom: 1px solid rgba(21, 2, 2, 0.06);
-  }
-
-  .main-filter__filter .filter__left > div:nth-child(2n-1) {
-    padding: 50px 39px;
-    border-right: 1px solid rgba(21, 2, 2, 0.06);
   }
 
   .main-filter__filter .filter__right {
@@ -1373,7 +1428,6 @@ input {
   }
 
   .main-filter__filter .filter__right > div {
-    padding: 50px 39px;
     border-bottom: 1px solid rgba(21, 2, 2, 0.06);
   }
 
@@ -1386,11 +1440,11 @@ input {
     padding: 80px 82px;
   }
 
-  .main-filter__filter .filter__raiting {
+  .main-filter__filter .filter__rating {
     border-bottom: none;
   }
 
-  .main-filter__filter .filter__raiting__content {
+  .main-filter__filter .filter__rating__content {
     max-width: 294px;
     -webkit-column-gap: 32px;
        -moz-column-gap: 32px;
@@ -1414,32 +1468,6 @@ input {
   .main-filter__filter .filter__right input {
     font-size: 15px;
     line-height: 18px;
-  }
-
-  .main-filter__filter .filter__left > div > select,
-  .main-filter__filter .filter__left > div .choices__inner,
-  .main-filter__filter .filter__left > div .choices,
-  .main-filter__filter .filter__left > div > input,
-  .main-filter__filter .filter__right > div > select,
-  .main-filter__filter .filter__right > div .choices__inner,
-  .main-filter__filter .filter__right > div .choices,
-  .main-filter__filter .filter__right > div > input {
-    width: 288px;
-  }
-
-  .main-filter__filter .filter__left > div > .filter__selects > select,
-  .main-filter__filter .filter__left > div > .filter__selects .choices__inner,
-  .main-filter__filter .filter__left > div > .filter__selects .choices,
-  .main-filter__filter .filter__right > div > .filter__selects > select,
-  .main-filter__filter .filter__right > div > .filter__selects .choices__inner,
-  .main-filter__filter .filter__right > div > .filter__selects .choices {
-    width: 135px;
-  }
-
-  .main-filter__filter .filter__buttons {
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
   }
 
   .main-filter__filter .filter__buttons > .red-btn {
@@ -1538,7 +1566,7 @@ input {
     display: block;
     -webkit-box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
             box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
-    margin-bottom: 80px;
+    margin-bottom: 50px;
     width: 100%;
   }
 
@@ -1546,31 +1574,8 @@ input {
     display: none;
   }
 
-  .main-filter__filter .filter__left > div {
-    padding: 50px 74px;
-  }
-
-  .main-filter__filter .filter__left > div:nth-child(2n-1) {
-    padding: 50px 74px;
-  }
-
-  .main-filter__filter .filter__right > div {
-    padding: 50px 74px;
-  }
-
   .main-filter__filter .filter__right > div:last-child {
     padding: 50px 282px;
-  }
-
-  .main-filter__filter .filter__left > div > select,
-  .main-filter__filter .filter__left > div .choices__inner,
-  .main-filter__filter .filter__left > div .choices,
-  .main-filter__filter .filter__left > div > input,
-  .main-filter__filter .filter__right > div > select,
-  .main-filter__filter .filter__right > div .choices__inner,
-  .main-filter__filter .filter__right > div .choices,
-  .main-filter__filter .filter__right > div > input {
-    width: 305px;
   }
 
   .main-filter__filter .filter__buttons {
@@ -1581,21 +1586,10 @@ input {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-
-  .main-filter__filter .filter__buttons > .all-btn {
-    margin-right: 111px;
-    margin-bottom: 18px;
   }
 
   .main-filter__filter .filter__buttons > .clear-btn {
     margin-right: 0;
-    margin-bottom: 18px;
   }
 
   .main-filter__filter .filter__buttons > .red-btn {
@@ -1626,19 +1620,14 @@ input {
   .main-filter__filter {
     display: grid;
     grid-template-columns: 2fr 1fr;
-    margin-bottom: 100px;
   }
 
   .main-filter__filter .filter__left > div {
-    padding: 45px 53px 55px !important;
+    padding: 15px 53px 21px !important;
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
     border-right: 1px solid rgba(21, 2, 2, 0.06);
-  }
-
-  .main-filter__filter .filter__left > div:nth-child(2n-1) {
-    padding: 50px 52px;
   }
 
   .main-filter__filter .filter__right {
@@ -1651,7 +1640,7 @@ input {
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
-    grid-gap: 23px !important;
+    grid-gap: 15px 23px !important;
     padding: 50px 0;
   }
 
@@ -1660,6 +1649,11 @@ input {
     padding: 0;
     margin: 0 auto;
     border-bottom: none;
+    width: 100%;
+  }
+
+  .main-filter__filter .filter__right > div * {
+    max-width: 305px;
   }
 
   .main-filter__filter .filter__right > div:nth-child(2n-1) {
@@ -1671,7 +1665,7 @@ input {
     margin-top: 0;
   }
 
-  .main-filter__filter .filter__raiting__content {
+  .main-filter__filter .filter__rating__content {
     max-width: 270px;
     -webkit-column-gap: 23px;
        -moz-column-gap: 23px;
@@ -1690,21 +1684,6 @@ input {
   .main-filter__filter .filter__color__checkbox input[type=checkbox] + label {
     width: 24px;
     height: 24px;
-  }
-
-  .main-filter__filter .filter__left > div > select,
-  .main-filter__filter .filter__left > div .choices__inner,
-  .main-filter__filter .filter__left > div .choices,
-  .main-filter__filter .filter__left > div > input,
-  .main-filter__filter .filter__right > div > select,
-  .main-filter__filter .filter__right > div .choices__inner,
-  .main-filter__filter .filter__right > div .choices,
-  .main-filter__filter .filter__right > div > input {
-    width: 273px;
-  }
-
-  .main-filter__filter .filter__buttons > .all-btn {
-    margin-right: 42px;
   }
 
   .main-filter__filter .filter__buttons > .red-btn {
@@ -1824,43 +1803,16 @@ input {
     font-size: 38px;
   }
 
-  .main-filter__filter {
-    margin-bottom: 120px;
-  }
-
-  .main-filter__filter .filter__left > div {
-    padding: 50px 77px;
-  }
-
-  .main-filter__filter .filter__left > div:nth-child(2n-1) {
-    padding: 50px 77px 50px 60px;
-  }
-
   .main-filter__filter .filter__right > div:last-child {
     margin-top: 0;
   }
 
-  .main-filter__filter .filter__raiting__content {
+  .main-filter__filter .filter__rating__content {
     max-width: 305px;
   }
 
   .main-filter__filter .filter__color__content {
     max-width: 305px;
-  }
-
-  .main-filter__filter .filter__left > div > select,
-  .main-filter__filter .filter__left > div .choices__inner,
-  .main-filter__filter .filter__left > div .choices,
-  .main-filter__filter .filter__left > div > input,
-  .main-filter__filter .filter__right > div > select,
-  .main-filter__filter .filter__right > div .choices__inner,
-  .main-filter__filter .filter__right > div .choices,
-  .main-filter__filter .filter__right > div > input {
-    width: 305px;
-  }
-
-  .main-filter__filter .filter__buttons > .all-btn {
-    margin-right: 70px;
   }
 
   .main-filter__filter .filter__buttons > .red-btn {

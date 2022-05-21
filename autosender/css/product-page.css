@@ -261,7 +261,7 @@ input {
   content: none;
 }
 
-.product-page .product__raiting {
+.product-page .product__rating {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -271,7 +271,7 @@ input {
           flex-direction: column;
 }
 
-.product-page .product__raiting-top {
+.product-page .product__rating-top {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -280,7 +280,7 @@ input {
           align-items: start;
 }
 
-.product-page .product__raiting .raiting__value {
+.product-page .product__rating .rating__value {
   position: relative;
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;
@@ -288,12 +288,12 @@ input {
   line-height: 100%;
 }
 
-.product-page .product__raiting .raiting__info {
+.product-page .product__rating .rating__info {
   position: relative;
   display: inline-block;
 }
 
-.product-page .product__raiting .raiting__info-text-container {
+.product-page .product__rating .rating__info-text-container {
   -webkit-transition: .3s;
   -o-transition: .3s;
   transition: .3s;
@@ -306,7 +306,7 @@ input {
   line-height: 14px;
 }
 
-.product-page .product__raiting .raiting__info-text {
+.product-page .product__rating .rating__info-text {
   width: 100%;
   padding: 15px 20px;
   display: grid;
@@ -319,12 +319,12 @@ input {
           box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
 }
 
-.product-page .product__raiting .raiting__info-text > span:nth-child(2n) {
+.product-page .product__rating .rating__info-text > span:nth-child(2n) {
   color: #5a9cff;
   font-weight: 700;
 }
 
-.product-page .product__raiting .raiting__info-sign:hover ~ .raiting__info-text-container {
+.product-page .product__rating .rating__info-sign:hover ~ .rating__info-text-container {
   opacity: 1;
   z-index: 100;
   -webkit-transition: .3s;
@@ -1074,11 +1074,11 @@ input {
     margin-bottom: 12px;
   }
 
-  .product-page .product__raiting .raiting__value {
+  .product-page .product__rating .rating__value {
     font-size: 28px;
   }
 
-  .product-page .product__raiting .raiting__description {
+  .product-page .product__rating .rating__description {
     font-size: 12px;
     font-weight: 500;
     width: -webkit-min-content;
@@ -1509,11 +1509,11 @@ input {
     margin-bottom: 0;
   }
 
-  .product-page .product__raiting .raiting__value {
+  .product-page .product__rating .rating__value {
     font-size: 30px;
   }
 
-  .product-page .product__raiting .raiting__description {
+  .product-page .product__rating .rating__description {
     font-size: 10px;
     font-weight: 400;
   }

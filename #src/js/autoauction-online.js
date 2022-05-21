@@ -11,6 +11,7 @@ $(document).ready(function () {
 
     $('.filter__color').addClass('not-visible')
     $('.filter__auctions').addClass('not-visible')
+    $('.filter__sell').addClass('not-visible')
     $('.filter__num-lot').addClass('not-visible')
     $('.filter__body-model').addClass('not-visible')
     $('.filter__body-type').addClass('not-visible')
@@ -21,7 +22,7 @@ $(document).ready(function () {
     if ($(window).width() < '1024') {
         $('.filter__price').addClass('not-visible')
         $('.filter__year').addClass('not-visible')
-        $('.filter__raiting').addClass('not-visible')
+        $('.filter__rating').addClass('not-visible')
     }
 
     let lists = document.getElementsByClassName('main-filter__list-category')
@@ -66,6 +67,7 @@ $(document).ready(function () {
         if (btn.classList.contains('closed')) {
             btn.classList.remove('closed')
             $('.filter__color').removeClass('not-visible')
+            $('.filter__sell').removeClass('not-visible')
             $('.filter__auctions').removeClass('not-visible')
             $('.filter__num-lot').removeClass('not-visible')
             $('.filter__body-model').removeClass('not-visible')
@@ -77,12 +79,14 @@ $(document).ready(function () {
             if ($(window).width() < '1024') {
                 $('.filter__price').removeClass('not-visible')
                 $('.filter__year').removeClass('not-visible')
-                $('.filter__raiting').removeClass('not-visible')
+                $('.filter__rating').removeClass('not-visible')
             }
         } else {
             btn.classList.add('closed')
             $('.filter__color').addClass('not-visible')
             $('.filter__auctions').addClass('not-visible')
+            $('.filter__sell').addClass('not-visible')
+
             $('.filter__num-lot').addClass('not-visible')
             $('.filter__body-model').addClass('not-visible')
             $('.filter__body-type').addClass('not-visible')
@@ -93,7 +97,7 @@ $(document).ready(function () {
             if ($(window).width() < '1024') {
                 $('.filter__price').addClass('not-visible')
                 $('.filter__year').addClass('not-visible')
-                $('.filter__raiting').addClass('not-visible')
+                $('.filter__rating').addClass('not-visible')
             }
         }
     });
@@ -133,4 +137,33 @@ $(document).ready(function () {
             placeholder: true,
         });
     })
-})
+
+
+
+
+
+    var slider = document.getElementById('rating');
+
+    noUiSlider.create(slider, {
+        start: [3, 9],
+        step: 1,
+        connect: true,
+        range: {
+            'min': 3,
+            'max': 9
+        }
+    });
+
+
+
+
+    slider.noUiSlider.on('update', function (values) {
+        console.log(values)
+        $('#rating-start-val').val(values[0])
+        $('#rating-end-val').val(values[1])
+        $('#rating-start').html(values[0])
+        $('#rating-end').html(values[1])
+    });
+
+
+});

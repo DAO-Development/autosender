@@ -16,8 +16,8 @@
         border-radius: 0
         border-bottom: 1px solid $black-21
         .choices__item
-            font-size: 19px !important
-            line-height: 19px !important
+            font-size: 17px !important
+            line-height: 17px !important
 
     #main-filter__select
         &:focus-visible
@@ -33,24 +33,34 @@
         transition: .3s
         border-bottom: none !important
         border-radius: 10px 10px 0 0
-        font-size: 19px !important
+        font-size: 18px !important
+        border: 1px solid $black-op20
+        background: $black-op03
+        color: $black-op50
+
         &:hover
-            padding: 8px 0 19px !important
+            border: 1px solid $black-op75
+            color: $black-op75
+            // padding: 8px 0 19px !important
             box-shadow: 0 -12px 12px rgba(0,0,0,.03)
             // padding: 20px 0 20px !important
 
         &.active
-
-            background: $red-dark
-            color: white
-            &:hover
-                padding: 15px 0 17px !important
+            border: 1px solid $black-op75
+            color: $black-op75
+            background: white
+            margin-top: -5px
+            padding-bottom: 20px !important
+            // background: $red-dark
+            // color: white
+            // &:hover
+                // padding: 15px 0 17px !important
 
     &__categories
         &-tabs
             // margin-bottom: 25px
             display: flex
-            // gap: 15px
+            gap: 10px
             justify-content: space-between
             width: 100% !important
         &-select
@@ -67,6 +77,9 @@
         box-shadow: 0 10px 10px rgba(0,0,0,.2)
         border-radius: 0 0 5px 5px
         position: relative
+        border-left: 1px solid $black-op20
+        border-right: 1px solid $black-op20
+        border-left: 1px solid $black-op20
 
         // border: 1px solid $black-21
         display: grid
@@ -171,7 +184,7 @@
         @media screen and (min-width: $tabletM)
             display: block
             box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2)
-            margin-bottom: 80px
+            margin-bottom: 50px
             width: 100%
 
         @media screen and ( max-width: $tabletM )
@@ -186,9 +199,6 @@
         @media screen and (min-width: 1250px)
             display: grid
             grid-template-columns: 2fr 1fr
-            margin-bottom: 100px
-        @media screen and (min-width: $desktopM)
-            margin-bottom: 120px
 
         &.active
             display: block !important
@@ -254,27 +264,27 @@
                         margin-bottom: 52px
                     @media screen and (min-width: $tabletS)
                         margin-bottom: 0
-                        padding: 50px 39px
+                        padding: 15px 35px 21px
                         border-bottom: 1px solid rgba(21, 2, 2, 0.06)
-                    @media screen and (min-width: $tabletM)
-                        padding: 50px 74px
+                    // @media screen and (min-width: $tabletM)
+                        // padding: 50px 74px
                     @media screen and (min-width: 1250px)
-                        padding: 45px 53px 55px !important
+                        padding: 15px 53px 21px !important
                         height: fit-content
                         border-right: 1px solid rgba(21, 2, 2, 0.06)
-                    @media screen and (min-width: $desktopM)
-                        padding: 50px 77px
+                    // @media screen and (min-width: $desktopM)
+                        // padding: 50px 77px
 
-                    &:nth-child(2n-1)
-                        @media screen and (min-width: $tabletS)
-                            padding: 50px 39px
-                            border-right: 1px solid rgba(21, 2, 2, 0.06)
-                        @media screen and (min-width: $tabletM)
-                            padding: 50px 74px
-                        @media screen and (min-width: 1250px)
-                            padding: 50px 52px
-                        @media screen and (min-width: $desktopM)
-                            padding: 50px 77px 50px 60px
+                    // &:nth-child(2n-1)
+                    //     @media screen and (min-width: $tabletS)
+                    //         padding: 50px 39px
+                    //         border-right: 1px solid rgba(21, 2, 2, 0.06)
+                    //     @media screen and (min-width: $tabletM)
+                    //         padding: 50px 74px
+                    //     @media screen and (min-width: 1250px)
+                    //         padding: 50px 52px
+                    //     @media screen and (min-width: $desktopM)
+                    //         padding: 50px 77px 50px 60px
 
                     & > label
                         font-size: 10px
@@ -295,29 +305,33 @@
                         grid-column: 1/2
                         height: fit-content
 
-                        grid-gap: 23px !important
+                        grid-gap: 15px 23px !important
                         padding: 50px 0
 
                 & > div
                     display: grid
                     @media screen and (min-width: 0)
-                        padding: 40px 30px
+                        padding: 15px 35px 21px
+                        // padding: 40px 30px
                     @media screen and (min-width: $mobileM)
-                        padding: 40px 32px
+                        // padding: 40px 32px
                     @media screen and (min-width: $mobileL)
-                        padding: 40px
+                        // padding: 40px
                     @media screen and (min-width: $tabletS)
-                        padding: 50px 39px
+
                         border-bottom: 1px solid rgba(21, 2, 2, 0.06)
                         &:nth-child(2n-1)
                             border-right: 1px solid rgba(21, 2, 2, 0.06)
                     @media screen and (min-width: $tabletM)
-                        padding: 50px 74px
+                        // padding: 50px 74px
                     @media screen and (min-width: 1250px)
                         max-width: 305px
                         padding: 0
                         margin: 0 auto
                         border-bottom: none
+                        width: 100%
+                        *
+                            max-width: 305px
                         &:nth-child(2n-1)
                             border-right: none
 
@@ -348,12 +362,50 @@
                         background-repeat: no-repeat
                         background-position: center
 
-            &__raiting
+            &__rating
+                width: 100%
                 @media screen and (min-width: 0)
                     border-bottom: 1px solid rgba(21, 2, 2, 0.06)
                 @media screen and (min-width: $tabletS)
                     border-bottom: none
 
+                .h3
+                    margin-top: 15px
+
+                &-range
+                    width: 100%
+
+                &-values
+                    display: flex
+                    justify-content: space-between
+                    gap: 15px
+                    align-items: center
+
+                    margin-top: 0 !important
+                &-value
+                    font-size: 12px
+                    color: $black-op50
+
+                .noUi-horizontal
+                    height: 5px
+
+                .noUi-connect
+                    background: $red-dark
+                    left: 5px
+
+                .noUi-handle
+                    height: 15px
+                    width: 15px
+                    // border-radius: 50%
+                    background: $red-dark
+                    border: none
+                    box-shadow: none
+                    &::before, &::after
+                        display: none
+
+                .noUi-connect,
+                .noUi-origin
+                    margin-right: 10px
                 &__content
                     display: flex
                     flex-wrap: wrap
@@ -530,19 +582,20 @@
                         @media screen and (min-width: 0)
                             width: 81vw
                         @media screen and (min-width: $mobileS)
-                            width: 300px
-                        @media screen and (min-width: $mobileM)
-                            width: 350px
-                        @media screen and (min-width: $mobileL)
-                            width: 488px
-                        @media screen and (min-width: $tabletS)
-                            width: 288px
-                        @media screen and (min-width: $tabletM)
-                            width: 305px
-                        @media screen and (min-width: 1250px)
-                            width: 273px
-                        @media screen and (min-width: $desktopM)
-                            width: 305px
+                            width: 100%
+                            // width: 300px
+                        // @media screen and (min-width: $mobileM)
+                        //     width: 350px
+                        // @media screen and (min-width: $mobileL)
+                        //     width: 488px
+                        // @media screen and (min-width: $tabletS)
+                        //     width: 288px
+                        // @media screen and (min-width: $tabletM)
+                        //     width: 305px
+                        // @media screen and (min-width: 1250px)
+                        //     width: 273px
+                        // @media screen and (min-width: $desktopM)
+                        //     width: 305px
 
                         &::-webkit-input-placeholder
                             color: $black-21
@@ -550,21 +603,26 @@
                         &::-moz-placeholder
                             color: $black-21
 
-                    & > .filter__selects
+                    .filter__selects
                         display: flex
                         grid-gap: 35px
+                        &>*
+                            max-width: calc(50% - 18px)
+                            *
+                                max-width: 100%
 
                         & > select,
                         & .choices__inner,
                         & .choices
                             @media screen and (min-width: 0)
-                                width: 140px
-                            @media screen and (min-width: $mobileM)
-                                width: 165px
-                            @media screen and (min-width: $mobileL)
-                                width: 234px
-                            @media screen and (min-width: $tabletS)
-                                width: 135px
+                                width: 100%
+                            //     width: 140px
+                            // @media screen and (min-width: $mobileM)
+                            //     width: 165px
+                            // @media screen and (min-width: $mobileL)
+                            //     width: 234px
+                            // @media screen and (min-width: $tabletS)
+                            //     width: 135px
 
                         & .choices__item
                             padding-right: 10px
@@ -575,17 +633,19 @@
             &__buttons
                 align-self: end
                 align-items: center
+                justify-content: space-between
+                gap: 10px 5px
                 @media screen and (min-width: 0)
                     display: flex !important
-                    flex-direction: column
+                    // flex-direction: column
                     align-items: center
+                    flex-wrap: wrap
                 @media screen and (min-width: $tabletS)
-                    justify-content: space-between
+                    // justify-content: space-between
                 @media screen and (min-width: $tabletM)
                     display: flex
                     flex-direction: row
-                    flex-wrap: wrap
-                    justify-content: center
+                    // justify-content: center
 
                 & > button
                     display: flex
@@ -603,14 +663,14 @@
                     margin-bottom: 0
                     @media screen and (min-width: 0)
                         display: block
-                        margin-bottom: 20px
+                        // margin-bottom: 20px
                     @media screen and (min-width: $tabletM)
-                        margin-right: 111px
-                        margin-bottom: 18px
+                        // margin-right: 111px
+                        // margin-bottom: 18px
                     @media screen and (min-width: 1250px)
-                        margin-right: 42px
+                        // margin-right: 42px
                     @media screen and (min-width: $desktopM)
-                        margin-right: 70px
+                        // margin-right: 70px
 
                     & > svg
                         &.closed
@@ -620,12 +680,15 @@
                     background: none
                     color: $grey-181
                     @media screen and (min-width: 0)
-                        margin-bottom: 20px
+                        // margin-bottom: 20px
                     @media screen and (min-width: $tabletM)
                         margin-right: 0
-                        margin-bottom: 18px
+                        // margin-bottom: 18px
 
                 & > .red-btn
+                    width: 100%
+                    margin-bottom: 15px
+                    text-align: center
                     @media screen and (min-width: 0)
                         padding: 13px 68px
                     @media screen and (min-width: $mobileM)
@@ -1074,3 +1137,17 @@
         z-index: 1000
         position: absolute
         right: 20px
+
+.desktop-sort
+    display: flex
+    gap: 10px
+    justify-content: start !important
+    .radio-list
+        font-weight: 600
+        display: flex
+        gap: 15px
+        justify-content: start !important
+    input
+        display: none
+        &:checked+label
+            color: $red-dark
