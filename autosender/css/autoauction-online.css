@@ -739,6 +739,13 @@ input {
   padding: 20px 25px;
 }
 
+.main-filter__mods .h2 {
+  font-size: 19px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
 .main-filter__mods-list {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
