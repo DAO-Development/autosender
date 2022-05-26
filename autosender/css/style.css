@@ -59,7 +59,7 @@ body {
 
 .choices__list--dropdown {
   max-height: 10rem;
-  overflow-y: scroll;
+  overflow-y: auto !important;
 }
 
 input[type="submit"] {
@@ -258,7 +258,7 @@ body {
 
 .choices__list--dropdown {
   max-height: 10rem;
-  overflow-y: scroll;
+  overflow-y: auto !important;
 }
 
 input[type="submit"] {
@@ -1321,7 +1321,7 @@ body {
 
 .choices__list--dropdown {
   max-height: 10rem;
-  overflow-y: scroll;
+  overflow-y: auto !important;
 }
 
 input[type="submit"] {
@@ -1834,7 +1834,7 @@ body {
 
 .choices__list--dropdown {
   max-height: 10rem;
-  overflow-y: scroll;
+  overflow-y: auto !important;
 }
 
 input[type="submit"] {
@@ -2341,7 +2341,7 @@ body {
 
 .choices__list--dropdown {
   max-height: 10rem;
-  overflow-y: scroll;
+  overflow-y: auto !important;
 }
 
 input[type="submit"] {
@@ -2674,7 +2674,7 @@ body {
 
 .choices__list--dropdown {
   max-height: 10rem;
-  overflow-y: scroll;
+  overflow-y: auto !important;
 }
 
 input[type="submit"] {
@@ -2922,7 +2922,7 @@ body {
 
 .choices__list--dropdown {
   max-height: 10rem;
-  overflow-y: scroll;
+  overflow-y: auto !important;
 }
 
 input[type="submit"] {
@@ -3211,7 +3211,7 @@ body {
 
 .choices__list--dropdown {
   max-height: 10rem;
-  overflow-y: scroll;
+  overflow-y: auto !important;
 }
 
 input[type="submit"] {
@@ -3506,7 +3506,7 @@ body {
 
 .choices__list--dropdown {
   max-height: 10rem;
-  overflow-y: scroll;
+  overflow-y: auto !important;
 }
 
 input[type="submit"] {
@@ -4109,7 +4109,7 @@ body {
 
 .choices__list--dropdown {
   max-height: 10rem;
-  overflow-y: scroll;
+  overflow-y: auto !important;
 }
 
 input[type="submit"] {
@@ -4459,7 +4459,7 @@ body {
 
 .choices__list--dropdown {
   max-height: 10rem;
-  overflow-y: scroll;
+  overflow-y: auto !important;
 }
 
 input[type="submit"] {
@@ -4790,7 +4790,7 @@ body {
 
 .choices__list--dropdown {
   max-height: 10rem;
-  overflow-y: scroll;
+  overflow-y: auto !important;
 }
 
 input[type="submit"] {
@@ -5816,7 +5816,7 @@ body {
 
 .choices__list--dropdown {
   max-height: 10rem;
-  overflow-y: scroll;
+  overflow-y: auto !important;
 }
 
 input[type="submit"] {
@@ -6248,7 +6248,7 @@ body {
 
 .choices__list--dropdown {
   max-height: 10rem;
-  overflow-y: scroll;
+  overflow-y: auto !important;
 }
 
 input[type="submit"] {
@@ -6494,7 +6494,7 @@ body {
 
 .choices__list--dropdown {
   max-height: 10rem;
-  overflow-y: scroll;
+  overflow-y: auto !important;
 }
 
 input[type="submit"] {
@@ -6767,7 +6767,7 @@ body {
 
 .choices__list--dropdown {
   max-height: 10rem;
-  overflow-y: scroll;
+  overflow-y: auto !important;
 }
 
 input[type="submit"] {
@@ -6995,7 +6995,7 @@ body {
 
 .choices__list--dropdown {
   max-height: 10rem;
-  overflow-y: scroll;
+  overflow-y: auto !important;
 }
 
 input[type="submit"] {
@@ -7391,7 +7391,7 @@ body {
 
 .choices__list--dropdown {
   max-height: 10rem;
-  overflow-y: scroll;
+  overflow-y: auto !important;
 }
 
 input[type="submit"] {
@@ -7849,7 +7849,7 @@ body {
 
 .choices__list--dropdown {
   max-height: 10rem;
-  overflow-y: scroll;
+  overflow-y: auto !important;
 }
 
 input[type="submit"] {

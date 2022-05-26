@@ -33,14 +33,33 @@ $(document).ready(function () {
         }
     }
 
-    let filterSelect = document.getElementById('main-filter__select');
-    filterSelect.onchange = function () {
-        selectedList.classList.remove("active")
-        selectedList = lists[filterSelect.selectedIndex]
-        selectedList.classList.add("active")
-    };
-
+    // let filterSelect = document.getElementById('main-filter__select');
+    // filterSelect.onchange = function () {
+    //     selectedList.classList.remove("active")
+    //     selectedList = lists[filterSelect.selectedIndex]
+    //     selectedList.classList.add("active")
+    // };
     let tabs = $('.main-filter__category')
+
+     $('#main-filter__select option').each((i, el) => {
+        $(el).val(i)
+     })
+    console.log($('#main-filter__select option'))
+    let select_filter = new Choices($('#main-filter__select')[0], {
+        placeholder: true,
+        searchEnabled: false,
+        shouldSort: false
+    })
+
+    select_filter.passedElement.element.addEventListener('change', function (event) {
+        selectedList.classList.remove("active")
+        selectedList = lists[event.detail.value]
+        selectedList.classList.add("active")
+
+        tabs.removeClass('active')
+        $('.main-filter__category[data-num=' + event.detail.value + ']').addClass('active')
+    })
+
     tabs.each((i, el) => {
         console.log(el)
         $(el).on('click', function () {
@@ -48,9 +67,12 @@ $(document).ready(function () {
             console.log($(el).attr('data-num'))
             $('.main-filter__list-category').removeClass('active')
             $('#list-category-' + $(el).attr('data-num')).addClass('active')
-
+            
             tabs.removeClass('active')
             $(el).addClass('active')
+            
+            select_filter.setChoiceByValue($(el).attr('data-num'))
+
         })
 
     })
@@ -128,7 +150,7 @@ $(document).ready(function () {
             placeholder: true,
         });
     });
-
+   
     $(".model-change").on("click", function () {
         $(".filter__model").html("<select class='model-select'><option class='placeholder' value='placeholder'>Модель</option><option>не Модель 1</option><option> неМодель 2</option></select>")
         let models = document.querySelector('.model-select');
