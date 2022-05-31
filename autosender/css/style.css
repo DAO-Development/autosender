@@ -5065,7 +5065,7 @@ input {
 }
 
 .main-filter__lists > ul > li > a .auctions__notes-item {
-  padding: 0 0 0 10px !important;
+  padding: 0 0 0 2px !important;
 }
 
 .main-filter__lists > ul > li > a .auctions__notes-text {
@@ -8636,6 +8636,9 @@ input {
         -ms-flex-direction: column;
             flex-direction: column;
     grid-gap: 24px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 
   .main-filter__lists > ul > li {
@@ -8879,10 +8882,6 @@ input {
   .main-filter__lists > ul.active {
     width: 100%;
     margin: 0 auto;
-    display: grid;
-    grid-auto-flow: column;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
     row-gap: 24px;
   }
 
@@ -9284,7 +9283,10 @@ input {
   }
 
   .main-filter__lists > ul.active {
-    width: 488px;
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-flow: unset !important;
   }
 
   .main-filter__filter .filter__top {
@@ -9717,9 +9719,7 @@ input {
   }
 
   .main-filter__lists > ul.active {
-    width: 656px;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
     -webkit-column-gap: 113px;
        -moz-column-gap: 113px;
             column-gap: 113px;
@@ -10072,6 +10072,14 @@ input {
   .product-full-price {
     width: 100%;
     margin-bottom: 26px;
+  }
+
+  .main-filter__lists > ul.active {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    -webkit-column-gap: 113px;
+       -moz-column-gap: 113px;
+            column-gap: 113px;
+    row-gap: 24px;
   }
 
   .main-filter__filter {
@@ -10666,14 +10674,16 @@ input {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    gap: 5px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 15px;
     width: 100%;
   }
 

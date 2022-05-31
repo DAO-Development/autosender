@@ -104,34 +104,56 @@
                     margin: 0 auto
                     display: flex
                     flex-direction: column
+                    // flex-wrap: wrap
+                    // display: grid
                     grid-gap: 24px
+                    justify-content: space-between
 
             @media screen and (min-width: $mobileS)
                 &.active
                     width: 100%
                     margin: 0 auto
-                    display: grid
-                    grid-auto-flow: column
-                    grid-template-columns: 1fr 1fr
-                    grid-template-rows: 1fr 1fr 1fr 1fr 1fr
+                    // display: grid
+                    // grid-auto-flow: column
+                    // grid-template-columns: 1fr 1fr
+                    // grid-template-rows: 1fr 1fr 1fr 1fr 1fr
                     row-gap: 24px
             @media screen and (min-width: $mobileL)
                 &.active
-                    width: 488px
+                    // width: 488px
+                    display: grid
+                    grid-auto-flow: column
+                    grid-template-columns: 1fr 1fr
+                    grid-auto-flow: unset !important
+                    // grid-template-rows: 1fr 1fr 1fr 1fr 1fr
             @media screen and (min-width: $tabletS)
                 &.active
-                    width: 656px
+                    // width: 656px
+                    // justify-content: start
+                    // display: grid
+                    // grid-template-columns: auto
                     grid-template-columns: 1fr 1fr 1fr
-                    grid-template-rows: 1fr 1fr 1fr 1fr
+                    column-gap: 113px
+                    row-gap: 24px
+            @media screen and (min-width: $tabletM)
+                &.active
+                    // width: 656px
+                    // justify-content: start
+                    // display: grid
+                    // grid-template-columns: auto
+                    grid-template-columns: 1fr 1fr 1fr 1fr
                     column-gap: 113px
                     row-gap: 24px
             @media screen and (min-width: $desktopS)
                 &.active
                     display: flex
-                    justify-content: space-between
+                    justify-content: start
                     flex-direction: row
-                    gap: 5px
+                    flex-wrap: wrap
+
+                    gap: 15px
                     width: 100%
+
             //     display: block
             //     &.active
             //         display: block
@@ -160,7 +182,7 @@
                         display: inline-block
                         padding: 0 !important
                     .auctions__notes-item
-                        padding: 0 0 0 10px !important
+                        padding: 0 0 0 2px !important
 
                     .auctions__notes-text
                         bottom: 27px !important
