@@ -1197,7 +1197,7 @@
     justify-content: start !important
 
     @media screen and ( max-width: $tabletM )
-        display: none !important
+        flex-wrap: wrap
 
     svg
         display: none
@@ -1207,6 +1207,9 @@
         display: flex
         gap: 15px
         justify-content: start !important
+
+        @media screen and ( max-width: $tabletM )
+            flex-wrap: wrap
     input
         display: none
         &:checked+svg

@@ -12251,7 +12251,13 @@ input {
   }
 
   .desktop-sort {
-    display: none !important;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+
+  .desktop-sort .radio-list {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
 
   .container {
