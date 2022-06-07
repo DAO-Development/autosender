@@ -448,7 +448,23 @@ input {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+}
+
+.footer .fmenu__cars-item.open {
   grid-gap: 16px;
+}
+
+.footer .fmenu__cars-item.open .fmenu__model {
+  height: 1em;
+}
+
+.footer .fmenu__cars-item.open .fmenu__brand-btn {
+  -webkit-transform: rotateZ(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotateZ(180deg);
 }
 
 .footer .fmenu__cars-list {
@@ -457,7 +473,9 @@ input {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  grid-gap: 56px;
+  grid-gap: 30px 50px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .footer .fmenu__cars-list::-webkit-scrollbar {
@@ -479,11 +497,30 @@ input {
   letter-spacing: 0.04em !important;
 }
 
+.footer .fmenu__brand {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 5px;
+}
+
+.footer .fmenu__brand-btn {
+  margin-left: 20px;
+  -webkit-transition: .2s;
+  -o-transition: .2s;
+  transition: .2s;
+}
+
 .footer .fmenu__model {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   white-space: nowrap;
+  height: 0px;
+  overflow: hidden;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
 }
 
 .footer .fmenu__menu2 {
@@ -812,7 +849,7 @@ input {
   }
 
   .footer .fmenu__cars-list {
-    grid-gap: 65px;
+    grid-gap: 30px 55px;
   }
 
   .footer .fmenu__menu2 {
@@ -925,7 +962,7 @@ input {
   }
 
   .footer .fmenu__cars-list {
-    grid-gap: 75px;
+    grid-gap: 30px 70px;
   }
 
   .footer .fmenu__number {

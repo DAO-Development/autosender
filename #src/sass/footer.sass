@@ -300,16 +300,24 @@
                 display: inline-flex
                 flex-direction: column
                 width: fit-content
-                grid-gap: 16px
+                transition: .3s
+
+                &.open
+                  grid-gap: 16px
+                  .fmenu__model
+                    height: 1em
+                  .fmenu__brand-btn
+                    transform: rotateZ(180deg)
             &-list
                 overflow-x: scroll
                 scrollbar-width: none
                 display: flex
-                grid-gap: 56px
+                grid-gap: 30px 50px
+                flex-wrap: wrap
                 @media screen and ( max-width: $mobileL )
-                    grid-gap: 65px
+                    grid-gap: 30px 55px
                 @media screen and ( max-width: $mobileS )
-                    grid-gap: 75px
+                    grid-gap: 30px 70px 
 
             &-list::-webkit-scrollbar
                 display: none
@@ -324,10 +332,22 @@
                 line-height: 18px !important
                 letter-spacing: 0.04em !important
 
+        &__brand
+          display: flex
+          gap: 5px
+          &-btn
+            margin-left: 20px      
+            transition: .2s  
+
+
         &__model
             width: fit-content
             white-space: nowrap
-
+            // display: none
+            height: 0px
+            overflow: hidden
+            transition: .3s
+            
         &__menu2
             display: grid
             grid-template-columns: 1fr 1fr
