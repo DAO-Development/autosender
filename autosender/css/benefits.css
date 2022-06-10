@@ -74,13 +74,19 @@ body {
   color: #150202;
 }
 
+.hidden {
+  display: none !important;
+}
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6,
-button,
+.h1,
+.h2,
+.h3 button,
 .btn {
   font-family: 'Montserrat', sans-serif;
   line-height: 130%;
@@ -92,14 +98,16 @@ h1 {
   letter-spacing: 0.045em;
 }
 
-h2 {
+h2,
+.h2 {
   margin-bottom: 47px;
   font-weight: 700;
   text-align: center;
   letter-spacing: 0.045em;
 }
 
-h3 {
+h3,
+.h3 {
   font-weight: 700;
   margin-bottom: 24px;
   letter-spacing: 0.11em;
@@ -353,7 +361,8 @@ input {
 }
 
 @media screen and (min-width: 768px) {
-  h2 {
+  h2,
+  .h2 {
     font-size: 32px;
   }
 }
@@ -364,7 +373,8 @@ input {
     line-height: 130%;
   }
 
-  h2 {
+  h2,
+  .h2 {
     font-size: 36px;
   }
 
@@ -378,13 +388,15 @@ input {
 }
 
 @media screen and (min-width: 1600px) {
-  h2 {
+  h2,
+  .h2 {
     font-size: 38px;
   }
 }
 
 @media screen and (max-width: 1600px) {
-  h3 {
+  h3,
+  .h3 {
     font-size: 20px;
   }
 
@@ -398,7 +410,8 @@ input {
     width: 1200px;
   }
 
-  h3 {
+  h3,
+  .h3 {
     font-size: 18px;
     letter-spacing: 0.04em;
   }
@@ -514,7 +527,8 @@ input {
     line-height: 120%;
   }
 
-  h2 {
+  h2,
+  .h2 {
     margin: 0 auto 47px;
     font-size: 28px;
   }
@@ -545,7 +559,8 @@ input {
     font-size: 36px;
   }
 
-  h3 {
+  h3,
+  .h3 {
     font-size: 16px;
     line-height: 130%;
     letter-spacing: 0.045em;
@@ -651,7 +666,8 @@ input {
 }
 
 @media screen and (min-width: 360px) and (max-width: 360px) {
-  h3 {
+  h3,
+  .h3 {
     font-size: 16px;
   }
 

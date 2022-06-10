@@ -303,10 +303,10 @@
                 transition: .3s
 
                 &.open
-                  grid-gap: 16px
-                  .fmenu__model
+                    grid-gap: 16px
+                .fmenu__model
                     height: 1em
-                  .fmenu__brand-btn
+                .fmenu__brand-btn
                     transform: rotateZ(180deg)
             &-list
                 overflow-x: scroll
@@ -317,7 +317,7 @@
                 @media screen and ( max-width: $mobileL )
                     grid-gap: 30px 55px
                 @media screen and ( max-width: $mobileS )
-                    grid-gap: 30px 70px 
+                    grid-gap: 30px 70px
 
             &-list::-webkit-scrollbar
                 display: none
@@ -333,12 +333,12 @@
                 letter-spacing: 0.04em !important
 
         &__brand
-          display: flex
-          gap: 5px
-          &-btn
-            margin-left: 20px      
-            transition: .2s  
-
+            display: flex
+            gap: 5px
+            font-size: 14px
+        &-btn
+            margin-left: 20px
+            transition: .2s
 
         &__model
             width: fit-content
@@ -347,7 +347,7 @@
             height: 0px
             overflow: hidden
             transition: .3s
-            
+
         &__menu2
             display: grid
             grid-template-columns: 1fr 1fr
