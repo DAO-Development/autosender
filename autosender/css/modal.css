@@ -94,7 +94,6 @@ h6,
 
 h1 {
   font-weight: bold;
-  font-size: 44px;
   letter-spacing: 0.045em;
 }
 
@@ -415,7 +414,7 @@ input {
 
 @media screen and (min-width: 1440px) {
   h1 {
-    font-size: 44px;
+    font-size: 38px;
     line-height: 130%;
   }
 
@@ -496,7 +495,7 @@ input {
   }
 
   h1 {
-    font-size: 42px;
+    font-size: 36px;
     line-height: 120%;
   }
 
@@ -555,7 +554,7 @@ input {
   }
 
   h1 {
-    font-size: 36px;
+    font-size: 31px;
   }
 
   h3,
@@ -669,7 +668,7 @@ input {
   }
 
   h1 {
-    font-size: 32px;
+    font-size: 28px;
   }
 
   .modal__content,
@@ -743,7 +742,7 @@ input {
 
 @media screen and (max-width: 360px) {
   h1 {
-    font-size: 24px;
+    font-size: 20px;
   }
 
   .modal__content,

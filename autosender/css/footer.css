@@ -94,7 +94,6 @@ h6,
 
 h1 {
   font-weight: bold;
-  font-size: 44px;
   letter-spacing: 0.045em;
 }
 
@@ -465,11 +464,11 @@ input {
   grid-gap: 16px;
 }
 
-.footer .fmenu__cars-item .fmenu__model {
+.footer .fmenu__cars-item.open .fmenu__model {
   height: 1em;
 }
 
-.footer .fmenu__cars-item .fmenu__brand-btn {
+.footer .fmenu__cars-item.open .fmenu__brand-btn {
   -webkit-transform: rotateZ(180deg);
       -ms-transform: rotate(180deg);
           transform: rotateZ(180deg);
@@ -602,7 +601,7 @@ input {
 
 @media screen and (min-width: 1440px) {
   h1 {
-    font-size: 44px;
+    font-size: 38px;
     line-height: 130%;
   }
 
@@ -746,7 +745,7 @@ input {
   }
 
   h1 {
-    font-size: 42px;
+    font-size: 36px;
     line-height: 120%;
   }
 
@@ -775,7 +774,7 @@ input {
   }
 
   h1 {
-    font-size: 36px;
+    font-size: 31px;
   }
 
   h3,
@@ -883,7 +882,7 @@ input {
   }
 
   h1 {
-    font-size: 32px;
+    font-size: 28px;
   }
 
   .footer__head-item--soc {
@@ -958,7 +957,7 @@ input {
 
 @media screen and (max-width: 360px) {
   h1 {
-    font-size: 24px;
+    font-size: 20px;
   }
 
   .footer li {
