@@ -63,7 +63,7 @@
 
   &__steps
     display: flex
-    gap: 60px
+    gap: 40px
     flex-direction: column
     flex-wrap: wrap
     justify-content: space-between
@@ -85,10 +85,11 @@
       margin-bottom: 120px
 
   &__text
-    grid-template-columns: 1fr 10fr
     display: grid
     height: fit-content
     align-self: center
+    @media screen and (max-width: $tabletSM)
+      align-self: start
 
   &__visualize
     align-self: start
@@ -98,35 +99,33 @@
   &__step
     padding: 24px
 
-    border: 1px solid $grey-179
     display: grid
-    gap: 70px
-    grid-template-columns: 1fr 1px 1fr
+    grid-template-columns: 1fr 1fr
+    gap: 50px
     align-items: center
     position: relative
     height: fit-content
 
     @media screen and (max-width: $tabletM)
-      width: min-content
+      padding-bottom: 25px !important
+      border-bottom: 1px solid $black-36
 
-    @media screen and (max-width: $mobileL)
+    @media screen and (max-width: $tabletSM)
+      align-items: start
       display: flex
       flex-direction: column
       width: 100%
       padding: 16px 20px 9px
       grid-gap: 16px
 
-    @media screen and (max-width: $mobileS)
-      grid-gap: 5px
-
     h4
-      padding-left: 15px
       display: flex
-      font-size: 1.3rem
+      gap: 20px
+      font-size: 20px
       align-items: center
-      margin-bottom: 20px
-      padding-bottom: 15px
-      border-bottom: 1px solid $grey-181
+      margin-bottom: 29px
+      @media screen and (max-width: $mobileL)
+        font-size: 16px
 
   &__split
     height: 100%
@@ -161,7 +160,6 @@
 
   &__content
     width: 435px
-    padding: 0 25px
     font-size: 14px
     font-weight: 400
     line-height: 21px

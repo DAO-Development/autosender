@@ -255,7 +255,7 @@ input {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 60px;
+  gap: 40px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -268,7 +268,6 @@ input {
 }
 
 .buy-car__text {
-  grid-template-columns: 1fr 10fr;
   display: grid;
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -287,10 +286,9 @@ input {
 
 .buy-car__step {
   padding: 24px;
-  border: 1px solid #b3b3b3;
   display: grid;
-  gap: 70px;
-  grid-template-columns: 1fr 1px 1fr;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -301,17 +299,15 @@ input {
 }
 
 .buy-car__step h4 {
-  padding-left: 15px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  font-size: 1.3rem;
+  gap: 20px;
+  font-size: 20px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 20px;
-  padding-bottom: 15px;
-  border-bottom: 1px solid #b5b5b5;
+  margin-bottom: 29px;
 }
 
 .buy-car__split {
@@ -338,7 +334,6 @@ input {
 
 .buy-car__content {
   width: 435px;
-  padding: 0 25px;
   font-size: 14px;
   font-weight: 400;
   line-height: 21px;
@@ -491,9 +486,8 @@ input {
   }
 
   .buy-car__step {
-    width: -webkit-min-content;
-    width: -moz-min-content;
-    width: min-content;
+    padding-bottom: 25px !important;
+    border-bottom: 1px solid #242424;
   }
 
   .buy-car__split {
@@ -503,6 +497,29 @@ input {
 
   .buy-car__num {
     width: 1.9ch;
+  }
+}
+
+@media screen and (max-width: 910px) {
+  .buy-car__text {
+    -ms-flex-item-align: start;
+        align-self: start;
+  }
+
+  .buy-car__step {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+    padding: 16px 20px 9px;
+    grid-gap: 16px;
   }
 }
 
@@ -567,17 +584,8 @@ input {
     height: 300px;
   }
 
-  .buy-car__step {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    width: 100%;
-    padding: 16px 20px 9px;
-    grid-gap: 16px;
+  .buy-car__step h4 {
+    font-size: 16px;
   }
 
   .buy-car__num {
@@ -639,10 +647,6 @@ input {
 
   .buy-car__banner {
     height: 200px;
-  }
-
-  .buy-car__step {
-    grid-gap: 5px;
   }
 
   .buy-car__content {
@@ -718,6 +722,14 @@ input {
 }
 
  @media screen and (max-width: 1024px){
+
+@supports (-webkit-appearance:none){
+
+}
+
+}
+
+ @media screen and (max-width: 910px){
 
 @supports (-webkit-appearance:none){
 
