@@ -17,6 +17,14 @@
 
 /* Общие стили */
 
+picture {
+  display: grid;
+}
+
+picture img {
+  height: 100%;
+}
+
 body {
   overflow-x: hidden;
 }

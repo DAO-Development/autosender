@@ -55,6 +55,14 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
+picture {
+  display: grid;
+}
+
+picture img {
+  height: 100%;
+}
+
 body {
   overflow-x: hidden;
 }
@@ -260,6 +268,14 @@ input {
 /* Цвета */
 
 /* Общие стили */
+
+picture {
+  display: grid;
+}
+
+picture img {
+  height: 100%;
+}
 
 body {
   overflow-x: hidden;
@@ -1331,6 +1347,14 @@ input {
 
 /* Общие стили */
 
+picture {
+  display: grid;
+}
+
+picture img {
+  height: 100%;
+}
+
 body {
   overflow-x: hidden;
 }
@@ -1851,6 +1875,14 @@ input {
 
 /* Общие стили */
 
+picture {
+  display: grid;
+}
+
+picture img {
+  height: 100%;
+}
+
 body {
   overflow-x: hidden;
 }
@@ -2365,6 +2397,14 @@ input {
 
 /* Общие стили */
 
+picture {
+  display: grid;
+}
+
+picture img {
+  height: 100%;
+}
+
 body {
   overflow-x: hidden;
 }
@@ -2705,6 +2745,14 @@ input {
 
 /* Общие стили */
 
+picture {
+  display: grid;
+}
+
+picture img {
+  height: 100%;
+}
+
 body {
   overflow-x: hidden;
 }
@@ -2959,6 +3007,14 @@ input {
 /* Цвета */
 
 /* Общие стили */
+
+picture {
+  display: grid;
+}
+
+picture img {
+  height: 100%;
+}
 
 body {
   overflow-x: hidden;
@@ -3255,6 +3311,14 @@ input {
 /* Цвета */
 
 /* Общие стили */
+
+picture {
+  display: grid;
+}
+
+picture img {
+  height: 100%;
+}
 
 body {
   overflow-x: hidden;
@@ -3557,6 +3621,14 @@ input {
 /* Цвета */
 
 /* Общие стили */
+
+picture {
+  display: grid;
+}
+
+picture img {
+  height: 100%;
+}
 
 body {
   overflow-x: hidden;
@@ -4168,6 +4240,14 @@ input {
 
 /* Общие стили */
 
+picture {
+  display: grid;
+}
+
+picture img {
+  height: 100%;
+}
+
 body {
   overflow-x: hidden;
 }
@@ -4524,6 +4604,14 @@ input {
 /* Цвета */
 
 /* Общие стили */
+
+picture {
+  display: grid;
+}
+
+picture img {
+  height: 100%;
+}
 
 body {
   overflow-x: hidden;
@@ -4894,6 +4982,14 @@ input {
 
 /* Общие стили */
 
+picture {
+  display: grid;
+}
+
+picture img {
+  height: 100%;
+}
+
 body {
   overflow-x: hidden;
 }
@@ -5112,7 +5208,7 @@ input {
       flex-shrink: 0;
 }
 
-.pre-filter-brand img {
+img {
   width: 100%;
 }
 
@@ -5954,6 +6050,14 @@ input {
 
 /* Общие стили */
 
+picture {
+  display: grid;
+}
+
+picture img {
+  height: 100%;
+}
+
 body {
   overflow-x: hidden;
 }
@@ -6393,6 +6497,14 @@ input {
 
 /* Общие стили */
 
+picture {
+  display: grid;
+}
+
+picture img {
+  height: 100%;
+}
+
 body {
   overflow-x: hidden;
 }
@@ -6645,6 +6757,14 @@ input {
 /* Цвета */
 
 /* Общие стили */
+
+picture {
+  display: grid;
+}
+
+picture img {
+  height: 100%;
+}
 
 body {
   overflow-x: hidden;
@@ -6926,6 +7046,14 @@ input {
 
 /* Общие стили */
 
+picture {
+  display: grid;
+}
+
+picture img {
+  height: 100%;
+}
+
 body {
   overflow-x: hidden;
 }
@@ -7160,6 +7288,14 @@ input {
 /* Цвета */
 
 /* Общие стили */
+
+picture {
+  display: grid;
+}
+
+picture img {
+  height: 100%;
+}
 
 body {
   overflow-x: hidden;
@@ -7468,6 +7604,14 @@ input {
 /* Цвета */
 
 /* Общие стили */
+
+picture {
+  display: grid;
+}
+
+picture img {
+  height: 100%;
+}
 
 body {
   overflow-x: hidden;
@@ -7871,6 +8015,14 @@ input {
 /* Цвета */
 
 /* Общие стили */
+
+picture {
+  display: grid;
+}
+
+picture img {
+  height: 100%;
+}
 
 body {
   overflow-x: hidden;
@@ -8336,6 +8488,14 @@ input {
 /* Цвета */
 
 /* Общие стили */
+
+picture {
+  display: grid;
+}
+
+picture img {
+  height: 100%;
+}
 
 body {
   overflow-x: hidden;
@@ -10715,6 +10875,51 @@ input {
 
   .contacts .bank-details > ul > li:nth-child(2) {
     grid-row: auto;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .auctions__item--short .auctions__info {
+    gap: 0 50px;
+  }
+
+  .auctions__item--short .auctions__info-wrap {
+    padding: 25px 0;
+  }
+
+  .auctions__item--short .auctions__price {
+    height: unset;
+    position: static;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 15px;
+    width: 250px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    place-items: start;
+    grid-gap: 20px;
+  }
+
+  .auctions__item--short .auctions__price svg {
+    display: none;
+  }
+
+  .auctions__item--short picture {
+    width: 280px;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    display: grid;
+    max-height: 220px;
+    min-height: 220px;
+  }
+
+  .auctions__item--short picture img {
+    width: 300px;
+    max-height: 220px;
+    min-height: 220px;
   }
 }
 
@@ -16344,6 +16549,14 @@ input {
 }
 
  @media screen and (min-width: 1024px){
+
+@supports (-webkit-appearance:none){
+
+}
+
+}
+
+ @media screen and (min-width: 1200px){
 
 @supports (-webkit-appearance:none){
 
