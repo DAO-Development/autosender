@@ -5287,6 +5287,10 @@ img {
   display: grid;
 }
 
+.main-filter__lists-more {
+  display: none;
+}
+
 .main-filter__lists > ul > li {
   letter-spacing: 0.045em;
 }
@@ -9982,6 +9986,7 @@ input {
   }
 
   .main-filter__lists > ul.active {
+    max-height: unset;
     display: grid;
     grid-auto-flow: column;
     grid-template-columns: 1fr 1fr;
@@ -13159,6 +13164,43 @@ input {
         flex-wrap: wrap;
   }
 
+  .auctions__item--short picture img {
+    min-height: 100% !important;
+    height: unset !important;
+  }
+
+  .auctions__item--short .auctions__content {
+    display: grid;
+    gap: 15px 30px;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .auctions__item--short .auctions__price {
+    padding-right: 10px;
+    grid-column: 2/3;
+    border: none !important;
+    grid-row: 1/2;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: unset;
+  }
+
+  .auctions__item--short .auctions__price .auctions__action {
+    text-align: start;
+    border: none !important;
+  }
+
+  .auctions__item--short .auctions__cost {
+    display: block;
+    padding-left: 0;
+  }
+
+  .auctions__item--short .auctions__info-wrap {
+    grid-column: 1/3;
+  }
+
   .container {
     width: 88.62vw;
   }
@@ -14929,8 +14971,71 @@ input {
     margin-top: 40px;
   }
 
+  .main-filter__lists {
+    max-height: 260px;
+    overflow-y: hidden;
+    padding-bottom: 40px;
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+    position: relative;
+  }
+
+  .main-filter__lists-more {
+    width: 98%;
+    position: absolute;
+    bottom: 0;
+    display: grid;
+    place-items: center;
+    padding: 6px 6px 10px;
+    background: white;
+    margin: 0 1% 0;
+  }
+
+  .main-filter__lists-more .more,
+  .main-filter__lists-more .less {
+    cursor: pointer;
+    padding: 10px 15px;
+    background: #bc002d;
+    color: white;
+    border-radius: 5px;
+  }
+
+  .main-filter__lists-more .less {
+    display: none;
+  }
+
+  .main-filter__lists-more .more {
+    display: block;
+  }
+
+  .main-filter__lists ul {
+    max-height: 100%;
+    overflow: hidden;
+  }
+
+  .main-filter__lists.open {
+    max-height: 900px;
+  }
+
+  .main-filter__lists.open .more {
+    display: none;
+  }
+
+  .main-filter__lists.open .less {
+    display: block;
+  }
+
   .main-filter__mods-list {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .auctions__item--short .auctions__content {
+    gap: 15px 20px;
+  }
+
+  .auctions__item--short .auctions__action {
+    padding: 5px 0 0;
   }
 
   .container {

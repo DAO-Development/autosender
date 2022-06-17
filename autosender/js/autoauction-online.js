@@ -25,6 +25,14 @@ $(document).ready(function () {
         $('.filter__rating').addClass('not-visible')
     }
 
+    $('.main-filter__lists-more .more').on('click', function () {
+        $('.main-filter__lists').addClass('open')
+    })
+
+    $('.main-filter__lists-more .less').on('click', function () {
+        $('.main-filter__lists').removeClass('open')
+    })
+
     let lists = document.getElementsByClassName('main-filter__list-category')
     let selectedList;
     for (let i = 0; i < lists.length; i++) {
@@ -41,9 +49,9 @@ $(document).ready(function () {
     // };
     let tabs = $('.main-filter__category')
 
-     $('#main-filter__select option').each((i, el) => {
+    $('#main-filter__select option').each((i, el) => {
         $(el).val(i)
-     })
+    })
     console.log($('#main-filter__select option'))
     let select_filter = new Choices($('#main-filter__select')[0], {
         placeholder: true,
@@ -67,10 +75,10 @@ $(document).ready(function () {
             console.log($(el).attr('data-num'))
             $('.main-filter__list-category').removeClass('active')
             $('#list-category-' + $(el).attr('data-num')).addClass('active')
-            
+
             tabs.removeClass('active')
             $(el).addClass('active')
-            
+
             select_filter.setChoiceByValue($(el).attr('data-num'))
 
         })
@@ -150,7 +158,7 @@ $(document).ready(function () {
             placeholder: true,
         });
     });
-   
+
     $(".model-change").on("click", function () {
         $(".filter__model").html("<select class='model-select'><option class='placeholder' value='placeholder'>Модель</option><option>не Модель 1</option><option> неМодель 2</option></select>")
         let models = document.querySelector('.model-select');
@@ -201,7 +209,7 @@ $(document).ready(function () {
             active_list = false
         }
         else {
-            
+
             $('.main-filter__mods-show').addClass('active')
             $('.main-filter__mods-list').addClass('active')
             active_list = true
