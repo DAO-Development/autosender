@@ -5204,9 +5204,9 @@ img {
 }
 
 .footer .fmenu__brand a img {
-  width: -webkit-fit-content !important;
-  width: -moz-fit-content !important;
-  width: fit-content !important;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 18px;
+          flex: 0 0 18px;
 }
 
 .footer .fmenu-btn {
