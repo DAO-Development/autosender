@@ -5269,6 +5269,12 @@ img {
   grid-gap: 22px;
 }
 
+.footer .fmenu__soc img {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
 .footer .fmenu__number {
   font-family: Montserrat;
   font-style: normal;
