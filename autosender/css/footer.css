@@ -391,9 +391,8 @@
 }
 
 .footer .fmenu__soc img {
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
+  height: 24px;
+  width: 24px;
 }
 
 .footer .fmenu__number {
