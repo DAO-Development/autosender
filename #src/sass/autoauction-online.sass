@@ -1305,6 +1305,24 @@ img
         align-items: center
         gap: 5px
 
+.canvas-wrapper
+    margin: 60px 0 30px
+    display: grid
+    grid-template-columns: 30px 1fr 30px
+    gap: 20px
+    @media screen and ( max-width: $mobileL )
+        padding-bottom: 10px
+        overflow-x: auto
+        
+
+    &__left-title
+        writing-mode: sideways-lr
+        text-align: center
+    &__right-title
+        writing-mode: sideways-rl
+        text-align: center
+        
+
 .auctions__item--short
     @media screen and ( min-width: $desktopXS )
         .auctions__info

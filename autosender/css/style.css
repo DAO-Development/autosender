@@ -3849,6 +3849,27 @@ img {
   gap: 5px;
 }
 
+.canvas-wrapper {
+  margin: 60px 0 30px;
+  display: grid;
+  grid-template-columns: 30px 1fr 30px;
+  gap: 20px;
+}
+
+.canvas-wrapper__left-title {
+  -webkit-writing-mode: sideways-lr;
+      -ms-writing-mode: sideways-lr;
+          writing-mode: sideways-lr;
+  text-align: center;
+}
+
+.canvas-wrapper__right-title {
+  -webkit-writing-mode: sideways-rl;
+      -ms-writing-mode: sideways-rl;
+          writing-mode: sideways-rl;
+  text-align: center;
+}
+
 /* Экраны */
 
 /*$mobileS: 400px
@@ -9453,6 +9474,11 @@ img {
 
   .main-filter__mods-list {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .canvas-wrapper {
+    padding-bottom: 10px;
+    overflow-x: auto;
   }
 
   .auctions__item--short .auctions__content {
