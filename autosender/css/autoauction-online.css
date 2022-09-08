@@ -98,14 +98,12 @@ img {
 }
 
 .main-filter__categories-tabs {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   gap: 10px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   width: 100% !important;
+  display: none;
 }
 
 .main-filter__lists {
@@ -530,6 +528,8 @@ img {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  gap: 10px;
+  place-items: center;
 }
 
 .main-filter__filter-mobile-top > h2 {
@@ -545,10 +545,6 @@ img {
           align-items: center;
   letter-spacing: 0.045em;
   grid-gap: 16px;
-}
-
-.main-filter__filter-mobile-top > p {
-  text-align: right;
 }
 
 .main-filter__filter-mobile-top > p > span {
@@ -580,8 +576,8 @@ img {
 .main-filter__mods {
   -webkit-box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
           box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
-  margin-bottom: 50px;
   padding: 20px 25px;
+  margin-bottom: 30px;
 }
 
 .main-filter__mods .h2 {
@@ -894,6 +890,14 @@ img {
   text-align: center;
 }
 
+.compact-btn {
+  cursor: pointer;
+  padding: 10px 15px !important;
+  background: #bc002d;
+  color: #fff;
+  border-radius: 5px;
+}
+
 @media screen and (min-width: 0) {
   .main-filter__categories-select {
     margin-bottom: 25px;
@@ -1027,7 +1031,7 @@ img {
   }
 
   .main-filter__filter-mobile {
-    padding: 20px;
+    padding: 14px 20px 20px;
     margin-bottom: 60px;
   }
 
@@ -1117,14 +1121,7 @@ img {
   }
 
   .main-filter__filter-mobile-top {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
     margin-bottom: 24px;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
   }
 
   .main-filter__filter-mobile-top > .red-btn {
@@ -1171,12 +1168,6 @@ img {
 
   .main-filter__filter-mobile-top > .red-btn {
     padding: 18px 28px;
-  }
-
-  .main-filter__filter-mobile-top > p {
-    max-width: 108px;
-    font-size: 16px;
-    line-height: 18px;
   }
 
   .main-filter__filter-mobile-tabs > .tab-active {
@@ -1270,6 +1261,10 @@ img {
   }
 
   .main-filter__filter-mobile-top {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     margin-bottom: 24px;
   }
 
@@ -1285,11 +1280,17 @@ img {
   }
 
   .main-filter__filter-mobile-top > p {
-    max-width: 200px;
+    text-align: right;
+    font-size: 16px;
+    line-height: 18px;
   }
 
   .main-filter__filter-mobile-tabs > .tab-active {
     padding: 8px 20px;
+  }
+
+  .main-filter__mods {
+    margin-bottom: 50px;
   }
 
   .autoauction-online .CEO h3 {
@@ -1316,8 +1317,15 @@ img {
 }
 
 @media screen and (min-width: 768px) {
+  .main-filter__categories-tabs {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
   .main-filter__categories-select {
     margin-bottom: 28px;
+    display: none;
   }
 
   .main-filter__lists {
@@ -1556,51 +1564,6 @@ img {
   .autoauction-online .auctions__notes-item {
     border-right: none;
     border-bottom: 1px solid #b3b3b3;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .auctions__item--short .auctions__info {
-    gap: 0 50px;
-  }
-
-  .auctions__item--short .auctions__info-wrap {
-    padding: 25px 0;
-  }
-
-  .auctions__item--short .auctions__price {
-    height: unset;
-    position: static;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    padding: 15px;
-    width: 250px;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    place-items: start;
-    grid-gap: 20px;
-  }
-
-  .auctions__item--short .auctions__price svg {
-    display: none;
-  }
-
-  .auctions__item--short picture {
-    width: 280px;
-    -ms-flex-negative: 0;
-        flex-shrink: 0;
-    display: grid;
-    max-height: 220px;
-    min-height: 220px;
-  }
-
-  .auctions__item--short picture img {
-    width: 300px;
-    max-height: 220px;
-    min-height: 220px;
   }
 }
 
@@ -1868,43 +1831,6 @@ img {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
-
-  .auctions__item--short picture img {
-    min-height: 100% !important;
-    height: unset !important;
-  }
-
-  .auctions__item--short .auctions__content {
-    display: grid;
-    gap: 15px 30px;
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .auctions__item--short .auctions__price {
-    padding-right: 10px;
-    grid-column: 2/3;
-    border: none !important;
-    grid-row: 1/2;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    height: unset;
-  }
-
-  .auctions__item--short .auctions__price .auctions__action {
-    text-align: start;
-    border: none !important;
-  }
-
-  .auctions__item--short .auctions__cost {
-    display: block;
-    padding-left: 0;
-  }
-
-  .auctions__item--short .auctions__info-wrap {
-    grid-column: 1/3;
-  }
 }
 
 @media screen and (max-width: 768px) {
@@ -1925,7 +1851,7 @@ img {
 
 @media screen and (max-width: 568px) {
   .main-filter {
-    margin-top: 40px;
+    margin-top: 20px;
   }
 
   .main-filter__lists {
@@ -1987,17 +1913,14 @@ img {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .autoauction-online .page-title {
+    font-size: 21px;
+    margin-bottom: 15px;
+  }
+
   .canvas-wrapper {
     padding-bottom: 10px;
     overflow-x: auto;
-  }
-
-  .auctions__item--short .auctions__content {
-    gap: 15px 20px;
-  }
-
-  .auctions__item--short .auctions__action {
-    padding: 5px 0 0;
   }
 }
 
@@ -2080,14 +2003,6 @@ img {
 }
 
  @media screen and (min-width: 1024px){
-
-@supports (-webkit-appearance:none){
-
-}
-
-}
-
- @media screen and (min-width: 1200px){
 
 @supports (-webkit-appearance:none){
 

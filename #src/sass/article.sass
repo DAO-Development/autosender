@@ -29,9 +29,8 @@
 
         .table-wrap
             width: 100%
-            max-width: 788px
             overflow: scroll
-            scrollbar-width: none
+            scrollbar-width: thin
             @media screen and (max-width: $tabletM)
                 max-width: unset
 
@@ -483,4 +482,30 @@
         font-weight: 400
         line-height: 21px
         letter-spacing: 0.04em
+
+table
+    min-width: 100%
+    border-collapse: collapse
+
+    *
+        border: 1px solid $grey-185
+
+    th, td
+        font-size: 14px
+        line-height: 130%
+        text-align: center
+        letter-spacing: 0.045em
+        text-align: center
+        padding: 17px 19px
+        white-space: nowrap
+
+        @media screen and (max-width: $desktopS)
+            padding: 17px 12px
+        @media screen and (max-width: $tabletS)
+            padding: 17px 24px
+        @media screen and (max-width: $mobileL)
+            padding: 11px 18px
+        @media screen and (max-width: $mobileM)
+            font-size: 15px
+            padding: 12px 18px
 

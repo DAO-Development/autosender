@@ -31,9 +31,8 @@
 
 .article__content .table-wrap {
   width: 100%;
-  max-width: 788px;
   overflow: scroll;
-  scrollbar-width: none;
+  scrollbar-width: thin;
 }
 
 .article__content .table-wrap::-webkit-scrollbar {
@@ -419,6 +418,26 @@
   letter-spacing: 0.04em;
 }
 
+table {
+  min-width: 100%;
+  border-collapse: collapse;
+}
+
+table * {
+  border: 1px solid #b9b9b9;
+}
+
+table th,
+table td {
+  font-size: 14px;
+  line-height: 130%;
+  text-align: center;
+  letter-spacing: 0.045em;
+  text-align: center;
+  padding: 17px 19px;
+  white-space: nowrap;
+}
+
 @media screen and (max-width: 1440px) {
   .article__content {
     grid-gap: 140px;
@@ -450,6 +469,11 @@
 
   .articles-a > h3 {
     font-size: 20px;
+  }
+
+  table th,
+  table td {
+    padding: 17px 12px;
   }
 }
 
@@ -561,6 +585,11 @@
   .article__car-photo {
     height: 370px;
   }
+
+  table th,
+  table td {
+    padding: 17px 24px;
+  }
 }
 
 @media screen and (max-width: 568px) {
@@ -624,6 +653,11 @@
   .article__car-photo {
     height: 280px;
   }
+
+  table th,
+  table td {
+    padding: 11px 18px;
+  }
 }
 
 @media screen and (max-width: 414px) {
@@ -656,6 +690,12 @@
 
   .article__car-photo {
     height: 200px;
+  }
+
+  table th,
+  table td {
+    font-size: 15px;
+    padding: 12px 18px;
   }
 }
 

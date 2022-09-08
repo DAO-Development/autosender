@@ -1,27 +1,4 @@
 @import "base.sass"
-.auction
-    padding: 120px 0
-
-    @media screen and ( max-width: $tabletM )
-        padding: 80px 0
-    @media screen and ( max-width: $mobileL )
-        padding: 64px 0
-        h2
-            margin-bottom: 36px
-
-    &__content
-        display: grid
-        grid-template-columns: 1fr 1fr 1fr
-        align-items: center
-        @media screen and ( max-width: $tabletM )
-            display: flex
-            &>svg
-                display: none
-
-    .empty
-        width: 8px
-        @media screen and ( max-width: $tabletM )
-            display: none
 
 .auctions__item--short
     @media screen and ( min-width: $desktopXS )
@@ -565,12 +542,3 @@
             border-bottom: 1px solid $grey-181
 
 .auctions picture img
-    max-height: 270px
-    min-height: 270px
-    height: 270px
-    object-fit: cover
-
-    @media screen and ( max-width: $mobileM )
-        max-height: 230px
-        min-height: 230px
-        height: 230px

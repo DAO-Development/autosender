@@ -1,0 +1,53 @@
+.auctions-table {
+  position: relative;
+}
+
+.auctions-table h2,
+.auctions-table .h2 {
+  margin-bottom: 10px;
+}
+
+.auctions-table__subtitle {
+  font-size: 16px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.auctions-table__wrap {
+  padding-bottom: 8px;
+  max-width: 100%;
+  width: 100%;
+  overflow: auto;
+  scrollbar-width: thin;
+}
+
+.auctions-table table {
+  border-left: none;
+}
+
+.auctions-table td {
+  padding: 10 px;
+}
+
+.auctions-table thead tr th:first-child {
+  background-color: #e6e6e6;
+}
+
+.auctions-table th {
+  background-color: #f3f3f3;
+}
+
+.auctions-table tr:nth-child(2n) th {
+  background-color: #e6e6e6;
+}
+
+.auctions-table tbody tr th,
+.auctions-table tr:first-child th:first-child {
+  left: 0px;
+  z-index: 12;
+  position: -webkit-sticky;
+  position: sticky;
+}
+@supports (-webkit-appearance:none){
+
+}
