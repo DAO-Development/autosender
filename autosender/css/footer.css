@@ -24,6 +24,13 @@
   color: rgba(255, 255, 255, 0.75);
 }
 
+.footer .footer__head-content-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 35px;
+}
+
 .footer .f-vis {
   display: block !important;
   position: relative;
@@ -56,7 +63,7 @@
 
 .footer__head {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 3fr;
+  grid-template-columns: 2fr 1fr 3fr;
   grid-gap: 13px;
   padding-top: 120px;
 }

@@ -89,16 +89,16 @@ input[type="submit"] {
   appearance: none;
 }
 
-* {
+body * {
   scrollbar-color: #eee rgba(0, 0, 0, 0);
 }
 
-*::-webkit-scrollbar {
+body *::-webkit-scrollbar {
   height: 24px;
   background-color: #f0f0f0;
 }
 
-*::-webkit-scrollbar-thumb {
+body *::-webkit-scrollbar-thumb {
   background-color: #707070;
   border-radius: 9em;
   -webkit-box-shadow: inset 1px 1px 10px rgba(0, 0, 0, 0);
@@ -2346,6 +2346,29 @@ table td {
   overflow: hidden;
 }
 
+.benefits-steps .benefits__item:nth-child(4) {
+  width: 40%;
+}
+
+.benefits-steps .benefits__item:nth-child(5) {
+  width: 40%;
+}
+
+.benefits .buy-car__step {
+  gap: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.benefits .buy-car__num {
+  padding: 0;
+}
+
+.benefits .buy-car__content h4 {
+  margin-bottom: 0;
+}
+
 .benefits h2 {
   margin-bottom: 60px;
 }
@@ -2357,15 +2380,16 @@ table td {
 }
 
 .benefits__list {
-  width: 142%;
   padding-top: 0;
   margin-bottom: 120px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  overflow-x: scroll;
-  overflow-y: hidden;
-  scrollbar-width: thin;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  gap: 45px 30px;
 }
 
 .benefits__list::-webkit-scrollbar {
@@ -2388,24 +2412,18 @@ table td {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 30%;
 }
 
 .benefits__item-content {
   border: 1px solid #b9b9b9;
   padding: 30px;
-  width: 425px;
+  width: 100%;
   font-size: 15px;
   line-height: 150%;
   letter-spacing: 0.04em;
   position: relative;
-}
-
-.benefits__item::after {
-  margin: 0 35px;
-  content: "";
-  width: 195px;
-  border: 1px solid #b9b9b9;
-  display: block;
+  height: 100%;
 }
 
 .benefits__item:last-child::after {
@@ -3441,10 +3459,18 @@ table td {
 
 /* Цвета */
 
+.body {
+  padding-top: 80px;
+}
+
 .header {
   background: black;
   color: white;
   padding: 16px;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  width: 100%;
 }
 
 .header__brands {
@@ -3543,9 +3569,15 @@ table td {
   margin-bottom: 4px;
 }
 
+.header__hover-title img {
+  width: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
 .header__hover-desc {
-  font-size: 10px;
-  line-height: 12px;
+  font-size: 13px;
+  line-height: 1.2;
   letter-spacing: 0.04em;
   text-align: left;
   color: #b3b3b3;
@@ -3722,6 +3754,13 @@ table td {
   color: rgba(255, 255, 255, 0.75);
 }
 
+.footer .footer__head-content-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 35px;
+}
+
 .footer .f-vis {
   display: block !important;
   position: relative;
@@ -3754,7 +3793,7 @@ table td {
 
 .footer__head {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 3fr;
+  grid-template-columns: 2fr 1fr 3fr;
   grid-gap: 13px;
   padding-top: 120px;
 }
@@ -5736,16 +5775,6 @@ table td {
     width: 994px;
   }
 
-  .benefits__list {
-    margin-left: -103px;
-    width: 132%;
-    margin-bottom: 100px;
-  }
-
-  .benefits__item::after {
-    width: 110px;
-  }
-
   .benefits__brands {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   }
@@ -5794,6 +5823,14 @@ table td {
     font-weight: 700;
     line-height: 26px;
     letter-spacing: 0.045em;
+  }
+
+  .body {
+    padding-top: 0;
+  }
+
+  .header {
+    position: static;
   }
 
   .header__nav {
@@ -6047,16 +6084,6 @@ table td {
     width: 100%;
   }
 
-  .benefits__list {
-    margin-left: 0;
-    margin-bottom: 80px;
-    width: 125%;
-  }
-
-  .benefits__item::after {
-    width: 100px;
-  }
-
   .benefits__brands {
     grid-template-columns: 1fr 1fr;
   }
@@ -6249,6 +6276,10 @@ table td {
 }
 
 @media screen and (max-width: 910px) {
+  .benefits__item {
+    width: 45% !important;
+  }
+
   .buy-car__text {
     -ms-flex-item-align: start;
         align-self: start;
@@ -6442,8 +6473,8 @@ table td {
     padding: 17px 24px;
   }
 
-  .benefits__item::after {
-    width: 40px;
+  .benefits {
+    display: none;
   }
 
   .benefits__brand {
@@ -6892,10 +6923,6 @@ table td {
     width: 288px;
     padding: 12px 24px;
     font-size: 14px;
-  }
-
-  .benefits__item::after {
-    width: 24px;
   }
 
   .benefits__desc {
@@ -7705,10 +7732,6 @@ table td {
   .benefits__item-content {
     width: 280px;
     padding: 4px 19px;
-  }
-
-  .benefits__item::after {
-    width: 20px;
   }
 
   .benefits__desc {

@@ -5,6 +5,9 @@
 .footer
     background: $black-26
     color: $white-op75
+    .footer__head-content-flex
+        display: flex
+        gap: 35px
     .f-vis
         display: block !important
         position: relative
@@ -35,7 +38,7 @@
 
     &__head
         display: grid
-        grid-template-columns: 1fr 1fr 1fr 3fr
+        grid-template-columns: 2fr 1fr 3fr
         grid-gap: 13px
         padding-top: 120px
         @media screen and ( max-width: $desktopS )

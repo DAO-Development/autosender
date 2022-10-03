@@ -1,6 +1,8 @@
 @import "base.sass"
 
 .benefits
+    @media screen and ( max-width: $tabletS )
+        display: none
     padding: 120px 0
     overflow: hidden
     @media screen and ( max-width: $desktopS )
@@ -11,6 +13,26 @@
         padding: 64px 0
     @media screen and ( max-width: $mobileS )
         padding: 60px 0
+
+    &-steps
+
+        .benefits__item
+                
+            &:nth-child(4)
+                width: 40%
+
+            &:nth-child(5)
+                width: 40%
+
+    .buy-car__step
+        gap: 30px
+        display: flex
+    .buy-car__num
+        padding: 0
+
+    .buy-car__content
+        h4
+            margin-bottom: 0
 
     h2
 
@@ -37,23 +59,13 @@
             padding: 0 30px
 
     &__list
-
-        width: 142%
+        // width: 142%
         padding-top: 0
         margin-bottom: 120px
         display: flex
-        overflow-x: scroll
-        overflow-y: hidden
-        scrollbar-width: thin
-
-        @media screen and ( max-width: $desktopS )
-            margin-left: -103px
-            width: 132%
-            margin-bottom: 100px
-        @media screen and ( max-width: $tabletM )
-            margin-left: 0
-            margin-bottom: 80px
-            width: 125%
+        flex-wrap: wrap
+        justify-content: space-around
+        gap: 45px 30px
 
         @media screen and ( max-width: $mobileL )
             margin-bottom: 64px
@@ -73,15 +85,26 @@
     &__item
         display: inline-flex
         align-items: center
+        width: 30%
+
+        @media screen and ( max-width: $tabletSM)
+            width: 45% !important
+            
+
+
+     
+
 
     &__item-content
         border: 1px solid $grey-185
         padding: 30px
-        width: 425px
+        width: 100%
         font-size: 15px
         line-height: 150%
         letter-spacing: 0.04em
         position: relative
+
+        height: 100%
 
         @media screen and ( max-width: $mobileL )
             width: 288px
@@ -91,22 +114,22 @@
             width: 280px
             padding: 4px 19px
 
-    &__item::after
-        margin: 0 35px
-        content: ""
-        width: 195px
-        border: 1px solid $grey-185
-        display: block
-        @media screen and ( max-width: $desktopS )
-            width: 110px
-        @media screen and ( max-width: $tabletM )
-            width: 100px
-        @media screen and ( max-width: $tabletS )
-            width: 40px
-        @media screen and ( max-width: $mobileL )
-            width: 24px
-        @media screen and ( max-width: $mobileS )
-            width: 20px
+    // &__item::after
+    //     margin: 0 35px
+    //     content: ""
+    //     width: 195px
+    //     border: 1px solid $grey-185
+    //     display: block
+    //     @media screen and ( max-width: $desktopS )
+    //         width: 110px
+    //     @media screen and ( max-width: $tabletM )
+    //         width: 100px
+    //     @media screen and ( max-width: $tabletS )
+    //         width: 40px
+    //     @media screen and ( max-width: $mobileL )
+    //         width: 24px
+    //     @media screen and ( max-width: $mobileS )
+    //         width: 20px
 
     &__item:last-child
         &::after

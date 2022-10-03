@@ -229,6 +229,7 @@ img {
 
 .main-filter__filter .filter__rating .h3 {
   margin-top: 15px;
+  margin-bottom: 10px;
 }
 
 .main-filter__filter .filter__rating-range {
@@ -474,6 +475,7 @@ img {
       -ms-flex-pack: justify;
           justify-content: space-between;
   gap: 10px 5px;
+  margin-top: 15px !important;
 }
 
 .main-filter__filter .filter__buttons > button {

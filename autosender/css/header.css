@@ -15,10 +15,18 @@
 
 /* Цвета */
 
+.body {
+  padding-top: 80px;
+}
+
 .header {
   background: black;
   color: white;
   padding: 16px;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  width: 100%;
 }
 
 .header__brands {
@@ -117,9 +125,15 @@
   margin-bottom: 4px;
 }
 
+.header__hover-title img {
+  width: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
 .header__hover-desc {
-  font-size: 10px;
-  line-height: 12px;
+  font-size: 13px;
+  line-height: 1.2;
   letter-spacing: 0.04em;
   text-align: left;
   color: #b3b3b3;
@@ -275,6 +289,14 @@
 }
 
 @media screen and (max-width: 1440px) {
+  .body {
+    padding-top: 0;
+  }
+
+  .header {
+    position: static;
+  }
+
   .header__nav {
     display: none;
   }

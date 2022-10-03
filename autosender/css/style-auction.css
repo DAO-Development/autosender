@@ -83,7 +83,7 @@
 }
 
 .auctions__content {
-  margin-top: 10px;
+  margin-top: 17px;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -297,7 +297,7 @@
 }
 
 .auctions__cost-down {
-  font-size: 10px;
+  font-size: 13px;
   line-height: 12px;
   letter-spacing: 0.03em;
   color: rgba(0, 0, 0, 0.5);
@@ -387,6 +387,28 @@
   height: 270px;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.auctions .auction-on-main .auctions__watch-more {
+  background: red !important;
+  color: #fff !important;
+  border: none !important;
+}
+
+.slick-dots li button::before {
+  font-size: 14px;
+}
+
+.slick-dots li button::before {
+  color: #6c0005;
+  opacity: 0.4;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+}
+
+.slick-dots li.slick-active button::before {
+  color: #bc002d;
 }
 
 /* Экраны */
@@ -616,6 +638,7 @@ img {
 
 .main-filter__filter .filter__rating .h3 {
   margin-top: 15px;
+  margin-bottom: 10px;
 }
 
 .main-filter__filter .filter__rating-range {
@@ -861,6 +884,7 @@ img {
       -ms-flex-pack: justify;
           justify-content: space-between;
   gap: 10px 5px;
+  margin-top: 15px !important;
 }
 
 .main-filter__filter .filter__buttons > button {
