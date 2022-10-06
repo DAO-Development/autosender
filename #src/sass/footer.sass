@@ -42,16 +42,18 @@
         grid-gap: 13px
         padding-top: 120px
         @media screen and ( max-width: $desktopS )
-            grid-template-columns: 1fr 1fr 1fr 2fr
+            grid-template-columns: 1fr 1fr 2fr
             grid-gap: 85px
             padding-top: 100px
         @media screen and ( max-width: $tabletM )
-            grid-template-columns: 1fr 1fr 1fr
+            grid-template-columns: 1fr 1fr
             grid-gap: 36px 25px
             padding-top: 80px
             &-item--contacts
                 grid-column: 1/4
                 grid-row: 2/3
+        @media screen and ( max-width: $tabletS )
+            grid-template-columns: 2fr 1fr
         @media screen and ( max-width: $mobileL )
             padding-top: 64px
             grid-gap: 19px 25px

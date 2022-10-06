@@ -432,7 +432,7 @@
 
 @media screen and (max-width: 1440px) {
   .footer__head {
-    grid-template-columns: 1fr 1fr 1fr 2fr;
+    grid-template-columns: 1fr 1fr 2fr;
     grid-gap: 85px;
     padding-top: 100px;
   }
@@ -477,7 +477,7 @@
   }
 
   .footer__head {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-gap: 36px 25px;
     padding-top: 80px;
   }
@@ -511,6 +511,10 @@
 }
 
 @media screen and (max-width: 768px) {
+  .footer__head {
+    grid-template-columns: 2fr 1fr;
+  }
+
   .footer__contacts {
     grid-gap: 31px 25px;
   }
