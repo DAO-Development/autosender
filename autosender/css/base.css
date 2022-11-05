@@ -14,6 +14,10 @@
  $desktopL: 1920px*/
 
 /* Цвета */
+
+.border-none {
+  border: none !important;
+}
 @supports (-webkit-appearance:none){
 
 }

@@ -15,6 +15,10 @@
 
 /* Цвета */
 
+.border-none {
+  border: none !important;
+}
+
 .vis {
   display: grid !important;
 }

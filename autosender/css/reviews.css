@@ -15,6 +15,10 @@
 
 /* Цвета */
 
+.border-none {
+  border: none !important;
+}
+
 .reviews {
   padding-top: 120px;
   padding-bottom: 120px;

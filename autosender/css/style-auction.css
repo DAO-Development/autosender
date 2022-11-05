@@ -17,6 +17,12 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+.border-none {
+  border: none !important;
+}
+
 /* Экраны */
 
 /*$mobileS: 400px
@@ -30,10 +36,12 @@
 
 /* Цвета */
 
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+.border-none {
+  border: none !important;
+}
 
 .auction {
-  padding: 120px 0;
+  padding: 20px 0;
 }
 
 .auction__content {
@@ -423,6 +431,10 @@
  $desktopL: 1920px*/
 
 /* Цвета */
+
+.border-none {
+  border: none !important;
+}
 
 .not-visible {
   display: none !important;

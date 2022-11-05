@@ -15,8 +15,12 @@
 
 /* Цвета */
 
+.border-none {
+  border: none !important;
+}
+
 .auction {
-  padding: 120px 0;
+  padding: 20px 0;
 }
 
 .auction__content {
