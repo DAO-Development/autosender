@@ -1,0 +1,202 @@
+@import "base.sass"
+@import "auction.sass"
+@import "auctions-table"
+
+.autoauction-online  .auctions__content .auctions__price
+    border-top: none
+
+    
+.auctions picture img
+    max-height: 270px
+    min-height: 270px
+    height: 270px
+    object-fit: cover
+
+    @media screen and ( max-width: $mobileM )
+        max-height: 230px
+        min-height: 230px
+        height: 230px
+
+.autoauction-online
+    overflow: hidden
+
+    .page-title
+        @media screen and (max-width: $mobileL)
+            font-size: 21px;
+            margin-bottom: 15px;
+    & .title-products
+        & > .container:first-child
+
+            display: flex
+            align-items: center
+            justify-content: space-between
+            border-top: 1px solid $black-21
+            padding-top: 15px
+            margin-bottom: 40px
+
+        & p
+            display: none
+            font-size: 16px
+            line-height: 18px
+
+            & > span
+                font-weight: 700
+
+            @media screen and (min-width: $tabletM)
+                display: block
+
+        & select
+            padding: 10px 14px
+            border: 1px solid $grey-179
+            background: white
+            @media screen and (min-width: 0)
+                width: 100%
+                font-size: 16px
+                line-height: 19px
+                display: block
+            @media screen and (min-width: $tabletM)
+                display: none !important
+                width: 195px
+                font-size: 15px
+                line-height: 18px
+
+            &:focus-visible
+                outline: none
+
+    & .auction
+        background-color: white
+        color: $grey-102
+        margin: 0 auto
+
+        &-first
+            padding-top: 0
+
+        &__content
+            display: block
+
+            & .auctions
+                align-items: center
+
+        &s__content
+            border: 1px solid $grey-52
+
+        &s__background
+            color: $grey-52
+            opacity: 0.03
+
+        &s__model
+            color: $black-21
+            opacity: 0.5
+
+            &::before
+                background-color: $grey-102
+
+        &s__price
+            border-top: 1px solid $grey-52
+            border-left: 1px solid $grey-52
+
+        &s__notes
+
+            &-item
+                @media screen and (min-width: $tabletS)
+                    border-right: 1px solid $grey-179
+                @media screen and (min-width: $tabletM)
+                    border-right: none
+                    border-bottom: 1px solid $grey-179
+
+            &-text
+                @media screen and (min-width: $tabletS)
+                    border-left: 1px solid $grey-179
+
+            & svg
+                & > path
+                    fill: $grey-181
+
+        &s__watch-more
+            color: $grey-181 !important
+            border-top: 1px solid $grey-181
+            border-bottom: 1px solid $grey-181
+
+    & .article-list__pages
+        margin-top: 25px
+        justify-content: space-between
+        grid-gap: 0
+        @media screen and (min-width: $mobileM)
+            margin-top: 28px
+        @media screen and (min-width: $tabletS)
+            margin-top: 32px
+            grid-gap: 20px
+        @media screen and (min-width: $desktopS)
+            margin-top: 30px
+
+    & .interesting-cars,
+    & .youtube
+        background: $background-grey-gradient
+        @media screen and (max-width: $mobileM)
+            padding: 60px 0
+            & > .container
+                width: 100vw
+        @media screen and (min-width: $mobileM)
+            padding: 64px 0
+            & > .container
+                width: 100vw
+        @media screen and (min-width: $tabletS)
+            padding: 80px 0
+            & > .container
+                width: 100vw
+        @media screen and (min-width: $desktopS)
+            padding: 100px 0
+            & > .container
+                width: 1200px
+        @media screen and (min-width: $desktopM)
+            padding: 120px 0
+            & > .container
+                width: 1345px
+
+    & .CEO
+        @media screen and (max-width: $mobileM)
+            margin: 60px 0
+        @media screen and (min-width: $mobileM)
+            margin: 64px 0
+        @media screen and (min-width: $tabletS)
+            margin: 80px 0
+        @media screen and (min-width: $desktopS)
+            margin: 100px 0
+        @media screen and (min-width: $desktopM)
+            margin: 120px 0
+
+        & > .container
+            border-top: 1px solid $black-21
+
+        & h3
+            @media screen and (min-width: 0)
+                margin: 20px 0 12px
+            @media screen and (min-width: $mobileL)
+                margin: 24px 0 16px
+            @media screen and (min-width: $desktopS)
+                margin: 30px 0 15px
+
+        & p
+            line-height: 150%
+            letter-spacing: 0.04em
+            margin-bottom: 10px
+            @media screen and (min-width: 0)
+                font-size: 14px
+            @media screen and (min-width: $tabletS)
+                font-size: 15px
+
+        & ul
+            & > li
+                display: flex
+                align-items: center
+                margin-bottom: 8px
+                grid-gap: 12px
+
+                &::before
+                    content: url("../img/marker.svg")
+
+                & > p
+                    margin-bottom: 0
+
+                    & > span
+                        font-weight: 700
