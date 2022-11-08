@@ -51,6 +51,7 @@
 }
 
 .managers {
+  margin-top: 150px;
   background: -webkit-gradient(linear, left top, left bottom, from(#F4F4F4), color-stop(29.69%, #FFFFFF), color-stop(71.87%, #FFFFFF), to(#F4F4F4));
   background: -o-linear-gradient(top, #F4F4F4 0%, #FFFFFF 29.69%, #FFFFFF 71.87%, #F4F4F4 100%);
   background: linear-gradient(180deg, #F4F4F4 0%, #FFFFFF 29.69%, #FFFFFF 71.87%, #F4F4F4 100%);
@@ -278,6 +279,7 @@
 
   .managers {
     padding: 60px 0;
+    margin-top: 60px;
   }
 
   .managers > .container {

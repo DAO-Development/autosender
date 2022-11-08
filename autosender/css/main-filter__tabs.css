@@ -125,35 +125,41 @@
   list-style: none;
 }
 
-.main-filter__lists > ul > li {
+.main-filter__lists > ul > li,
+.main-filter__lists > div > li {
   letter-spacing: 0.045em;
 }
 
-.main-filter__lists > ul > li > a {
+.main-filter__lists > ul > li > a,
+.main-filter__lists > div > li > a {
   color: black;
   text-decoration: none;
   position: relative;
   white-space: nowrap;
 }
 
-.main-filter__lists > ul > li > a .auctions__notes {
+.main-filter__lists > ul > li > a .auctions__notes,
+.main-filter__lists > div > li > a .auctions__notes {
   position: static;
   display: inline-block;
   padding: 0 !important;
 }
 
-.main-filter__lists > ul > li > a .auctions__notes-item {
+.main-filter__lists > ul > li > a .auctions__notes-item,
+.main-filter__lists > div > li > a .auctions__notes-item {
   padding: 0 0 0 2px !important;
 }
 
-.main-filter__lists > ul > li > a .auctions__notes-text {
+.main-filter__lists > ul > li > a .auctions__notes-text,
+.main-filter__lists > div > li > a .auctions__notes-text {
   bottom: 27px !important;
   right: -90px !important;
   white-space: normal;
   z-index: 111;
 }
 
-.main-filter__lists > ul > li > a:hover {
+.main-filter__lists > ul > li > a:hover,
+.main-filter__lists > div > li > a:hover {
   text-decoration: underline;
 }
 
@@ -278,11 +284,13 @@
     margin-bottom: 40px;
   }
 
-  .main-filter__lists > ul {
+  .main-filter__lists > ul,
+  .main-filter__lists > div {
     display: none;
   }
 
-  .main-filter__lists > ul.active {
+  .main-filter__lists > ul.active,
+  .main-filter__lists > div.active {
     max-width: 100% !important;
     margin: 0 auto;
     display: -webkit-box;
@@ -298,14 +306,16 @@
             justify-content: space-between;
   }
 
-  .main-filter__lists > ul > li {
+  .main-filter__lists > ul > li,
+  .main-filter__lists > div > li {
     font-size: 14px;
     line-height: 16px;
   }
 }
 
 @media screen and (min-width: 360px) {
-  .main-filter__lists > ul.active {
+  .main-filter__lists > ul.active,
+  .main-filter__lists > div.active {
     width: 100%;
     margin: 0 auto;
     row-gap: 24px;
@@ -329,7 +339,8 @@
     width: 488px;
   }
 
-  .main-filter__lists > ul.active {
+  .main-filter__lists > ul.active,
+  .main-filter__lists > div.active {
     max-height: unset;
     display: grid;
     grid-auto-flow: column;
@@ -339,17 +350,6 @@
 }
 
 @media screen and (min-width: 768px) {
-  .main-filter__categories-tabs {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-
-  .main-filter__categories-select {
-    margin-bottom: 28px;
-    display: none;
-  }
-
   .main-filter__categories .categories-select > select {
     width: 656px;
     padding-bottom: 15px;
@@ -360,7 +360,8 @@
     margin-bottom: 48px;
   }
 
-  .main-filter__lists > ul.active {
+  .main-filter__lists > ul.active,
+  .main-filter__lists > div.active {
     grid-template-columns: 1fr 1fr 1fr;
     -webkit-column-gap: 113px;
        -moz-column-gap: 113px;
@@ -378,7 +379,19 @@
 }
 
 @media screen and (min-width: 1024px) {
-  .main-filter__lists > ul.active {
+  .main-filter__categories-tabs {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+  }
+
+  .main-filter__categories-select {
+    margin-bottom: 28px;
+    display: none;
+  }
+
+  .main-filter__lists > ul.active,
+  .main-filter__lists > div.active {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     -webkit-column-gap: 113px;
        -moz-column-gap: 113px;
@@ -415,7 +428,8 @@
             column-gap: 68px;
   }
 
-  .main-filter__lists > ul.active {
+  .main-filter__lists > ul.active,
+  .main-filter__lists > div.active {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -432,7 +446,8 @@
     width: 100%;
   }
 
-  .main-filter__lists > ul > li {
+  .main-filter__lists > ul > li,
+  .main-filter__lists > div > li {
     margin-bottom: 14px;
     font-size: 13px;
     line-height: 15px;
@@ -489,11 +504,13 @@
 }
 
 @media screen and (max-width: 768px) {
-  .main-filter__lists > ul > li > a {
+  .main-filter__lists > ul > li > a,
+  .main-filter__lists > div > li > a {
     position: static;
   }
 
-  .main-filter__lists > ul > li > a .auctions__notes-text {
+  .main-filter__lists > ul > li > a .auctions__notes-text,
+  .main-filter__lists > div > li > a .auctions__notes-text {
     right: 20px !important;
     bottom: unset !important;
     margin-bottom: 80px;

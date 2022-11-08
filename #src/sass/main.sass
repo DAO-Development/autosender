@@ -2,6 +2,7 @@
 
 .main-s
     background-image: url("../img/main/bg.png")
+    background-position: bottom
     background-size: cover
     background-repeat: no-repeat
     color: white
@@ -218,16 +219,19 @@
         //place-self: end
         //margin-top: 40px
         height: fit-content
-        margin-left: 15px
+        margin-top: 30px
         @media screen and ( max-width: $desktopS )
             grid-column: 1/4
             grid-row: 2/3
+            max-width: 100%
+            display: grid
 
         @media screen and ( max-width: $tabletS )
             position: absolute
             left: 0
             bottom: 0
             width: 100vw
+            max-width: 100vw
 
         @media screen and ( max-width: $mobileL )
             box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.2);
@@ -255,6 +259,8 @@
             line-height: 18px;
             letter-spacing: 0.04em;
             width: 100%
+            @media screen and ( max-width: $tabletS )
+                padding: 20px 25px
             @media screen and ( max-width: $mobileL )
                 padding: 0px
 
@@ -382,6 +388,8 @@
         grid-column: 3/4
         grid-row: 1/3
         max-width: 9%
+        @media screen and ( max-width: $desktopS )
+            max-width: unset
         @media screen and ( max-width: $mobileL )
             background: $red-dark
             padding: 18px

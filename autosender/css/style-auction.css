@@ -1321,6 +1321,10 @@ img {
   border-radius: 5px;
 }
 
+.autoauction-online .CEO > .container {
+  padding-top: 50px;
+}
+
 .auctions-table {
   position: relative;
 }

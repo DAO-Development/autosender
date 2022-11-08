@@ -17,19 +17,27 @@ $(document).ready(function () {
 
     let tabs = $('.main-filter__category')
 
-    $('#main-filter__select option').each((i, el) => {
+    $('.autoauction-online #main-filter__select option').each((i, el) => {
         $(el).val(i)
     })
-    console.log($('#main-filter__select option'))
+    
+    $('#main-filter__select option').each((i, el) => {
+        $(el).attr('data-custom-properties', i)
+    })
+
     let select_filter = new Choices($('#main-filter__select')[0], {
         placeholder: true,
         searchEnabled: false,
         shouldSort: false
     })
 
+    
+
     select_filter.passedElement.element.addEventListener('change', function (event) {
-        selectedList.classList.remove("active")
-        selectedList = lists[event.detail.value]
+        $('.main-filter__list-category').removeClass("active");
+        console.log(event)
+        console.log($(event.target[0]).attr('data-custom-properties'))
+        selectedList = lists[$(event.target[0]).attr('data-custom-properties')]
         selectedList.classList.add("active")
 
         tabs.removeClass('active')

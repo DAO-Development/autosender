@@ -904,6 +904,10 @@ img {
   border-radius: 5px;
 }
 
+.autoauction-online .CEO > .container {
+  padding-top: 50px;
+}
+
 @media screen and (min-width: 0) {
   .main-filter__categories-select {
     margin-bottom: 25px;
