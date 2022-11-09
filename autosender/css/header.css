@@ -292,6 +292,11 @@
   color: #b9b9b9;
 }
 
+.header__hover-col-title img {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
 @media screen and (max-width: 1440px) {
   .body {
     padding-top: 0;

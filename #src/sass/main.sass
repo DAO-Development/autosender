@@ -424,4 +424,66 @@
     .buy-car__content
         width: 100% !important
     .benefits__list
-        margin-bottom: 0;
+        margin-bottom: 0
+
+
+
+.popular-models
+    padding: 60px 10px 0px
+    margin-bottom: 40px
+    &__list
+        padding-bottom: 20px
+        display: flex
+        gap: 40px
+        justify-content: space-between
+
+        overflow: auto
+
+        scrollbar-color: #333 transparent;
+
+
+    &__col
+        display: flex
+        flex-direction: column
+        gap: 10px
+
+        &-title
+            font-size: 26px
+            font-weight: bold
+            margin-bottom: 10px
+            display: flex
+            gap: 15px
+            align-items: center
+
+            padding-bottom: 4px;
+            border-bottom: 3px solid #bc002d;
+            img
+                height: 20px
+                object-fit: contain
+
+        &-item
+            font-size: 21px
+
+            @media screen and ( max-width: $mobileM )
+                font-size: 18px
+
+    &__btn
+        margin-top: 20px
+        width: fit-content;
+        font-size: 26px;
+        padding: 15px;
+        height: fit-content;
+        line-height: 1;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin-left: auto;
+        color: white !important
+        svg path
+            color: white;
+            fill: white;
+
+    a
+        color: inherit
+        text-decoration: none
