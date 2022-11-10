@@ -295,6 +295,7 @@
 .header__hover-col-title img {
   -o-object-fit: contain;
      object-fit: contain;
+  width: auto;
 }
 
 @media screen and (max-width: 1440px) {

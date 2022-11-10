@@ -4039,6 +4039,7 @@ table td {
 .header__hover-col-title img {
   -o-object-fit: contain;
      object-fit: contain;
+  width: auto;
 }
 
 /* Экраны */
@@ -5562,10 +5563,6 @@ table td {
     margin-bottom: 45px;
   }
 
-  .product-page .product__acc {
-    width: 450px;
-  }
-
   .product-page .product__decoding {
     display: block;
   }
@@ -5820,10 +5817,6 @@ table td {
   h2,
   .h2 {
     font-size: 38px;
-  }
-
-  .product-page .product__acc {
-    width: 500px;
   }
 
   .product-page .product__buy-product__prices {

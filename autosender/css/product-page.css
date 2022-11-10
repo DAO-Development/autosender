@@ -1619,10 +1619,6 @@
     margin-bottom: 45px;
   }
 
-  .product-page .product__acc {
-    width: 450px;
-  }
-
   .product-page .product__decoding {
     display: block;
   }
@@ -1770,10 +1766,6 @@
 }
 
 @media screen and (min-width: 1600px) {
-  .product-page .product__acc {
-    width: 500px;
-  }
-
   .product-page .product__buy-product__prices {
     margin-bottom: 45px;
   }
