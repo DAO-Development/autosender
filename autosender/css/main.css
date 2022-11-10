@@ -432,6 +432,15 @@
   text-decoration: none;
 }
 
+.main-s__form .choices__list--dropdown .choices__item-c {
+  font-size: 10px;
+}
+
+.main-s .choices__list--dropdown {
+  max-height: 20rem;
+  overflow: auto;
+}
+
 @media screen and (min-width: 414px) {
   .main-s .m-feedback form input {
     width: 350px;
