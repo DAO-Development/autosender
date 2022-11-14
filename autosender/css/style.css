@@ -2857,6 +2857,10 @@ table td {
   border: none !important;
 }
 
+.contacts .page-title {
+  margin-bottom: 47px;
+}
+
 .contacts__info {
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -3070,7 +3074,7 @@ table td {
 }
 
 .contacts .main-filter__lists {
-  min-width: 400px;
+  min-width: 500px;
   margin-bottom: 0;
 }
 
@@ -7355,6 +7359,10 @@ table td {
 
   .contacts__manager {
     grid-gap: 4px 11px;
+  }
+
+  .contacts .main-filter__lists {
+    min-width: 100%;
   }
 
   .contacts__big-manager {

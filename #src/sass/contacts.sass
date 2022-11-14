@@ -1,6 +1,8 @@
 @import "base.sass"
 
 .contacts
+    .page-title
+        margin-bottom: 47px
     &__info
         display: grid
         grid-template-columns: 2fr 1fr
@@ -314,8 +316,11 @@
 
         
     .main-filter__lists
-        min-width: 400px
+        min-width: 500px
         margin-bottom: 0
+        @media screen and ( max-width: $mobileL )
+            min-width: 100%
+            
 
     .main-filter__list-category
         flex-direction: column !important
