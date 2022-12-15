@@ -73,7 +73,7 @@
             grid-row: 1/2
             flex-direction: column
             height: unset
-            align-items:
+            align-items: center
             .auctions__action
                 text-align: start
                 border: none !important
@@ -398,9 +398,8 @@
         grid-gap: 29px
         padding-left: 30px
         padding-right: 30px
-        &>*
-            padding-top: 8px
-            padding-bottom: 8px
+        padding-top: 8px
+        padding-bottom: 8px
 
         @media screen and ( max-width: $tabletM )
             border-left: none !important
@@ -598,14 +597,33 @@
 .slick-dots li.slick-active button::before 
   color: #ffe995
 
-
-.auctions__action-btn
-    margin: 0 -30px
-    padding: 0 29px
+.auctions__action
+    margin: 0
+    border-left: 1px solid #0003
+    padding-left: 29px
+    height: 26px
     display: grid
     place-items: center
-    height: 100%
+    @media screen and ( max-width: $tabletSM)
+        height: unset
+
+.auctions__action-btn
+    margin: 0 -22px 0 0
+    padding: 10px 29px !important
+    display: grid
+    place-items: center
+    // height: 100%
+    height: fit-content
+
     background: $red-dark
     color: white !important
+    box-shadow: -5px 5px 11px #00000054
+    border-radius: 20px
+    @media screen and ( max-width: $tabletSM)
+        // height: fit-content
+    @media screen and ( max-width: $mobileL )
+        margin: 15px
+        width: 90%
+        
     a
         color: white
