@@ -62,3 +62,21 @@ $background-grey-gradient: linear-gradient(180deg, #F4F4F4 0%, #FFFFFF 29.69%, #
 
 .border-none
     border: none !important
+
+.flex
+    display: flex
+    gap: 1rem
+    justify-content: space-between
+    @media screen and ( max-width: $mobileL )
+        flex-direction: column
+
+.green-btn
+    background: #4caf5030
+    border: 2px solid black !important
+    text-decoration: none
+    color: black
+    font-weight: 600
+    display: flex
+    place-items: center
+    justify-content: center
+    gap: 10px

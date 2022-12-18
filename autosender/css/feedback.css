@@ -19,6 +19,32 @@
   border: none !important;
 }
 
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.green-btn {
+  background: #4caf5030;
+  border: 2px solid black !important;
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  place-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 10px;
+}
+
 .feedback {
   background-size: cover !important;
   background: -webkit-gradient(linear, left bottom, left top, from(rgba(52, 52, 52, 0.8)), to(rgba(52, 52, 52, 0.8))), url("../img/autoauction-online/feedback-back.png") center no-repeat;
@@ -32,7 +58,8 @@
   letter-spacing: 0.04em;
 }
 
-.feedback form > .red-btn {
+.feedback form .btn,
+.feedback form .red-btn {
   border: none;
 }
 
@@ -47,17 +74,17 @@
   letter-spacing: 0.04em;
 }
 
-.feedback__fields > input {
+.feedback__fields input {
   background: none;
   border: 1px solid white;
   color: white;
 }
 
-.feedback__fields > input::-moz-placeholder {
+.feedback__fields input::-moz-placeholder {
   color: white;
 }
 
-.feedback__fields > input::-webkit-input-placeholder {
+.feedback__fields input::-webkit-input-placeholder {
   color: white;
 }
 
@@ -110,7 +137,8 @@
 }
 
 @media screen and (min-width: 0) {
-  .feedback form > .red-btn {
+  .feedback form .btn,
+  .feedback form .red-btn {
     margin: 0 auto;
     padding: 14px 87px;
   }
@@ -144,11 +172,12 @@
     text-align: center;
   }
 
-  .feedback form > .red-btn {
+  .feedback form .btn,
+  .feedback form .red-btn {
     padding: 16px 108px;
   }
 
-  .feedback__fields > input {
+  .feedback__fields input {
     width: 350px;
     margin: 0 auto;
     padding: 16px 20px;
@@ -183,7 +212,8 @@
     max-width: 656px;
   }
 
-  .feedback form > .red-btn {
+  .feedback form .btn,
+  .feedback form .red-btn {
     margin: 0;
     padding: 16px 87px;
   }
@@ -195,7 +225,7 @@
             flex-direction: row;
   }
 
-  .feedback__fields > input {
+  .feedback__fields input {
     width: 310px;
     margin: 0 0 28px;
     padding: 16px 20px;
@@ -229,11 +259,12 @@
     max-width: 613px;
   }
 
-  .feedback form > .red-btn {
-    padding: 12px 71px;
+  .feedback form .btn,
+  .feedback form .red-btn {
+    padding: 12px 61px;
   }
 
-  .feedback__fields > input {
+  .feedback__fields input {
     width: 268px;
     margin-bottom: 31px;
     padding: 10px 15px;
@@ -260,6 +291,15 @@
   }
 }
 
+@media screen and (max-width: 568px) {
+  .flex {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 @media screen and (max-width: 414px) {
   .feedback {
     padding: 60px 0;
@@ -272,7 +312,7 @@
     text-align: center;
   }
 
-  .feedback__fields > input {
+  .feedback__fields input {
     width: 300px;
     margin: 0 auto;
     padding: 16px 20px;
@@ -334,6 +374,14 @@
 }
 
  @media screen and (max-width: 768px){
+
+@supports (-webkit-appearance:none){
+
+}
+
+}
+
+ @media screen and (max-width: 568px){
 
 @supports (-webkit-appearance:none){
 
