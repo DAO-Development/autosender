@@ -1,6 +1,7 @@
 let status1 = 0;
 let status2 = 0;
 let status3 = 0;
+let status4 = 0;
 
 
 $("#price").mouseenter(function () {
@@ -122,6 +123,47 @@ $(".header__hover-3").mouseleave(function () {
             $('.header__nav a').removeClass("hover")
 
             $(".header__hover-3").removeClass("vis")
+        }
+    }, 100);
+});
+
+
+$("#about").mouseenter(function () {
+    status4++;
+
+    $('.header__nav a').removeClass("hover")
+    $("#info").addClass('hover');
+    $(".header__hover").removeClass("vis")
+
+    $(".header__hover-4").addClass("vis")
+
+});
+
+$("#about").mouseleave(function () {
+    status4--;
+    setTimeout(() => {
+        if (status4 == 0) {
+
+            $('.header__nav a').removeClass("hover")
+
+            $(".header__hover-4").removeClass("vis")
+        }
+    }, 100);
+
+})
+
+$(".header__hover-4").mouseenter(function () {
+    status3++;
+})
+
+$(".header__hover-4").mouseleave(function () {
+    status4--;
+    setTimeout(() => {
+        if (status4 == 0) {
+
+            $('.header__nav a').removeClass("hover")
+
+            $(".header__hover-4").removeClass("vis")
         }
     }, 100);
 });

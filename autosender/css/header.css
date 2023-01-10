@@ -130,6 +130,10 @@
   border-left: 1px solid rgba(255, 255, 255, 0.15);
 }
 
+.header__hover-4 {
+  left: 600px;
+}
+
 .header__hover .all-btn {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -212,6 +216,8 @@
   font-size: 13px;
   line-height: 15px;
   letter-spacing: 0.045em;
+  color: white;
+  text-decoration: none;
 }
 
 .header .container {
