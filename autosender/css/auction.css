@@ -508,7 +508,7 @@
         -ms-flex-direction: column;
             flex-direction: column;
     padding: 15px;
-    width: 250px;
+    width: 300px;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
