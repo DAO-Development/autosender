@@ -3704,6 +3704,7 @@ table td {
   gap: 15px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  margin-top: 46px;
 }
 
 .about-company__navigation-item {
