@@ -126,6 +126,10 @@
   color: white;
 }
 
+.video-banner {
+  margin-top: 50px;
+}
+
 .video-banner__content {
   border: 10px solid #150202;
   border-bottom: 10px solid #bc002d;

@@ -1913,6 +1913,56 @@ input {
   left: -10px;
 }
 
+.youtube h2 {
+  text-align: left;
+}
+
+.youtube-slider .slide {
+  position: relative;
+}
+
+.youtube-slider .slide:hover .filter {
+  opacity: 1;
+}
+
+.youtube-slider .slide .filter {
+  opacity: 0;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-image: url("../img/autoauction-online/play-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.youtube .arrow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  position: absolute;
+}
+
+.youtube .arrow img {
+  display: block;
+}
+
+.youtube .arrow-prev {
+  z-index: 1000;
+  position: absolute;
+}
+
+.youtube .arrow-next {
+  z-index: 1000;
+  position: absolute;
+  right: 20px;
+}
+
 /* Экраны */
 
 /*$mobileS: 400px
@@ -4410,6 +4460,18 @@ table td {
   letter-spacing: 0.02em;
 }
 
+.modal-video .modal__wrap {
+  width: unset;
+}
+
+.modal-video iframe {
+  margin-top: 20px;
+  max-width: 80vw;
+  width: 1100px;
+  height: 600px;
+  max-height: 80vh;
+}
+
 /* Экраны */
 
 /*$mobileS: 400px
@@ -5312,6 +5374,10 @@ table td {
   color: white;
 }
 
+.video-banner {
+  margin-top: 50px;
+}
+
 .video-banner__content {
   border: 10px solid #150202;
   border-bottom: 10px solid #bc002d;
@@ -5548,6 +5614,25 @@ table td {
     width: 100vw;
   }
 
+  .youtube h2 {
+    margin-left: 30px;
+  }
+
+  .youtube h2 > svg {
+    width: 32px;
+    margin-bottom: -7px;
+  }
+
+  .youtube-slider .slide img {
+    width: 270px;
+    height: 160px;
+  }
+
+  .youtube-slider .slide .filter {
+    width: 270px;
+    height: 160px;
+  }
+
   .feedback form .btn,
   .feedback form .red-btn {
     margin: 0 auto;
@@ -5734,6 +5819,32 @@ table td {
     width: 100vw;
   }
 
+  .youtube {
+    padding: 64px 0;
+  }
+
+  .youtube > .container {
+    width: 100vw;
+  }
+
+  .youtube h2 {
+    margin-left: 32px;
+  }
+
+  .youtube-slider {
+    margin-left: 32px;
+  }
+
+  .youtube-slider .slide img {
+    width: 300px;
+    height: 180px;
+  }
+
+  .youtube-slider .slide .filter {
+    width: 300px;
+    height: 180px;
+  }
+
   .feedback {
     padding: 64px 0;
   }
@@ -5900,6 +6011,24 @@ table td {
 
   .product-full-price__info-content {
     left: -120px;
+  }
+
+  .youtube h2 {
+    margin-left: 40px;
+  }
+
+  .youtube-slider {
+    margin-left: 40px;
+  }
+
+  .youtube-slider .slide img {
+    width: 340px;
+    height: 204px;
+  }
+
+  .youtube-slider .slide .filter {
+    width: 340px;
+    height: 204px;
   }
 
   .feedback p {
@@ -6164,6 +6293,37 @@ table td {
 
   .reviews .container {
     width: 100vw;
+  }
+
+  .youtube {
+    padding: 80px 0;
+  }
+
+  .youtube > .container {
+    width: 100vw;
+  }
+
+  .youtube h2 {
+    margin-left: 56px;
+  }
+
+  .youtube h2 > svg {
+    width: 47px;
+    margin-bottom: -7px;
+  }
+
+  .youtube-slider {
+    margin-left: 56px;
+  }
+
+  .youtube-slider .slide img {
+    width: 400px;
+    height: 240px;
+  }
+
+  .youtube-slider .slide .filter {
+    width: 400px;
+    height: 240px;
   }
 
   .feedback {
@@ -6599,6 +6759,41 @@ table td {
     width: 1200px;
   }
 
+  .youtube > .container {
+    width: 1200px;
+  }
+
+  .youtube h2 {
+    margin-left: 0;
+  }
+
+  .youtube-slider {
+    margin-left: 0;
+  }
+
+  .youtube-slider .slide img {
+    width: 376px;
+    height: 212px;
+  }
+
+  .youtube-slider .slide .filter {
+    width: 376px;
+    height: 212px;
+  }
+
+  .youtube .arrow {
+    top: -68px;
+  }
+
+  .youtube .arrow > img {
+    width: 68px;
+    height: 15px;
+  }
+
+  .youtube .arrow-prev {
+    right: 103px;
+  }
+
   .feedback {
     padding: 100px 0;
     font-size: 15px;
@@ -6784,6 +6979,32 @@ table td {
 
   .reviews .container {
     width: 1345px;
+  }
+
+  .youtube > .container {
+    width: 1345px;
+  }
+
+  .youtube-slider .slide img {
+    width: 425px;
+    height: 240px;
+  }
+
+  .youtube-slider .slide .filter {
+    width: 425px;
+    height: 240px;
+  }
+
+  .youtube .arrow {
+    top: -77px;
+  }
+
+  .youtube .arrow > img {
+    width: 80px;
+  }
+
+  .youtube .arrow-prev {
+    right: 120px;
   }
 
   .feedback {
@@ -8715,6 +8936,18 @@ table td {
     height: 160px;
   }
 
+  .youtube {
+    padding: 60px 0;
+  }
+
+  .youtube > .container {
+    width: 100vw;
+  }
+
+  .youtube-slider {
+    margin-left: 30px;
+  }
+
   .feedback {
     padding: 60px 0;
   }
@@ -9332,6 +9565,7 @@ table td {
 @supports (-webkit-appearance:none){
 .product-page .video-review__video .filter{background-image:url("../img/product-page/youtube-icon.webp")}
 .main-s{background-image:url("../img/main/bg.webp")}
+.youtube-slider .slide .filter{background-image:url("../img/autoauction-online/play-icon.svg")}
 .feedback{background:-webkit-gradient(linear, left bottom, left top, from(rgba(52, 52, 52, 0.8)), to(rgba(52, 52, 52, 0.8))), url("../img/autoauction-online/feedback-back.webp") center no-repeat}
 .feedback{background:-o-linear-gradient(bottom, rgba(52, 52, 52, 0.8), rgba(52, 52, 52, 0.8)), url("../img/autoauction-online/feedback-back.webp") center no-repeat}
 .feedback{background:linear-gradient(0deg, rgba(52, 52, 52, 0.8), rgba(52, 52, 52, 0.8)), url("../img/autoauction-online/feedback-back.webp") center no-repeat}
