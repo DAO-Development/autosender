@@ -97,6 +97,12 @@
   }
 }
 
+@media screen and (max-width: 1440px) {
+  main {
+    padding-top: 70px;
+  }
+}
+
 @media screen and (max-width: 1024px) {
   .main-filter__mods-list {
     grid-template-columns: repeat(6, 1fr);
@@ -104,6 +110,10 @@
 }
 
 @media screen and (max-width: 768px) {
+  main {
+    padding-top: 56px;
+  }
+
   .main-filter__mods-list {
     grid-template-columns: repeat(4, 1fr);
   }
@@ -126,6 +136,14 @@
 }
 
  @media screen and (min-width: 568px){
+
+@supports (-webkit-appearance:none){
+
+}
+
+}
+
+ @media screen and (max-width: 1440px){
 
 @supports (-webkit-appearance:none){
 

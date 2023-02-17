@@ -233,6 +233,10 @@
 }
 
 @media screen and (max-width: 1440px) {
+  main {
+    padding-top: 70px;
+  }
+
   .buy-car__description {
     margin-top: 50px;
   }
@@ -295,6 +299,12 @@
     width: 100%;
     padding: 16px 20px 9px;
     grid-gap: 16px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    padding-top: 56px;
   }
 }
 
@@ -434,6 +444,14 @@
 }
 
  @media screen and (max-width: 910px){
+
+@supports (-webkit-appearance:none){
+
+}
+
+}
+
+ @media screen and (max-width: 768px){
 
 @supports (-webkit-appearance:none){
 

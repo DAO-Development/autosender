@@ -469,6 +469,10 @@ table td {
 }
 
 @media screen and (max-width: 1440px) {
+  main {
+    padding-top: 70px;
+  }
+
   .article__content {
     grid-gap: 140px;
   }
@@ -540,6 +544,10 @@ table td {
 }
 
 @media screen and (max-width: 768px) {
+  main {
+    padding-top: 56px;
+  }
+
   .article__content p {
     margin: 18px 0 27px;
   }

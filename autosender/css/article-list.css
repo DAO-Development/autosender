@@ -93,6 +93,10 @@
 }
 
 @media screen and (max-width: 1440px) {
+  main {
+    padding-top: 70px;
+  }
+
   .article-list .articles-a__content {
     margin-bottom: 100px;
   }
@@ -125,6 +129,12 @@
   .article-list .articles-a__item {
     display: grid;
     grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    padding-top: 56px;
   }
 }
 
@@ -183,6 +193,14 @@
 }
 
  @media screen and (max-width: 1024px){
+
+@supports (-webkit-appearance:none){
+
+}
+
+}
+
+ @media screen and (max-width: 768px){
 
 @supports (-webkit-appearance:none){
 

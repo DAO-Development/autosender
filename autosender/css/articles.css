@@ -142,6 +142,10 @@
 }
 
 @media screen and (max-width: 1440px) {
+  main {
+    padding-top: 70px;
+  }
+
   .articles {
     padding: 100px 0;
   }
@@ -226,6 +230,10 @@
 }
 
 @media screen and (max-width: 768px) {
+  main {
+    padding-top: 56px;
+  }
+
   .articles__content {
     width: 100%;
   }

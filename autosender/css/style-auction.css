@@ -258,14 +258,33 @@
 .auctions__info-wrap > *:nth-child(1) {
   font-family: Montserrat;
   margin-bottom: 15px;
-  grid-gap: 0;
+  grid-gap: 20px;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
 }
 
 .auctions__info-item {
-  display: grid;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   grid-auto-columns: 1fr 1.5fr;
   width: auto;
   grid-gap: 20px;
+}
+
+.auctions__info-item .auctions__favourites {
+  width: 16px;
+  height: 16px;
+}
+
+.auctions__info-item .auctions__favourites svg {
+  width: 100%;
+  height: 100%;
+}
+
+.auctions__info-item .auctions__favourites.active svg path {
+  fill: #bc002d;
 }
 
 .auctions__info-property {
@@ -2248,6 +2267,18 @@ img {
 }
 
 @media screen and (max-width: 1440px) {
+  main {
+    padding-top: 70px;
+  }
+
+  main {
+    padding-top: 70px;
+  }
+
+  main {
+    padding-top: 70px;
+  }
+
   .main-filter {
     margin-top: 50px;
   }
@@ -2477,6 +2508,14 @@ img {
 }
 
 @media screen and (max-width: 768px) {
+  main {
+    padding-top: 56px;
+  }
+
+  main {
+    padding-top: 56px;
+  }
+
   .auctions__desc {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -2514,6 +2553,10 @@ img {
   .auctions__notes-item {
     padding-top: 3px;
     padding-bottom: 3px;
+  }
+
+  main {
+    padding-top: 56px;
   }
 
   .main-filter__lists > ul > li > a {

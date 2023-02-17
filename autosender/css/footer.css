@@ -461,6 +461,10 @@
 }
 
 @media screen and (max-width: 1440px) {
+  main {
+    padding-top: 70px;
+  }
+
   .footer__head {
     grid-template-columns: 1fr 1fr 2fr;
     grid-gap: 85px;
@@ -482,9 +486,6 @@
   }
 
   .footer__bar {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     position: fixed;
     z-index: 1000;
     bottom: 0;
@@ -541,6 +542,10 @@
 }
 
 @media screen and (max-width: 768px) {
+  main {
+    padding-top: 56px;
+  }
+
   .footer__head {
     grid-template-columns: 2fr 1fr;
   }

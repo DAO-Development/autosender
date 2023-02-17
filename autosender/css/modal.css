@@ -299,6 +299,10 @@
 }
 
 @media screen and (max-width: 1440px) {
+  main {
+    padding-top: 70px;
+  }
+
   .modal__content .feedback h3,
   .modal-city__content .feedback h3 {
     font-size: 20px;
@@ -316,6 +320,10 @@
 }
 
 @media screen and (max-width: 768px) {
+  main {
+    padding-top: 56px;
+  }
+
   .modal__wrap,
   .modal-city__wrap {
     width: 712px;

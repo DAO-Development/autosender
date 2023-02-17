@@ -487,6 +487,10 @@
 }
 
 @media screen and (max-width: 1440px) {
+  main {
+    padding-top: 70px;
+  }
+
   .main-filter__categories .categories-tabs .category {
     font-size: 18px;
   }
@@ -530,6 +534,10 @@
 }
 
 @media screen and (max-width: 768px) {
+  main {
+    padding-top: 56px;
+  }
+
   .main-filter__lists > ul > li > a,
   .main-filter__lists > div > li > a {
     position: static;

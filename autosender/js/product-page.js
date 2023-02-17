@@ -129,4 +129,13 @@ $(document).ready(function () {
         else
             $('.product__acc-mobile[data-id="'+data_id+'"]').addClass('show')
     })
+
+    $('.auctions__favourites').on('click', function() {
+        console.log('click')
+        if (this.classList.contains('active')) {
+            this.classList.remove('active')
+        } else {
+            this.classList.add('active')
+        }
+    })
 });

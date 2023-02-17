@@ -13,7 +13,9 @@
     z-index: 100
     width: 100%
     @media screen and ( max-width: $desktopS )
-        position: static
+        position: fixed
+    @media screen and (max-width: $tabletS)
+        padding: 10px
 
     &__brands
         grid-column: 1/4
@@ -135,18 +137,38 @@
         display: flex
         justify-content: space-between
         align-items: center
-        grid-gap: 33px
+        grid-gap: 25px
         position: relative
+        @media screen and (max-width: $tabletS)
+            grid-gap: 15px
+
+    .footer__bar-item--menu
+        display: none
+        @media screen and ( max-width: $desktopS )
+            display: block
+            background: transparent
+            height: auto
+            padding: 0
+
+    &__logo
+        .mob
+            display: none
+        @media screen and (max-width: $tabletS)
+            height: 30px
+            svg path:nth-child(12), path:nth-child(13),path:nth-child(14),path:nth-child(15),path:nth-child(11)
+                display: none
+            svg
+                margin-top: -13px
 
     &__nav
         display: flex
-        grid-gap: 32px
+        grid-gap: 25px
         @media screen and ( max-width: $desktopS )
             display: none
 
         a
             display: flex
-            gap: 8px
+            gap: 5px
             align-items: center
             height: 100%
             font-size: 15px
@@ -171,7 +193,7 @@
     &__contacts
         display: flex
         justify-content: space-between
-        grid-gap: 25px
+        grid-gap: 15px
         @media screen and ( max-width: $desktopS )
             grid-gap: 36px
 
@@ -188,8 +210,17 @@
                 display: flex
                 grid-gap: 32px
                 align-items: center
+            @media screen and ( max-width:  $tabletS)
+                grid-gap: 15px
+
+                a
+                    line-height: 100%
+                    svg
+                        width: 24px
+                        height: 24px
+
             @media screen and ( max-width: $mobileL )
-                grid-gap: 25px
+                grid-gap: 10px
 
     &__phone
         display: flex
@@ -211,6 +242,25 @@
             line-height: 120%
             letter-spacing: 0.04em
             color: $grey-185
+    &__favourites
+        display: flex
+        align-items: center
+        gap: 5px
+        flex-wrap: nowrap
+
+        svg
+            width: 20px
+            height: 20px
+            opacity: 0.5
+
+        & .fav__count
+            opacity: 0
+
+        &.active
+            svg
+                opacity: 1
+            & .fav__count
+                opacity: 1
 
 .header__hover-col-title img
     object-fit: contain

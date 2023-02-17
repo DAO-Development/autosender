@@ -450,6 +450,12 @@
   }
 }
 
+@media screen and (max-width: 1440px) {
+  main {
+    padding-top: 70px;
+  }
+}
+
 @media screen and (max-width: 910px) {
   .about-company__points {
     -webkit-box-orient: vertical;
@@ -461,6 +467,10 @@
 }
 
 @media screen and (max-width: 768px) {
+  main {
+    padding-top: 56px;
+  }
+
   .about-company__numbers {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -590,6 +600,14 @@
 }
 
  @media screen and (min-width: 1600px){
+
+@supports (-webkit-appearance:none){
+
+}
+
+}
+
+ @media screen and (max-width: 1440px){
 
 @supports (-webkit-appearance:none){
 

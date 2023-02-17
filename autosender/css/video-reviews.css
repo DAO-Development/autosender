@@ -147,6 +147,12 @@
      object-fit: contain;
 }
 
+@media screen and (max-width: 1440px) {
+  main {
+    padding-top: 70px;
+  }
+}
+
 @media screen and (max-width: 1024px) {
   .video-banner__content {
     height: 52vw;
@@ -154,6 +160,10 @@
 }
 
 @media screen and (max-width: 768px) {
+  main {
+    padding-top: 56px;
+  }
+
   .video-reviews-item__photo img,
   .video-reviews-item__photo picture {
     height: 350px;
@@ -169,6 +179,14 @@
   }
 }
 @supports (-webkit-appearance:none){
+
+}
+
+ @media screen and (max-width: 1440px){
+
+@supports (-webkit-appearance:none){
+
+}
 
 }
 
