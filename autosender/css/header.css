@@ -342,6 +342,12 @@
   gap: 5px;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
+  color: white;
+  text-decoration: none;
+}
+
+.header__favourites * {
+  text-decoration: none;
 }
 
 .header__favourites svg {
