@@ -322,10 +322,15 @@
                 svg
                     width: 100%
                     height: 100%
+                    color: $grey-179
+                    transition: color 0.3s ease-in-out
+                    cursor: pointer
+                    &:hover
+                        color: $red-dark
 
                 &.active
-                    svg path
-                        fill: $red-dark
+                    svg
+                        color: $red-dark
 
         &-property
             grid-column: 1/2

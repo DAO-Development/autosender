@@ -234,10 +234,19 @@
 .auctions__info-item .auctions__favourites svg {
   width: 100%;
   height: 100%;
+  color: #b3b3b3;
+  -webkit-transition: color 0.3s ease-in-out;
+  -o-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+  cursor: pointer;
 }
 
-.auctions__info-item .auctions__favourites.active svg path {
-  fill: #bc002d;
+.auctions__info-item .auctions__favourites svg:hover {
+  color: #bc002d;
+}
+
+.auctions__info-item .auctions__favourites.active svg {
+  color: #bc002d;
 }
 
 .auctions__info-property {
