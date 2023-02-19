@@ -1,5 +1,5 @@
 $('.open-modal').on("click", function(){
-    $('.modal').addClass('vis')
+    $('.modal:not(.modal-video)').addClass('vis')
 })
  	
 $('.modal, .modal__close').on("click", function(){
