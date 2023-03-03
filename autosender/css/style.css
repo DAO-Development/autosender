@@ -5450,7 +5450,8 @@ table td {
   border-bottom: 10px solid #bc002d;
   border-left: 10px solid #bc002d;
   background: #150202;
-  width: 90%;
+  width: 135.1vh;
+  max-width: 100%;
   height: 740px;
   max-height: 76vh;
   margin: 0 auto;
