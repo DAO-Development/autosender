@@ -5453,6 +5453,7 @@ table td {
   width: 90%;
   height: 740px;
   max-height: 76vh;
+  margin: 0 auto;
 }
 
 .video-banner__content iframe {
