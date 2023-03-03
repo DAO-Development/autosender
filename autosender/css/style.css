@@ -7860,8 +7860,9 @@ table td {
   }
 
   .video-banner__content {
-    height: 52vw;
-    width: 100%;
+    height: 78vh;
+    width: 128vh;
+    max-height: 52vw;
   }
 }
 
@@ -9139,6 +9140,11 @@ table td {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+
+  .video-banner__content {
+    height: 52vw;
+    width: 100%;
   }
 }
 
