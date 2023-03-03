@@ -5450,9 +5450,9 @@ table td {
   border-bottom: 10px solid #bc002d;
   border-left: 10px solid #bc002d;
   background: #150202;
-  width: 100%;
+  width: 90%;
   height: 740px;
-  max-height: 70vh;
+  max-height: 76vh;
 }
 
 .video-banner__content iframe {
@@ -7859,6 +7859,7 @@ table td {
 
   .video-banner__content {
     height: 52vw;
+    width: 100%;
   }
 }
 
