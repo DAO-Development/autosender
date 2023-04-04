@@ -77,7 +77,7 @@
             display: none
             @media screen and (min-width: $tabletS)
                 display: flex
-                
+
         &-select
             @media screen and (min-width: 0)
                 margin-bottom: 25px
@@ -949,7 +949,7 @@
                 .hide
                     display: inline-block
 
-    
+
 .auction
     padding: 20px 0
     //padding: 120px 0
@@ -1072,6 +1072,54 @@
 
         @media screen and ( max-width: $mobileL )
             // max-width: 360px
+        &--with-delivery
+            & .auctions
+                &__notes
+                    top: 0
+                    right: 0
+                    left: unset
+
+                &__price
+                    max-width: 80%
+                    padding-left: 20px
+                    grid-gap: 20px
+
+                &__cost
+                    &-up
+                        font-size: 18px
+                        white-space: nowrap
+                        letter-spacing: 0.01em
+
+                @media screen and ( max-width: $desktopXS )
+                    &__price
+                        max-width: 65%
+                        grid-gap: 15px
+                        padding-left: 15px
+                        heigth: 62px
+
+                    &__cost
+                        &-up
+                            font-size: 16px
+                            margin-bottom: 2px
+                        &-down
+                            font-size: 12px
+                @media screen and ( max-width: $tabletM )
+                    &__price
+                        max-width: 100%
+
+                    &__cost
+                        &-up
+                            font-size: 18px
+                            margin-bottom: 2px
+                        &-down
+                            font-size: 12px
+                @media screen and ( max-width: $tabletSM )
+                    &__price
+                        height: 100%
+                    &__notes
+                        right: -10px
+                        bottom: 20px
+                        top: unset
 
     &__content
         margin-top: 17px
@@ -1245,7 +1293,7 @@
                 grid-gap: 20px
                 align-items: baseline
 
-                @media screen and ( max-width: $tabletSM)
+                //@media screen and ( max-width: $tabletSM)
                     display: flex
                     flex-direction: column
                     flex-direction: row

@@ -536,6 +536,14 @@
   position: relative;
 }
 
+.sincing-slider .slick-current > .carousel-filter {
+  z-index: 10000;
+  position: absolute;
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(52, 52, 52, 0.6)), to(rgba(52, 52, 52, 0.6)));
+  background: -o-linear-gradient(bottom, rgba(52, 52, 52, 0.6), rgba(52, 52, 52, 0.6));
+  background: linear-gradient(0deg, rgba(52, 52, 52, 0.6), rgba(52, 52, 52, 0.6));
+}
+
 .sincing-slider .arrow {
   width: 28px;
   height: 28px;
@@ -1899,11 +1907,6 @@
   .sincing-slider .slick-current > .carousel-filter {
     width: 205px;
     height: 120px;
-    z-index: 10000;
-    position: absolute;
-    background: -webkit-gradient(linear, left bottom, left top, from(rgba(52, 52, 52, 0.6)), to(rgba(52, 52, 52, 0.6)));
-    background: -o-linear-gradient(bottom, rgba(52, 52, 52, 0.6), rgba(52, 52, 52, 0.6));
-    background: linear-gradient(0deg, rgba(52, 52, 52, 0.6), rgba(52, 52, 52, 0.6));
   }
 
   .interesting-cars {
