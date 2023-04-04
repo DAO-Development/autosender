@@ -1335,7 +1335,7 @@
 
         </div>
 
-        <div class="main-filter__filter">
+        <div class="main-filter__filter main-filter__filter-simple">
           <div class="filter__top">
             <h2>Фильтр</h2>
             <button id="filter__close-btn">
@@ -1364,6 +1364,13 @@
                 <option class="placeholder" value="placeholder">Модель</option>
                 <option>Модель 1</option>
                 <option>Модель 2</option>
+              </select>
+            </div>
+            <div class="filter__drive">
+              <select class="select">
+                <option class="placeholder" value="placeholder">Привод</option>
+                <option>Кузов 1</option>
+                <option>Кузов 2</option>
               </select>
             </div>
             <div class="filter__price">
@@ -1396,254 +1403,17 @@
                 </select>
               </div>
             </div>
-            <div class="filter__body-model">
-              <select class="select">
-                <option class="placeholder" value="placeholder">Модель кузова</option>
-                <option>Кузов 1</option>
-                <option>Кузов 2</option>
-              </select>
-            </div>
-            <div class="filter__body-type">
-              <select class="select">
-                <option class="placeholder" value="placeholder">Тип кузова</option>
-                <option>Тип 1</option>
-                <option>Тип 2</option>
-              </select>
-            </div>
-            <div class="filter__mileage">
-              <label>Пробег, км</label>
-              <div class="filter__selects">
-                <select class="filter__mileage-from select">
-                  <option class="placeholder" value="placeholder">от</option>
-                  <option>1000</option>
-                  <option>2000</option>
-                </select>
-                <select class="filter__mileage-to select">
-                  <option class="placeholder" value="placeholder">до</option>
-                  <option>10000</option>
-                  <option>20000</option>
-                </select>
-              </div>
-            </div>
-            <div class="filter__volume">
-              <label>Объем, см<sup>3</sup></label>
-              <div class="filter__selects">
-                <select class="filter__volume-from select">
-                  <option class="placeholder" value="placeholder">от</option>
-                  <option>2017</option>
-                  <option>2018</option>
-                </select>
-                <select class="filter__volume-to select">
-                  <option class="placeholder" value="placeholder">до</option>
-                  <option>2021</option>
-                  <option>2020</option>
-                </select>
-              </div>
-            </div>
-            <div class="filter__drive">
-              <select class="select">
-                <option class="placeholder" value="placeholder">Привод</option>
-                <option>Кузов 1</option>
-                <option>Кузов 2</option>
-              </select>
-            </div>
-            <div class="filter__num-body">
-              <input type="text" placeholder="Номер кузова">
-            </div>
-          </div>
-          <div class="filter__right">
-            <div class="filter__rating">
 
-              <div class="h3">Оценка: </div>
-              <div class="filter__rating-values">
-                <input type="hidden" id="rating-start-val" name="rating-start-val" class="hidden">
-                <input type="hidden" id="rating-end-val" name="rating-end-val" class="hidden">
-
-                <div class="filter__rating-value" id="rating-start"></div>
-                <div class="filter__rating-range" id="rating"></div>
-
-                <div class="filter__rating-value" id="rating-end"></div>
-                <div class="filter__rating__checkbox">
-                  <input type="checkbox" id="rait-11">
-                  <label for="rait-11"></label>
-                  <label for="rait-11">R</label>
-                </div>
-                <div class="filter__rating__checkbox">
-                  <input type="checkbox" id="rait-12">
-                  <label for="rait-12"></label>
-                  <label for="rait-12">RA</label>
-                </div>
-              </div>
-              <!--<div class="filter__rating__content">
-                            <div class="filter__rating__checkbox">
-                                <input type="checkbox" id="rait-1">
-                                <label for="rait-1"></label>
-                                <label for="rait-1">-</label>
-                            </div>
-                            <div class="filter__rating__checkbox">
-                                <input type="checkbox" id="rait-2">
-                                <label for="rait-2"></label>
-                                <label for="rait-2">3</label>
-                            </div>
-                            <div class="filter__rating__checkbox">
-                                <input type="checkbox" id="rait-3">
-                                <label for="rait-3"></label>
-                                <label for="rait-3">3.4</label>
-                            </div>
-                            <div class="filter__rating__checkbox">
-                                <input type="checkbox" id="rait-4">
-                                <label for="rait-4"></label>
-                                <label for="rait-4">4</label>
-                            </div>
-                            <div class="filter__rating__checkbox">
-                                <input type="checkbox" id="rait-5">
-                                <label for="rait-5"></label>
-                                <label for="rait-5">4.5</label>
-                            </div>
-                            <div class="filter__rating__checkbox">
-                                <input type="checkbox" id="rait-6">
-                                <label for="rait-6"></label>
-                                <label for="rait-6">5</label>
-                            </div>
-                            <div class="filter__rating__checkbox">
-                                <input type="checkbox" id="rait-7">
-                                <label for="rait-7"></label>
-                                <label for="rait-7">6</label>
-                            </div>
-                            <div class="filter__rating__checkbox">
-                                <input type="checkbox" id="rait-8">
-                                <label for="rait-8"></label>
-                                <label for="rait-8">7</label>
-                            </div>
-                            <div class="filter__rating__checkbox">
-                                <input type="checkbox" id="rait-9">
-                                <label for="rait-9"></label>
-                                <label for="rait-9">8</label>
-                            </div>
-                            <div class="filter__rating__checkbox">
-                                <input type="checkbox" id="rait-10">
-                                <label for="rait-10"></label>
-                                <label for="rait-10">9</label>
-                            </div>
-                            <div class="filter__rating__checkbox">
-                                <input type="checkbox" id="rait-11">
-                                <label for="rait-11"></label>
-                                <label for="rait-11">R</label>
-                            </div>
-                            <div class="filter__rating__checkbox">
-                                <input type="checkbox" id="rait-12">
-                                <label for="rait-12"></label>
-                                <label for="rait-12">RA</label>
-                            </div>
-                        </div> -->
-            </div>
-            <div class="filter__color">
-              <label>Цвет</label>
-              <div class="filter__color__content">
-                <div class="filter__color__checkbox">
-                  <input type="checkbox" id="color-1">
-                  <label for="color-1"></label>
-                </div>
-                <div class="filter__color__checkbox">
-                  <input type="checkbox" id="color-2">
-                  <label for="color-2"></label>
-                </div>
-                <div class="filter__color__checkbox">
-                  <input type="checkbox" id="color-3">
-                  <label for="color-3"></label>
-                </div>
-                <div class="filter__color__checkbox">
-                  <input type="checkbox" id="color-4">
-                  <label for="color-4"></label>
-                </div>
-                <div class="filter__color__checkbox">
-                  <input type="checkbox" id="color-5">
-                  <label for="color-5"></label>
-                </div>
-                <div class="filter__color__checkbox">
-                  <input type="checkbox" id="color-6">
-                  <label for="color-6"></label>
-                </div>
-                <div class="filter__color__checkbox">
-                  <input type="checkbox" id="color-7">
-                  <label for="color-7"></label>
-                </div>
-                <div class="filter__color__checkbox">
-                  <input type="checkbox" id="color-8">
-                  <label for="color-8"></label>
-                </div>
-                <div class="filter__color__checkbox">
-                  <input type="checkbox" id="color-9">
-                  <label for="color-9"></label>
-                </div>
-                <div class="filter__color__checkbox">
-                  <input type="checkbox" id="color-10">
-                  <label for="color-10"></label>
-                </div>
-                <div class="filter__color__checkbox">
-                  <input type="checkbox" id="color-11">
-                  <label for="color-11"></label>
-                </div>
-                <div class="filter__color__checkbox">
-                  <input type="checkbox" id="color-12">
-                  <label for="color-12"></label>
-                </div>
-                <div class="filter__color__checkbox">
-                  <input type="checkbox" id="color-13">
-                  <label for="color-13"></label>
-                </div>
-                <div class="filter__color__checkbox">
-                  <input type="checkbox" id="color-14">
-                  <label for="color-14"></label>
-                </div>
-                <div class="filter__color__checkbox">
-                  <input type="checkbox" id="color-15">
-                  <label for="color-15"></label>
-                </div>
-                <div class="filter__color__checkbox">
-                  <input type="checkbox" id="color-16">
-                  <label for="color-16"></label>
-                </div>
-              </div>
-            </div>
-            <div class="filter__auctions">
-              <select class="select">
-                <option class="placeholder" value="placeholder">Аукционы</option>
-                <option>Аукцион 1</option>
-                <option>Аукцион 2</option>
-              </select>
-            </div>
-            <div class="filter__sell">
-              <div class="filter__selects">
-
-
-
-                <div class="filter__num-date">
-                  <input type="date" placeholder="дата торгов">
-                </div>
-                <div class="filter__num-lot">
-                  <input type="text" placeholder="Номер лота">
-                </div>
-              </div>
-            </div>
 
             <div class="filter__buttons">
-              <button class="btn all-btn">
-                Все параметры
-                <svg class="all-btn-svg closed" width="16" height="16" viewBox="0 0 16 16" fill="none"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path d="M12.5713 10.2852L7.99986 5.71373L3.42843 10.2852" stroke="#BC002D" stroke-linecap="round"
-                    stroke-linejoin="round" />
-                </svg>
-              </button>
-              <button class="btn clear-btn">
-                Сбросить
-                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M5.91617 5.01169L9.80998 1.11777C10.0634 0.864489 10.0634 0.454965 9.80998 0.201681C9.55669 -0.0516021 9.14717 -0.0516021 8.89388 0.201681L4.99996 4.0956L1.10614 0.201681C0.852742 -0.0516021 0.443336 -0.0516021 0.190052 0.201681C-0.0633506 0.454965 -0.0633506 0.864489 0.190052 1.11777L4.08386 5.01169L0.190052 8.90561C-0.0633506 9.15889 -0.0633506 9.56842 0.190052 9.8217C0.316279 9.94805 0.482248 10.0115 0.648098 10.0115C0.813949 10.0115 0.9798 9.94805 1.10614 9.8217L4.99996 5.92778L8.89388 9.8217C9.02023 9.94805 9.18608 10.0115 9.35193 10.0115C9.51778 10.0115 9.68363 9.94805 9.80998 9.8217C10.0634 9.56842 10.0634 9.15889 9.80998 8.90561L5.91617 5.01169Z"
-                    fill="#B5B5B5" />
-                </svg>
-              </button>
+<!--              <button class="btn clear-btn">-->
+<!--                Сбросить-->
+<!--                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">-->
+<!--                  <path-->
+<!--                    d="M5.91617 5.01169L9.80998 1.11777C10.0634 0.864489 10.0634 0.454965 9.80998 0.201681C9.55669 -0.0516021 9.14717 -0.0516021 8.89388 0.201681L4.99996 4.0956L1.10614 0.201681C0.852742 -0.0516021 0.443336 -0.0516021 0.190052 0.201681C-0.0633506 0.454965 -0.0633506 0.864489 0.190052 1.11777L4.08386 5.01169L0.190052 8.90561C-0.0633506 9.15889 -0.0633506 9.56842 0.190052 9.8217C0.316279 9.94805 0.482248 10.0115 0.648098 10.0115C0.813949 10.0115 0.9798 9.94805 1.10614 9.8217L4.99996 5.92778L8.89388 9.8217C9.02023 9.94805 9.18608 10.0115 9.35193 10.0115C9.51778 10.0115 9.68363 9.94805 9.80998 9.8217C10.0634 9.56842 10.0634 9.15889 9.80998 8.90561L5.91617 5.01169Z"-->
+<!--                    fill="#B5B5B5" />-->
+<!--                </svg>-->
+<!--              </button>-->
               <button class="red-btn show-btn">Показать результаты</button>
             </div>
           </div>

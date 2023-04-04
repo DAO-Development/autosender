@@ -546,6 +546,10 @@ img {
   text-align: center;
 }
 
+.main-filter__filter-simple {
+  grid-template-columns: 1fr !important;
+}
+
 .main-filter__filter-mobile {
   display: block;
   background: white;
@@ -1016,6 +1020,15 @@ img {
     padding: 13px 68px;
   }
 
+  .main-filter__filter-simple .filter__buttons {
+    margin-top: 0 !important;
+  }
+
+  .main-filter__filter-simple .filter__buttons > .red-btn {
+    text-align: center;
+    display: block;
+  }
+
   .main-filter__filter-mobile {
     padding: 14px 20px 20px;
     margin-bottom: 60px;
@@ -1339,6 +1352,14 @@ img {
     padding: 16px 125px;
   }
 
+  .main-filter__filter-simple .filter__buttons {
+    grid-column: 1/3;
+  }
+
+  .main-filter__filter-simple .filter__year {
+    border-bottom: none !important;
+  }
+
   .main-filter__filter-mobile {
     padding: 28px;
     margin-bottom: 80px;
@@ -1438,6 +1459,31 @@ img {
     padding: 13px 89px;
   }
 
+  .main-filter__filter-simple .filter__left {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .main-filter__filter-simple .filter__buttons > .red-btn {
+    margin-bottom: 8px;
+  }
+
+  .main-filter__filter-simple {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    min-height: unset !important;
+  }
+
+  .main-filter__filter-simple .filter__buttons {
+    grid-column: auto;
+  }
+
+  .main-filter__filter-simple .filter__buttons > .red-btn {
+    padding: 13px 20px;
+    margin-bottom: 0;
+  }
+
   .main-filter__filter-mobile {
     display: none;
   }
@@ -1456,6 +1502,12 @@ img {
   .autoauction-online .auctions__notes-item {
     border-right: none;
     border-bottom: 1px solid #b3b3b3;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .main-filter__filter-simple .filter__buttons > .red-btn {
+    margin-bottom: 8px;
   }
 }
 
@@ -1639,6 +1691,11 @@ img {
 @media screen and (max-width: 1024px) {
   .main-filter__filter {
     min-height: 100vh;
+  }
+
+  .main-filter__filter-simple .filter__drive {
+    -ms-flex-item-align: end;
+        align-self: flex-end;
   }
 
   .main-filter__mods-list {
@@ -1828,6 +1885,14 @@ img {
 }
 
  @media screen and (min-width: 1024px){
+
+@supports (-webkit-appearance:none){
+
+}
+
+}
+
+ @media screen and (min-width: 1200px){
 
 @supports (-webkit-appearance:none){
 

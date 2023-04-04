@@ -961,6 +961,22 @@
         h2
             margin-bottom: 36px
 
+    &.auction--catalog
+        .auctions
+            &__info
+                max-height: 80px
+                @media screen and ( max-width: $tabletM )
+                    max-height: 120px
+                @media screen and ( max-width: $mobileL )
+                    max-height: unset
+            & picture img
+                min-height: 240px
+                max-height: 240px
+                @media screen and ( max-width: $tabletM )
+                    max-height: 270px
+                    min-height: 270px
+
+
     &__content
         display: grid
         grid-template-columns: 1fr 1fr 1fr
@@ -1492,6 +1508,23 @@
     a
         color: black
         text-decoration: none
+
+    &__availability
+        margin-left: 20px
+        background: #fff
+        padding: 6px 12px
+        border-radius: 3px
+        display: inline-grid
+        place-items: center
+        font-weight: 600
+        &--yes
+            color: #109851
+
+        @media screen and ( max-width: $mobileL )
+            display: block
+            margin-left: 0
+            width: fit-content
+            margin-top: 3px
 
 
 

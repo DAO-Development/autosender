@@ -17,11 +17,11 @@ $(document).ready(function () {
     $('.filter__body-type').addClass('not-visible')
     $('.filter__mileage').addClass('not-visible')
     $('.filter__volume').addClass('not-visible')
-    $('.filter__drive').addClass('not-visible')
+    // $('.filter__drive').addClass('not-visible')
     $('.filter__num-body').addClass('not-visible')
     if ($(window).width() < '1024') {
-        $('.filter__price').addClass('not-visible')
-        $('.filter__year').addClass('not-visible')
+        // $('.filter__price').addClass('not-visible')
+        // $('.filter__year').addClass('not-visible')
         $('.filter__rating').addClass('not-visible')
     }
 
@@ -104,11 +104,11 @@ $(document).ready(function () {
             $('.filter__body-type').removeClass('not-visible')
             $('.filter__mileage').removeClass('not-visible')
             $('.filter__volume').removeClass('not-visible')
-            $('.filter__drive').removeClass('not-visible')
+            // $('.filter__drive').removeClass('not-visible')
             $('.filter__num-body').removeClass('not-visible')
             if ($(window).width() < '1024') {
-                $('.filter__price').removeClass('not-visible')
-                $('.filter__year').removeClass('not-visible')
+                // $('.filter__price').removeClass('not-visible')
+                // $('.filter__year').removeClass('not-visible')
                 $('.filter__rating').removeClass('not-visible')
             }
         } else {
@@ -122,11 +122,11 @@ $(document).ready(function () {
             $('.filter__body-type').addClass('not-visible')
             $('.filter__mileage').addClass('not-visible')
             $('.filter__volume').addClass('not-visible')
-            $('.filter__drive').addClass('not-visible')
+            // $('.filter__drive').addClass('not-visible')
             $('.filter__num-body').addClass('not-visible')
             if ($(window).width() < '1024') {
-                $('.filter__price').addClass('not-visible')
-                $('.filter__year').addClass('not-visible')
+                // $('.filter__price').addClass('not-visible')
+                // $('.filter__year').addClass('not-visible')
                 $('.filter__rating').addClass('not-visible')
             }
         }

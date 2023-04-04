@@ -113,6 +113,25 @@
      object-fit: cover;
 }
 
+.reviews__stars {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 3px;
+  grid-row: 1/2;
+  grid-column: 2/3;
+  place-self: center end;
+}
+
+.reviews__stars svg {
+  width: 20px;
+  height: 20px;
+}
+
+.reviews__stars svg path {
+  fill: #ffe400;
+}
+
 .reviews__header {
   margin: 26px 30px 0;
   padding-bottom: 18px;
@@ -139,7 +158,7 @@
 
 .reviews__date {
   grid-column: 2/3;
-  grid-row: 1/2;
+  grid-row: 2/3;
   font-size: 12px;
   line-height: 14px;
   letter-spacing: 0.045em;

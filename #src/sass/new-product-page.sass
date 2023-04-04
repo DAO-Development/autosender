@@ -1,0 +1,92 @@
+@import "base"
+.product
+    &-page
+        padding-top: 78px
+
+        .product-similar
+            margin-top: 80px
+
+    &__main
+        &-right
+            width: 100%
+            margin-left: 50px
+
+        @media screen and (max-width: $desktopS)
+            margin-left: 0
+
+    &__availability
+        display: inline-grid
+        padding: 6px 12px
+        border-radius: 3px
+        place-items: center
+        font-weight: 600
+        font-size: 18px
+
+        &--yes
+            background-color: #109851
+            color: white
+
+        @media screen and (max-width: $mobileL)
+            display: block
+            margin-left: 0
+            width: fit-content
+            margin-top: 3px
+
+    &__description
+        & .description
+            &__content
+                font-size: 18px
+
+            &__similar
+                & .btn
+                    display: block
+                    width: fit-content
+                    padding: 15px 80px
+                    margin: 20px auto 0
+                    font-size: 18px
+                    font-weight: 600
+
+    &__characteristic
+        //display: grid
+        //grid-template-columns: 1fr 1fr
+        display: flex
+        flex-direction: row
+        gap: 60px
+        width: fit-content
+        margin: 0 auto
+        @media screen and (min-width: $desktopS)
+            flex-direction: column
+            grid-gap: 30px
+
+
+        & .characteristic-item
+            display: flex
+            gap: 10px
+            align-items: center
+
+            &__icon
+                width: 52px
+                height: 52px
+                background-color: $grey-229
+                border-radius: 3px
+                display: grid
+                place-content: center
+
+                svg
+                    width: 40px
+                    height: 40px
+
+                    path
+                        fill: $red-dark-extra
+
+            &:last-child
+                svg path, g
+                    stroke: $red-dark-extra
+
+            &__title
+                font-size: 13px
+                color: $grey-128
+
+            &__value
+                font-size: 20px
+                color: black
