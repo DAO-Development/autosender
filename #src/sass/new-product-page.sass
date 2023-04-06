@@ -11,8 +11,9 @@
             width: 100%
             margin-left: 50px
 
-        @media screen and (max-width: $desktopS)
-            margin-left: 0
+            @media screen and (max-width: $desktopS)
+                margin-left: 0
+                margin-bottom: 40px
 
     &__availability
         display: inline-grid
@@ -36,6 +37,7 @@
         & .description
             &__content
                 font-size: 18px
+                line-height: 1.6
 
             &__similar
                 & .btn
@@ -47,46 +49,126 @@
                     font-weight: 600
 
     &__characteristic
-        //display: grid
-        //grid-template-columns: 1fr 1fr
-        display: flex
-        flex-direction: row
+        width: 100% !important
+        display: grid
+        grid-template-columns: 1fr 1fr
         gap: 60px
         width: fit-content
         margin: 0 auto
-        @media screen and (min-width: $desktopS)
-            flex-direction: column
+        border: none !important
+        padding-bottom: 30px !important
+        border-bottom: 1px solid #777 !important
+        @media screen and (max-width: $desktopS)
+            grid-template-columns: 1fr 1fr 1fr
             grid-gap: 30px
-
+        @media screen and (max-width: $tabletSM)
+            grid-template-columns: 1fr 1fr
+        @media screen and (max-width: $mobileL)
+            grid-template-columns: 1fr 
+    
 
         & .characteristic-item
             display: flex
-            gap: 10px
+            gap: 20px
             align-items: center
 
             &__icon
-                width: 52px
-                height: 52px
                 background-color: $grey-229
-                border-radius: 3px
                 display: grid
                 place-content: center
 
+                width: 70px
+                height: 70px
+                border-radius: 0 5px 5px 0
+                border-left: 4px solid #bc002d
+
+
                 svg
-                    width: 40px
-                    height: 40px
+                    width: 35px
+                    height: 35px
 
-                    path
-                        fill: $red-dark-extra
+                    path, g
+                        stroke: #6a6a6a
+                        fill: #6a6a6a
 
-            &:last-child
-                svg path, g
-                    stroke: $red-dark-extra
+
 
             &__title
-                font-size: 13px
-                color: $grey-128
+                font-size: 23px
+                color: #373737
+                margin-bottom: 3px
+                font-weight: bold
 
             &__value
-                font-size: 20px
+                font-size: 22px
                 color: black
+
+                
+
+    &__price-new
+        font-size: 36px
+        font-weight: 600
+        padding: 15px 0
+        margin-bottom: 25px
+        border-bottom: 4px solid #333
+        width: 100%
+        color: #252525
+        font-family: Montserrat,sans-serif
+        line-height: 130%
+
+    .product-full-price__total-val-new
+        width: 100%
+        font-size: 34px
+
+
+        .red-btn 
+            font-size: 17px
+            padding: 18px 46px
+
+    &__right-head
+        width: 100%
+        padding-top: 10px
+        padding-bottom: 25px
+        margin-bottom: 15px
+        border-bottom: 1px solid #777
+        display: flex
+        gap: 20px
+        &-rating
+            display: flex
+            gap: 12px
+            align-items: center
+            font-size: 23px
+            font-weight: 600
+            color: #333
+
+        .star-rating
+            width: 200px
+            height: 35px
+            mark
+                background-size: 200px 35px
+                height: 35px
+
+        .product__availability
+            padding: 8px 14px
+            font-size: 19px
+
+
+.star-rating
+    
+    background-image: url(/img/ratingsinner.svg)
+    background-repeat: no-repeat
+    background-position: center center
+    display: inline-block
+
+
+    mark
+        // height: 100%
+        // background-image: url(/img/ratings-wrapper.svg) 
+        // background-repeat: no-repeat
+        // background-position: left top
+        // background-size: 100%
+        // display: block
+        // padding: .2em
+        background: url(/img/ratings-wrapper.svg) no-repeat left top
+        background-size: auto
+        display: block
