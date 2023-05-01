@@ -1,6 +1,10 @@
 $('.open-modal').on("click", function(){
     $('.modal:not(.modal-video)').addClass('vis')
 })
+
+$('.open-modal-request').on("click", function(){
+    $('.modal-request').addClass('vis')
+})
  	
 $('.modal, .modal__close').on("click", function(){
     $('.modal').removeClass('vis')
@@ -11,7 +15,8 @@ $('.modal, .modal__close').on("click", function(){
 
 $( ".modal__wrap" ).click(function( event ) {
     event.stopPropagation();
-  });
+});
+  
 $('.video-reviews-item').on('click', function (e) {
     e.preventDefault();
     let code = $(this).attr('href').split('watch?v=')[1]

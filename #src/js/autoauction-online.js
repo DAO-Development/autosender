@@ -1,12 +1,17 @@
 $(document).ready(function () {
 
-    $('.auctions__content-pictures').slick({
-        infinite: true,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        dots: true,
-        arrows: true,
-    });
+    try {
+        $('.auctions__content-pictures').slick({
+            infinite: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            dots: true,
+            arrows: true,
+        });
+    }
+    catch {
+        
+    }
 
 
     $('.filter__color').addClass('not-visible')
@@ -174,26 +179,29 @@ $(document).ready(function () {
 
     var slider = document.getElementById('rating');
 
-    noUiSlider.create(slider, {
-        start: [3, 9],
-        step: 1,
-        connect: true,
-        range: {
-            'min': 3,
-            'max': 9
-        }
-    });
+    if (slider) {
+        noUiSlider.create(slider, {
+            start: [3, 9],
+            step: 1,
+            connect: true,
+            range: {
+                'min': 3,
+                'max': 9
+            }
+        });
 
 
 
 
-    slider.noUiSlider.on('update', function (values) {
-        console.log(values)
-        $('#rating-start-val').val(values[0])
-        $('#rating-end-val').val(values[1])
-        $('#rating-start').html(values[0])
-        $('#rating-end').html(values[1])
-    });
+        slider.noUiSlider.on('update', function (values) {
+            console.log(values)
+            $('#rating-start-val').val(values[0])
+            $('#rating-end-val').val(values[1])
+            $('#rating-start').html(values[0])
+            $('#rating-end').html(values[1])
+        });
+    }
+        
     $('.sort__item:first input').prop('checked', true)
     $('.sort__item').on('click', function () {
         $('.sort__item').removeClass('active')
@@ -218,89 +226,91 @@ $(document).ready(function () {
 
 
 
-    const ctx = document.getElementById('myChart').getContext('2d');
-    const DATA_COUNT = 7;
-    const NUMBER_CFG = {count: DATA_COUNT, min: -100, max: 100};
+    if (document.getElementById('myChart')) {
+        const ctx = document.getElementById('myChart').getContext('2d');
+        const DATA_COUNT = 7;
+        const NUMBER_CFG = { count: DATA_COUNT, min: -100, max: 100 };
 
-    const labels = ['1-10 Apr', '10-20 Apr', '20-30 Apr', '1-10 May', '10-20 May', '20-31 May'];
-    const data = {
-    labels: labels,
-    datasets: [
-        {
-            label: 'Цена в йенах',
-            data: [1,2,3,4,4,3],
-            borderColor: 'rgba(60, 225, 126, 1)',
-            backgroundColor: 'rgba(60, 225, 126, 1)',
-            yAxisID: 'y',
-        },
-        {
-            label: 'Цена в рублях',
-            data: [7, 7, 2, 3, 3,5],
-            borderColor: 'rgba(60, 126, 225, 1)',
-            backgroundColor: 'rgba(60, 126, 225, 1)',
-            yAxisID: 'y1',
-        },
-        {
-            type: 'bar',
-            label: 'Количество объявлений',
-            data: [9, 3, 2, 1,9,6],
-            // borderColor: Utils.CHART_COLORS.blue,
-            backgroundColor: 'rgba(188, 0, 45, .7)',
+        const labels = ['1-10 Apr', '10-20 Apr', '20-30 Apr', '1-10 May', '10-20 May', '20-31 May'];
+        const data = {
+            labels: labels,
+            datasets: [
+                {
+                    label: 'Цена в йенах',
+                    data: [1, 2, 3, 4, 4, 3],
+                    borderColor: 'rgba(60, 225, 126, 1)',
+                    backgroundColor: 'rgba(60, 225, 126, 1)',
+                    yAxisID: 'y',
+                },
+                {
+                    label: 'Цена в рублях',
+                    data: [7, 7, 2, 3, 3, 5],
+                    borderColor: 'rgba(60, 126, 225, 1)',
+                    backgroundColor: 'rgba(60, 126, 225, 1)',
+                    yAxisID: 'y1',
+                },
+                {
+                    type: 'bar',
+                    label: 'Количество объявлений',
+                    data: [9, 3, 2, 1, 9, 6],
+                    // borderColor: Utils.CHART_COLORS.blue,
+                    backgroundColor: 'rgba(188, 0, 45, .7)',
 
-            yAxisID: 'y2',
-        }
+                    yAxisID: 'y2',
+                }
 
-    ]
-    };
+            ]
+        };
 
-    let ratio = window.innerWidth / window.innerHeight * 1.2;
-    const myChart = new Chart(ctx, {
-        type: 'line',
-        data: data,
-        options: {
-            aspectRatio: ratio,
-            responsive: true,
-            interaction: {
-                mode: 'index',
-                intersect: false,
-            },
-            stacked: false,
-            plugins: {
-                title: {
-                    display: true,
-                    text: 'Статистика продаж по аукционам Honda за 6 месяцев'
+        let ratio = window.innerWidth / window.innerHeight * 1.2;
+        const myChart = new Chart(ctx, {
+            type: 'line',
+            data: data,
+            options: {
+                aspectRatio: ratio,
+                responsive: true,
+                interaction: {
+                    mode: 'index',
+                    intersect: false,
+                },
+                stacked: false,
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Статистика продаж по аукционам Honda за 6 месяцев'
+                    }
+                },
+                scales: {
+                    y: {
+                        type: 'linear',
+                        display: true,
+                        position: 'left',
+                    },
+                    y1: {
+                        type: 'linear',
+                        display: true,
+                        position: 'right',
+
+                        // grid line settings
+                        grid: {
+                            drawOnChartArea: false, // only want the grid lines for one axis to show up
+                        },
+                    },
+
+                    y2: {
+                        type: 'linear',
+                        display: false,
+                        position: 'right',
+
+                        // grid line settings
+                        grid: {
+                            drawOnChartArea: false, // only want the grid lines for one axis to show up
+                        },
+                    }
                 }
             },
-            scales: {
-                y: {
-                    type: 'linear',
-                    display: true,
-                    position: 'left',
-                },
-                y1: {
-                    type: 'linear',
-                    display: true,
-                    position: 'right',
-
-                    // grid line settings
-                    grid: {
-                        drawOnChartArea: false, // only want the grid lines for one axis to show up
-                    },
-                },
-
-                y2: {
-                    type: 'linear',
-                    display: false,
-                    position: 'right',
-
-                    // grid line settings
-                    grid: {
-                        drawOnChartArea: false, // only want the grid lines for one axis to show up
-                    },
-                }
-            }
-        },
-    });
+        });
+    }
 
     $('.auctions__favourites').on('click', function() {
         console.log('click')

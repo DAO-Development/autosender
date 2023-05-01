@@ -307,3 +307,118 @@
         max-height: 80vh
 
     
+.modal-request
+    .modal__content
+        border-radius: 15px !important
+    &__title
+        --tw-text-opacity: 1
+        color: rgb(17, 24, 39)
+        line-height: 1.5rem
+        font-weight: 500
+        font-size: 18px
+        margin-top: -20px
+        margin-bottom: 23px
+
+    &__subtitle
+        margin-bottom: 8px
+
+
+    &__inputs
+        display: flex
+        flex-direction: column
+        gap: 12px
+
+    &__input
+        line-height: 1.25
+        --tw-shadow: 0 1px 2px 0 rgb(156, 163, 175)
+        --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color)
+        box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000s), var(--tw-shadow)
+        --tw-bg-opacity: 1
+        background-color: rgb(249, 250, 251)
+        --tw-border-opacity: 1
+        border: 1px solidrgb(243, 244, 246 )
+
+        border-radius: 10px
+        width: 100%
+        padding: 12px
+        line-height: 1.5
+            
+        outline: none
+        &::placeholder 
+            opacity: 1
+            color: #9ca3af
+        
+        &::before, &::after 
+            --tw-content: ''
+
+        &:focus
+            outline: none
+            border-color: rgb(100, 116, 139)
+
+    &__country-choice
+        margin-top: 16px
+        padding-bottom: 24px
+        border-bottom: 1px solid rgb(243, 244, 246)
+        margin-bottom: 12px
+        &-inputs
+            display: flex
+            gap: 12px
+
+        label
+            width: 100%
+            position: relative
+            padding: 12px
+            text-align: center
+            border: 1px solid rgb(243, 244, 246)
+            background: rgb(249, 250, 251)
+
+        input
+            display: none
+
+        input:checked
+            & + label
+                background-color: rgb(107, 114, 128)
+                color: white
+                border-radius: 8px
+                &::before
+                    border-radius: 8px
+
+                    left: -4px
+                    top: -4px
+                    content: ''
+                    position: absolute
+                    width: calc(100% + 6px)
+                    height: calc(100% + 6px)
+                    border: 1px solid rgb(156, 163, 175)
+
+    &__connect-choice
+        &-inputs
+            display: flex
+            gap: 12px
+            @media screen and ( max-width: $mobileL )
+                flex-direction: column
+                
+
+        &-btn
+            border: none
+            padding: 12px
+            width: 100%
+            border-radius: 8px
+            display: flex
+            justify-content: center
+            align-items: center
+            gap: 5px
+            color: white
+            font-size: 14px
+            outline: none
+            &--wa
+                background: rgb(22, 163, 74)
+                &:focus
+                    background: rgb(21, 128, 61)
+
+            &--call
+                background: rgb(220, 38, 38)
+                &:focus
+                    background: rgb(185, 28, 28)
+                    
+                
